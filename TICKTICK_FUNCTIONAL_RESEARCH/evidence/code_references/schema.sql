@@ -1,0 +1,490 @@
+-- ============================================================================
+-- Table: AI_GENERATED_CONTENT
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "AI_GENERATED_CONTENT" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"USER_ID" TEXT,"GEN_TYPE" TEXT,"OBJ_ID" TEXT,"OBJ_TYPE" TEXT,"GENERATED" TEXT);
+
+-- ============================================================================
+-- Table: ASSIGNMENT
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "ASSIGNMENT" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"USER_ID" TEXT,"PROJECT_ID" INTEGER NOT NULL ,"ASSIGNEE_ID" TEXT,"TASK_ID" INTEGER NOT NULL ,"PROJECT_TITLE" TEXT,"Assign_name" TEXT,"TASK_TITLE" TEXT);
+
+-- ============================================================================
+-- Table: ATTACHMENT
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "ATTACHMENT" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"SID" TEXT,"TASK_ID" INTEGER NOT NULL ,"TASK_SID" TEXT NOT NULL ,"USER_ID" TEXT,"fileName" TEXT,"localPath" TEXT,"SIZE" INTEGER NOT NULL ,"FILE_TYPE" TEXT,"DESCRIPTION" TEXT,"OTHER_DATA" TEXT,"CREATED_TIME" INTEGER,"MODIFIED_TIME" INTEGER,"_deleted" INTEGER NOT NULL ,"_status" INTEGER NOT NULL ,"ETAG" TEXT,"UP_DOWN" INTEGER NOT NULL ,"SYNC_ERROR_CODE" INTEGER NOT NULL ,"ref_attachment_sid" TEXT,"SERVER_PATH" TEXT,"STATUS" INTEGER NOT NULL ,"DOWNLOAD" INTEGER NOT NULL );
+
+-- ============================================================================
+-- Table: BetaUserState
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "BetaUserState" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"USER_ID" TEXT,"JOIN_ENABLE" INTEGER NOT NULL ,"SHOW_BANNER" INTEGER NOT NULL ,"VERSION" INTEGER NOT NULL ,"TITLE_CN" TEXT,"TITLE_EN" TEXT);
+
+-- ============================================================================
+-- Table: BindCalendar
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "BindCalendar" ("_id" INTEGER PRIMARY KEY ,"sid" TEXT,"BIND_ID" TEXT,"USER_ID" TEXT,"NAME" TEXT,"COLOR_STR" TEXT,"timeZone" TEXT,"VISIBLE" INTEGER NOT NULL ,"VISIBLE_STATUS" INTEGER NOT NULL ,"ACCESS_ROLE" TEXT,"ALIAS" TEXT,"CURRENT_USER_PRIVILEGE_SET" TEXT,"DESCRIPTION" TEXT,"ETAG" TEXT,"HREF" TEXT,"PERMISSIONS" TEXT,"RESOURCE_TYPE" TEXT,"SHOW" TEXT,"SUPPORTED_CALENDAR_COMPONENT_SET" TEXT,"SUPPORTED_REPORT_SET" TEXT,"TYPE" TEXT,"OUT_ID" TEXT,"BACKGROUND_INFO" TEXT);
+
+-- ============================================================================
+-- Table: BindCalendarAccount
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "BindCalendarAccount" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"sid" TEXT,"USER_ID" TEXT,"ACCOUNT" TEXT,"SITE" TEXT,"errorCode" INTEGER NOT NULL ,"createdTime" INTEGER,"modifiedTime" INTEGER,"DESC" TEXT,"DOMAIN" TEXT,"HOME" TEXT,"KIND" TEXT,"PASSWORD" TEXT,"USER_PRINCIPAL" TEXT,"USERNAME" TEXT,"SORT_ORDER" INTEGER,"BACKGROUND_INFO" TEXT);
+
+-- ============================================================================
+-- Table: CHECKLIST_REMINDER
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "CHECKLIST_REMINDER" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"ITEM_ID" INTEGER NOT NULL ,"TASK_ID" INTEGER NOT NULL ,"REMIND_TIME" INTEGER,"TYPE" INTEGER,"STATUS" INTEGER NOT NULL );
+
+-- ============================================================================
+-- Table: COLUMN
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "COLUMN" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"SID" TEXT,"USER_ID" TEXT,"PROJECT_ID" TEXT,"NAME" TEXT,"SORT_ORDER" INTEGER,"DELETED" INTEGER NOT NULL ,"CREATED_TIME" INTEGER,"MODIFIED_TIME" INTEGER,"ETAG" TEXT,"STATUS" TEXT);
+
+-- ============================================================================
+-- Table: COMMENT
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "COMMENT" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"sId" TEXT,"TASK_SID" TEXT NOT NULL ,"USER_ID" TEXT NOT NULL ,"PROJECT_SID" TEXT,"TITLE" TEXT,"CREATED_TIME" INTEGER,"MODIFIED_TIME" INTEGER,"userName" TEXT,"_deleted" INTEGER NOT NULL ,"_status" INTEGER NOT NULL ,"OWNER_SID" TEXT,"IS_MYSELF" INTEGER NOT NULL ,"AVATAR_URL" TEXT,"REPLY_COMMENT_ID" TEXT,"REPLY_USER_NAME" TEXT,"AT_LABEL" TEXT,"USER_CODE" TEXT,"ATTACHMENTS" TEXT);
+
+-- ============================================================================
+-- Table: COUNTDOWN
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "COUNTDOWN" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"SID" TEXT,"USER_ID" TEXT,"NAME" TEXT,"DATE" INTEGER,"ICON_RES" TEXT,"COLOR" TEXT,"SORT_ORDER" INTEGER,"STATUS" INTEGER,"IGNORE_YEAR" INTEGER NOT NULL ,"TYPE" INTEGER NOT NULL ,"CALENDAR_TYPE" INTEGER NOT NULL ,"ANNOYING_ALERT" INTEGER,"REMINDERS" TEXT,"REPEAT_FLAG" TEXT,"REMARK" TEXT,"STYLE" TEXT,"BACKGROUND" TEXT,"STYLE_COLOR" TEXT,"DATE_DISPLAY_FORMAT" TEXT,"TYPE_OF_SMART_LIST" INTEGER NOT NULL ,"ARCHIVED_TIME" INTEGER,"PINNED_TIME" INTEGER,"CREATED_TIME" INTEGER,"MODIFIED_TIME" INTEGER,"ETAG" TEXT,"BACKGROUND_STYLE" TEXT,"_deleted" INTEGER,"_sync_status" INTEGER,"TIMER_MODE" INTEGER,"SHOW_AGE" INTEGER,"DAYS_OPTION" INTEGER,"SHOW_REMARK" INTEGER);
+
+-- ============================================================================
+-- Table: COUNTDOWN_REMINDER
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "COUNTDOWN_REMINDER" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"COUNTDOWN_ID" INTEGER NOT NULL ,"USER_ID" TEXT,"REMINDER" TEXT,"REMINDER_TIME" INTEGER,"TYPE" INTEGER,"STATUS" INTEGER NOT NULL );
+
+-- ============================================================================
+-- Table: CalendarArchiveRecord
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "CalendarArchiveRecord" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"EVENT_ID" INTEGER,"TITLE" TEXT,"USER_ID" TEXT,"DUE_START" INTEGER,"OP_TYPE" INTEGER,"OP_TIME" INTEGER);
+
+-- ============================================================================
+-- Table: CalendarEvent
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "CalendarEvent" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"UUID" TEXT,"USER_ID" TEXT,"CALENDAR_ID" INTEGER NOT NULL ,"TITLE" TEXT,"CONTENT" TEXT,"DUE_START" INTEGER,"ORIGINAL_START_TIME" INTEGER,"DUE_END" INTEGER,"COLOR" INTEGER NOT NULL ,"all_day" INTEGER NOT NULL ,"uId" TEXT,"SEQUENCE" INTEGER NOT NULL ,"BIND_CALENDAR_ID" TEXT,"REPEAT_FLAG" TEXT,"REPEAT_FIRST_DATE" INTEGER,"TIME_ZONE" TEXT,"STATUS" INTEGER NOT NULL ,"EX_DATES" TEXT,"ETAG" TEXT,"LOCATION" TEXT,"REMINDERS" TEXT,"SID" TEXT,"_deleted" INTEGER,"ACCOUNT_SITE" TEXT,"UNIQUE_ID" TEXT,"ORIGINAL_CALENDAR_ID" TEXT,"CONFERENCE" TEXT,"TICK_TASK_ID" TEXT,"RECURRENCE" TEXT,"RESPONSE_STATUS" TEXT,"MODIFY_SCOPE" INTEGER);
+
+-- ============================================================================
+-- Table: CalendarEventBlocker
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "CalendarEventBlocker" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"USER_ID" TEXT,"EVENT_UUID" TEXT,"EVENT_ID" INTEGER NOT NULL ,"SUBSCRIBE_ID" TEXT,"SEQUENCE" INTEGER NOT NULL ,"TITLE" TEXT,"due_start" INTEGER,"due_end" INTEGER,"CALENDAR_TYPE" TEXT,"ARCHIVE_SYNC_KEY" INTEGER NOT NULL );
+
+-- ============================================================================
+-- Table: CalendarRefProject
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "CalendarRefProject" ("_id" INTEGER PRIMARY KEY ,"sid" TEXT,"USER_ID" TEXT,"BIND_CALENDAR_ACCOUNT_SID" TEXT,"BIND_CALENDAR_ACCOUNT_ID" INTEGER,"CALENDAR_ID" TEXT,"DEFAULT_TAGS" TEXT,"SYNC_TOKEN" TEXT,"SYNC_PROJECT_ID" TEXT,"SYNC_PROJECT_SCOPE" TEXT,"createdTime" INTEGER,"modifiedTime" INTEGER,"NOTION_DATE_REL" TEXT,"NOTION_CONTENT_REL" TEXT,"NOTION_STATUS_REL" TEXT);
+
+-- ============================================================================
+-- Table: CalendarSubscribeProfile
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "CalendarSubscribeProfile" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"sid" TEXT,"USER_ID" TEXT,"URL" TEXT,"cal_name" TEXT,"STATUS" INTEGER NOT NULL ,"CREATED_TIME" INTEGER,"COLOR" TEXT,"DELETED" INTEGER NOT NULL ,"VISIBLE_STATUS" INTEGER NOT NULL ,"ERROR_CODE" INTEGER NOT NULL ,"KIND" INTEGER NOT NULL ,"REMINDER_ENABLE" INTEGER,"PARSE_NAME" TEXT,"SORT_ORDER" INTEGER,"BACKGROUND_INFO" TEXT);
+
+-- ============================================================================
+-- Table: ConnectCalendarAccount
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "ConnectCalendarAccount" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"sid" TEXT,"USER_ID" TEXT,"ACCOUNT" TEXT,"SITE" TEXT,"REFRESH_TOKEN" TEXT,"createdTime" INTEGER,"modifiedTime" INTEGER,"STATUS" INTEGER NOT NULL ,"NOTION_WORKSPACE_ID" TEXT,"NOTION_WORKSPACE_NAME" TEXT,"NOTION_WORKSPACE_ICON" TEXT,"NOTION_OWNER_NAME" TEXT,"NOTION_OWNER_ID" TEXT,"NOTION_BOT_ID" TEXT,"NOTION_TEMPLATE_ID" TEXT);
+
+-- ============================================================================
+-- Table: CourseDetail
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "CourseDetail" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"SID" TEXT,"NAME" TEXT,"TIMETABLE_SID" TEXT,"TIMETABLE_ID" INTEGER,"COLOR" TEXT,"ITEMS" TEXT);
+
+-- ============================================================================
+-- Table: CourseReminder
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "CourseReminder" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"USER_ID" TEXT,"COURSE_SID" TEXT,"TIMETABLE_SID" TEXT,"REMINDER_TIME" INTEGER,"STATUS" INTEGER NOT NULL ,"NAME" TEXT,"ROOM" TEXT,"TEACHER" TEXT,"START_LESSON" INTEGER NOT NULL ,"END_LESSON" INTEGER NOT NULL );
+
+-- ============================================================================
+-- Table: DELAY_REMINDER
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "DELAY_REMINDER" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"USER_ID" TEXT,"TYPE" TEXT,"OBJ_ID" TEXT,"REMINDER_TIME" INTEGER,"DELAY_TIME" INTEGER,"_deleted" INTEGER,"_status" INTEGER);
+
+-- ============================================================================
+-- Table: EventAttendee
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "EventAttendee" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"ADDITIONAL_GUESTS" INTEGER,"COMMENT" TEXT,"DISPLAY_NAME" TEXT,"EMAIL" TEXT,"OPTIONAL" INTEGER,"ORGANIZER" INTEGER,"RESOURCE" INTEGER,"RESPONSE_STATUS" TEXT,"SELF" INTEGER,"SID" TEXT,"EVENT_ID" INTEGER,"EVENT_UNIQUE_ID" TEXT);
+
+-- ============================================================================
+-- Table: FILTER
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "FILTER" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"SID" TEXT,"USER_ID" TEXT,"NAME" TEXT,"RULE" TEXT,"SORT_ORDER" INTEGER,"SORT_TYPE" INTEGER,"MODIFIED_TIME" INTEGER,"ETAG" TEXT,"_deleted" INTEGER NOT NULL ,"_status" INTEGER NOT NULL ,"VIEW_MODE" TEXT,"TIMELINE_SORT_TYPE" INTEGER,"TIMELINE_GROUP_BY" INTEGER,"TIMELINE_ORDER_BY" INTEGER,"GROUP_BY" INTEGER,"ORDER_BY" INTEGER,"BACKGROUND_INFO" TEXT,"_order" TEXT);
+
+-- ============================================================================
+-- Table: FILTER_SYNCED_JSON
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "FILTER_SYNCED_JSON" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"USER_ID" TEXT,"FILTER_SID" TEXT,"json" TEXT);
+
+-- ============================================================================
+-- Table: FROZEN_HABIT_DATA
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "FROZEN_HABIT_DATA" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"HABIT_ID" TEXT,"LAST_CHECKIN_STAMP" INTEGER,"CHECKED_TIMES_OF_LAST_WEEK" INTEGER,"END_DATE" INTEGER,"LONGEST_STREAK" INTEGER,"TOTAL_CHECK_INS" INTEGER,"LAST_STREAK" INTEGER,"WEEK_START" INTEGER,"RECURRENCE_RULE" TEXT,"USER_ID" TEXT);
+
+-- ============================================================================
+-- Table: FavLocation
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "FavLocation" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"SID" TEXT,"USER_ID" TEXT,"LATITUDE" REAL NOT NULL ,"LONGITUDE" REAL NOT NULL ,"RADIUS" REAL NOT NULL ,"ALIAS" TEXT,"ADDRESS" TEXT,"shortAddress" TEXT,"createdTime" INTEGER,"modifiedTime" INTEGER,"ETAG" TEXT,"_deleted" INTEGER NOT NULL ,"_status" INTEGER NOT NULL );
+
+-- ============================================================================
+-- Table: FeaturePromptRecord
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "FeaturePromptRecord" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"USER_ID" TEXT,"_status" INTEGER NOT NULL ,"TODAY_BANNER" INTEGER NOT NULL ,"INBOX_BANNER" INTEGER NOT NULL ,"CALENDAR_BANNER" INTEGER NOT NULL ,"POMO_TASK_BANNER" INTEGER NOT NULL ,"POMO_BANNER" INTEGER NOT NULL ,"LEVEL_BANNER" INTEGER NOT NULL ,"LINK_TASK_TIPS" INTEGER NOT NULL );
+
+-- ============================================================================
+-- Table: FocusOptionModel
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "FocusOptionModel" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"S_ID" TEXT,"O_ID" TEXT,"O_TYPE" INTEGER NOT NULL ,"OP" TEXT,"DURATION" INTEGER NOT NULL ,"FIRST_FOCUS_ID" TEXT,"FOCUS_ON_ID" TEXT,"FOCUS_ON_TYPE" INTEGER NOT NULL ,"FOCUS_ON_TITLE" TEXT,"AUTO_POMO_LEFT" INTEGER NOT NULL ,"POMO_COUNT" INTEGER NOT NULL ,"TIME" INTEGER,"MANUAL" INTEGER,"USER_ID" TEXT,"NOTE" TEXT);
+
+-- ============================================================================
+-- Table: HABIT
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "HABIT" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"SID" TEXT,"USER_ID" TEXT,"NAME" TEXT,"ICON_RES" TEXT,"COLOR" TEXT,"SORT_ORDER" INTEGER,"STATUS" INTEGER,"ENCOURAGEMENT" TEXT,"CURRENT_STREAK" INTEGER,"MAX_STREAK" INTEGER,"TOTAL_CHECK_INS" INTEGER,"CREATED_TIME" INTEGER,"MODIFIED_TIME" INTEGER,"ETAG" TEXT,"_deleted" INTEGER,"_sync_status" INTEGER,"REPEAT_RULE" TEXT,"REMINDERS" TEXT,"TYPE" TEXT,"GOAL" REAL NOT NULL ,"RECORD_ENABLED" INTEGER,"SECTION_ID" TEXT,"STEP" REAL NOT NULL ,"UNIT" TEXT,"TARGET_DAYS" INTEGER,"TARGET_START_DATE" INTEGER,"COMPLETED_CYCLES" INTEGER,"EX_DATES" TEXT,"ARCHIVED_TIME" INTEGER,"ANNOYING_ALERT" INTEGER);
+
+-- ============================================================================
+-- Table: HABIT_CHECK_IN
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "HABIT_CHECK_IN" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"SID" TEXT,"USER_ID" TEXT,"HABIT_ID" TEXT,"CHECK_IN_STAMP" INTEGER,"CHECK_IN_TIME" INTEGER,"OP_TIME" INTEGER,"VALUE" REAL NOT NULL ,"GOAL" REAL NOT NULL ,"CHECK_IN_STATUS" INTEGER,"_deleted" INTEGER,"_status" INTEGER);
+
+-- ============================================================================
+-- Table: HABIT_CONFIG
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "HABIT_CONFIG" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"_status" INTEGER NOT NULL ,"USER_ID" TEXT,"RECORD_ENABLED" INTEGER NOT NULL ,"SHOW_IN_CALENDAR" INTEGER NOT NULL ,"SHOW_IN_TODAY" INTEGER NOT NULL ,"SORT_TYPE" TEXT,"DEFAULT_SECTION" TEXT);
+
+-- ============================================================================
+-- Table: HABIT_RECORD
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "HABIT_RECORD" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"HABIT_SID" TEXT,"CONTENT" TEXT,"STAMP" INTEGER,"SID" TEXT,"USER_ID" TEXT,"_deleted" INTEGER,"_status" INTEGER,"EMOJI" INTEGER,"OP_TIME" INTEGER);
+
+-- ============================================================================
+-- Table: HABIT_REMINDER
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "HABIT_REMINDER" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"HABIT_ID" INTEGER NOT NULL ,"USER_ID" TEXT,"REMINDER" TEXT,"REMINDER_TIME" INTEGER,"TYPE" INTEGER,"STATUS" INTEGER NOT NULL );
+
+-- ============================================================================
+-- Table: HABIT_SECTION
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "HABIT_SECTION" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"SID" TEXT,"USER_ID" TEXT,"NAME" TEXT,"SORT_ORDER" INTEGER,"SYNC_STATUS" TEXT,"DELETED" INTEGER,"ETAG" TEXT);
+
+-- ============================================================================
+-- Table: HABIT_SYNC_CHECK_IN_STAMP
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "HABIT_SYNC_CHECK_IN_STAMP" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"USER_ID" TEXT,"HABIT_ID" TEXT,"STAMP" INTEGER NOT NULL ,"RECORD_STAMP" INTEGER NOT NULL );
+
+-- ============================================================================
+-- Table: HISTORICAL_STATISTICS_DATA
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "HISTORICAL_STATISTICS_DATA" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"SEARCH_DATE" INTEGER,"USER_ID" TEXT,"BY_DAYS" TEXT,"COMPLETED_RATE_BY_WEEKS" TEXT,"COMPLETED_RATE_BY_MONTHS" TEXT,"DAILY_SCORES" TEXT);
+
+-- ============================================================================
+-- Table: HOLIDAY
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "HOLIDAY" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"DATE" INTEGER,"holiday_type" INTEGER NOT NULL );
+
+-- ============================================================================
+-- Table: JAPAN_HOLIDAY
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "JAPAN_HOLIDAY" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"DATE" TEXT,"NAME" TEXT);
+
+-- ============================================================================
+-- Table: LOCATION
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "LOCATION" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"GEOFENCE_ID" TEXT,"TASK_ID" INTEGER,"TASK_SID" TEXT,"USER_ID" TEXT,"LATITUDE" REAL NOT NULL ,"LONGITUDE" REAL NOT NULL ,"RADIUS" REAL NOT NULL ,"TRANSITION_TYPE" INTEGER NOT NULL ,"ADDRESS" TEXT,"SHORT_ADDRESS" TEXT,"ALIAS" TEXT,"ALERT_STATUS" INTEGER NOT NULL ,"FIRED_TIME" INTEGER,"CREATED_TIME" INTEGER,"MODIFIED_TIME" INTEGER,"_status" INTEGER NOT NULL ,"_deleted" INTEGER NOT NULL ,"_history" TEXT);
+
+-- ============================================================================
+-- Table: LocationReminder
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "LocationReminder" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"taskId" INTEGER NOT NULL ,"locationId" INTEGER NOT NULL ,"GID" TEXT,"STATUS" INTEGER NOT NULL );
+
+-- ============================================================================
+-- Table: LunarCache
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "LunarCache" ("_id" INTEGER PRIMARY KEY ,"TIMEZONE" TEXT,"YEAR" INTEGER NOT NULL ,"MONTH" INTEGER NOT NULL ,"DAY_OF_MONTH" INTEGER NOT NULL ,"LUNAR_DAY" TEXT,"LUNAR_MONTH" TEXT,"HOLIDAY" TEXT,"IS_HOLIDAY" INTEGER NOT NULL );
+
+-- ============================================================================
+-- Table: MATRIX_PROFILE
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "MATRIX_PROFILE" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"SID" TEXT,"USER_ID" TEXT,"NAME" TEXT,"SORT_ORDER" INTEGER NOT NULL ,"createdTime" INTEGER,"modifiedTime" INTEGER,"ETAG" TEXT,"_deleted" INTEGER NOT NULL ,"_status" INTEGER NOT NULL );
+
+-- ============================================================================
+-- Table: MATRIX_QUADRANT
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "MATRIX_QUADRANT" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"MATRIX_SID" TEXT,"QUADRANT" INTEGER NOT NULL ,"NAME" TEXT,"RULE" TEXT,"SORT_TYPE" TEXT,"SORT_ORDER" INTEGER NOT NULL ,"GROUP_BY" TEXT,"ORDER_BY" TEXT,"_order" TEXT,"ETAG" TEXT,"_deleted" INTEGER NOT NULL ,"_status" INTEGER NOT NULL ,"createdTime" INTEGER,"modifiedTime" INTEGER);
+
+-- ============================================================================
+-- Table: Notification
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "Notification" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"SID" TEXT,"USER_ID" TEXT,"TITLE" TEXT,"TYPE" TEXT,"DATA" TEXT,"ACTION_STATUS" INTEGER NOT NULL ,"CREATED_TIME" INTEGER NOT NULL ,"UNREAD" INTEGER NOT NULL ,"_deleted" INTEGER NOT NULL ,"_status" INTEGER NOT NULL );
+
+-- ============================================================================
+-- Table: OtherCalendar
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "OtherCalendar" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"YEAR" INTEGER NOT NULL ,"MONTH" INTEGER NOT NULL ,"DAY_OF_MONTH" INTEGER NOT NULL ,"DAY_NAME" TEXT,"MONTH_NAME" TEXT,"YEAR_NAME" TEXT,"CALENDAR_TYPE" TEXT,"LANGUAGE" TEXT,"IS_FIRST_DAY_OF_MONTH" INTEGER NOT NULL );
+
+-- ============================================================================
+-- Table: POMODORO_TASK_BRIEF
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "POMODORO_TASK_BRIEF" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"START_TIME" INTEGER,"END_TIME" INTEGER,"TAGS" TEXT,"POMODORO_ID" INTEGER NOT NULL ,"TASK_ID" INTEGER NOT NULL ,"TASK_SID" TEXT,"TITLE" TEXT,"PROJECT_NAME" TEXT,"ENTITY_TYPE" INTEGER NOT NULL ,"TIMER_ID" TEXT,"TIMER_NAME" TEXT);
+
+-- ============================================================================
+-- Table: PROJECT
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "PROJECT" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"SID" TEXT,"USER_ID" TEXT,"NAME" TEXT,"COLOR" TEXT,"SORT_ORDER" INTEGER NOT NULL ,"SORT_TYPE" INTEGER,"GROUP_BY" INTEGER,"ORDER_BY" INTEGER,"DEFAULT_PROJECT" INTEGER NOT NULL ,"SHOW_IN_ALL" INTEGER NOT NULL ,"MUTED" INTEGER NOT NULL ,"USER_COUNT" INTEGER NOT NULL ,"createdTime" INTEGER,"modifiedTime" INTEGER,"ETAG" TEXT,"_deleted" INTEGER NOT NULL ,"_status" INTEGER NOT NULL ,"CLOSED" INTEGER NOT NULL ,"NEED_PULL_TASKS" INTEGER NOT NULL ,"PROJECT_GROUP_SID" TEXT,"PERMISSION" TEXT,"IS_OWNER" INTEGER NOT NULL ,"NOTIFICATION_OPTIONS" TEXT,"TEAM_ID" TEXT,"VIEW_MODE" TEXT,"DEFAULT_COLUMN" TEXT,"KIND" TEXT,"TIMELINE_SORT_TYPE" INTEGER,"TIMELINE_GROUP_BY" INTEGER,"TIMELINE_ORDER_BY" INTEGER,"_order" TEXT,"NEED_AUDIT" INTEGER NOT NULL ,"BARCODE_NEED_AUDIT" INTEGER NOT NULL ,"OPEN_TO_TEAM" INTEGER NOT NULL ,"TEAM_MEMBER_PERMISSION" TEXT,"SOURCE" INTEGER NOT NULL ,"SHOW_TYPE" INTEGER,"REMINDER_TYPE" INTEGER,"BACKGROUND_INFO" TEXT);
+
+-- ============================================================================
+-- Table: PROJECT_GROUP_SYNCED_JSON
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "PROJECT_GROUP_SYNCED_JSON" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"USER_ID" TEXT,"PROJECT_GROUP_SID" TEXT,"json" TEXT);
+
+-- ============================================================================
+-- Table: PROJECT_SYNCED_JSON
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "PROJECT_SYNCED_JSON" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"USER_ID" TEXT,"PROJECT_SID" TEXT,"json" TEXT);
+
+-- ============================================================================
+-- Table: PROJECT_TEMPLATE
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "PROJECT_TEMPLATE" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"SID" TEXT,"KEYWORD" TEXT,"NAME" TEXT);
+
+-- ============================================================================
+-- Table: PUSH_TEST_MODEL
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "PUSH_TEST_MODEL" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"UUID" TEXT,"MODEL" TEXT,"OS_VERSION" INTEGER NOT NULL ,"TIME" TEXT);
+
+-- ============================================================================
+-- Table: Pomodoro
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "Pomodoro" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"SID" TEXT,"USER_ID" TEXT,"TASK_SID" TEXT,"POMO_STATUS" INTEGER NOT NULL ,"START_TIME" INTEGER NOT NULL ,"END_TIME" INTEGER NOT NULL ,"NEED_POST" INTEGER NOT NULL ,"STATUS" INTEGER NOT NULL ,"PAUSE_DURATION" INTEGER NOT NULL ,"TYPE" INTEGER NOT NULL ,"NOTE" TEXT,"ADDED" INTEGER NOT NULL ,"_deleted" INTEGER NOT NULL ,"ADJUST_TIME" INTEGER);
+
+-- ============================================================================
+-- Table: PomodoroConfig
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "PomodoroConfig" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"_status" INTEGER NOT NULL ,"USER_ID" TEXT,"POMO_DURATION" INTEGER NOT NULL ,"SHORT_BREAK_DURATION" INTEGER NOT NULL ,"LONG_BREAK_DURATION" INTEGER NOT NULL ,"LONG_BREAK_INTERVAL" INTEGER NOT NULL ,"AUTO_POMO" INTEGER NOT NULL ,"AUTO_BREAK" INTEGER NOT NULL ,"LIGHTS_ON" INTEGER NOT NULL ,"IS_IN_FOCUS_MODE" INTEGER NOT NULL ,"DAILY_TARGET_POMO" INTEGER NOT NULL ,"FOCUS_DURATION" INTEGER NOT NULL );
+
+-- ============================================================================
+-- Table: PomodoroSummary
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "PomodoroSummary" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"TASK_ID" INTEGER NOT NULL ,"USER_SID" TEXT,"COUNT" INTEGER NOT NULL ,"duration" INTEGER NOT NULL ,"timerDuration" INTEGER NOT NULL ,"ESTIMATED_POMO" INTEGER NOT NULL ,"estimatedDuration" INTEGER NOT NULL ,"focuses" TEXT);
+
+-- ============================================================================
+-- Table: PresetTaskExtra
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "PresetTaskExtra" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"TASK_SID" TEXT,"ACTIONS" TEXT,"RESOURCES" TEXT);
+
+-- ============================================================================
+-- Table: RECENT_REMINDER
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "RECENT_REMINDER" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"TRIGGER" TEXT,"TYPE" INTEGER NOT NULL ,"UPDATE_DATE" INTEGER);
+
+-- ============================================================================
+-- Table: RECENT_STATISTICS_DATA
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "RECENT_STATISTICS_DATA" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"USER_ID" TEXT,"DAILY_SCORES" TEXT,"LAST7_DAYS" TEXT,"LAST7_WEEKS" TEXT,"LAST7_MONTHS" TEXT,"CURRENT_WEEK_COMPLETED_RATE" REAL NOT NULL ,"LAST_WEEK_COMPLETED_RATE" REAL NOT NULL );
+
+-- ============================================================================
+-- Table: Ranking
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "Ranking" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL ,"userId" TEXT,"ranking" INTEGER NOT NULL ,"taskCount" INTEGER NOT NULL ,"projectCount" INTEGER NOT NULL ,"dayCount" INTEGER NOT NULL ,"completedCount" INTEGER NOT NULL ,"score" INTEGER NOT NULL ,"level" INTEGER NOT NULL );
+
+-- ============================================================================
+-- Table: RecentContant
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "RecentContant" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"EMAIL" TEXT,"userId" TEXT,"avatarUrl" TEXT,"FREQUENCY" INTEGER NOT NULL ,"NAME" TEXT,"MODIFIED_TIME" INTEGER NOT NULL ,"_deleted" INTEGER NOT NULL ,"USER_CODE" TEXT,"TEAM_ID" TEXT,"PHONE" TEXT,"SITE_ID" INTEGER);
+
+-- ============================================================================
+-- Table: ReferAttachment
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "ReferAttachment" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"ATTACHMENT_SID" TEXT,"REF_ATTACHMENT_SID" TEXT,"USER_ID" TEXT);
+
+-- ============================================================================
+-- Table: ReminderTraceStep
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "ReminderTraceStep" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"trace_key" TEXT,"flow_id" TEXT,"stage" TEXT,"reminder_id" INTEGER,"planned_time" INTEGER,"actual_time" INTEGER,"result" TEXT,"ext" TEXT);
+
+-- ============================================================================
+-- Table: RepeatInstance
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "RepeatInstance" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"entity_id" TEXT,"START_TIME" INTEGER,"END_TIME" INTEGER);
+
+-- ============================================================================
+-- Table: RepeatInstanceFetchPoint
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "RepeatInstanceFetchPoint" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"entity_id" TEXT,"fetch_begin_time" INTEGER,"fetch_end_time" INTEGER,"HASH_TAG" INTEGER);
+
+-- ============================================================================
+-- Table: ResolveInfo
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "ResolveInfo" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"modifyTime" INTEGER,"activityName" TEXT,"packageName" TEXT);
+
+-- ============================================================================
+-- Table: SECTION_FOLDED_STATUS
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "SECTION_FOLDED_STATUS" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"USER_ID" TEXT,"ENTITY_TYPE" INTEGER NOT NULL ,"ENTITY_ID" TEXT,"SORT_TYPE" INTEGER,"IS_FOLDED" INTEGER NOT NULL ,"LABEL" TEXT);
+
+-- ============================================================================
+-- Table: SIMPLE_WIDGET_CONFIG
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "SIMPLE_WIDGET_CONFIG" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"APP_WIDGET_ID" INTEGER NOT NULL ,"USER_ID" TEXT,"FLAGS" INTEGER NOT NULL ,"EXTRA_CONFIG" TEXT,"ALPHA" INTEGER NOT NULL ,"THEME_TYPE" INTEGER NOT NULL ,"IS_AUTO_DARK_MODE" INTEGER NOT NULL );
+
+-- ============================================================================
+-- Table: SKIPPED_HABIT
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "SKIPPED_HABIT" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"USER_ID" TEXT,"HABIT_ID" TEXT,"DATE" INTEGER);
+
+-- ============================================================================
+-- Table: SLIDE_MENU_PINNED
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "SLIDE_MENU_PINNED" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"USER_ID" TEXT,"ENTITY_ID" TEXT,"SORT_ORDER" INTEGER,"modifiedTime" INTEGER,"_status" INTEGER NOT NULL ,"ENTITY_TYPE" INTEGER NOT NULL );
+
+-- ============================================================================
+-- Table: SORT_ORDER_IN_SECTION
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "SORT_ORDER_IN_SECTION" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"USER_ID" TEXT,"SORT_ORDER" INTEGER NOT NULL ,"_status" INTEGER NOT NULL ,"ENTITY_TYPE" INTEGER NOT NULL ,"ENTITY_ID" TEXT,"LIST_ID" TEXT,"GROUP_BY" TEXT,"ORDER_BY" TEXT,"_order" TEXT,"DELETED" INTEGER,"SECTION_ID" TEXT);
+
+-- ============================================================================
+-- Table: SYNC_STATUS
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "SYNC_STATUS" ("_id" INTEGER PRIMARY KEY ,"USER_ID" TEXT,"ENTITY_ID" TEXT NOT NULL ,"_type" INTEGER NOT NULL ,"MOVE_FROM_ID" TEXT,"CREATE_TIME" INTEGER);
+
+-- ============================================================================
+-- Table: ScheduleCalendarReminder
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "ScheduleCalendarReminder" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"eventId" INTEGER NOT NULL ,"reminderTime" INTEGER,"DUE_START" INTEGER,"STATUS" INTEGER NOT NULL ,"TYPE" INTEGER NOT NULL );
+
+-- ============================================================================
+-- Table: ScheduleReminder
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "ScheduleReminder" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"REMINDER_ID" INTEGER NOT NULL ,"taskId" INTEGER NOT NULL ,"reminderTime" INTEGER,"dueDate" INTEGER,"DURATION" TEXT,"TYPE" INTEGER,"STATUS" INTEGER NOT NULL );
+
+-- ============================================================================
+-- Table: SearchHistory
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "SearchHistory" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"search_key" TEXT,"entity_id" TEXT,"user_id" TEXT,"created_time" INTEGER);
+
+-- ============================================================================
+-- Table: TAG_SYNCED_JSON
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "TAG_SYNCED_JSON" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"USER_ID" TEXT,"TAG_NAME" TEXT,"json" TEXT);
+
+-- ============================================================================
+-- Table: TASK_EXTRA_DATA
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "TASK_EXTRA_DATA" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"USER_ID" TEXT,"TASK_SID" TEXT,"DATE_EDIT_COUNT" INTEGER,"ESTIMATED_DURATION" INTEGER,"IMPORTANCE" INTEGER);
+
+-- ============================================================================
+-- Table: TASK_SORT_ORDER_IN_PINNED
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "TASK_SORT_ORDER_IN_PINNED" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"USER_ID" TEXT,"TASK_SERVER_ID" TEXT,"SORT_ORDER" INTEGER NOT NULL ,"modifiedTime" INTEGER,"_status" INTEGER NOT NULL ,"ENTITY_TYPE" INTEGER NOT NULL ,"ENTITY_SID" TEXT);
+
+-- ============================================================================
+-- Table: TASK_SORT_ORDER_IN_PRIORITY
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "TASK_SORT_ORDER_IN_PRIORITY" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"USER_ID" TEXT,"PRIORITY" INTEGER NOT NULL ,"TASK_SERVER_ID" TEXT,"SORT_ORDER" INTEGER NOT NULL ,"modifiedTime" INTEGER,"_status" INTEGER NOT NULL ,"ENTITY_TYPE" INTEGER NOT NULL ,"ENTITY_SID" TEXT);
+
+-- ============================================================================
+-- Table: TASK_SORT_ORDER_IN_TAG
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "TASK_SORT_ORDER_IN_TAG" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"USER_ID" TEXT,"TASK_SERVER_ID" TEXT,"SORT_ORDER" INTEGER NOT NULL ,"modifiedTime" INTEGER,"_status" INTEGER NOT NULL ,"ENTITY_TYPE" INTEGER NOT NULL ,"ENTITY_SID" TEXT,"TAG" TEXT);
+
+-- ============================================================================
+-- Table: TASK_SYNCED_JSON
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "TASK_SYNCED_JSON" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"USER_ID" TEXT,"TASK_SID" TEXT,"json" TEXT);
+
+-- ============================================================================
+-- Table: TEAM
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "TEAM" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"SID" TEXT,"USER_ID" TEXT,"NAME" TEXT,"CREATED_TIME" INTEGER,"MODIFIED_TIME" INTEGER,"JOINED_TIME" INTEGER,"EXPIRED_DATE" INTEGER,"EXPIRED" INTEGER NOT NULL ,"IS_FOLDED" INTEGER NOT NULL ,"TEAM_PRO" INTEGER NOT NULL );
+
+-- ============================================================================
+-- Table: TEAM_MEMBER
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "TEAM_MEMBER" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"TEAM_SID" TEXT,"USER_ID" TEXT,"ROLE" INTEGER NOT NULL ,"USER_CODE" TEXT,"DISPLAY_NAME" TEXT,"AVATAR_URL" TEXT,"IS_MYSELF" INTEGER NOT NULL ,"EMAIL" TEXT,"NICK_NAME" TEXT,"JOINED_TIME" INTEGER,"DELETED" INTEGER NOT NULL ,"SITE_ID" INTEGER);
+
+-- ============================================================================
+-- Table: TagSortType
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "TagSortType" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"user_id" TEXT,"tag" TEXT,"tag_list_sort_type" INTEGER);
+
+-- ============================================================================
+-- Table: TaskCalendarEventMap
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "TaskCalendarEventMap" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"TASK_ID" INTEGER,"EVENT_ID" INTEGER,"TITLE" TEXT,"CONTENT" TEXT,"START_DATE" INTEGER,"END_DATE" INTEGER,"TIME_ZONE" TEXT,"IS_ALL_DAY" INTEGER,"REPEAT_FLAG" TEXT,"REPEAT_FROM" TEXT,"IS_RECURRING" INTEGER,"RECURRING_INDEX" INTEGER,"REMINDER" INTEGER);
+
+-- ============================================================================
+-- Table: TaskGoogleEventInfo
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "TaskGoogleEventInfo" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"REMOTE_ID" TEXT,"USER_ID" TEXT,"PROJECT_ID" TEXT,"TASK_ID" TEXT,"CONNECT_ID" TEXT,"CALENDAR_ID" TEXT,"EVENT_ID" TEXT,"LOCATION" TEXT,"ATTENDEES" TEXT,"MEETING" TEXT,"HTML_LINK" TEXT,"ETAG" TEXT,"DELETED" INTEGER NOT NULL ,"ETIMESTAMP" INTEGER NOT NULL ,"CREATED_TIME" INTEGER NOT NULL ,"MODIFIED_TIME" INTEGER NOT NULL );
+
+-- ============================================================================
+-- Table: TaskGoogleEventInfoSyncState
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "TaskGoogleEventInfoSyncState" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"USER_ID" TEXT,"CHECKPOINT" INTEGER NOT NULL ,"NEXT_CURSOR" TEXT,"HAS_MORE" INTEGER NOT NULL );
+
+-- ============================================================================
+-- Table: TaskReminder
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "TaskReminder" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"SID" TEXT,"USER_ID" TEXT,"TASK_ID" INTEGER NOT NULL ,"TASK_SID" TEXT NOT NULL ,"DURATION" TEXT);
+
+-- ============================================================================
+-- Table: TaskSortOrderInDate
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "TaskSortOrderInDate" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"USER_ID" TEXT,"DATE" TEXT,"PROJECT_ID" INTEGER NOT NULL ,"TASK_SERVER_ID" TEXT,"SORT_ORDER" INTEGER NOT NULL ,"modifiedTime" INTEGER,"_status" INTEGER NOT NULL ,"ENTITY_TYPE" INTEGER NOT NULL ,"ENTITY_SID" TEXT);
+
+-- ============================================================================
+-- Table: TaskSortOrderInList
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "TaskSortOrderInList" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"USER_ID" TEXT,"TASK_SERVER_ID" TEXT,"SORT_ORDER" INTEGER NOT NULL ,"modifiedTime" INTEGER,"_status" INTEGER NOT NULL ,"LIST_ID" TEXT,"ENTITY_TYPE" INTEGER NOT NULL ,"ENTITY_SID" TEXT);
+
+-- ============================================================================
+-- Table: Task_Default
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "Task_Default" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"USER_ID" TEXT,"DEFAULT_PRIORITY" INTEGER NOT NULL ,"DEFAULT_DUEDATE" INTEGER NOT NULL ,"DEFAULT_REMIND_BEFORE" TEXT NOT NULL ,"DEFAULT_TIME_MODE" INTEGER NOT NULL ,"DEFAULT_TIME_DURATION" INTEGER NOT NULL ,"DEFAULT_TO_ADD" INTEGER NOT NULL ,"DEFAULT_ADREMINDERS" TEXT,"DEFAULT_PROJECT_SID" TEXT);
+
+-- ============================================================================
+-- Table: Tasks2
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "Tasks2" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"SID" TEXT,"ATTEND_ID" TEXT,"USER_ID" TEXT,"PROJECT_ID" INTEGER,"PROJECT_SID" TEXT,"SORT_ORDER" INTEGER,"TASK_STATUS" INTEGER NOT NULL ,"COMPLETED_TIME" INTEGER,"TITLE" TEXT,"CONTENT" TEXT,"DUE_DATE" INTEGER,"SERVER_DUE_DATE" INTEGER,"RepeatFirstDate" INTEGER,"REMINDER" TEXT,"repeatFlag" TEXT,"repeatTaskId" TEXT,"USER_COUNT" INTEGER NOT NULL ,"PRIORITY" INTEGER,"createdTime" INTEGER,"modifiedTime" INTEGER,"ETAG" TEXT,"_deleted" INTEGER,"_status" INTEGER,"PRIOR_CONTENT" TEXT,"PRIOR_TITLE" TEXT,"KIND" TEXT,"TIME_ZONE" TEXT,"REPEAT_REMINDER_TIME" INTEGER,"repeatFrom" TEXT,"HAS_ATTACHMENT" INTEGER NOT NULL ,"TAGS" TEXT,"COMMENT_COUNT" INTEGER NOT NULL ,"ASSIGNEE" INTEGER NOT NULL ,"IMG_MODE" INTEGER,"isAllDay" INTEGER NOT NULL ,"IS_FLOATING" INTEGER NOT NULL ,"DESC" TEXT,"PROGRESS" INTEGER,"START_DATE" INTEGER,"SERVER_START_DATE" INTEGER,"CREATOR" INTEGER NOT NULL ,"COMPLETED_USER_ID" INTEGER NOT NULL ,"COLUMN_ID" TEXT,"COLUMN_UID" INTEGER,"PARENT_SID" TEXT,"COLLAPSED" INTEGER NOT NULL ,"PINNED_TIME" INTEGER,"LOCAL_UNPINNED" INTEGER NOT NULL ,"CHILD_IDS" TEXT,"reminder_time" INTEGER,"EX_DATE" TEXT,"CURRENT_TASK_HAS_RECOGNIZED" INTEGER NOT NULL ,"ANNOYING_ALERT" INTEGER,"NOTION_BLOCK" TEXT,"TASK_TYPE" INTEGER);
+
+-- ============================================================================
+-- Table: Timer
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "Timer" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"SID" TEXT,"USER_ID" TEXT,"ICON" TEXT,"COLOR" TEXT,"NAME" TEXT,"OBJ_TYPE" TEXT,"OBJ_ID" TEXT,"TYPE" TEXT,"POMODORO_TIME" INTEGER NOT NULL ,"STATUS" INTEGER NOT NULL ,"SORT_ORDER" INTEGER NOT NULL ,"ETAG" TEXT,"createdTime" INTEGER,"modifiedTime" INTEGER,"archivedTime" INTEGER,"_deleted" INTEGER,"_status" INTEGER,"TODAY_FOCUS" INTEGER NOT NULL ,"DAY_COUNT" INTEGER NOT NULL ,"TOTAL_DURATION" INTEGER NOT NULL );
+
+-- ============================================================================
+-- Table: TimerRecentData
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "TimerRecentData" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"TIMER_ID" INTEGER,"PAGE_DATA" TEXT,"INTERVAL" TEXT,"START_DATE_INT" INTEGER NOT NULL ,"END_DATE_INT" INTEGER NOT NULL ,"SAVED_TIME" INTEGER);
+
+-- ============================================================================
+-- Table: Timetable
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "Timetable" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"SID" TEXT,"USER_ID" TEXT,"SCHOOL_ID" TEXT,"NAME" TEXT,"START_DATE" INTEGER,"MODIFIED_TIME" INTEGER,"DELETED" INTEGER,"ETAG" TEXT,"STATUS" INTEGER,"REMINDERS" TEXT,"LESSON_TIMES" TEXT,"WEEK_COUNT" INTEGER,"SORT_ORDER" INTEGER,"CREATED_TIME" INTEGER);
+
+-- ============================================================================
+-- Table: UserPublicProfile
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "UserPublicProfile" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"USER_CODE" TEXT,"displayName" TEXT,"avatarUrl" TEXT,"isMyself" INTEGER NOT NULL ,"STATUS" INTEGER NOT NULL ,"EMAIL" TEXT,"NICKNAME" TEXT,"accountDomain" TEXT,"SITE_ID" INTEGER);
+
+-- ============================================================================
+-- Table: WIDGET_CONFIGURATION
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "WIDGET_CONFIGURATION" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"APP_WIDGET_ID" INTEGER NOT NULL ,"USER_ID" TEXT,"ENTITY_TYPE" INTEGER NOT NULL ,"ENTITY_ID" TEXT,"SORT_TYPE" INTEGER,"FONT_SIZE" INTEGER NOT NULL ,"ENABLE_CURRENT_DATE" INTEGER NOT NULL ,"LIST_CLICK_ACTION" INTEGER NOT NULL ,"UNDONE_CLICK_ACTION" INTEGER NOT NULL ,"WIDGET_THEME" INTEGER NOT NULL ,"IS_HIDE_DATE" INTEGER NOT NULL ,"ALPHA" INTEGER NOT NULL ,"SHOW_LUNAR" INTEGER NOT NULL ,"SHOW_COMPLETE_TASKS" INTEGER NOT NULL ,"SHOW_TASK_DETAIL" INTEGER NOT NULL ,"SHOW_OFFICE_REST_DAY" INTEGER NOT NULL ,"THREE_DAY_START_TIME" TEXT,"THREE_DAY_END_TIME" TEXT,"FILTER_SIDS" TEXT,"SHOW_REPEAT_INSTANCES" INTEGER NOT NULL ,"IS_PARENT_TAG" INTEGER NOT NULL ,"TIMELINE_HEIGHT_OFFSET" INTEGER NOT NULL ,"GROUP_BY" INTEGER,"ORDER_BY" INTEGER,"WIDTH" INTEGER NOT NULL ,"HEIGHT" INTEGER NOT NULL ,"FAKE_WIDTH" INTEGER NOT NULL ,"FAKE_HEIGHT" INTEGER NOT NULL ,"LAND_WIDTH" INTEGER NOT NULL ,"LAND_HEIGHT" INTEGER NOT NULL ,"FAKE_LAND_WIDTH" INTEGER NOT NULL ,"FAKE_LAND_HEIGHT" INTEGER NOT NULL ,"LEGACY_MODE" INTEGER NOT NULL ,"CELL_ITEM_COUNT" INTEGER NOT NULL ,"AUTO_DARK_MODE" INTEGER NOT NULL ,"IS_PORTRAIT" INTEGER NOT NULL ,"CONFIG_COMPLETED" INTEGER NOT NULL ,"CORNER" INTEGER NOT NULL ,"PADDING_TOP" INTEGER NOT NULL ,"TITLE_PADDING_TOP" INTEGER NOT NULL ,"TEXT_COLOR" INTEGER NOT NULL ,"ONLY_TASK" INTEGER NOT NULL ,"SHOW_OVERDUE" INTEGER NOT NULL ,"FLAGS" INTEGER NOT NULL );
+
+-- ============================================================================
+-- Table: WIDGET_EXTENSIBLE_CONFIG
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "WIDGET_EXTENSIBLE_CONFIG" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"APP_WIDGET_ID" INTEGER NOT NULL ,"USER_ID" TEXT,"TYPE" INTEGER NOT NULL ,"CONFIG_JSON" TEXT);
+
+-- ============================================================================
+-- Table: WIDGET_SIZE
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "WIDGET_SIZE" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"PROVIDER_SIZE" INTEGER NOT NULL ,"CALCULATE_SIZE" INTEGER NOT NULL ,"TYPE" INTEGER NOT NULL );
+
+-- ============================================================================
+-- Table: checklist_item
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "checklist_item" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"sId" TEXT,"TASK_ID" INTEGER NOT NULL ,"TASK_SID" TEXT,"USER_ID" TEXT,"TITLE" TEXT,"CHECKED" INTEGER NOT NULL ,"SORT_ORDER" INTEGER,"CREATED_TIME" INTEGER,"MODIFIED_TIME" INTEGER,"START_DATE" INTEGER,"SERVER_START_DATE" INTEGER,"ALL_DAY" INTEGER NOT NULL ,"SNOOZE_REMINDER_TIME" INTEGER,"COMPLETED_TIME" INTEGER,"_deleted" INTEGER NOT NULL ,"_status" INTEGER NOT NULL ,"TIME_ZONE" TEXT);
+
+-- ============================================================================
+-- Table: push_param
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS "push_param" ("_id" INTEGER PRIMARY KEY AUTOINCREMENT ,"SID" TEXT,"USER_ID" TEXT,"REG_ID" TEXT,"REG_APP_VERSION" INTEGER NOT NULL ,"REGISTED_TIME" INTEGER NOT NULL ,"_deleted" INTEGER NOT NULL ,"_status" INTEGER NOT NULL ,"PUSH_TYPE" INTEGER);
+

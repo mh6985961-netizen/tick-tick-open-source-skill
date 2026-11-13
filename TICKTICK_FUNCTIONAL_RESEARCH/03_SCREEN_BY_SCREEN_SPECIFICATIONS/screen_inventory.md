@@ -1,0 +1,32 @@
+# Screen Inventory & Master Navigation Map
+
+## 1. Overview
+This directory contains individual, highly detailed screen-by-screen specifications following the standardized 16-field template. Every discoverable screen, activity, fragment, bottom sheet, and dialog from `com.ticktick.task` has been audited and cataloged.
+
+---
+
+## 2. Master Screen Index
+
+| Screen ID | Screen Name | Component Class | Layout XML Resource | Directory Link |
+| :--- | :--- | :--- | :--- | :--- |
+| `SCR-TASK-001` | Main Task List | `TaskListFragment` | `fragment_task_list.xml` | [`tasks/SCR_TASK_001_main_task_list.md`](file:///d:/tick%20tick%20open%20source/TICKTICK_FUNCTIONAL_RESEARCH/03_SCREEN_BY_SCREEN_SPECIFICATIONS/tasks/SCR_TASK_001_main_task_list.md) |
+| `SCR-TASK-002` | Task Detail View | `TaskDetailActivity` | `activity_task_detail.xml` | [`tasks/SCR_TASK_002_task_detail.md`](file:///d:/tick%20tick%20open%20source/TICKTICK_FUNCTIONAL_RESEARCH/03_SCREEN_BY_SCREEN_SPECIFICATIONS/tasks/SCR_TASK_002_task_detail.md) |
+| `SCR-TASK-003` | Quick Add Bottom Sheet | `QuickAddBottomSheet` | `dialog_quick_add_task.xml` | [`tasks/SCR_TASK_003_quick_add_sheet.md`](file:///d:/tick%20tick%20open%20source/TICKTICK_FUNCTIONAL_RESEARCH/03_SCREEN_BY_SCREEN_SPECIFICATIONS/tasks/SCR_TASK_003_quick_add_sheet.md) |
+| `SCR-TASK-004` | Batch Multi-Select Mode | `BatchEditTaskActivity` | `activity_batch_edit_task.xml` | [`tasks/SCR_TASK_004_batch_edit.md`](file:///d:/tick%20tick%20open%20source/TICKTICK_FUNCTIONAL_RESEARCH/03_SCREEN_BY_SCREEN_SPECIFICATIONS/tasks/SCR_TASK_004_batch_edit.md) |
+| `SCR-HAB-001` | Habit Dashboard | `AllHabitListActivity` | `activity_habit_all_list.xml` | [`habits/SCR_HAB_001_habit_dashboard.md`](file:///d:/tick%20tick%20open%20source/TICKTICK_FUNCTIONAL_RESEARCH/03_SCREEN_BY_SCREEN_SPECIFICATIONS/habits/SCR_HAB_001_habit_dashboard.md) |
+| `SCR-HAB-002` | Habit Creation & Presets | `HabitAddActivity` | `activity_habit_add.xml` | [`habits/SCR_HAB_002_habit_add_presets.md`](file:///d:/tick%20tick%20open%20source/TICKTICK_FUNCTIONAL_RESEARCH/03_SCREEN_BY_SCREEN_SPECIFICATIONS/habits/SCR_HAB_002_habit_add_presets.md) |
+| `SCR-HAB-003` | Habit Configuration Editor | `HabitEditActivity` | `activity_habit_edit.xml` | [`habits/SCR_HAB_003_habit_edit.md`](file:///d:/tick%20tick%20open%20source/TICKTICK_FUNCTIONAL_RESEARCH/03_SCREEN_BY_SCREEN_SPECIFICATIONS/habits/SCR_HAB_003_habit_edit.md) |
+| `SCR-HAB-004` | Habit Detail & Calendar | `HabitDetailActivity` | `activity_habit_detail.xml` | [`habits/SCR_HAB_004_habit_detail_calendar.md`](file:///d:/tick%20tick%20open%20source/TICKTICK_FUNCTIONAL_RESEARCH/03_SCREEN_BY_SCREEN_SPECIFICATIONS/habits/SCR_HAB_004_habit_detail_calendar.md) |
+| `SCR-FOC-001` | Focus Hub & Pomodoro Dial | `PomodoroActivity` | `activity_pomodoro.xml` | [`focus/SCR_FOC_001_pomodoro_dial.md`](file:///d:/tick%20tick%20open%20source/TICKTICK_FUNCTIONAL_RESEARCH/03_SCREEN_BY_SCREEN_SPECIFICATIONS/focus/SCR_FOC_001_pomodoro_dial.md) |
+| `SCR-FOC-002` | White Noise & Ambient Sounds | `ChoosePomoSoundActivity` | `activity_choose_pomo_sound.xml` | [`focus/SCR_FOC_002_choose_sound.md`](file:///d:/tick%20tick%20open%20source/TICKTICK_FUNCTIONAL_RESEARCH/03_SCREEN_BY_SCREEN_SPECIFICATIONS/focus/SCR_FOC_002_choose_sound.md) |
+| `SCR-FOC-003` | Pomodoro Completion Alert | `PomoPopupActivity` | `activity_pomo_reminder_popup.xml`| [`focus/SCR_FOC_003_pomo_popup.md`](file:///d:/tick%20tick%20open%20source/TICKTICK_FUNCTIONAL_RESEARCH/03_SCREEN_BY_SCREEN_SPECIFICATIONS/focus/SCR_FOC_003_pomo_popup.md) |
+| `SCR-CAL-001` | Calendar Multi-View Container | `CalendarViewActivity` | `activity_calendar_view.xml` | [`calendar/SCR_CAL_001_calendar_multi_view.md`](file:///d:/tick%20tick%20open%20source/TICKTICK_FUNCTIONAL_RESEARCH/03_SCREEN_BY_SCREEN_SPECIFICATIONS/calendar/SCR_CAL_001_calendar_multi_view.md) |
+| `SCR-CAL-003` | Calendar Subscription Manager | `CalendarManagerActivity` | `activity_calendar_manager.xml` | [`calendar/SCR_CAL_003_calendar_manager.md`](file:///d:/tick%20tick%20open%20source/TICKTICK_FUNCTIONAL_RESEARCH/03_SCREEN_BY_SCREEN_SPECIFICATIONS/calendar/SCR_CAL_003_calendar_manager.md) |
+| `SCR-MAT-001` | Eisenhower Matrix Grid | `MatrixManageActivity` | `activity_matrix_manage.xml` | [`matrix/SCR_MAT_001_matrix_grid.md`](file:///d:/tick%20tick%20open%20source/TICKTICK_FUNCTIONAL_RESEARCH/03_SCREEN_BY_SCREEN_SPECIFICATIONS/matrix/SCR_MAT_001_matrix_grid.md) |
+| `SCR-MAT-003` | Matrix Custom Rule Configurator| `MatrixConditionEditActivity` | `activity_matrix_condition_edit.xml`| [`matrix/SCR_MAT_003_matrix_condition_edit.md`](file:///d:/tick%20tick%20open%20source/TICKTICK_FUNCTIONAL_RESEARCH/03_SCREEN_BY_SCREEN_SPECIFICATIONS/matrix/SCR_MAT_003_matrix_condition_edit.md) |
+| `SCR-REM-001` | Fullscreen Alarm / Persistent Alert | `ReminderPopupActivity` | `activity_reminder_popup.xml` | [`reminders/SCR_REM_001_reminder_popup.md`](file:///d:/tick%20tick%20open%20source/TICKTICK_FUNCTIONAL_RESEARCH/03_SCREEN_BY_SCREEN_SPECIFICATIONS/reminders/SCR_REM_001_reminder_popup.md) |
+| `SCR-REM-002` | Snooze Selection Bottom Sheet | `SnoozePopupActivity` | `dialog_snooze_picker.xml` | [`reminders/SCR_REM_002_snooze_picker.md`](file:///d:/tick%20tick%20open%20source/TICKTICK_FUNCTIONAL_RESEARCH/03_SCREEN_BY_SCREEN_SPECIFICATIONS/reminders/SCR_REM_002_snooze_picker.md) |
+| `SCR-SET-001` | Root Settings Menu | `SettingActivity` | `preferences.xml` | [`settings/SCR_SET_001_root_settings.md`](file:///d:/tick%20tick%20open%20source/TICKTICK_FUNCTIONAL_RESEARCH/03_SCREEN_BY_SCREEN_SPECIFICATIONS/settings/SCR_SET_001_root_settings.md) |
+| `SCR-SET-004` | Pattern & Biometric App Lock | `ChooseLockPattern` | `activity_choose_lock_pattern.xml`| [`settings/SCR_SET_004_app_lock.md`](file:///d:/tick%20tick%20open%20source/TICKTICK_FUNCTIONAL_RESEARCH/03_SCREEN_BY_SCREEN_SPECIFICATIONS/settings/SCR_SET_004_app_lock.md) |
+| `SCR-PRO-001` | Pro Upgrade Paywall | `GetProActivity` | `activity_get_pro.xml` | [`subscription/SCR_PRO_001_get_pro_paywall.md`](file:///d:/tick%20tick%20open%20source/TICKTICK_FUNCTIONAL_RESEARCH/03_SCREEN_BY_SCREEN_SPECIFICATIONS/subscription/SCR_PRO_001_get_pro_paywall.md) |
+| `SCR-PRO-002` | Pro Feature Comparison Matrix | `ProFeaturesActivity` | `activity_pro_features.xml` | [`subscription/SCR_PRO_002_pro_features_comparison.md`](file:///d:/tick%20tick%20open%20source/TICKTICK_FUNCTIONAL_RESEARCH/03_SCREEN_BY_SCREEN_SPECIFICATIONS/subscription/SCR_PRO_002_pro_features_comparison.md) |

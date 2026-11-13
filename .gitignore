@@ -1,0 +1,23 @@
+# APK and archives
+*.apk
+*.xapk
+*.zip
+*.tar.gz
+*.tgz
+
+# Tool binaries and runtime JDK
+TICKTICK_FUNCTIONAL_RESEARCH/tools/
+tools/
+staging_apk/
+apktool_out/
+
+# Windows Directory Junction duplicate
+TickTick_Research
+
+# Python cache
+__pycache__/
+*.pyc
+
+# OS artifacts
+Thumbs.db
+.DS_Store

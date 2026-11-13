@@ -1,0 +1,3531 @@
+{
+  "about_preferences.xml": [
+    {
+      "tag": "PreferenceScreen",
+      "key": null,
+      "title": "@string/widget_settings",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_app_version",
+      "title": "@string/app_name",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_visit_official_website",
+      "title": "@string/visit_official_website",
+      "summary": "@string/like_choice_title",
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_rate",
+      "title": "@string/rate_our_app",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": "prefkey_wechat_and_weibo_and_xiaohongshu",
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_wechat_official_account",
+      "title": "@string/about_wechat_official_account",
+      "summary": "@string/about_us_wechat",
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_about_xiaohongshu",
+      "title": "@string/about_xiaohongshu",
+      "summary": "@string/about_us_xiaohongshu",
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_about_weibo",
+      "title": "@string/about_weibo",
+      "summary": "@string/about_us_weibo",
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": "prefkey_wechat_and_weibo_bottom",
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": "prefkey_facebook_or_twitter",
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_ticktick_twitter",
+      "title": "@string/about_ticktick_twitter",
+      "summary": "@string/about_ticktick_twitter_summary",
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_reddit",
+      "title": "Reddit",
+      "summary": "r/ticktick",
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_ticktick_facebook",
+      "title": "@string/about_ticktick_facebook",
+      "summary": "@string/about_ticktick_facebook_summary",
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_instagram",
+      "title": "Instagram",
+      "summary": "@TickTickApp",
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_youtube",
+      "title": "YouTube",
+      "summary": "@GetTickTick",
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_ticktick_blog",
+      "title": "@string/about_ticktick_blog",
+      "summary": "@string/about_ticktick_blog_summary",
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": "prefkey_facebook_or_twitter_bottom",
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_terms_of_use",
+      "title": "@string/preferences_title_terms_of_use",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_privacy_declare",
+      "title": "@string/preferences_title_privacy_declare",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_user_info_collection_record",
+      "title": "@string/user_info_collection_record",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_user_info_third_party_share",
+      "title": "@string/user_info_third_party_share",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_licenses_declare",
+      "title": "@string/preferences_title_licenses_declare",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_thanks",
+      "title": "@string/preferences_title_thanks",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_beian",
+      "title": "@string/beian_code",
+      "summary": null,
+      "default": null
+    }
+  ],
+  "account_info_preferences.xml": [
+    {
+      "tag": "androidx.preference.PreferenceScreen",
+      "key": null,
+      "title": "@string/user_account",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.view.AccountAvatarPreference",
+      "key": "pref_key_avatar",
+      "title": "@string/change_user_portrait",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "androidx.preference.Preference",
+      "key": "pref_key_nickname",
+      "title": "@string/change_user_name_et_hint",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "androidx.preference.Preference",
+      "key": "pref_key_email",
+      "title": "@string/share_to_email",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "androidx.preference.Preference",
+      "key": "pref_key_change_password",
+      "title": "@string/change_password",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "androidx.preference.Preference",
+      "key": "pref_key_two_factor",
+      "title": "@string/two_factor_authentication",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "androidx.preference.Preference",
+      "key": "pref_key_manage_device",
+      "title": "@string/manage_devices",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "androidx.preference.PreferenceCategory",
+      "key": "pref_key_third_site_bind",
+      "title": "@string/third_party_account",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "androidx.preference.Preference",
+      "key": "pref_key_weibo_bind",
+      "title": "\u5fae\u535a",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "androidx.preference.Preference",
+      "key": "pref_key_weixin_bind",
+      "title": "\u5fae\u4fe1",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "androidx.preference.Preference",
+      "key": "pref_key_qq_bind",
+      "title": "QQ",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.view.BindThirdAccountPreference",
+      "key": "pref_key_google_bind",
+      "title": "Google",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "androidx.preference.Preference",
+      "key": "pref_key_facebook_bind",
+      "title": "Facebook",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "androidx.preference.Preference",
+      "key": "pref_key_twitter_bind",
+      "title": "Twitter",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": "pref_key_third_site_bind_bottom",
+      "title": null,
+      "summary": null,
+      "default": null
+    }
+  ],
+  "advance_reminder_preferences.xml": [
+    {
+      "tag": "PreferenceScreen",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.view.TickTickListPreference",
+      "key": "prefkey_reminder_popup_visibility",
+      "title": "@string/preferences_notify_dlg_enable_title",
+      "summary": null,
+      "default": "-1"
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_set_priority_reminder_ringtone",
+      "title": "@string/priority_reminder_ringtone",
+      "summary": "@string/select_different_reminder_ringtone_hint",
+      "default": "false"
+    },
+    {
+      "tag": "com.ticktick.task.activity.preference.CustomRingtonePreference",
+      "key": "prefkey_high_priority_reminder_ringtone",
+      "title": "@string/high_priority_reminder_ringtone",
+      "summary": null,
+      "default": "false"
+    },
+    {
+      "tag": "com.ticktick.task.activity.preference.CustomRingtonePreference",
+      "key": "prefkey_medium_priority_reminder_ringtone",
+      "title": "@string/medium_priority_reminder_ringtone",
+      "summary": null,
+      "default": "false"
+    },
+    {
+      "tag": "com.ticktick.task.activity.preference.CustomRingtonePreference",
+      "key": "prefkey_low_priority_reminder_ringtone",
+      "title": "@string/low_priority_reminder_ringtone",
+      "summary": null,
+      "default": "false"
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "reminder_continuous_reminders",
+      "title": "@string/global_constant_reminder",
+      "summary": "@string/global_continuous_reminders_desc_android",
+      "default": "false"
+    },
+    {
+      "tag": "Preference",
+      "key": "reminder_continuous_reminders_category",
+      "title": "@string/annoying_reminder_category",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_android_6_alert_mode",
+      "title": "@string/android_6_alert_mode",
+      "summary": "@string/doze_mode_desc",
+      "default": "false"
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_override_not_disturb_priority",
+      "title": "@string/override_not_disturb",
+      "summary": "@string/override_not_disturb_priority",
+      "default": "true"
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    }
+  ],
+  "android_6_reminder_preference.xml": [
+    {
+      "tag": "PreferenceScreen",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_android_6_alert_mode",
+      "title": "@string/android_6_alert_mode",
+      "summary": null,
+      "default": "false"
+    }
+  ],
+  "data_import_preferences.xml": [
+    {
+      "tag": "PreferenceScreen",
+      "key": null,
+      "title": "@string/import_and_integration",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": "top_gap",
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "pref_setting_calendar",
+      "title": "@string/calendar_list_label",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "pref_setting_notion",
+      "title": "Notion",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": "pref_import",
+      "title": "@string/data_import_title_import",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_calendar_course",
+      "title": "@string/course_schedule",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_import_todoist",
+      "title": "@string/pref_title_import_todoist",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_import_anydo",
+      "title": "@string/pref_title_anydo",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_import_gtasks",
+      "title": "@string/import_gtasks_title",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_import_ms_todo",
+      "title": "@string/pref_title_import_ms_todo",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": "pref_title_integration",
+      "title": "@string/data_import_title_integration",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_integration_zapier",
+      "title": "@string/data_import_integration_zapier",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_integration_ifttt",
+      "title": "@string/data_import_integration_ifttt",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "pref_setting_telegram",
+      "title": "@string/telegram",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": "pref_title_integration_divider",
+      "title": null,
+      "summary": null,
+      "default": null
+    }
+  ],
+  "date_and_time_preference.xml": [
+    {
+      "tag": "PreferenceScreen",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.view.ListClickPreference",
+      "key": "time_format",
+      "title": "@string/time_format",
+      "summary": "@string/preference_locale_default",
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.view.ListClickPreference",
+      "key": "prefkey_start_week",
+      "title": "@string/preferences_calendar_fow",
+      "summary": null,
+      "default": "0"
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_lunar",
+      "title": "@string/lunar_calendar",
+      "summary": null,
+      "default": "false"
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_tick_other_calendar",
+      "title": "@string/alternate_calendar",
+      "summary": "@string/none",
+      "default": null
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_week_numbers",
+      "title": "@string/show_week_numbers",
+      "summary": null,
+      "default": "false"
+    },
+    {
+      "tag": "Preference",
+      "key": "first_start_week",
+      "title": "@string/first_start_week_title",
+      "summary": "@string/first_start_week_summary_standard",
+      "default": "0"
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_holiday",
+      "title": "@string/show_holiday_in_calendar",
+      "summary": null,
+      "default": "true"
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_auto_timezone",
+      "title": "@string/timezone",
+      "summary": "@string/timezone_preference_summary",
+      "default": "false"
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    }
+  ],
+  "follow_us_preferences.xml": [
+    {
+      "tag": "PreferenceScreen",
+      "key": null,
+      "title": "@string/widget_settings",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_twitter",
+      "title": "Twitter",
+      "summary": "@TickTick",
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_reddit",
+      "title": "Reddit",
+      "summary": "r/ticktick",
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_facebook",
+      "title": "Facebook",
+      "summary": "@TickTickApp",
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_instagram",
+      "title": "Instagram",
+      "summary": "@TickTickApp",
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_youtube",
+      "title": "YouTube",
+      "summary": "@GetTickTick",
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_ticktick_blog",
+      "title": "@string/about_ticktick_blog",
+      "summary": "@string/about_ticktick_blog_summary",
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    }
+  ],
+  "help_preferences.xml": [
+    {
+      "tag": "PreferenceScreen",
+      "key": null,
+      "title": "@string/widget_settings",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_feedback_email",
+      "title": "@string/preferences_title_feedback",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_my_feedback",
+      "title": "@string/preferences_title_my_feedback",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_translation_help",
+      "title": "@string/translation_help",
+      "summary": null,
+      "default": null
+    }
+  ],
+  "help_translate_preferences.xml": [
+    {
+      "tag": "PreferenceScreen",
+      "key": null,
+      "title": "@string/widget_settings",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_new_language_translation",
+      "title": "@string/new_language_translation",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_improve_translation",
+      "title": "@string/improve_translation",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_spot_mistake",
+      "title": "@string/spot_mistake",
+      "summary": null,
+      "default": null
+    }
+  ],
+  "ignore_battery_optimization_preference.xml": [
+    {
+      "tag": "PreferenceScreen",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_ignore_battery_optimization",
+      "title": "@string/ignore_battery_optimization",
+      "summary": null,
+      "default": "false"
+    }
+  ],
+  "lock_preferences.xml": [
+    {
+      "tag": "PreferenceScreen",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": "pref_security_category",
+      "title": "@string/status",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "patternlock_enabled",
+      "title": "@string/preferences_task_pattern_lock_title",
+      "summary": null,
+      "default": "false"
+    },
+    {
+      "tag": "Preference",
+      "key": "patternlock_reset",
+      "title": "@string/preferences_task_pattern_lock_reset_title",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.view.ListClickPreference",
+      "key": "patternlock_start_time",
+      "title": "@string/preferences_task_pattern_lock_start_time_title",
+      "summary": null,
+      "default": "0"
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "pattern_hide_track",
+      "title": "@string/make_pattern_invisible",
+      "summary": null,
+      "default": "false"
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "patternlock_popup",
+      "title": "@string/pattern_lock_reminder_popup",
+      "summary": "@string/pattern_lock_reminder_popup_summary",
+      "default": "false"
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "lock_widget",
+      "title": "@string/preferences_lock_widget_title",
+      "summary": "@string/preferences_lock_widget_summary",
+      "default": "false"
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prekey_fingerprint",
+      "title": "@string/preference_fingerprint_title",
+      "summary": "@string/preference_fingerprint_summary",
+      "default": "false"
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_local_pattern_message",
+      "title": "@string/local_pattern_email_message",
+      "summary": null,
+      "default": null
+    }
+  ],
+  "more_advance_settings.xml": [
+    {
+      "tag": "PreferenceScreen",
+      "key": "more_advance_settings",
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "provider_manager",
+      "title": "@string/title_accessor_manager",
+      "summary": "@string/pref_message_provider_security",
+      "default": null
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_pure_background",
+      "title": "@string/pure_background_title",
+      "summary": null,
+      "default": "false"
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_warn_quit",
+      "title": "@string/preferences_warn_quit",
+      "summary": "@string/preferences_warn_quit_message",
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    }
+  ],
+  "more_settings_preferences.xml": [
+    {
+      "tag": "PreferenceScreen",
+      "key": "prefkey_more_settings",
+      "title": "@string/widget_settings",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.view.ExtraBottomActionListPreference",
+      "key": "locale",
+      "title": "@string/preference_locale_dialog_title",
+      "summary": null,
+      "default": "Default"
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_shortcuts",
+      "title": "@string/shortcuts",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_task_detail_page",
+      "title": "@string/task_detail_page",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_smart_recognition",
+      "title": "@string/smart_recognition",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_quick_add_task",
+      "title": "@string/task_quick_add",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_task_defaults",
+      "title": "@string/preferences_task_defaults_settings_title",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_upload_download_attachment",
+      "title": "@string/upload_download_attachment",
+      "summary": "@string/upload_download_attachment_summary",
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_shareList",
+      "title": "@string/option_menu_share_list",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_template",
+      "title": "@string/manage_template",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.view.ListClickPreference",
+      "key": "prefkey_wear_select_list",
+      "title": "@string/wear_select_list",
+      "summary": null,
+      "default": "0"
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_send_data_to_huaweiwear",
+      "title": "@string/send_data_to_huawei_wear",
+      "summary": "@string/send_data_to_huawei_wear_summary",
+      "default": "false"
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_task_pattern_lock",
+      "title": "@string/preferences_task_pattern_lock_title",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_custom_swipe",
+      "title": "@string/preference_custom_swipe_title",
+      "summary": "@string/preference_custom_swipe_summary",
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_more_advance_settings",
+      "title": "@string/advanced_settings",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    }
+  ],
+  "preferences.xml": [
+    {
+      "tag": "androidx.preference.PreferenceScreen",
+      "key": null,
+      "title": "@string/widget_settings",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.view.AccountInfoPreference",
+      "key": "prefkey_current_account",
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.annualreport.YearlyReportBannerPreference",
+      "key": "prefkey_yearly_report",
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.view.Account7ProPreference",
+      "key": "prefkey_account_7pro_preference",
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "androidx.preference.PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.preference.FeaturePreference",
+      "key": "prefkey_navigation_setup",
+      "title": "@string/preference_navigation_bar",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "androidx.preference.PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "androidx.preference.PreferenceCategory",
+      "key": "prefkey_app_other",
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "androidx.preference.Preference",
+      "key": "prefkey_appearance",
+      "title": "@string/appearance",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "androidx.preference.Preference",
+      "key": "prefkey_date_and_time",
+      "title": "@string/date_and_time",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "androidx.preference.Preference",
+      "key": "prefkey_reminder",
+      "title": "@string/sounds_and_notifications",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "androidx.preference.Preference",
+      "key": "prefkey_widgets",
+      "title": "@string/widgets",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "androidx.preference.Preference",
+      "key": "prefkey_ai_features",
+      "title": "@string/ai_features",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "androidx.preference.Preference",
+      "key": "prefkey_settings",
+      "title": "@string/general_setting",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "androidx.preference.PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "androidx.preference.PreferenceCategory",
+      "key": "prefkey_link_other",
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "provider_data_import",
+      "title": "@string/import_and_integration",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "androidx.preference.PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "androidx.preference.PreferenceCategory",
+      "key": "services",
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "androidx.preference.Preference",
+      "key": "prefkey_share_app",
+      "title": "@string/pref_title_share_app",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "androidx.preference.Preference",
+      "key": "prefkey_ip_change",
+      "title": "@string/debug",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "androidx.preference.Preference",
+      "key": "prefkey_guide",
+      "title": "@string/newbie_guide",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "androidx.preference.Preference",
+      "key": "prefkey_help",
+      "title": "@string/help_feedback",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "androidx.preference.Preference",
+      "key": "prefkey_follow_us",
+      "title": "@string/follow_us",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "androidx.preference.Preference",
+      "key": "prefkey_about",
+      "title": "@string/preferences_title_about",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "androidx.preference.PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "androidx.preference.PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "androidx.preference.Preference",
+      "key": "prefkey_logout",
+      "title": "@string/rank_sign_out",
+      "summary": null,
+      "default": null
+    }
+  ],
+  "preferences_ai_feature.xml": [
+    {
+      "tag": "PreferenceScreen",
+      "key": "more_advance_settings",
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.preference.NeedProCheckBoxPreference",
+      "key": "prefkey_ai_voice_add",
+      "title": "@string/ai_voice_add",
+      "summary": "@string/ai_voice_add_summary",
+      "default": "false"
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": "prefkey_ai_assistant_section_top_2x",
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": "prefkey_ai_assistant_section_top",
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_ai_assistant_section",
+      "title": "@string/settings_usage",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": "prefkey_ai_assistant_content_top",
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_ai_assistant_usage",
+      "title": "@string/ai_assistant_usage_limit_new",
+      "summary": "@string/loading",
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": "prefkey_ai_assistant_privacy_section_top",
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": "prefkey_ai_assistant_privacy_section_title_top",
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_ai_assistant_privacy_section",
+      "title": "@string/ai_assistant_settings_privacy",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": "prefkey_ai_assistant_privacy_content_top",
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_ai_assistant_improve",
+      "title": "@string/ai_assistant_improve_title",
+      "summary": "@string/ai_assistant_improve_desc",
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": "prefkey_ai_assistant_section_bottom",
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": null,
+      "title": "@string/integrations_str",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_ai_mcp",
+      "title": "@string/mcp_servers",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_ai_cli",
+      "title": "@string/annoying_reminder_category",
+      "summary": null,
+      "default": null
+    }
+  ],
+  "preference_calendar_view_options.xml": [
+    {
+      "tag": "PreferenceScreen",
+      "key": "pref_main",
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_calendar_color",
+      "title": "@string/color",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_show_check_box_in_calendar_view",
+      "title": "@string/the_style",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_show_details",
+      "title": "@string/show_details",
+      "summary": "@string/calendar_show_details_summary",
+      "default": "true"
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_show_completed",
+      "title": "@string/show_completed",
+      "summary": "@string/calendar_show_completed_summary",
+      "default": "true"
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_show_subtask",
+      "title": "@string/show_subtask",
+      "summary": null,
+      "default": "true"
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_show_repeat_task",
+      "title": "@string/schedule_show_repeat_task",
+      "summary": null,
+      "default": "true"
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_show_declined_calendar_events",
+      "title": "@string/show_declined_events",
+      "summary": null,
+      "default": "false"
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_habit_show_in_calendar_view",
+      "title": "@string/calendar_show_habit",
+      "summary": null,
+      "default": "true"
+    },
+    {
+      "tag": "com.ticktick.task.view.CheckBoxWithInfoPreference",
+      "key": "prefkey_show_focus_records",
+      "title": "@string/show_focus_records",
+      "summary": null,
+      "default": "false"
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_show_countdown",
+      "title": "@string/calendar_view_opt_show_countdown",
+      "summary": null,
+      "default": "false"
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_show_course",
+      "title": "@string/timetable_show_course",
+      "summary": null,
+      "default": "false"
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_timezone_settings",
+      "title": "@string/additional_time_zone",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    }
+  ],
+  "preference_habit_settings.xml": [
+    {
+      "tag": "PreferenceScreen",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": "pref_main",
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.preference.CustomRingtonePreference",
+      "key": "prefkey_habit_ringtone",
+      "title": "@string/habit_ringtone",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_habit_classify_enabled",
+      "title": "@string/habit_classify_enabled_title",
+      "summary": "@string/habit_classify_enabled_tip",
+      "default": "false"
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_habit_manage_section",
+      "title": "@string/manage_column",
+      "summary": null,
+      "default": "true"
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_habit_show_in_today",
+      "title": "@string/habit_show_in_today_n7day_title",
+      "summary": null,
+      "default": "true"
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_habit_show_in_badge",
+      "title": "@string/count_in_badge",
+      "summary": null,
+      "default": "true"
+    }
+  ],
+  "preference_pomodoro.xml": [
+    {
+      "tag": "PreferenceScreen",
+      "key": "pref_main",
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_pomodoro_focus_settings",
+      "title": "@string/pomodoro_focus_preference",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": "prefkey_study_room_top",
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_study_room",
+      "title": "@string/study_room",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_flip_start",
+      "title": "@string/flip_start",
+      "summary": "@string/flip_start_hint",
+      "default": "false"
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_focus_mode",
+      "title": "@string/strict_mode",
+      "summary": "@string/pomo_focus_mode_summary",
+      "default": "false"
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_white_list_pomo",
+      "title": "@string/pomo_white_list_title",
+      "summary": "@string/strict_mode_summary",
+      "default": "4"
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prekey_anti_burn_in",
+      "title": "@string/anti_burn_in",
+      "summary": "@string/anti_burn_in_summary",
+      "default": "true"
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_pomodoro_focus_auto_sync",
+      "title": "@string/focus_auto_sync",
+      "summary": "@string/focus_auto_sync_desc",
+      "default": null
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_pomodoro_focus_auto_full_screen",
+      "title": "@string/focus_auto_full_screen",
+      "summary": "@string/focus_auto_full_screen_desc",
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_pomodoro_focus_floating_window",
+      "title": "@string/focus_floating_window",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prekey_live_activity",
+      "title": "@string/live_activity",
+      "summary": "@string/live_activity_desc",
+      "default": "true"
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    }
+  ],
+  "preference_pomodoro_focus.xml": [
+    {
+      "tag": "PreferenceScreen",
+      "key": "pref_main",
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_pomo_duration",
+      "title": "@string/pomo_duration",
+      "summary": null,
+      "default": "1500000"
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_short_break_duration",
+      "title": "@string/short_break_duration",
+      "summary": null,
+      "default": "300000"
+    },
+    {
+      "tag": "Preference",
+      "key": "pref_long_break_duration",
+      "title": "@string/long_break_duration",
+      "summary": null,
+      "default": "900000"
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_long_break_every_pomo",
+      "title": "@string/long_break_every_pomo",
+      "summary": null,
+      "default": "4"
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_auto_start_next_pomo",
+      "title": "@string/auto_start_of_next_pomo",
+      "summary": null,
+      "default": "false"
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_auto_start_break",
+      "title": "@string/auto_start_of_break",
+      "summary": null,
+      "default": "false"
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_auto_pomo_max_count",
+      "title": "@string/auto_pomodoro_count",
+      "summary": null,
+      "default": "8"
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.preference.CustomRingtonePreference",
+      "key": "prefkey_pomo_ringtone",
+      "title": "@string/pomoending",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.preference.CustomRingtonePreference",
+      "key": "prefkey_pomo_relax_ringtone",
+      "title": "@string/breakending",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_pomo_vibrate_duration",
+      "title": "@string/vibrate_duration",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    }
+  ],
+  "preference_pomodoro_permission.xml": [
+    {
+      "tag": "PreferenceScreen",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": "prefkey_pomodoro",
+      "title": "@string/pomo_permission_title",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_pomodoro_usage_access",
+      "title": "@string/pomo_usage_access_title",
+      "summary": "@string/pomo_usage_access_summary",
+      "default": "false"
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_pomodoro_alert_window",
+      "title": "@string/pomo_alert_window_title",
+      "summary": "@string/pomo_alert_window_summary",
+      "default": "false"
+    }
+  ],
+  "preference_smart_date_parse.xml": [
+    {
+      "tag": "PreferenceScreen",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": "pref_date_recognition",
+      "title": "@string/date_recognition",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_enable_date_parsing",
+      "title": "@string/enable_date_parsing",
+      "summary": "@string/smart_date_parsing_tips",
+      "default": "true"
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_remove_text_in_tasks",
+      "title": "@string/remove_text_in_tasks",
+      "summary": "@string/remove_text_in_tasks_summary",
+      "default": "false"
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_example_tips",
+      "title": "@string/example_stp",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": "@string/tag_recognition",
+      "title": "@string/tag_recognition",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_enable_tag_parsing",
+      "title": "@string/smart_tagging",
+      "summary": null,
+      "default": "true"
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_remove_tag_in_tasks",
+      "title": "@string/remove_tags_in_task_name",
+      "summary": "@string/remove_tags_from_task_name_via_quick_add",
+      "default": "true"
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": "@string/settings_url_parsing",
+      "title": "@string/settings_url_parsing",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_url_parsing",
+      "title": "@string/settings_url_parsing",
+      "summary": "@string/settings_url_parsing_desc",
+      "default": "true"
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    }
+  ],
+  "shortcut_config_preferences.xml": [
+    {
+      "tag": "PreferenceScreen",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.view.TickTickListPreference",
+      "key": "prefkey_shortcut_action",
+      "title": "@string/pref_widget_action_label",
+      "summary": null,
+      "default": "0"
+    },
+    {
+      "tag": "com.ticktick.task.view.TickTickListPreference",
+      "key": "prefkey_shortcut_tasklist",
+      "title": "@string/widget_tasklist_label",
+      "summary": null,
+      "default": "-1"
+    }
+  ],
+  "sound_reminder_and_notification_preferences.xml": [
+    {
+      "tag": "PreferenceScreen",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": "pref_notice_is_close_group",
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.preference.NotificationPermissionPreference",
+      "key": "pref_notice_is_close",
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.preference.NotificationPermissionPreference",
+      "key": "prefkey_notification_daily_summary",
+      "title": "@string/preferences_daily_summary",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": "prefkey_reminder_layout",
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_notification_status_bar",
+      "title": "@string/notification_status_bar",
+      "summary": null,
+      "default": "false"
+    },
+    {
+      "tag": "com.ticktick.task.activity.preference.CustomRingtonePreference",
+      "key": "prefkey_notification_ringtone",
+      "title": "@string/preferences_reminder_ringtone_title",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_notification_vibrate",
+      "title": "@string/preferences_reminder_vibrate_title",
+      "summary": null,
+      "default": "true"
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_notification_vibrate_v2",
+      "title": "@string/preferences_reminder_vibrate_title",
+      "summary": null,
+      "default": "false"
+    },
+    {
+      "tag": "Preference",
+      "key": "pref_advance_reminder_settings",
+      "title": "@string/advanced_settings_for_reminders",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": "prefkey_wechat_reminder_layout",
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "pref_wechat_reminder",
+      "title": "@string/wechat_notifications",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "pref_email_reminder",
+      "title": "@string/emails_notifications",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_notification_by_system_calendar",
+      "title": "@string/system_calendar_reminder_title_v2",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.view.ChooseCompletionTaskSoundListPreference",
+      "key": "prefkey_completion_task_sound",
+      "title": "@string/preferences_completion_sound_title",
+      "summary": null,
+      "default": "jingle"
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_short_vibrate_enable",
+      "title": "@string/vibrate_enable_title",
+      "summary": "@string/vibrate_enable_summary",
+      "default": "false"
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": "prefkey_reminders_not_working_top_group",
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_reminders_not_working",
+      "title": "@string/reminders_not_working",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    }
+  ],
+  "task_quick_add_preference.xml": [
+    {
+      "tag": "PreferenceScreen",
+      "key": null,
+      "title": "@string/task_quick_add",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_quick_add_show",
+      "title": "@string/preferences_quick_add_show_title",
+      "summary": "@string/preferences_quick_add_show_summary",
+      "default": "false"
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_add_via_clipboard",
+      "title": "@string/clipborad",
+      "summary": "@string/preferences_add_via_clipboard_summary",
+      "default": "false"
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_notification_ongoing",
+      "title": "@string/preferences_status_bar",
+      "summary": "@string/preferences_status_bar_summary",
+      "default": "false"
+    },
+    {
+      "tag": "com.ticktick.task.view.ListClickPreference",
+      "key": "prefkey_status_bar_font_color",
+      "title": "@string/status_bar_font_color",
+      "summary": null,
+      "default": "default"
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_show_status_bar_on_lock_screen",
+      "title": "@string/show_status_bar_on_lock_screen",
+      "summary": "@string/show_status_bar_on_lock_screen_summary",
+      "default": "false"
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_show_status_bar_on_lock_screen_v26",
+      "title": "@string/status_bar_display_type",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_quick_ball",
+      "title": "@string/quick_ball",
+      "summary": "@string/quick_add_tasks_on_homescreen",
+      "default": "false"
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_process_text",
+      "title": "@string/text_selection_action",
+      "summary": "@string/text_selection_action_summary",
+      "default": "false"
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    }
+  ],
+  "timeline_view_options.xml": [
+    {
+      "tag": "PreferenceScreen",
+      "key": "pref_main",
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.view.ListSummaryPreference",
+      "key": "prefkey_calendar_color",
+      "title": "@string/task_card_color",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_show_check_item",
+      "title": "@string/show_subtask",
+      "summary": null,
+      "default": "true"
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_show_weekday",
+      "title": "@string/timeline_show_week",
+      "summary": null,
+      "default": "true"
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_countdown_mode",
+      "title": "@string/pref_title_countdown",
+      "summary": "@string/pref_summary_countdown",
+      "default": "false"
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_view_mode_sync",
+      "title": "@string/view_mode_sync",
+      "summary": "@string/view_mode_sync_desc",
+      "default": "false"
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    }
+  ],
+  "upload_download_attachment_preferences.xml": [
+    {
+      "tag": "PreferenceScreen",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_use_mobile_data_upload_attachment",
+      "title": "@string/use_mobile_data_upload",
+      "summary": null,
+      "default": "true"
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_use_mobile_data_download_attachment",
+      "title": "@string/use_mobile_data_download",
+      "summary": null,
+      "default": "true"
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    }
+  ],
+  "widget_ai_assistant_config_preference_fragment.xml": [
+    {
+      "tag": "PreferenceScreen",
+      "key": "pref_main",
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_widget_theme",
+      "title": "@string/widget_label_theme",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.SeekBarPreference",
+      "key": "prefkey_widget_alpha",
+      "title": "@string/widget_select_alpha_text1",
+      "summary": null,
+      "default": "90"
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_widget_size",
+      "title": "@string/widget_size",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    }
+  ],
+  "widget_compact_preference.xml": [
+    {
+      "tag": "androidx.preference.PreferenceScreen",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetPreference",
+      "key": "widgetDisplayProjectOrTag",
+      "title": "@string/display_range",
+      "summary": "@string/widget_tasklist_label",
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetPreference",
+      "key": "WidgetGroupBy",
+      "title": "@string/group_by",
+      "summary": "@string/group_by",
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetPreference",
+      "key": "WidgetOrderBy",
+      "title": "@string/widget_sortby_label",
+      "summary": "@string/widget_sortby_label",
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetPreference",
+      "key": "widgetTaskClick",
+      "title": "@string/widget_label_list_click",
+      "summary": "@string/widget_label_list_click",
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetSwitchPreference",
+      "key": "WidgetShowOverdue",
+      "title": "@string/show_overdue",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetSwitchPreference",
+      "key": "WidgetShowCheckbox",
+      "title": "@string/widget_show_checkbox",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetSwitchPreference",
+      "key": "WidgetShowDate",
+      "title": "@string/widget_show_date_label",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    }
+  ],
+  "widget_course_preference.xml": [
+    {
+      "tag": "androidx.preference.PreferenceScreen",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetPreference",
+      "key": "widgetFilterProject",
+      "title": "@string/display_range",
+      "summary": "@string/widget_tasklist_label",
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetPreference",
+      "key": "WidgetStartTime",
+      "title": "@string/start_at",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetPreference",
+      "key": "WidgetEndTime",
+      "title": "@string/end_at",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    }
+  ],
+  "widget_focus_distribution_config_preference_fragment.xml": [
+    {
+      "tag": "PreferenceScreen",
+      "key": "pref_main",
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_widget_theme",
+      "title": "@string/widget_label_theme",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.SeekBarPreference",
+      "key": "prefkey_widget_alpha",
+      "title": "@string/widget_select_alpha_text1",
+      "summary": null,
+      "default": "90"
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_widget_size",
+      "title": "@string/widget_size",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_display_type",
+      "title": "@string/widget_focus_category",
+      "summary": null,
+      "default": null
+    }
+  ],
+  "widget_habit_config_preference_fragment.xml": [
+    {
+      "tag": "PreferenceScreen",
+      "key": "pref_main",
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_habit_widget_theme",
+      "title": "@string/widget_label_theme",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.SeekBarPreference",
+      "key": "prefkey_habit_widget_alpha",
+      "title": "@string/widget_select_alpha_text1",
+      "summary": null,
+      "default": "90"
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_list_type",
+      "title": "@string/widget_list_display_mode",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    }
+  ],
+  "widget_habit_month_config_preference_fragment.xml": [
+    {
+      "tag": "PreferenceScreen",
+      "key": "pref_main",
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_habit_widget_theme",
+      "title": "@string/widget_label_theme",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.SeekBarPreference",
+      "key": "prefkey_widget_alpha",
+      "title": "@string/widget_select_alpha_text1",
+      "summary": null,
+      "default": "90"
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_widget_size",
+      "title": "@string/widget_size",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_habit_item",
+      "title": "@string/choose_habit",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    }
+  ],
+  "widget_habit_week_config_preference_fragment.xml": [
+    {
+      "tag": "PreferenceScreen",
+      "key": "pref_main",
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_habit_widget_theme",
+      "title": "@string/widget_label_theme",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.SeekBarPreference",
+      "key": "prefkey_widget_alpha",
+      "title": "@string/widget_select_alpha_text1",
+      "summary": null,
+      "default": "90"
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    }
+  ],
+  "widget_matrix_config_preference_fragment.xml": [
+    {
+      "tag": "PreferenceScreen",
+      "key": "pref_main",
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetPreference",
+      "key": "prefkey_matrix_profile",
+      "title": "@string/view_name",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetPreference",
+      "key": "prefkey_matrix_widget_theme",
+      "title": "@string/widget_label_theme",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetSeekBarPreference",
+      "key": "prefkey_matrix_widget_alpha",
+      "title": "@string/widget_select_alpha_text1",
+      "summary": null,
+      "default": "90"
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetPreference",
+      "key": "prefkey_matrix_font_size",
+      "title": "@string/preference_text_size_title",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetSwitchPreference",
+      "key": "prefkey_matrix_completed",
+      "title": "@string/widget_show_checkbox",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetSwitchPreference",
+      "key": "prefkey_matrix_show_completed",
+      "title": "@string/show_completed",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    }
+  ],
+  "widget_month_preference.xml": [
+    {
+      "tag": "androidx.preference.PreferenceScreen",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetPreference",
+      "key": "widgetFilterProject",
+      "title": "@string/display_range",
+      "summary": "@string/widget_tasklist_label",
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetSwitchPreference",
+      "key": "WidgetShowCompleted",
+      "title": "@string/show_completed",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetSwitchPreference",
+      "key": "WidgetShowDetail",
+      "title": "@string/show_details",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "ShowAbnormally",
+      "title": "@string/show_abnormally",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    }
+  ],
+  "widget_page_turn_preference.xml": [
+    {
+      "tag": "androidx.preference.PreferenceScreen",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetPreference",
+      "key": "widgetDisplayProjectOrTag",
+      "title": "@string/display_range",
+      "summary": "@string/widget_tasklist_label",
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetPreference",
+      "key": "WidgetGroupBy",
+      "title": "@string/group_by",
+      "summary": "@string/group_by",
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetPreference",
+      "key": "WidgetOrderBy",
+      "title": "@string/widget_sortby_label",
+      "summary": "@string/widget_sortby_label",
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetSwitchPreference",
+      "key": "WidgetShowOverdue",
+      "title": "@string/show_overdue",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetSwitchPreference",
+      "key": "WidgetShowCompleted",
+      "title": "@string/show_completed",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetSwitchPreference",
+      "key": "WidgetShowDate",
+      "title": "@string/widget_show_date_label",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    }
+  ],
+  "widget_pomo_config_preference_fragment.xml": [
+    {
+      "tag": "PreferenceScreen",
+      "key": "pref_main",
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_pomo_widget_theme",
+      "title": "@string/widget_label_theme",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.SeekBarPreference",
+      "key": "prefkey_pomo_widget_alpha",
+      "title": "@string/widget_select_alpha_text1",
+      "summary": null,
+      "default": "90"
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_pomo_duration",
+      "title": "@string/pomo_duration",
+      "summary": null,
+      "default": "1500000"
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_short_break_duration",
+      "title": "@string/short_break_duration",
+      "summary": null,
+      "default": "300000"
+    },
+    {
+      "tag": "Preference",
+      "key": "pref_long_break_duration",
+      "title": "@string/long_break_duration",
+      "summary": null,
+      "default": "900000"
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_long_break_every_pomo",
+      "title": "@string/long_break_every_pomo",
+      "summary": null,
+      "default": "4"
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_auto_start_next_pomo",
+      "title": "@string/auto_start_of_next_pomo",
+      "summary": null,
+      "default": "false"
+    },
+    {
+      "tag": "CheckBoxPreference",
+      "key": "prefkey_auto_start_break",
+      "title": "@string/auto_start_of_break",
+      "summary": null,
+      "default": "false"
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    }
+  ],
+  "widget_quick_add_preference.xml": [
+    {
+      "tag": "androidx.preference.PreferenceScreen",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "PrefDefaultsTheme",
+      "title": "@string/widget_label_theme",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.SeekBarPreference",
+      "key": "PrefDefaultsAlpha",
+      "title": "@string/widget_select_alpha_text1",
+      "summary": null,
+      "default": "90"
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_widget_size",
+      "title": "@string/widget_size",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "PrefDefaultsTitle",
+      "title": "@string/title",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "PrefDefaultsDate",
+      "title": "@string/date",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "PrefDefaultsPriority",
+      "title": "@string/priority",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "PrefDefaultsTag",
+      "title": "@string/tag",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "PrefDefaultsList",
+      "title": "@string/list",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "PrefDefaultsTemplate",
+      "title": "@string/template",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    }
+  ],
+  "widget_single_habit_config_preference_fragment.xml": [
+    {
+      "tag": "PreferenceScreen",
+      "key": "pref_main",
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_habit_item",
+      "title": "@string/choose_habit",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_widget_size",
+      "title": "@string/widget_size",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    }
+  ],
+  "widget_square_focus_config_preference_fragment.xml": [
+    {
+      "tag": "PreferenceScreen",
+      "key": "pref_main",
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_widget_theme",
+      "title": "@string/widget_label_theme",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.SeekBarPreference",
+      "key": "prefkey_widget_alpha",
+      "title": "@string/widget_select_alpha_text1",
+      "summary": null,
+      "default": "90"
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_widget_size",
+      "title": "@string/widget_size",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_timer",
+      "title": "@string/focus_on",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_timing_mode",
+      "title": "@string/timer_mode",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    }
+  ],
+  "widget_standard_preference.xml": [
+    {
+      "tag": "androidx.preference.PreferenceScreen",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetPreference",
+      "key": "widgetDisplayProjectOrTag",
+      "title": "@string/display_range",
+      "summary": "@string/widget_tasklist_label",
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetPreference",
+      "key": "WidgetGroupBy",
+      "title": "@string/group_by",
+      "summary": "@string/group_by",
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetPreference",
+      "key": "WidgetOrderBy",
+      "title": "@string/widget_sortby_label",
+      "summary": "@string/widget_sortby_label",
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetPreference",
+      "key": "widgetTaskClick",
+      "title": "@string/widget_label_list_click",
+      "summary": "@string/widget_label_list_click",
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetSwitchPreference",
+      "key": "WidgetShowOverdue",
+      "title": "@string/show_overdue",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetSwitchPreference",
+      "key": "WidgetShowCheckbox",
+      "title": "@string/widget_show_checkbox",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetSwitchPreference",
+      "key": "WidgetShowCompleted",
+      "title": "@string/show_completed",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetSwitchPreference",
+      "key": "WidgetShowDetail",
+      "title": "@string/show_details",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetSwitchPreference",
+      "key": "WidgetShowSection",
+      "title": "@string/show_section",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetSwitchPreference",
+      "key": "WidgetShowDate",
+      "title": "@string/widget_show_date_label",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetSwitchPreference",
+      "key": "WidgetCompactMode",
+      "title": "@string/widget_compact_mode",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    }
+  ],
+  "widget_task_completion_config_preference_fragment.xml": [
+    {
+      "tag": "PreferenceScreen",
+      "key": "pref_main",
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_widget_theme",
+      "title": "@string/widget_label_theme",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.SeekBarPreference",
+      "key": "prefkey_widget_alpha",
+      "title": "@string/widget_select_alpha_text1",
+      "summary": null,
+      "default": "90"
+    },
+    {
+      "tag": "Preference",
+      "key": "prefkey_widget_size",
+      "title": "@string/widget_size",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    }
+  ],
+  "widget_theme_preview_preference.xml": [
+    {
+      "tag": "androidx.preference.PreferenceScreen",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetPreference",
+      "key": "widgetThemeType",
+      "title": "@string/widget_label_theme",
+      "summary": "@string/widget_label_theme",
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetPreference",
+      "key": "WidgetFontSize",
+      "title": "@string/preference_text_size_title",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetSeekBarPreference",
+      "key": "WidgetAlpha",
+      "title": "@string/widget_select_alpha_text1",
+      "summary": null,
+      "default": "50"
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetPreference",
+      "key": "ViewType",
+      "title": "@string/select_view",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    }
+  ],
+  "widget_three_day_preference.xml": [
+    {
+      "tag": "androidx.preference.PreferenceScreen",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetPreference",
+      "key": "widgetFilterProject",
+      "title": "@string/display_range",
+      "summary": "@string/widget_tasklist_label",
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetPreference",
+      "key": "WidgetStartTime",
+      "title": "@string/start_at",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetPreference",
+      "key": "WidgetEndTime",
+      "title": "@string/end_at",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetSwitchPreference",
+      "key": "WidgetShowCompleted",
+      "title": "@string/show_completed",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetSwitchPreference",
+      "key": "WidgetShowDetail",
+      "title": "@string/show_details",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    }
+  ],
+  "widget_today_calendar_preference.xml": [
+    {
+      "tag": "androidx.preference.PreferenceScreen",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetSwitchPreference",
+      "key": "WidgetShowOverdue",
+      "title": "@string/show_overdue_today",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetSwitchPreference",
+      "key": "WidgetShowMarks",
+      "title": "@string/show_undone_point",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetSwitchPreference",
+      "key": "WidgetShowCheckbox",
+      "title": "@string/widget_show_checkbox",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetSwitchPreference",
+      "key": "WidgetShowCompleted",
+      "title": "@string/show_completed",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetSwitchPreference",
+      "key": "WidgetOnlyTask",
+      "title": "@string/only_task",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetSwitchPreference",
+      "key": "WidgetShowTime",
+      "title": "@string/widget_show_task_time",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    }
+  ],
+  "widget_week_preference.xml": [
+    {
+      "tag": "androidx.preference.PreferenceScreen",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetPreference",
+      "key": "widgetFilterProject",
+      "title": "@string/display_range",
+      "summary": "@string/widget_tasklist_label",
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetSwitchPreference",
+      "key": "WidgetShowCompleted",
+      "title": "@string/show_completed",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "com.ticktick.task.activity.widget.preference.WidgetSwitchPreference",
+      "key": "WidgetShowDetail",
+      "title": "@string/show_details",
+      "summary": null,
+      "default": null
+    },
+    {
+      "tag": "PreferenceCategory",
+      "key": null,
+      "title": null,
+      "summary": null,
+      "default": null
+    }
+  ]
+}

@@ -1,0 +1,1394 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:sharedUserId="com.ticktick.task" android:versionCode="8301" android:versionName="8.3.0.1" android:compileSdkVersion="37" android:compileSdkVersionCodename="17" android:requiredSplitTypes="base__abi,base__density" android:splitTypes="" package="com.ticktick.task" platformBuildVersionCode="37" platformBuildVersionName="17">
+  <uses-sdk android:minSdkVersion="26" android:targetSdkVersion="37"/>
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+  <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+  <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+  <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+  <uses-permission android:name="android.permission.VIBRATE"/>
+  <uses-permission android:name="android.permission.WAKE_LOCK"/>
+  <uses-permission android:name="android.permission.READ_CALENDAR"/>
+  <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+  <uses-permission android:name="android.permission.READ_CONTACTS"/>
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="32"/>
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32"/>
+  <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+  <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+  <uses-permission android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY"/>
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+  <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+  <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+  <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+  <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT"/>
+  <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+  <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+  <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" android:maxSdkVersion="32"/>
+  <uses-permission android:name="android.permission.USE_EXACT_ALARM"/>
+  <uses-permission android:name="com.coloros.permission.READ_CALENDAR"/>
+  <uses-permission android:name="com.coloros.permission.WRITE_CALENDAR"/>
+  <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+  <uses-permission android:name="android.permission.READ_MEDIA_AUDIO"/>
+  <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+  <permission android:label="@7F130FED" android:name="com.ticktick.task.permission.READ_TASKS" android:protectionLevel="0x00000000" android:description="@7F130FED"/>
+  <permission android:name="com.ticktick.task.permission.WEAR_ACCESS" android:protectionLevel="0x00000002"/>
+  <permission android:name="com.ticktick.task.permission.signature" android:protectionLevel="0x00000002"/>
+  <uses-permission android:name="com.ticktick.task.permission.signature"/>
+  <uses-permission android:name="com.ticktick.task.permission.READ_TASKS"/>
+  <uses-permission android:name="org.dayup.gtask.permission.READ_TASKS"/>
+  <uses-permission android:name="org.dayup.gtask.v2.permission.READ_TASKS"/>
+  <uses-permission android:name="com.ticktick.task.permission.WEAR_DATA_CHANGED_BROADCAST"/>
+  <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+  <uses-permission android:name="com.anydo.provider.permission.READ_ANYDO_TASKS"/>
+  <uses-permission android:name="android.permission.GET_TASKS"/>
+  <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+  <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"/>
+  <queries>
+    <intent>
+      <action android:name="android.speech.action.RECOGNIZE_SPEECH"/>
+    </intent>
+    <intent>
+      <action android:name="android.intent.action.SEND"/>
+    </intent>
+    <intent>
+      <action android:name="android.intent.action.VIEW"/>
+    </intent>
+    <intent>
+      <action android:name="android.intent.action.MAIN"/>
+    </intent>
+    <intent>
+      <action android:name="android.speech.RecognitionService"/>
+    </intent>
+    <package android:name="com.xiaomi.wearable"/>
+    <package android:name="com.mi.health"/>
+    <package android:name="com.google.android.apps.maps"/>
+    <package android:name="com.facebook.katana"/>
+    <intent>
+      <action android:name="com.android.vending.billing.InAppBillingService.BIND"/>
+    </intent>
+    <intent>
+      <action android:name="com.google.android.apps.play.billingtestcompanion.BillingOverrideService.BIND"/>
+    </intent>
+    <package android:name="com.huawei.health"/>
+    <package android:name="com.hihonor.healthdemo"/>
+    <package android:name="com.hihonor.health"/>
+  </queries>
+  <queries>
+    <package android:name="com.huawei.health"/>
+    <package android:name="com.huawei.wearengine.service.WearEngineService"/>
+  </queries>
+  <uses-permission android:name="android.permission.POST_PROMOTED_NOTIFICATIONS"/>
+  <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"/>
+  <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE"/>
+  <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE"/>
+  <uses-permission android:name="com.vivo.aiengine.permission.READ_AWARE_PROVIDER"/>
+  <uses-permission android:name="com.vivo.aiengine.permission.WRITE_AWARE_PROVIDER"/>
+  <uses-permission android:name="android.permission.CAMERA"/>
+  <uses-permission android:name="oppo.permission.OPPO_COMPONENT_SAFE"/>
+  <uses-permission android:name="com.huawei.permission.external_app_settings.USE_COMPONENT"/>
+  <uses-permission android:name="com.huawei.permission.external_app_settings.ACCESS_INTERFACE"/>
+  <uses-permission android:name="com.vivo.devicerpc.notify"/>
+  <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
+  <uses-permission android:name="com.android.vending.BILLING"/>
+  <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+  <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+  <uses-permission android:name="android.permission.ACCESS_ADSERVICES_ATTRIBUTION"/>
+  <uses-permission android:name="android.permission.ACCESS_ADSERVICES_AD_ID"/>
+  <uses-permission android:name="android.permission.ACCESS_ADSERVICES_CUSTOM_AUDIENCE"/>
+  <uses-permission android:name="android.permission.ACCESS_ADSERVICES_TOPICS"/>
+  <permission android:name="com.ticktick.task.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="0x00000002"/>
+  <uses-permission android:name="com.ticktick.task.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+  <uses-permission android:name="com.hihonor.healthservice.permission.access"/>
+  <application android:theme="@7F14039B" android:label="@7F130194" android:icon="@7F100002" android:name="com.ticktick.task.TickTickApplication" android:allowBackup="false" android:supportsRtl="true" android:extractNativeLibs="true" android:networkSecurityConfig="@7F170011" android:roundIcon="@7F100044" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:localeConfig="@7F17000D" android:enableOnBackInvokedCallback="false">
+    <activity android:theme="@7F1403E9" android:name="com.ticktick.task.activity.DispatchActivity" android:exported="true" android:taskAffinity="com.ticktick.task.external" android:excludeFromRecents="true" android:launchMode="2">
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:scheme="ticktick" android:host="login"/>
+      </intent-filter>
+      <intent-filter android:autoVerify="true">
+        <data android:scheme="https" android:host="ticktick.com" android:pathPrefix="/webapp"/>
+        <data android:scheme="http"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+      </intent-filter>
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <data android:mimeType="vnd.android.cursor.dir/ticktick.task.task"/>
+      </intent-filter>
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW"/>
+        <data android:mimeType="vnd.android.cursor.item/ticktick.task.task"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+      </intent-filter>
+      <intent-filter>
+        <action android:name="android.intent.action.INSERT"/>
+        <data android:mimeType="vnd.android.cursor.item/ticktick.task.task"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+      </intent-filter>
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <data android:scheme="ticktick" android:host="v1" android:pathPattern="/task/view/.*"/>
+      </intent-filter>
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <data android:scheme="ticktick" android:host="v1" android:pathPattern="/home/.*"/>
+      </intent-filter>
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:scheme="ticktick" android:host="v1" android:pathPattern="/event/report"/>
+      </intent-filter>
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:scheme="ticktick" android:host="v1" android:pathPattern="/share_link/join*"/>
+      </intent-filter>
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:scheme="ticktick" android:host="v1" android:pathPattern="/calendar/bind*"/>
+      </intent-filter>
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <data android:scheme="ticktick" android:host="v1" android:pathPattern="/template/project/apply/.*"/>
+      </intent-filter>
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <data android:scheme="ticktick" android:host="helper-center"/>
+      </intent-filter>
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:scheme="ticktick" android:host="v1" android:pathPattern="/notion/bind"/>
+      </intent-filter>
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <data android:scheme="ticktick" android:host="v2" android:pathPattern="/task/detail/.*"/>
+      </intent-filter>
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <data android:scheme="ticktick" android:host="v2" android:pathPattern="/list/.*"/>
+      </intent-filter>
+      <intent-filter>
+        <action android:name="android.intent.action.INSERT"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <data android:scheme="ticktick" android:host="v2" android:pathPattern="/addTask/.*"/>
+      </intent-filter>
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <data android:scheme="ticktick" android:host="v2" android:pathPattern="/focus/view"/>
+      </intent-filter>
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:scheme="ticktick" android:host="help-center"/>
+        <data android:scheme="ticktick" android:host="helper-center"/>
+      </intent-filter>
+    </activity>
+    <activity android:theme="@7F1403E9" android:name="com.ticktick.task.activity.dispatch.InnerDispatchSingleTaskActivity" android:taskAffinity="com.ticktick.task.second" android:excludeFromRecents="true" android:launchMode="2"/>
+    <activity android:theme="@7F1403E9" android:name="com.ticktick.task.activity.dispatch.InnerDispatchSingleInstanceActivity" android:taskAffinity="" android:excludeFromRecents="true" android:launchMode="3"/>
+    <activity android:name="com.ticktick.task.location.TaskMapActivity"/>
+    <activity android:theme="@7F140159" android:label="@7F130194" android:name="com.facebook.FacebookActivity" android:configChanges="0x000005B0"/>
+    <activity android:name="com.facebook.CustomTabActivity" android:exported="true">
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:scheme="@7F130748"/>
+      </intent-filter>
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:scheme="fbconnect" android:host="cct.com.ticktick.task"/>
+      </intent-filter>
+    </activity>
+    <provider android:name="com.facebook.FacebookContentProvider" android:exported="true" android:authorities="com.facebook.app.FacebookContentProvider687713684576416"/>
+    <activity android:theme="@7F1403E9" android:name="com.ticktick.task.share.ShareActivity" android:excludeFromRecents="true" android:configChanges="0x00000420"/>
+    <activity android:theme="@7F140172" android:name="com.ticktick.task.share.TickTickSendTaskListActivity" android:excludeFromRecents="true" android:configChanges="0x00000420"/>
+    <activity android:theme="@7F1403EA" android:name="com.ticktick.task.payfor.FeatureItemActivityOld" android:configChanges="0x00000420"/>
+    <activity android:theme="@7F1403E9" android:name="com.ticktick.task.activity.ExpandImageActivity" android:configChanges="0x00000420"/>
+    <activity android:theme="@7F14039B" android:name="com.ticktick.task.account.LoginMainActivity" android:windowSoftInputMode="0x00000013"/>
+    <activity android:name="com.ticktick.task.activity.preference.FeedbackPreferences" android:exported="false"/>
+    <activity android:name="com.ticktick.task.activity.preference.CustomSwipePreference" android:exported="false" android:configChanges="0x000004A0"/>
+    <activity android:name="com.ticktick.task.activity.preference.Android6ReminderTipsPreference" android:exported="false" android:configChanges="0x000004A0"/>
+    <activity android:label="@7F1308AD" android:name="com.ticktick.task.activity.widget.AppWidgetWeekConfigActivity" android:exported="true" android:taskAffinity="" android:excludeFromRecents="true" android:configChanges="0x000004A0">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+      </intent-filter>
+    </activity>
+    <activity android:label="@7F1317DF" android:name="com.ticktick.task.activity.widget.AppWidgetHabitWeekConfigActivity" android:exported="true" android:taskAffinity="" android:excludeFromRecents="true" android:configChanges="0x000004A0">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+      </intent-filter>
+    </activity>
+    <activity android:label="@7F13180F" android:name="com.ticktick.task.activity.widget.AppWidgetHabitMonthConfigActivity" android:exported="true" android:taskAffinity="" android:excludeFromRecents="true" android:configChanges="0x000004A0">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+      </intent-filter>
+    </activity>
+    <activity android:theme="@7F1403EA" android:name="com.ticktick.task.activity.CalendarViewActivity" android:screenOrientation="4"/>
+    <activity android:name="net.openid.appauth.RedirectUriReceiverActivity" android:exported="true">
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:scheme="@7F130899"/>
+      </intent-filter>
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:scheme="@7F1305E8"/>
+      </intent-filter>
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:scheme="@7F130886"/>
+      </intent-filter>
+    </activity>
+    <activity android:name="com.ticktick.task.share.ThreeOrSevenCalendarShareActivity" android:screenOrientation="1" android:configChanges="0x00000420"/>
+    <activity android:name="com.ticktick.task.share.TaskListShareActivity" android:screenOrientation="1" android:configChanges="0x00000420"/>
+    <activity android:name="com.ticktick.task.share.TaskShareActivity" android:screenOrientation="1" android:configChanges="0x00000420"/>
+    <activity android:name="com.ticktick.task.share.AchievementSharePreviewActivity" android:screenOrientation="1" android:configChanges="0x00000420"/>
+    <activity android:theme="@7F1403AC" android:name="com.ticktick.task.activity.ShareImageActivity" android:configChanges="0x00000420"/>
+    <activity android:name="com.ticktick.task.activity.TimetableShareActivity" android:screenOrientation="1" android:configChanges="0x00000420"/>
+    <activity android:name="com.ticktick.task.share.MedalShareActivity" android:screenOrientation="1" android:configChanges="0x000004A0"/>
+    <activity android:theme="@7F1403EA" android:name="com.ticktick.task.share.AnnualYearReportWebViewActivity" android:configChanges="0x00000480"/>
+    <activity android:theme="@7F1403EA" android:name="com.ticktick.task.share.MedalWebActivity"/>
+    <activity android:theme="@7F1403EA" android:name="com.ticktick.task.activity.preference.TranslateWebViewActivity"/>
+    <activity android:name="com.ticktick.task.activity.preference.HelpTranslatePreferences"/>
+    <activity android:theme="@7F1403EA" android:name="com.ticktick.task.invitefriend.InviteFriendsActivity" android:screenOrientation="1" android:configChanges="0x00000480"/>
+    <activity android:theme="@7F140016" android:name="com.ticktick.task.matrix.ui.MatrixDetailListActivity"/>
+    <activity android:name="com.ticktick.task.matrix.ui.MatrixManageActivity"/>
+    <activity android:name="com.ticktick.task.matrix.ui.MatrixConditionActivity"/>
+    <activity android:theme="@7F1403E9" android:name="com.ticktick.task.activity.widget.AppWidgetResizeActivity" android:taskAffinity="cn.ticktick.widget_resize" android:excludeFromRecents="true" android:configChanges="0x000004A0"/>
+    <activity android:theme="@7F1403E9" android:name="com.ticktick.task.activity.widget.UndoneCountWidgetResizeActivity" android:taskAffinity="cn.ticktick.widget_resize" android:excludeFromRecents="true" android:launchMode="3" android:configChanges="0x000004A0"/>
+    <activity android:theme="@7F1403E9" android:name="com.ticktick.task.focus.ui.FocusExitConfirmActivity" android:taskAffinity="" android:excludeFromRecents="true" android:launchMode="3" android:configChanges="0x000004A0"/>
+    <activity android:theme="@7F140018" android:name="com.ticktick.task.activity.LoadDexActivity" android:process=":loadDex"/>
+    <activity android:name="com.ticktick.task.activity.NotificationSettingActivity" android:screenOrientation="1"/>
+    <activity android:theme="@7F14005C" android:name="com.theartofdev.edmodo.cropper.CropImageActivity"/>
+    <activity android:label="@7F13180C" android:name="com.ticktick.task.activity.widget.AppWidgetFocusDistributionConfigActivity" android:exported="true" android:taskAffinity="" android:excludeFromRecents="true" android:configChanges="0x000004A0">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+      </intent-filter>
+    </activity>
+    <activity android:name="com.ticktick.task.focus.ui.timer.ArchiveTimersActivity" android:windowSoftInputMode="0x00000013"/>
+    <activity android:theme="@7F1403AC" android:name="com.ticktick.task.payfor.PayUserInfoActivityV6" android:launchMode="1"/>
+    <service android:label="@7F130194" android:icon="@7F080319" android:name="com.ticktick.task.dashClock.GTasksExtension" android:permission="com.google.android.apps.dashclock.permission.READ_EXTENSION_DATA" android:exported="true">
+      <intent-filter>
+        <action android:name="com.google.android.apps.dashclock.Extension"/>
+      </intent-filter>
+      <meta-data android:name="protocolVersion" android:value="1"/>
+      <meta-data android:name="description" android:value="@7F1304F8"/>
+    </service>
+    <service android:name="com.ticktick.task.controller.ReminderPlayService" android:exported="false" android:foregroundServiceType="0x00000002"/>
+    <service android:name="com.ticktick.task.reminder.AlertCalendarReminderService" android:exported="false"/>
+    <service android:name="com.ticktick.task.activity.widget.HabitWidget1Service" android:permission="android.permission.BIND_REMOTEVIEWS" android:exported="false"/>
+    <service android:name="com.ticktick.task.activity.widget.HabitWidget2Service" android:permission="android.permission.BIND_REMOTEVIEWS" android:exported="false"/>
+    <service android:name="com.ticktick.task.activity.widget.CountdownWidgetService" android:permission="android.permission.BIND_REMOTEVIEWS" android:exported="false"/>
+    <service android:name="com.ticktick.task.activity.widget.MatrixWidgetFactory1Service" android:permission="android.permission.BIND_REMOTEVIEWS" android:exported="false"/>
+    <service android:name="com.ticktick.task.activity.widget.MatrixWidgetFactory2Service" android:permission="android.permission.BIND_REMOTEVIEWS" android:exported="false"/>
+    <service android:name="com.ticktick.task.activity.widget.MatrixWidgetFactory3Service" android:permission="android.permission.BIND_REMOTEVIEWS" android:exported="false"/>
+    <service android:name="com.ticktick.task.activity.widget.MatrixWidgetFactory4Service" android:permission="android.permission.BIND_REMOTEVIEWS" android:exported="false"/>
+    <service android:name="com.ticktick.task.activity.widget.WidgetService" android:permission="android.permission.BIND_REMOTEVIEWS" android:exported="false"/>
+    <service android:name="com.ticktick.task.reminder.AlertService" android:exported="false"/>
+    <service android:name="com.ticktick.task.receiver.HolidayDailySyncService" android:exported="false"/>
+    <service android:name="com.ticktick.task.location.alert.LocationAlertService" android:exported="false"/>
+    <service android:name="com.ticktick.task.reminder.AlertActionService" android:exported="false"/>
+    <service android:name="com.ticktick.task.activity.background.AutoSyncTaskService"/>
+    <service android:name="com.ticktick.task.push.PushIntentService"/>
+    <service android:name="com.ticktick.task.analytics.channel.ChannelTrackingService"/>
+    <service android:name="com.ticktick.task.service.ReminderPopupDispatcherService" android:exported="false"/>
+    <service android:name="com.ticktick.task.focus.stopwatch.service.StopwatchControlService" android:exported="false" android:foregroundServiceType="0x00000002"/>
+    <receiver android:name="com.ticktick.task.reminder.TaskAlertReceiver" android:permission="com.ticktick.task.permission.signature" android:exported="false">
+      <intent-filter>
+        <action android:name="com.ticktick.task.action.BOOT_COMPLETED"/>
+        <action android:name="android.intent.action.TIME_SET"/>
+        <action android:name="com.ticktick.task.action.TASK_ALERT_SCHEDULE"/>
+        <action android:name="com.ticktick.task.action.TASK_TIME_CHANGED"/>
+        <action android:name="com.ticktick.task.action.TASK_MISS_REMINDER_SHOW"/>
+      </intent-filter>
+      <intent-filter>
+        <action android:name="com.ticktick.task.action.TASK_REMINDERS"/>
+        <action android:name="com.ticktick.task.action.ANNOYING_REPEAT_ALERT"/>
+        <data android:mimeType="vnd.android.cursor.item/ticktick.task.task"/>
+      </intent-filter>
+      <intent-filter>
+        <action android:name="com.ticktick.task.action.ITEM_REMINDERS"/>
+        <data android:mimeType="vnd.android.cursor.item/ticktick.task.item"/>
+      </intent-filter>
+      <intent-filter>
+        <action android:name="com.ticktick.task.action.COUNT_DOWN_REMINDERS"/>
+        <data android:mimeType="vnd.android.cursor.item/ticktick.task.countdown"/>
+      </intent-filter>
+      <intent-filter>
+        <action android:name="com.ticktick.task.action.FREE_TRAIL_END"/>
+      </intent-filter>
+    </receiver>
+    <receiver android:name="com.ticktick.task.location.alert.LocationAlertReceiver" android:permission="com.ticktick.task.permission.signature" android:exported="false">
+      <intent-filter>
+        <action android:name="com.ticktick.task.action.BOOT_COMPLETED"/>
+        <action android:name="com.ticktick.task.action.LOCATION_ALERT_SCHEDULE"/>
+        <action android:name="com.ticktick.task.action.TICKTICK_ON_LAUNCH"/>
+      </intent-filter>
+      <intent-filter>
+        <action android:name="com.ticktick.task.action.LOCATION_ALERT"/>
+      </intent-filter>
+    </receiver>
+    <receiver android:label="@7F1317F1" android:name="com.ticktick.task.activity.widget.AppWidgetProvider4x4" android:permission="com.ticktick.task.permission.signature" android:exported="true">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+        <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+      </intent-filter>
+      <meta-data android:name="android.appwidget.provider" android:resource="@7F170020"/>
+    </receiver>
+    <receiver android:label="@7F13184F" android:name="com.ticktick.task.activity.widget.AppWidgetProviderWeek" android:permission="com.ticktick.task.permission.signature" android:exported="true">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+        <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+        <action android:name="com.ticktick.task.action.CONF_CHANGE"/>
+      </intent-filter>
+      <meta-data android:name="android.appwidget.provider" android:resource="@7F17003A"/>
+    </receiver>
+    <receiver android:label="@7F13180D" android:name="com.ticktick.task.activity.widget.AppWidgetProviderGrid" android:permission="com.ticktick.task.permission.signature" android:exported="true">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+        <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+        <action android:name="com.ticktick.task.action.CONF_CHANGE"/>
+      </intent-filter>
+      <meta-data android:name="android.appwidget.provider" android:resource="@7F170029"/>
+    </receiver>
+    <receiver android:label="@7F1317DC" android:name="com.ticktick.task.activity.widget.AppWidgetProviderGridWeek" android:permission="com.ticktick.task.permission.signature" android:exported="true">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+        <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+        <action android:name="com.ticktick.task.action.TASKS_UPDATED"/>
+        <action android:name="com.ticktick.task.action.CONF_CHANGE"/>
+      </intent-filter>
+      <meta-data android:name="android.appwidget.provider" android:resource="@7F17002A"/>
+    </receiver>
+    <receiver android:label="@7F13182F" android:name="com.ticktick.task.activity.widget.AppWidgetScrollable" android:permission="com.ticktick.task.permission.signature" android:exported="true">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+        <action android:name="com.ticktick.task.action.TASKS_UPDATED"/>
+        <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+      </intent-filter>
+      <meta-data android:name="android.appwidget.provider" android:resource="@7F17003B"/>
+    </receiver>
+    <receiver android:label="@7F131594" android:name="com.ticktick.task.activity.widget.AppWidgetProviderUndoneCount" android:permission="com.ticktick.task.permission.signature" android:exported="true">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+        <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+      </intent-filter>
+      <meta-data android:name="android.appwidget.provider" android:resource="@7F170039"/>
+    </receiver>
+    <receiver android:label="@7F131810" android:name="com.ticktick.task.activity.widget.AppWidgetProviderHabit" android:exported="true">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+        <action android:name="com.ticktick.task.action.HABIT_WIDGET_UPDATED"/>
+        <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+      </intent-filter>
+      <meta-data android:name="android.appwidget.provider" android:resource="@7F17002B"/>
+    </receiver>
+    <receiver android:label="@7F13181A" android:name="com.ticktick.task.activity.widget.AppWidgetProviderMatrix" android:exported="true">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+        <action android:name="com.ticktick.task.action.MATRIX_WIDGET_UPDATED"/>
+        <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+      </intent-filter>
+      <meta-data android:name="android.appwidget.provider" android:resource="@7F170030"/>
+    </receiver>
+    <receiver android:label="@7F13181E" android:name="com.ticktick.task.activity.widget.provider.AppWidgetProviderSingleHabit" android:exported="true">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+        <action android:name="com.ticktick.task.action.SINGLE_HABIT_WIDGET_UPDATED"/>
+        <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+      </intent-filter>
+      <meta-data android:name="android.appwidget.provider" android:resource="@7F170034"/>
+    </receiver>
+    <receiver android:label="@7F1307D5" android:name="com.ticktick.task.activity.widget.provider.AppWidgetProviderDailyFocused" android:exported="true">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+        <action android:name="com.ticktick.task.action.DAILY_FOCUSED_WIDGET_UPDATED"/>
+        <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+      </intent-filter>
+      <meta-data android:name="android.appwidget.provider" android:resource="@7F170025"/>
+    </receiver>
+    <receiver android:name="com.ticktick.task.activity.widget.WidgetItemBroadcastReceiver" android:permission="com.ticktick.task.permission.signature" android:exported="false">
+      <intent-filter>
+        <action android:name="ticktick.appwidget.toast.action"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+      </intent-filter>
+    </receiver>
+    <receiver android:label="@7F13180C" android:name="com.ticktick.task.activity.widget.AppWidgetProviderFocusDistribution2x2" android:exported="true">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+        <action android:name="com.ticktick.task.action.HABIT_WIDGET_UPDATED"/>
+        <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+      </intent-filter>
+      <meta-data android:name="android.appwidget.provider" android:resource="@7F170026"/>
+    </receiver>
+    <receiver android:label="@7F13180C" android:name="com.ticktick.task.activity.widget.AppWidgetProviderFocusDistribution4x2" android:exported="true">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+        <action android:name="com.ticktick.task.action.HABIT_WIDGET_UPDATED"/>
+        <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+      </intent-filter>
+      <meta-data android:name="android.appwidget.provider" android:resource="@7F170027"/>
+    </receiver>
+    <receiver android:label="@7F13180C" android:name="com.ticktick.task.activity.widget.AppWidgetProviderFocusDistribution4x4" android:exported="true">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+        <action android:name="com.ticktick.task.action.HABIT_WIDGET_UPDATED"/>
+        <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+      </intent-filter>
+      <meta-data android:name="android.appwidget.provider" android:resource="@7F170028"/>
+    </receiver>
+    <receiver android:label="@7F130272" android:name="com.ticktick.task.activity.widget.AppWidgetTodayCalendar" android:exported="true">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+        <action android:name="com.ticktick.task.action.HABIT_WIDGET_UPDATED"/>
+        <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+      </intent-filter>
+      <meta-data android:name="android.appwidget.provider" android:resource="@7F170038"/>
+    </receiver>
+    <receiver android:name="com.ticktick.task.reminder.DailyReminderReceiver" android:permission="com.ticktick.task.permission.signature" android:exported="false">
+      <intent-filter>
+        <action android:name="com.ticktick.task.action.BOOT_COMPLETED"/>
+        <action android:name="android.intent.action.TIME_SET"/>
+        <action android:name="com.ticktick.task.action.notificationDailySummarySchedule"/>
+        <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+        <action android:name="com.ticktick.task.action.notificaitonDailySummary"/>
+      </intent-filter>
+    </receiver>
+    <receiver android:name="com.ticktick.task.receiver.DailyScheduleReceiver" android:permission="com.ticktick.task.permission.signature" android:exported="false">
+      <intent-filter>
+        <action android:name="com.ticktick.task.action.BOOT_COMPLETED"/>
+        <action android:name="android.intent.action.TIME_SET"/>
+        <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+        <action android:name="com.ticktick.task.action.DailyScheduleAction"/>
+        <action android:name="com.ticktick.task.action.DailyScheduleZeroClockAction"/>
+      </intent-filter>
+    </receiver>
+    <receiver android:name="com.ticktick.task.broadcast.BootCompletedReceive" android:exported="true">
+      <intent-filter>
+        <action android:name="android.intent.action.BOOT_COMPLETED"/>
+      </intent-filter>
+    </receiver>
+    <receiver android:name="com.ticktick.task.reminder.CalendarAlertReceiver" android:permission="com.ticktick.task.permission.signature" android:exported="false">
+      <intent-filter>
+        <action android:name="com.ticktick.task.action.BOOT_COMPLETED"/>
+        <action android:name="android.intent.action.TIME_SET"/>
+        <action android:name="com.ticktick.task.action.CALENDAR_ALERT_SCHEDULE"/>
+        <action android:name="com.ticktick.task.action.CALENDAR_EVENT_CHANGED"/>
+        <action android:name="com.ticktick.task.action.TASK_MISS_REMINDER_SHOW"/>
+      </intent-filter>
+      <intent-filter>
+        <action android:name="com.ticktick.task.action.CALENDAR_EVENT_REMINDERS"/>
+        <data android:mimeType="vnd.android.cursor.item/ticktick.task.calendar"/>
+      </intent-filter>
+    </receiver>
+    <receiver android:name="com.google.android.gms.analytics.AnalyticsReceiver" android:enabled="true" android:exported="false">
+      <intent-filter>
+        <action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH"/>
+      </intent-filter>
+    </receiver>
+    <service android:name="com.google.android.gms.analytics.AnalyticsService" android:enabled="true" android:exported="false"/>
+    <service android:label="@7F13007C" android:icon="@7F080686" android:name="com.ticktick.task.service.QuickSettingsTileService" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE" android:exported="true">
+      <intent-filter>
+        <action android:name="android.service.quicksettings.action.QS_TILE"/>
+      </intent-filter>
+    </service>
+    <receiver android:name="com.ticktick.task.analytics.channel.ChannelTrackingReceiver" android:enabled="true" android:exported="true">
+      <intent-filter>
+        <action android:name="com.android.vending.INSTALL_REFERRER"/>
+      </intent-filter>
+    </receiver>
+    <service android:name="com.google.android.gms.analytics.CampaignTrackingService" android:enabled="true" android:exported="false"/>
+    <service android:name="com.ticktick.task.activity.background.AutoSyncJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="true"/>
+    <service android:name="com.ticktick.task.compat.service.job.TaskAlertJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+    <service android:name="com.ticktick.task.compat.service.job.CalendarAlertJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+    <service android:name="com.ticktick.task.compat.service.job.ChannelTrackingJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+    <service android:name="com.ticktick.task.location.alert.LocationAlertJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+    <service android:name="com.ticktick.task.compat.service.job.HolidayDailySyncJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+    <service android:name="com.ticktick.task.compat.service.job.PushIntentJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+    <service android:name="com.ticktick.task.push.PushMessagingService" android:exported="true">
+      <intent-filter>
+        <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+      </intent-filter>
+    </service>
+    <provider android:name="com.ticktick.task.wearableprovider.WearContentProvider" android:permission="com.ticktick.task.permission.WEAR_ACCESS" android:exported="true" android:multiprocess="true" android:authorities="com.ticktick.task.provider.weardataprovider"/>
+    <provider android:name="com.ticktick.task.provider.TickTickTaskProvider" android:readPermission="com.ticktick.task.permission.READ_TASKS" android:exported="true" android:multiprocess="true" android:authorities="com.ticktick.task.data" android:grantUriPermissions="true"/>
+    <provider android:name="com.ticktick.task.provider.TaskSuggestionProvider" android:exported="false" android:authorities="com.ticktick.task.provider.TaskSuggestionProvider"/>
+    <provider android:name="androidx.core.content.FileProvider" android:exported="false" android:authorities="com.ticktick.task.fileprovider" android:grantUriPermissions="true">
+      <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F17001B"/>
+    </provider>
+    <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F130738"/>
+    <meta-data android:name="com.facebook.sdk.ClientToken" android:value="@7F130739"/>
+    <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyAC87nrrR7qWWgsUoCbpafrtorrR2e-P0Q"/>
+    <meta-data android:name="com.google.android.maps.address_requester_api_key" android:value="AIzaSyA--rmAZ5vSbTTjXZ7DK5RVjV0Z63GF98g"/>
+    <uses-library android:name="com.sec.android.app.multiwindow" android:required="false"/>
+    <meta-data android:name="com.sec.android.support.multiwindow" android:value="true"/>
+    <meta-data android:name="com.sec.android.multiwindow.DEFAULT_SIZE_W" android:value="632.0dip"/>
+    <meta-data android:name="com.sec.android.multiwindow.DEFAULT_SIZE_H" android:value="598.0dip"/>
+    <meta-data android:name="com.sec.android.multiwindow.MINIMUM_SIZE_W" android:value="632.0dip"/>
+    <meta-data android:name="com.sec.android.multiwindow.MINIMUM_SIZE_H" android:value="598.0dip"/>
+    <meta-data android:name="UMENG_CHANNEL" android:value="google_play"/>
+    <meta-data android:name="com.google.android.gms.version" android:value="@7F0B000B"/>
+    <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+    <meta-data android:name="com.huawei.hms.client.appid" android:value="appid=10176493"/>
+    <meta-data android:name="com.bugsnag.android.API_KEY" android:value="d642b933055b596d4ec07e521a221465"/>
+    <meta-data android:name="com.xiaomi.xms.APP_ID" android:value="2882303761517256433"/>
+    <meta-data android:name="com.xiaomi.xms.BUILD_TYPE_DEBUG" android:value="false"/>
+    <activity android:name="com.ticktick.task.activity.account.BaseLoginMainActivity"/>
+    <activity android:theme="@7F1403AC" android:name="com.ticktick.task.activity.web.SimpleWebActivity" android:configChanges="0x00000480"/>
+    <activity android:theme="@7F140017" android:name="com.ticktick.task.activity.MeTaskActivity" android:exported="true" android:configChanges="0x00000480" android:windowSoftInputMode="0x00000013">
+      <intent-filter>
+        <category android:name="android.intent.category.LAUNCHER"/>
+        <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+      </intent-filter>
+    </activity>
+    <activity-alias android:label="@7F130194" android:icon="@7F100002" android:name="com.ticktick.task.HomeAlia_default" android:exported="true" android:targetActivity="com.ticktick.task.activity.MeTaskActivity" android:roundIcon="@7F100044">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+        <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+      </intent-filter>
+    </activity-alias>
+    <activity-alias android:label="@7F130194" android:icon="@7F100002" android:name="com.ticktick.task.HomeAlia_tick" android:enabled="false" android:exported="true" android:targetActivity="com.ticktick.task.activity.MeTaskActivity" android:roundIcon="@7F100044">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+        <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+      </intent-filter>
+    </activity-alias>
+    <activity-alias android:label="@7F130194" android:icon="@7F100045" android:name="com.ticktick.task.HomeAlia_1" android:enabled="false" android:exported="true" android:targetActivity="com.ticktick.task.activity.MeTaskActivity" android:roundIcon="@7F100045">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+        <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+      </intent-filter>
+    </activity-alias>
+    <activity-alias android:label="@7F130194" android:icon="@7F100049" android:name="com.ticktick.task.HomeAlia_2" android:enabled="false" android:exported="true" android:targetActivity="com.ticktick.task.activity.MeTaskActivity" android:roundIcon="@7F100049">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+        <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+      </intent-filter>
+    </activity-alias>
+    <activity-alias android:label="@7F130194" android:icon="@7F10004A" android:name="com.ticktick.task.HomeAlia_3" android:enabled="false" android:exported="true" android:targetActivity="com.ticktick.task.activity.MeTaskActivity" android:roundIcon="@7F10004A">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+        <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+      </intent-filter>
+    </activity-alias>
+    <activity-alias android:label="@7F130194" android:icon="@7F10004B" android:name="com.ticktick.task.HomeAlia_4" android:enabled="false" android:exported="true" android:targetActivity="com.ticktick.task.activity.MeTaskActivity" android:roundIcon="@7F10004B">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+        <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+      </intent-filter>
+    </activity-alias>
+    <activity-alias android:label="@7F130194" android:icon="@7F10004C" android:name="com.ticktick.task.HomeAlia_5" android:enabled="false" android:exported="true" android:targetActivity="com.ticktick.task.activity.MeTaskActivity" android:roundIcon="@7F10004C">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+        <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+      </intent-filter>
+    </activity-alias>
+    <activity-alias android:label="@7F130194" android:icon="@7F10004D" android:name="com.ticktick.task.HomeAlia_6" android:enabled="false" android:exported="true" android:targetActivity="com.ticktick.task.activity.MeTaskActivity" android:roundIcon="@7F10004D">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+        <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+      </intent-filter>
+    </activity-alias>
+    <activity-alias android:label="@7F130194" android:icon="@7F10004E" android:name="com.ticktick.task.HomeAlia_7" android:enabled="false" android:exported="true" android:targetActivity="com.ticktick.task.activity.MeTaskActivity" android:roundIcon="@7F10004E">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+        <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+      </intent-filter>
+    </activity-alias>
+    <activity-alias android:label="@7F130194" android:icon="@7F10004F" android:name="com.ticktick.task.HomeAlia_8" android:enabled="false" android:exported="true" android:targetActivity="com.ticktick.task.activity.MeTaskActivity" android:roundIcon="@7F10004F">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+        <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+      </intent-filter>
+    </activity-alias>
+    <activity-alias android:label="@7F130194" android:icon="@7F100050" android:name="com.ticktick.task.HomeAlia_9" android:enabled="false" android:exported="true" android:targetActivity="com.ticktick.task.activity.MeTaskActivity" android:roundIcon="@7F100050">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+        <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+      </intent-filter>
+    </activity-alias>
+    <activity-alias android:label="@7F130194" android:icon="@7F100046" android:name="com.ticktick.task.HomeAlia_10" android:enabled="false" android:exported="true" android:targetActivity="com.ticktick.task.activity.MeTaskActivity" android:roundIcon="@7F100046">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+        <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+      </intent-filter>
+    </activity-alias>
+    <activity-alias android:label="@7F130194" android:icon="@7F100047" android:name="com.ticktick.task.HomeAlia_11" android:enabled="false" android:exported="true" android:targetActivity="com.ticktick.task.activity.MeTaskActivity" android:roundIcon="@7F100047">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+        <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+      </intent-filter>
+    </activity-alias>
+    <activity-alias android:label="@7F130194" android:icon="@7F100048" android:name="com.ticktick.task.HomeAlia_12" android:enabled="false" android:exported="true" android:targetActivity="com.ticktick.task.activity.MeTaskActivity" android:roundIcon="@7F100048">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+        <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+      </intent-filter>
+    </activity-alias>
+    <activity-alias android:label="@7F130194" android:icon="@7F100054" android:name="com.ticktick.task.HomeAlia_earth" android:enabled="false" android:exported="true" android:targetActivity="com.ticktick.task.activity.MeTaskActivity" android:roundIcon="@7F100054">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+        <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+      </intent-filter>
+    </activity-alias>
+    <activity-alias android:label="@7F130194" android:icon="@7F100052" android:name="com.ticktick.task.HomeAlia_christmas" android:enabled="false" android:exported="true" android:targetActivity="com.ticktick.task.activity.MeTaskActivity" android:roundIcon="@7F100052">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+        <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+      </intent-filter>
+    </activity-alias>
+    <activity-alias android:label="@7F130194" android:icon="@7F10005C" android:name="com.ticktick.task.HomeAlia_springFestive" android:enabled="false" android:exported="true" android:targetActivity="com.ticktick.task.activity.MeTaskActivity" android:roundIcon="@7F10005C">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+        <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+      </intent-filter>
+    </activity-alias>
+    <activity-alias android:label="@7F130194" android:icon="@7F10005A" android:name="com.ticktick.task.HomeAlia_plump3d" android:enabled="false" android:exported="true" android:targetActivity="com.ticktick.task.activity.MeTaskActivity" android:roundIcon="@7F10005A">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+        <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+      </intent-filter>
+    </activity-alias>
+    <activity-alias android:label="@7F130194" android:icon="@7F100055" android:name="com.ticktick.task.HomeAlia_emotion" android:enabled="false" android:exported="true" android:targetActivity="com.ticktick.task.activity.MeTaskActivity" android:roundIcon="@7F100055">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+        <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+      </intent-filter>
+    </activity-alias>
+    <activity-alias android:label="@7F130194" android:icon="@7F100051" android:name="com.ticktick.task.HomeAlia_ai" android:enabled="false" android:exported="true" android:targetActivity="com.ticktick.task.activity.MeTaskActivity" android:roundIcon="@7F100051">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+        <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+      </intent-filter>
+    </activity-alias>
+    <activity-alias android:label="@7F130194" android:icon="@7F100035" android:name="com.ticktick.task.HomeAlia_macintosh" android:enabled="false" android:exported="true" android:targetActivity="com.ticktick.task.activity.MeTaskActivity" android:roundIcon="@7F100056">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+        <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+      </intent-filter>
+    </activity-alias>
+    <activity-alias android:label="@7F130194" android:icon="@7F100057" android:name="com.ticktick.task.HomeAlia_mechanical" android:enabled="false" android:exported="true" android:targetActivity="com.ticktick.task.activity.MeTaskActivity" android:roundIcon="@7F100057">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+        <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+      </intent-filter>
+    </activity-alias>
+    <activity-alias android:label="@7F130194" android:icon="@7F100058" android:name="com.ticktick.task.HomeAlia_neon" android:enabled="false" android:exported="true" android:targetActivity="com.ticktick.task.activity.MeTaskActivity" android:roundIcon="@7F100058">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+        <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+      </intent-filter>
+    </activity-alias>
+    <activity-alias android:label="@7F130194" android:icon="@7F10005B" android:name="com.ticktick.task.HomeAlia_spaceship" android:enabled="false" android:exported="true" android:targetActivity="com.ticktick.task.activity.MeTaskActivity" android:roundIcon="@7F10005B">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+        <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+      </intent-filter>
+    </activity-alias>
+    <activity-alias android:label="@7F130194" android:icon="@7F100059" android:name="com.ticktick.task.HomeAlia_planet" android:enabled="false" android:exported="true" android:targetActivity="com.ticktick.task.activity.MeTaskActivity" android:roundIcon="@7F100059">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+        <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+      </intent-filter>
+    </activity-alias>
+    <activity-alias android:label="@7F130194" android:icon="@7F100053" android:name="com.ticktick.task.HomeAlia_dark_linear" android:enabled="false" android:exported="true" android:targetActivity="com.ticktick.task.activity.MeTaskActivity" android:roundIcon="@7F100053">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+        <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+      </intent-filter>
+    </activity-alias>
+    <activity android:label="@7F1308AD" android:name="com.ticktick.task.activity.widget.add.AppWidgetAddConfigActivity" android:exported="true" android:taskAffinity="" android:excludeFromRecents="true" android:configChanges="0x000004A0">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+      </intent-filter>
+    </activity>
+    <activity android:label="@7F1308AD" android:name="com.ticktick.task.activity.widget.AppWidgetSingleTimerConfigActivity" android:exported="true" android:taskAffinity="" android:excludeFromRecents="true" android:configChanges="0x000004A0">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+      </intent-filter>
+    </activity>
+    <activity android:theme="@7F1403AC" android:name="com.ticktick.task.activity.preference.FragmentWrapActivity"/>
+    <activity android:name="com.ticktick.task.activity.preference.PreferenceFragmentWrapActivity"/>
+    <activity android:theme="@7F1403AC" android:name="com.ticktick.task.activity.preference.FullScreenFragmentWrapActivity"/>
+    <activity android:name="com.ticktick.task.ai.complete.AiCompleteActivity" android:windowSoftInputMode="0x00000010"/>
+    <activity android:theme="@7F1403AC" android:name="com.ticktick.task.activity.preference.HelpCenterWebViewActivity"/>
+    <activity android:theme="@7F1403AC" android:name="com.ticktick.task.activity.preference.UserGuideWebViewActivity" android:hardwareAccelerated="true"/>
+    <activity android:theme="@7F1403AC" android:name="com.ticktick.task.activity.statistics.UserStatisticsActivity" android:configChanges="0x000004A0"/>
+    <activity android:name="com.ticktick.task.activity.TaskCommentActivity" android:configChanges="0x000004A0" android:windowSoftInputMode="0x00000030"/>
+    <activity android:name="com.ticktick.task.activity.lock.ConfirmLockPattern" android:launchMode="2" android:windowSoftInputMode="0x00000013"/>
+    <activity android:theme="@7F140368" android:name="com.ticktick.task.focus.ui.fullscreen.FullScreenTimerActivity" android:launchMode="2" android:configChanges="0x00000420"/>
+    <activity android:theme="@7F1403EA" android:name="com.ticktick.task.activity.TaskDetailMenuEditActivity"/>
+    <activity android:name="com.ticktick.task.activity.repeat.CustomRepeatActivity"/>
+    <activity android:label="@7F1307D5" android:name="com.ticktick.task.activity.widget.AppWidgetSquareFocusConfigActivity" android:exported="true" android:taskAffinity="" android:excludeFromRecents="true" android:configChanges="0x000004A0">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+      </intent-filter>
+    </activity>
+    <activity android:name="com.ticktick.task.userguide.FirstLaunchGuideActivity" android:screenOrientation="1"/>
+    <activity android:name="com.ticktick.task.userguide.FirstLaunchGuideActivityV2" android:screenOrientation="1"/>
+    <activity android:name="com.ticktick.task.userguide.NewUserConfigActivity" android:screenOrientation="1"/>
+    <activity android:theme="@7F1403EA" android:name="com.ticktick.task.userguide.NewUserConfig4PadActivity"/>
+    <activity android:name="com.ticktick.task.quickadd.controller.AddTaskButtonSettingsActivity"/>
+    <activity android:theme="@7F1403E9" android:name="com.ticktick.task.quickadd.QuickAddActivity" android:configChanges="0x000004A0" android:windowSoftInputMode="0x00000015"/>
+    <activity android:name="com.ticktick.task.timezone.TimelineTimeZoneActivity"/>
+    <activity android:name="com.ticktick.task.activity.notion.LinkNotionMainActivity" android:launchMode="2"/>
+    <activity android:theme="@7F1403E9" android:name="com.ticktick.task.activity.StopwatchFinishActivity" android:taskAffinity="" android:excludeFromRecents="true" android:launchMode="3" android:configChanges="0x000004A0"/>
+    <activity android:theme="@7F1403EA" android:name="com.ticktick.task.activity.countdown.edit.CountdownEditActivity" android:windowSoftInputMode="0x00000013"/>
+    <activity android:theme="@7F1403EA" android:name="com.ticktick.task.activity.countdown.CountdownDetailActivity" android:configChanges="0x000004A0" android:windowSoftInputMode="0x00000033"/>
+    <activity android:name="com.ticktick.task.activity.CropImageActivity"/>
+    <activity android:label="@7F1314AF" android:name="com.ticktick.task.activity.widget.AppWidgetCountdownListConfigActivity" android:exported="true" android:taskAffinity="" android:excludeFromRecents="true" android:configChanges="0x000004A0">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+      </intent-filter>
+    </activity>
+    <activity android:label="@7F1314AF" android:name="com.ticktick.task.activity.widget.AppWidgetSingleCountdownConfigActivity" android:exported="true" android:taskAffinity="" android:excludeFromRecents="true" android:configChanges="0x000004A0">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+      </intent-filter>
+    </activity>
+    <activity android:label="@7F1308AD" android:name="com.ticktick.task.activity.widget.AppWidgetCompactConfigActivity" android:exported="true" android:taskAffinity="" android:excludeFromRecents="true" android:configChanges="0x000004A0">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+      </intent-filter>
+    </activity>
+    <activity android:theme="@7F1403EA" android:name="com.ticktick.task.activity.course.CourseDetailActivity" android:windowSoftInputMode="0x00000020"/>
+    <activity android:theme="@7F1403EA" android:name="com.ticktick.task.activity.course.CoursePreviewDetailActivity" android:windowSoftInputMode="0x00000020"/>
+    <activity android:theme="@7F14039B" android:name="com.ticktick.task.activity.account.BindEmailOrPhoneActivity" android:windowSoftInputMode="0x00000013"/>
+    <activity android:theme="@7F1403EA" android:name="com.ticktick.task.activity.preference.TickTickPreferenceCompat" android:exported="false" android:launchMode="2" android:configChanges="0x000004A0"/>
+    <activity android:theme="@7F1403AC" android:name="com.ticktick.task.upgrade.ProFeaturesActivity" android:configChanges="0x00000420"/>
+    <activity android:name="com.ticktick.task.activity.DataAccessRationaleActivity" android:permission="android.permission.START_VIEW_PERMISSION_USAGE" android:exported="true" android:launchMode="1">
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW_PERMISSION_USAGE"/>
+        <action android:name="android.intent.action.VIEW_PERMISSION_USAGE_FOR_PERIOD"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+      </intent-filter>
+    </activity>
+    <activity android:theme="@7F1403AC" android:name="com.ticktick.task.activity.statistics.view.HabitShareActivity" android:configChanges="0x00000420"/>
+    <activity android:theme="@7F1403AC" android:name="com.ticktick.task.calendar.view.URLCalendarEditActivity"/>
+    <activity android:theme="@7F1403AC" android:name="com.ticktick.task.activity.BindCalDavAccountsActivity"/>
+    <activity android:theme="@7F1403AC" android:name="com.ticktick.task.activity.BindAccountsActivity"/>
+    <activity android:theme="@7F1403AC" android:name="com.ticktick.task.calendar.view.SystemCalendarEditActivity"/>
+    <activity android:name="com.ticktick.task.activity.calendarmanage.CalendarManagerActivity" android:launchMode="2" android:configChanges="0x000004A0"/>
+    <activity android:theme="@7F1403AC" android:name="com.ticktick.task.activity.web.CommonWebActivity" android:configChanges="0x000004A0"/>
+    <activity android:theme="@7F1403AC" android:name="com.ticktick.task.activity.tips.ReminderTipsWebViewActivity"/>
+    <activity android:theme="@7F1403AC" android:name="com.ticktick.task.activity.preference.TickTickWebViewActivity"/>
+    <activity android:theme="@7F1403AC" android:name="com.ticktick.task.activity.preference.ImportTodoistWebViewActivity"/>
+    <activity android:theme="@7F1403AC" android:name="com.ticktick.task.activity.IntegrationWebViewActivity"/>
+    <service android:name="com.ticktick.task.wear.WearListenerService" android:exported="true">
+      <intent-filter>
+        <action android:name="com.google.android.gms.wearable.MESSAGE_RECEIVED"/>
+        <action android:name="com.google.android.gms.wearable.BIND_LISTENER"/>
+      </intent-filter>
+    </service>
+    <receiver android:label="@7F130487" android:name="com.ticktick.task.activity.widget.course.AppWidgetProviderCourse" android:exported="true">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+        <action android:name="com.ticktick.task.action.CONF_CHANGE"/>
+        <action android:name="com.ticktick.task.action.COURSE_WIDGET_UPDATED"/>
+      </intent-filter>
+      <meta-data android:name="android.appwidget.provider" android:resource="@7F170024"/>
+    </receiver>
+    <receiver android:label="@7F1300E3" android:name="com.ticktick.task.activity.widget.AppWidgetProviderAiAssistant" android:permission="com.ticktick.task.permission.signature" android:exported="true">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+        <action android:name="com.ticktick.task.action.CONFIGURATION_CHANGED"/>
+      </intent-filter>
+      <meta-data android:name="android.appwidget.provider" android:resource="@7F170021"/>
+    </receiver>
+    <receiver android:label="@7F13182A" android:name="com.ticktick.task.activity.widget.add.AppWidgetProviderQuickAdd" android:permission="com.ticktick.task.permission.signature" android:exported="true">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+        <action android:name="com.ticktick.task.action.CONF_CHANGE"/>
+        <action android:name="com.ticktick.task.action.QUICK_ADD_UPDATED"/>
+      </intent-filter>
+      <meta-data android:name="android.appwidget.provider" android:resource="@7F170032"/>
+    </receiver>
+    <receiver android:label="@7F13184D" android:name="com.ticktick.task.activity.widget.AppWidgetProviderThreeDay" android:permission="com.ticktick.task.permission.signature" android:exported="true">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+        <action android:name="com.ticktick.task.action.CONF_CHANGE"/>
+        <action android:name="com.ticktick.task.action.TIMER_REFRESH"/>
+      </intent-filter>
+      <meta-data android:name="android.appwidget.provider" android:resource="@7F170037"/>
+    </receiver>
+    <receiver android:label="@7F131816" android:name="com.ticktick.task.activity.widget.GoogleTaskAppWidgetProviderLarge" android:permission="com.ticktick.task.permission.signature" android:exported="true">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+        <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+        <action android:name="com.ticktick.task.action.TASKS_UPDATED"/>
+      </intent-filter>
+      <meta-data android:name="android.appwidget.provider" android:resource="@7F170022"/>
+    </receiver>
+    <receiver android:label="@7F131821" android:name="com.ticktick.task.activity.widget.AppWidgetProviderPomo" android:exported="true">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+        <action android:name="com.ticktick.task.action.POMO_WIDGET_UPDATED"/>
+        <action android:name="com.ticktick.task.action.CONFIGURATION_CHANGED"/>
+      </intent-filter>
+      <meta-data android:name="android.appwidget.provider" android:resource="@7F170031"/>
+    </receiver>
+    <receiver android:label="@7F1317DF" android:name="com.ticktick.task.activity.widget.AppWidgetProviderHabitWeek" android:exported="true">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+        <action android:name="com.ticktick.task.action.HABIT_WIDGET_UPDATED"/>
+      </intent-filter>
+      <meta-data android:name="android.appwidget.provider" android:resource="@7F17002F"/>
+    </receiver>
+    <receiver android:label="@7F131847" android:name="com.ticktick.task.activity.widget.AppWidgetProviderTaskCompletion" android:exported="true">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+        <action android:name="com.ticktick.task.action.TASKS_UPDATED"/>
+      </intent-filter>
+      <meta-data android:name="android.appwidget.provider" android:resource="@7F170036"/>
+    </receiver>
+    <receiver android:label="@7F13180F" android:name="com.ticktick.task.activity.widget.AppWidgetProviderHabitMonth" android:exported="true">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+        <action android:name="com.ticktick.task.action.HABIT_WIDGET_UPDATED"/>
+      </intent-filter>
+      <meta-data android:name="android.appwidget.provider" android:resource="@7F17002C"/>
+    </receiver>
+    <receiver android:label="@7F1309E1" android:name="com.ticktick.task.activity.widget.AppWidgetProviderHabitProgress4x2" android:exported="true">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+        <action android:name="com.ticktick.task.action.HABIT_WIDGET_UPDATED"/>
+      </intent-filter>
+      <meta-data android:name="android.appwidget.provider" android:resource="@7F17002E"/>
+    </receiver>
+    <receiver android:label="@7F1309E1" android:name="com.ticktick.task.activity.widget.AppWidgetProviderHabitProgress2x2" android:exported="true">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+        <action android:name="com.ticktick.task.action.HABIT_WIDGET_UPDATED"/>
+      </intent-filter>
+      <meta-data android:name="android.appwidget.provider" android:resource="@7F17002D"/>
+    </receiver>
+    <receiver android:label="@7F1315A9" android:name="com.ticktick.task.activity.widget.AppWidgetProviderSingleTimer" android:exported="true">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+        <action android:name="com.ticktick.task.action.HABIT_WIDGET_UPDATED"/>
+      </intent-filter>
+      <meta-data android:name="android.appwidget.provider" android:resource="@7F170035"/>
+    </receiver>
+    <receiver android:label="@7F1314AF" android:name="com.ticktick.task.activity.widget.AppWidgetProviderCountdownList" android:exported="true">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+        <action android:name="com.ticktick.task.action.COUNTDOWN_WIDGET_UPDATED"/>
+      </intent-filter>
+      <meta-data android:name="android.appwidget.provider" android:resource="@7F170023"/>
+    </receiver>
+    <receiver android:label="@7F1314AF" android:name="com.ticktick.task.activity.widget.AppWidgetProviderSingleCountdown" android:exported="true">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+        <action android:name="com.ticktick.task.action.COUNTDOWN_WIDGET_UPDATED"/>
+      </intent-filter>
+      <meta-data android:name="android.appwidget.provider" android:resource="@7F170033"/>
+    </receiver>
+    <service android:name="com.ticktick.task.activity.background.QuickBallService" android:exported="false" android:foregroundServiceType="0x40000000">
+      <property android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE" android:value="hold a floating ball that allows for quick task addition."/>
+    </service>
+    <service android:name="com.ticktick.task.focus.pomodoro.service.PomodoroControlService" android:exported="false" android:foregroundServiceType="0x00000002"/>
+    <service android:name="com.ticktick.task.service.CrashService" android:process=":pushservice" android:foregroundServiceType="0x40000000"/>
+    <service android:name="com.ticktick.task.soundrecorder.RecorderService" android:exported="false" android:foregroundServiceType="0x00000080"/>
+    <service android:name="com.ticktick.task.soundrecorder.MediaPlayerService" android:exported="false" android:foregroundServiceType="0x00000002"/>
+    <service android:label="@7F1314AE" android:icon="@7F080549" android:name="com.ticktick.task.service.QuickSettingsAiAssistantTileService" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE" android:exported="true">
+      <intent-filter>
+        <action android:name="android.service.quicksettings.action.QS_TILE"/>
+      </intent-filter>
+    </service>
+    <service android:label="@7F13041C" android:icon="@7F08054B" android:name="com.ticktick.task.service.QuickSettingsCountdownTileService" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE" android:exported="true">
+      <intent-filter>
+        <action android:name="android.service.quicksettings.action.QS_TILE"/>
+      </intent-filter>
+    </service>
+    <service android:label="@7F1302B3" android:icon="@7F08054A" android:name="com.ticktick.task.service.QuickSettingsCalendarTileService" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE" android:exported="true">
+      <intent-filter>
+        <action android:name="android.service.quicksettings.action.QS_TILE"/>
+      </intent-filter>
+    </service>
+    <service android:label="@7F130D7A" android:icon="@7F08054E" android:name="com.ticktick.task.service.QuickSettingsMatrixTileService" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE" android:exported="true">
+      <intent-filter>
+        <action android:name="android.service.quicksettings.action.QS_TILE"/>
+      </intent-filter>
+    </service>
+    <service android:label="@7F13104E" android:icon="@7F08054C" android:name="com.ticktick.task.service.QuickSettingsFocusTileService" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE" android:exported="true">
+      <intent-filter>
+        <action android:name="android.service.quicksettings.action.QS_TILE"/>
+      </intent-filter>
+    </service>
+    <service android:label="@7F1308B2" android:icon="@7F08054D" android:name="com.ticktick.task.service.QuickSettingsHabitTileService" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE" android:exported="true">
+      <intent-filter>
+        <action android:name="android.service.quicksettings.action.QS_TILE"/>
+      </intent-filter>
+    </service>
+    <service android:label="@7F1311A7" android:icon="@7F08054F" android:name="com.ticktick.task.service.QuickSettingsVoiceAddTileService" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE" android:exported="true">
+      <intent-filter>
+        <action android:name="android.service.quicksettings.action.QS_TILE"/>
+      </intent-filter>
+    </service>
+    <receiver android:name="com.ticktick.task.activity.background.AutoSyncTaskScheduler" android:permission="com.ticktick.task.permission.signature" android:exported="false">
+      <intent-filter>
+        <action android:name="com.ticktick.task.action.AutoSyncTaskScheduler"/>
+        <action android:name="com.ticktick.task.action.AutoSyncTaskSchedulerChange"/>
+      </intent-filter>
+    </receiver>
+    <receiver android:name="com.ticktick.task.activity.NotificationOngoing" android:permission="com.ticktick.task.permission.signature" android:exported="false">
+      <intent-filter>
+        <action android:name="com.ticktick.task.action.NOTIFICATION_ONGOING_UPDATE"/>
+        <action android:name="com.ticktick.task.action.NOTIFICATION_ONGOING_REMOVED"/>
+      </intent-filter>
+    </receiver>
+    <receiver android:name="com.ticktick.task.focus.FocusActionReceiver" android:exported="true">
+      <intent-filter>
+        <action android:name="com.ticktick.task.stopwatch.STOP"/>
+        <action android:name="com.ticktick.task.stopwatch.PAUSE"/>
+        <action android:name="com.ticktick.task.stopwatch.RESUME"/>
+        <action android:name="com.ticktick.task.pomodoro.PROCEED"/>
+        <action android:name="com.ticktick.task.pomodoro.FINISH"/>
+        <action android:name="com.ticktick.task.pomodoro.FINISH_WITHOUT_CONFIRM"/>
+        <action android:name="com.ticktick.task.pomodoro.PAUSE_AND_FINISH"/>
+      </intent-filter>
+    </receiver>
+    <provider android:name="com.ticktick.task.provider.RemoteMethodContentProvider" android:exported="true" android:authorities="com.ticktick.task.remoteMethod"/>
+    <activity android:name="com.ticktick.task.activity.CalendarDisplayRangeActivity"/>
+    <activity android:name="com.ticktick.task.activity.CalendarViewOptionsActivity"/>
+    <activity android:name="com.ticktick.task.activity.ChoosePomoSoundActivity" android:windowSoftInputMode="0x00000003"/>
+    <activity android:theme="@7F14039D" android:name="com.ticktick.task.activity.DailyTaskDisplayActivity" android:configChanges="0x000004A0"/>
+    <activity android:theme="@7F1403E9" android:name="com.ticktick.task.activity.NoteToSelf" android:exported="true">
+      <intent-filter>
+        <action android:name="com.google.android.gm.action.AUTO_SEND"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <data android:mimeType="*/*"/>
+      </intent-filter>
+      <intent-filter>
+        <action android:name="android.intent.action.SET_ALARM"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+      </intent-filter>
+    </activity>
+    <activity android:theme="@7F1403EA" android:name="com.ticktick.task.activity.NotificationCenterActivity" android:configChanges="0x000004A0" android:windowSoftInputMode="0x00000013"/>
+    <activity android:theme="@7F1403E9" android:name="com.ticktick.task.activity.PomoPopupActivity" android:exported="true" android:taskAffinity="" android:excludeFromRecents="true" android:launchMode="3" android:configChanges="0x000004A0">
+      <intent-filter>
+        <action android:name="com.ticktick.task.activity.PomoPopupActivity"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+      </intent-filter>
+    </activity>
+    <activity android:theme="@7F1403E9" android:name="com.ticktick.task.activity.PomodoroActivity" android:launchMode="1"/>
+    <activity android:theme="@7F1403E9" android:name="com.ticktick.task.activity.ProcessTextActivity" android:exported="true" android:taskAffinity="com.ticktick.task.widget.external" android:excludeFromRecents="true" android:launchMode="2">
+      <intent-filter android:label="@7F130194">
+        <action android:name="android.intent.action.PROCESS_TEXT"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <data android:mimeType="text/plain"/>
+      </intent-filter>
+    </activity>
+    <activity android:theme="@7F1403EA" android:name="com.ticktick.task.activity.ProjectEditActivity" android:windowSoftInputMode="0x00000003"/>
+    <activity android:name="com.ticktick.task.activity.ProjectManageActivity" android:configChanges="0x000004A0"/>
+    <activity android:theme="@7F14039B" android:name="com.ticktick.task.activity.QuickDateConfigActivity" android:screenOrientation="1"/>
+    <activity android:theme="@7F1403E9" android:name="com.ticktick.task.activity.ReminderPopupActivity" android:exported="true" android:taskAffinity="" android:excludeFromRecents="true" android:launchMode="3" android:configChanges="0x000004A0">
+      <intent-filter>
+        <action android:name="com.ticktick.task.activity.ReminderPopupActivity"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+      </intent-filter>
+    </activity>
+    <activity android:name="com.ticktick.task.activity.SearchActivity" android:exported="true" android:launchMode="1" android:windowSoftInputMode="0x00000010">
+      <intent-filter>
+        <action android:name="android.intent.action.SEARCH"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+      </intent-filter>
+      <meta-data android:name="android.app.searchable" android:resource="@7F17003C"/>
+    </activity>
+    <activity android:theme="@7F1402F2" android:name="com.ticktick.task.activity.SelectReminderMeTimeDialogActivity" android:excludeFromRecents="true" android:configChanges="0x000004A0"/>
+    <activity android:label="@7F131302" android:name="com.ticktick.task.activity.ShareReceiveActivity" android:exported="true">
+      <intent-filter>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="com.google.android.voicesearch.SELF_NOTE"/>
+        <action android:name="android.intent.action.SEND"/>
+        <data android:mimeType="text/plain"/>
+      </intent-filter>
+      <intent-filter>
+        <action android:name="android.intent.action.SEND"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="com.google.android.voicesearch.SELF_NOTE"/>
+        <data android:mimeType="*/*"/>
+      </intent-filter>
+      <intent-filter>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <action android:name="android.intent.action.SEND_MULTIPLE"/>
+        <action android:name="android.intent.action.SEND"/>
+        <data android:mimeType="*/*"/>
+      </intent-filter>
+    </activity>
+    <activity android:theme="@7F1403E9" android:name="com.ticktick.task.activity.SnoozePopupActivity" android:taskAffinity="" android:excludeFromRecents="true" android:launchMode="3" android:configChanges="0x000004A0"/>
+    <activity android:theme="@7F1403EA" android:name="com.ticktick.task.activity.TagEditActivity" android:windowSoftInputMode="0x00000003"/>
+    <activity android:theme="@7F1403EA" android:name="com.ticktick.task.activity.TaskActivitiesWebViewActivity"/>
+    <activity android:theme="@7F1403E9" android:name="com.ticktick.task.activity.TaskActivity" android:windowSoftInputMode="0x00000013"/>
+    <activity android:name="com.ticktick.task.activity.TaskAgendaManagerActivity" android:windowSoftInputMode="0x00000003"/>
+    <activity android:theme="@7F14039B" android:name="com.ticktick.task.activity.TeamExpiredActivity"/>
+    <activity android:theme="@7F1402F2" android:label="@7F1305CC" android:name="com.ticktick.task.activity.TokenTimeoutPopupActivity" android:excludeFromRecents="true" android:launchMode="3" android:configChanges="0x000004A0"/>
+    <activity android:theme="@7F1402F2" android:label="@7F13184A" android:name="com.ticktick.task.activity.WidgetTaskListDialog" android:taskAffinity="" android:excludeFromRecents="true" android:launchMode="3" android:configChanges="0x00000420"/>
+    <activity android:name="com.ticktick.task.activity.account.DataMigrationGuideActivity" android:configChanges="0x000004A0"/>
+    <activity android:theme="@7F1403AC" android:name="com.ticktick.task.activity.account.GetProActivity"/>
+    <activity android:theme="@7F1403AC" android:name="com.ticktick.task.activity.course.CourseCommonWebActivity" android:configChanges="0x000004A0"/>
+    <activity android:theme="@7F1403AC" android:name="com.ticktick.task.activity.course.CourseFeedbackWebActivity" android:configChanges="0x000004A0" android:windowSoftInputMode="0x00000023"/>
+    <activity android:theme="@7F1403AC" android:name="com.ticktick.task.activity.course.CourseGuideWebActivity" android:configChanges="0x000004A0"/>
+    <activity android:name="com.ticktick.task.activity.course.CourseImportActivity" android:windowSoftInputMode="0x00000020"/>
+    <activity android:name="com.ticktick.task.activity.course.CourseInputUrlActivity" android:windowSoftInputMode="0x00000004"/>
+    <activity android:name="com.ticktick.task.activity.course.CourseLessonTimesActivity"/>
+    <activity android:name="com.ticktick.task.activity.course.TimetableCalendarEnableActivity"/>
+    <activity android:name="com.ticktick.task.activity.course.TimetableCreateActivity"/>
+    <activity android:name="com.ticktick.task.activity.course.TimetableEditActivity"/>
+    <activity android:name="com.ticktick.task.activity.course.TimetableManageActivity" android:windowSoftInputMode="0x00000003"/>
+    <activity android:name="com.ticktick.task.activity.course.TimetablePreviewActivity"/>
+    <activity android:name="com.ticktick.task.activity.course.TimetableSettingsActivity" android:windowSoftInputMode="0x00000003"/>
+    <activity android:name="com.ticktick.task.activity.course.TimetableSharePreviewActivity"/>
+    <activity android:theme="@7F1403E9" android:name="com.ticktick.task.activity.dispatch.InnerDispatchDefaultModelActivity"/>
+    <activity android:name="com.ticktick.task.activity.habit.AllHabitListActivity" android:windowSoftInputMode="0x00000013"/>
+    <activity android:theme="@7F1403EA" android:name="com.ticktick.task.activity.habit.HabitAddActivity" android:windowSoftInputMode="0x00000013"/>
+    <activity android:theme="@7F1403E9" android:name="com.ticktick.task.activity.habit.HabitCompleteCycleActivity" android:taskAffinity="cn.ticktick.habitcycle" android:excludeFromRecents="true" android:launchMode="3" android:windowSoftInputMode="0x00000011"/>
+    <activity android:name="com.ticktick.task.activity.habit.HabitCycleActivity" android:windowSoftInputMode="0x00000013"/>
+    <activity android:theme="@7F1403EA" android:name="com.ticktick.task.activity.habit.HabitDetailActivity"/>
+    <activity android:theme="@7F1403EA" android:name="com.ticktick.task.activity.habit.HabitEditActivity" android:windowSoftInputMode="0x00000013"/>
+    <activity android:theme="@7F1403E9" android:name="com.ticktick.task.activity.habit.HabitRecordActivity" android:taskAffinity="cn.ticktick.habitlog" android:windowSoftInputMode="0x00000010"/>
+    <activity android:name="com.ticktick.task.activity.habit.HabitSectionEditActivity" android:windowSoftInputMode="0x00000013"/>
+    <activity android:name="com.ticktick.task.activity.habit.HabitSectionManageActivity" android:windowSoftInputMode="0x00000013"/>
+    <activity android:name="com.ticktick.task.activity.kanban.ColumnEditActivity" android:windowSoftInputMode="0x00000013"/>
+    <activity android:name="com.ticktick.task.activity.kanban.ColumnManageActivity" android:windowSoftInputMode="0x00000013"/>
+    <activity android:name="com.ticktick.task.activity.lock.ChooseLockPattern"/>
+    <activity android:name="com.ticktick.task.activity.preference.ChooseAppearanceActivity"/>
+    <activity android:theme="@7F1403EA" android:name="com.ticktick.task.activity.preference.CustomThemeActivity"/>
+    <activity android:name="com.ticktick.task.activity.preference.DailyReminderTimeActivity" android:exported="false" android:configChanges="0x000004A0"/>
+    <activity android:name="com.ticktick.task.activity.preference.HabitPreference" android:exported="false" android:configChanges="0x000004A0"/>
+    <activity android:name="com.ticktick.task.activity.preference.JoinTestGroupWebViewActivity"/>
+    <activity android:name="com.ticktick.task.activity.preference.PomodoroFocusPreference" android:exported="false" android:configChanges="0x000004A0"/>
+    <activity android:name="com.ticktick.task.activity.preference.PomodoroPermission" android:exported="false" android:configChanges="0x000004A0"/>
+    <activity android:name="com.ticktick.task.activity.preference.PomodoroPreference" android:exported="false" android:configChanges="0x000004A0"/>
+    <activity android:name="com.ticktick.task.activity.preference.ReminderIgnoreBatteryOptimizationPreference" android:configChanges="0x000004A0"/>
+    <activity android:label="@7F130194" android:name="com.ticktick.task.activity.preference.ShortcutPreferences" android:exported="true">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+      </intent-filter>
+    </activity>
+    <activity-alias android:label="@7F131331" android:icon="@7F08039D" android:name="com.ticktick.task.CreateShortcut" android:exported="true" android:configChanges="0x000004A0" android:targetActivity="com.ticktick.task.activity.preference.ShortcutPreferences">
+      <intent-filter>
+        <action android:name="android.intent.action.CREATE_SHORTCUT"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+    </activity-alias>
+    <activity android:theme="@7F1403AC" android:name="com.ticktick.task.activity.preference.SmartTimeParseExampleWebViewActivity"/>
+    <activity android:name="com.ticktick.task.activity.preference.TaskTemplatePreference"/>
+    <activity android:theme="@7F1403EA" android:name="com.ticktick.task.activity.preference.ThemePreviewActivity"/>
+    <activity android:name="com.ticktick.task.activity.preference.WidgetsActivity" android:screenOrientation="1"/>
+    <activity android:theme="@7F1403E9" android:name="com.ticktick.task.activity.pro.ProExpiredActivity6130"/>
+    <activity android:theme="@7F1403E9" android:name="com.ticktick.task.activity.reminder.NotificationActionHandlerActivity" android:taskAffinity="" android:excludeFromRecents="true" android:launchMode="3" android:configChanges="0x000004A0"/>
+    <activity android:name="com.ticktick.task.activity.share.teamwork.InviteTeamMemberActivity" android:configChanges="0x000004A0" android:windowSoftInputMode="0x00000013"/>
+    <activity android:name="com.ticktick.task.activity.share.teamwork.TeamWorkerListActivity" android:configChanges="0x000004A0" android:windowSoftInputMode="0x00000013"/>
+    <activity android:theme="@7F1403AC" android:name="com.ticktick.task.activity.statistics.AboutAchievementWebViewActivity"/>
+    <activity android:name="com.ticktick.task.activity.statistics.FocusTimelineActivity" android:exported="false" android:configChanges="0x000004A0" android:windowSoftInputMode="0x00000030"/>
+    <activity android:theme="@7F1403EA" android:name="com.ticktick.task.activity.statistics.FocusTimelineEditActivity" android:windowSoftInputMode="0x00000030"/>
+    <activity android:name="com.ticktick.task.activity.summary.SummaryActivity" android:windowSoftInputMode="0x00000013"/>
+    <activity android:name="com.ticktick.task.activity.summary.SummaryFilterActivity" android:windowSoftInputMode="0x00000013"/>
+    <activity android:theme="@7F1402F2" android:name="com.ticktick.task.activity.tips.NoDefaultReminderTipsDialog"/>
+    <activity android:theme="@7F1402F2" android:name="com.ticktick.task.activity.tips.ReminderTipsDialog" android:excludeFromRecents="true" android:launchMode="2"/>
+    <activity android:label="@7F1308AD" android:name="com.ticktick.task.activity.widget.AppWidgetGridWeekConfigActivity" android:exported="true" android:taskAffinity="" android:excludeFromRecents="true" android:configChanges="0x000004A0">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+      </intent-filter>
+    </activity>
+    <activity android:label="@7F131810" android:name="com.ticktick.task.activity.widget.AppWidgetHabitConfigActivity" android:exported="true" android:taskAffinity="" android:excludeFromRecents="true" android:configChanges="0x000004A0">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+      </intent-filter>
+    </activity>
+    <activity android:label="@7F1300E3" android:name="com.ticktick.task.activity.widget.AppWidgetAiAssistantConfigActivity" android:exported="true" android:taskAffinity="" android:excludeFromRecents="true" android:configChanges="0x000004A0">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+      </intent-filter>
+    </activity>
+    <activity android:label="@7F1309E1" android:name="com.ticktick.task.activity.widget.AppWidgetHabitProgress2x2ConfigActivity" android:exported="true" android:taskAffinity="" android:excludeFromRecents="true" android:configChanges="0x000004A0">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+      </intent-filter>
+    </activity>
+    <activity android:label="@7F1309E1" android:name="com.ticktick.task.activity.widget.AppWidgetHabitProgress4x2ConfigActivity" android:exported="true" android:taskAffinity="" android:excludeFromRecents="true" android:configChanges="0x000004A0">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+      </intent-filter>
+    </activity>
+    <activity android:label="@7F13181A" android:name="com.ticktick.task.activity.widget.AppWidgetMatrixConfigActivity" android:exported="true" android:taskAffinity="" android:excludeFromRecents="true" android:configChanges="0x000004A0">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+      </intent-filter>
+    </activity>
+    <activity android:label="@7F1308AD" android:name="com.ticktick.task.activity.widget.AppWidgetMonthConfigActivity" android:exported="true" android:taskAffinity="" android:excludeFromRecents="true" android:configChanges="0x000004A0">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+      </intent-filter>
+    </activity>
+    <activity android:label="@7F1308AD" android:name="com.ticktick.task.activity.widget.AppWidgetPageTurnConfigActivity" android:exported="true" android:taskAffinity="" android:excludeFromRecents="true" android:configChanges="0x000004A0">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+      </intent-filter>
+    </activity>
+    <activity android:label="@7F131821" android:name="com.ticktick.task.activity.widget.AppWidgetPomoConfigActivity" android:exported="true" android:taskAffinity="" android:excludeFromRecents="true" android:configChanges="0x000004A0">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+      </intent-filter>
+    </activity>
+    <activity android:label="@7F13181E" android:name="com.ticktick.task.activity.widget.AppWidgetSingleHabitConfigActivity" android:exported="true" android:taskAffinity="" android:excludeFromRecents="true" android:configChanges="0x000004A0">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+      </intent-filter>
+    </activity>
+    <activity android:label="@7F1308AD" android:name="com.ticktick.task.activity.widget.AppWidgetStandardConfigActivity" android:exported="true" android:taskAffinity="" android:excludeFromRecents="true" android:configChanges="0x000004A0">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+      </intent-filter>
+    </activity>
+    <activity android:label="@7F13180C" android:name="com.ticktick.task.activity.widget.AppWidgetTaskCompletionConfigActivity" android:exported="true" android:taskAffinity="" android:excludeFromRecents="true" android:configChanges="0x000004A0">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+      </intent-filter>
+    </activity>
+    <activity android:label="@7F1308AD" android:name="com.ticktick.task.activity.widget.AppWidgetThreeDayConfigActivity" android:exported="true" android:taskAffinity="" android:excludeFromRecents="true" android:configChanges="0x000004A0">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+      </intent-filter>
+    </activity>
+    <activity android:label="@7F1308AD" android:name="com.ticktick.task.activity.widget.AppWidgetTodayCalendarConfigActivity" android:exported="true" android:taskAffinity="" android:excludeFromRecents="true" android:configChanges="0x000004A0">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+      </intent-filter>
+    </activity>
+    <activity android:label="@7F1308AB" android:name="com.ticktick.task.activity.widget.AppWidgetUndoneConfigActivity" android:exported="true" android:taskAffinity="" android:excludeFromRecents="true" android:configChanges="0x000004A0">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+      </intent-filter>
+    </activity>
+    <activity android:theme="@7F1403E9" android:name="com.ticktick.task.activity.widget.MatrixWidgetHandlerActivity" android:taskAffinity="" android:excludeFromRecents="true" android:configChanges="0x000004A0"/>
+    <activity android:theme="@7F1402F2" android:name="com.ticktick.task.activity.widget.WidgetAddTaskActivity" android:exported="true" android:taskAffinity="" android:excludeFromRecents="true" android:launchMode="3" android:configChanges="0x00000420" android:windowSoftInputMode="0x00000015"/>
+    <activity android:theme="@7F1402F2" android:label="@7F13184A" android:name="com.ticktick.task.activity.widget.WidgetTaskListChoiceActivity" android:taskAffinity="" android:excludeFromRecents="true" android:launchMode="3" android:configChanges="0x00000420"/>
+    <activity android:name="com.ticktick.task.filebrowser.FileBrowserActivity" android:configChanges="0x00000420"/>
+    <activity android:theme="@7F1403EA" android:name="com.ticktick.task.filter.FilterEditActivity" android:windowSoftInputMode="0x00000003"/>
+    <activity android:name="com.ticktick.task.filter.FilterPreviewActivity" android:screenOrientation="1"/>
+    <activity android:theme="@7F1403E9" android:name="com.ticktick.task.focus.ui.PomoWidgetHandleOperationActivity" android:taskAffinity="" android:excludeFromRecents="true" android:configChanges="0x000004A0"/>
+    <activity android:theme="@7F1403EA" android:name="com.ticktick.task.focus.ui.timer.AddTimerActivity" android:windowSoftInputMode="0x00000013"/>
+    <activity android:theme="@7F1403EA" android:name="com.ticktick.task.focus.ui.timer.TimerDetailActivity" android:windowSoftInputMode="0x00000013"/>
+    <activity android:name="com.ticktick.task.matrix.ui.MatrixEditActivity"/>
+    <activity android:theme="@7F1403AC" android:name="com.ticktick.task.matrix.ui.MatrixHelperActivity"/>
+    <activity android:name="com.ticktick.task.promotion.PromotionActivity" android:screenOrientation="1"/>
+    <activity android:theme="@7F14039D" android:name="com.ticktick.task.promotion.PromotionDispatchActivity" android:exported="true">
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:scheme="ticktick" android:host="open-promotion"/>
+      </intent-filter>
+    </activity>
+    <activity android:name="com.ticktick.task.provider.ProviderAccessorManagerActivity" android:configChanges="0x000004A0"/>
+    <activity android:theme="@7F1402F2" android:name="com.ticktick.task.provider.ProviderPromotionDialogActivity" android:excludeFromRecents="true" android:configChanges="0x000004A0"/>
+    <activity android:theme="@7F1403E9" android:name="com.ticktick.task.reminder.AlertActionDispatchActivity" android:exported="true" android:taskAffinity="" android:excludeFromRecents="true" android:launchMode="2"/>
+    <activity android:name="com.ticktick.task.search.SearchFilterActivity" android:screenOrientation="1"/>
+    <activity android:theme="@7F140172" android:name="com.ticktick.task.send.SendToAllActivity" android:excludeFromRecents="true" android:configChanges="0x00000420"/>
+    <activity android:theme="@android:0103000B" android:name="com.ticktick.task.share.manager.ShareSyncErrorHandlerActivity" android:excludeFromRecents="true" android:launchMode="3" android:configChanges="0x000004A0"/>
+    <activity android:name="com.ticktick.task.tabbars.TabBarConfigActivity"/>
+    <activity android:theme="@7F1403AC" android:name="com.ticktick.task.ticket.TicketActivity" android:configChanges="0x00000480"/>
+    <activity android:name="com.ticktick.task.timeline.TimelineViewOptionsActivity"/>
+    <activity android:theme="@7F1403E9" android:name="com.ticktick.task.upgrade.RenewalsSuccessActivity"/>
+    <activity android:theme="@7F1403E9" android:name="com.ticktick.task.upgrade.UpgradeSuccessActivity"/>
+    <activity android:theme="@7F140019" android:name="com.ticktick.task.userguide.NewbieDispatchActivity"/>
+    <activity android:name="com.ticktick.task.view.customview.imagepicker.ui.ImageGridActivity" android:configChanges="0x00000480"/>
+    <activity android:name="com.ticktick.task.view.customview.imagepicker.ui.ImagePreviewActivity" android:configChanges="0x00000480"/>
+    <activity android:theme="@7F1403AC" android:name="com.ticktick.task.activity.account.AccountInfoActivity" android:configChanges="0x000004A0"/>
+    <service android:name="com.vivo.health.deviceRpcSdk.service.DeviceRpcService" android:exported="true">
+      <intent-filter>
+        <action android:name="com.vivo.health.device.rpc.channel"/>
+      </intent-filter>
+    </service>
+    <service android:name="androidx.credentials.playservices.CredentialProviderMetadataHolder" android:enabled="true" android:exported="false">
+      <meta-data android:name="androidx.credentials.CREDENTIAL_PROVIDER_KEY" android:value="androidx.credentials.playservices.CredentialProviderPlayServicesImpl"/>
+    </service>
+    <activity android:theme="@7F140302" android:name="androidx.credentials.playservices.HiddenActivity" android:enabled="true" android:exported="false" android:configChanges="0x000005A0" android:fitsSystemWindows="true"/>
+    <activity android:theme="@7F140190" android:name="com.twitter.sdk.android.tweetui.PlayerActivity" android:configChanges="0x000004A0"/>
+    <activity android:theme="@7F140190" android:name="com.twitter.sdk.android.tweetui.GalleryActivity"/>
+    <activity android:name="com.facebook.CustomTabMainActivity"/>
+    <activity android:theme="@android:0103000A" android:name="com.google.mlkit.vision.documentscanner.internal.GmsDocumentScanningDelegateActivity" android:exported="false" android:screenOrientation="1"/>
+    <provider android:name="com.google.mlkit.common.internal.MlKitInitProvider" android:exported="false" android:authorities="com.ticktick.task.mlkitinitprovider" android:initOrder="99"/>
+    <service android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService" android:exported="false" android:directBootAware="true">
+      <meta-data android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+    </service>
+    <service android:name="com.google.android.gms.analytics.AnalyticsJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="true" android:exported="false"/>
+    <meta-data android:name="com.google.android.play.billingclient.version" android:value="8.0.0"/>
+    <activity android:theme="@android:01030010" android:name="com.android.billingclient.api.ProxyBillingActivity" android:exported="false" android:configChanges="0x000005B0"/>
+    <activity android:theme="@android:01030010" android:name="com.android.billingclient.api.ProxyBillingActivityV2" android:exported="false" android:configChanges="0x000005B0"/>
+    <service android:name="com.google.firebase.messaging.FirebaseMessagingService" android:exported="false" android:directBootAware="true">
+      <intent-filter android:priority="-500">
+        <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+      </intent-filter>
+    </service>
+    <service android:name="com.google.firebase.components.ComponentDiscoveryService" android:exported="false" android:directBootAware="true">
+      <meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+      <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+      <meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+      <meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+      <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+    </service>
+    <receiver android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND" android:exported="true">
+      <intent-filter>
+        <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+      </intent-filter>
+    </receiver>
+    <activity android:theme="@android:01030010" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:exported="false" android:excludeFromRecents="true"/>
+    <service android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" android:exported="true" android:visibleToInstantApps="true"/>
+    <activity android:theme="@android:01030010" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false"/>
+    <receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver" android:enabled="true" android:exported="false"/>
+    <service android:name="com.google.android.gms.measurement.AppMeasurementService" android:enabled="true" android:exported="false"/>
+    <service android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="true" android:exported="false"/>
+    <provider android:name="com.google.firebase.provider.FirebaseInitProvider" android:exported="false" android:authorities="com.ticktick.task.firebaseinitprovider" android:initOrder="100"/>
+    <provider android:name="androidx.startup.InitializationProvider" android:exported="false" android:authorities="com.ticktick.task.androidx-startup">
+      <meta-data android:name="androidx.work.WorkManagerInitializer" android:value="androidx.startup"/>
+      <meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
+      <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+      <meta-data android:name="androidx.profileinstaller.ProfileInstallerInitializer" android:value="androidx.startup"/>
+    </provider>
+    <service android:name="androidx.work.impl.background.systemalarm.SystemAlarmService" android:enabled="@7F050003" android:exported="false" android:directBootAware="false"/>
+    <service android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="@7F050005" android:exported="true" android:directBootAware="false"/>
+    <service android:name="androidx.work.impl.foreground.SystemForegroundService" android:enabled="@7F050004" android:exported="false" android:directBootAware="false"/>
+    <receiver android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver" android:enabled="true" android:exported="false" android:directBootAware="false"/>
+    <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+      <intent-filter>
+        <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+        <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+      </intent-filter>
+    </receiver>
+    <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+      <intent-filter>
+        <action android:name="android.intent.action.BATTERY_OKAY"/>
+        <action android:name="android.intent.action.BATTERY_LOW"/>
+      </intent-filter>
+    </receiver>
+    <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+      <intent-filter>
+        <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+        <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+      </intent-filter>
+    </receiver>
+    <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+      <intent-filter>
+        <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+      </intent-filter>
+    </receiver>
+    <receiver android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver" android:enabled="false" android:exported="false" android:directBootAware="false">
+      <intent-filter>
+        <action android:name="android.intent.action.BOOT_COMPLETED"/>
+        <action android:name="android.intent.action.TIME_SET"/>
+        <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+      </intent-filter>
+    </receiver>
+    <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver" android:enabled="@7F050003" android:exported="false" android:directBootAware="false">
+      <intent-filter>
+        <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+      </intent-filter>
+    </receiver>
+    <receiver android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver" android:permission="android.permission.DUMP" android:enabled="true" android:exported="true" android:directBootAware="false">
+      <intent-filter>
+        <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS"/>
+      </intent-filter>
+    </receiver>
+    <uses-library android:name="androidx.window.extensions" android:required="false"/>
+    <uses-library android:name="androidx.window.sidecar" android:required="false"/>
+    <provider android:name="com.facebook.internal.FacebookInitProvider" android:exported="false" android:authorities="com.ticktick.task.FacebookInitProvider"/>
+    <receiver android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver" android:exported="false">
+      <intent-filter>
+        <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED"/>
+      </intent-filter>
+    </receiver>
+    <receiver android:name="com.facebook.AuthenticationTokenManager$CurrentAuthenticationTokenChangedBroadcastReceiver" android:exported="false">
+      <intent-filter>
+        <action android:name="com.facebook.sdk.ACTION_CURRENT_AUTHENTICATION_TOKEN_CHANGED"/>
+      </intent-filter>
+    </receiver>
+    <activity android:name="com.twitter.sdk.android.tweetcomposer.ComposerActivity" android:exported="false" android:windowSoftInputMode="0x00000014"/>
+    <service android:name="com.twitter.sdk.android.tweetcomposer.TweetUploadService" android:enabled="true" android:exported="false"/>
+    <activity android:name="com.twitter.sdk.android.core.identity.OAuthActivity" android:exported="false" android:excludeFromRecents="true" android:configChanges="0x00000480"/>
+    <service android:name="androidx.room.MultiInstanceInvalidationService" android:exported="false" android:directBootAware="true"/>
+    <provider android:name="com.bugsnag.android.internal.BugsnagContentProvider" android:exported="false" android:authorities="com.ticktick.task.bugsnag-startup" android:initOrder="9000"/>
+    <receiver android:name="androidx.profileinstaller.ProfileInstallReceiver" android:permission="android.permission.DUMP" android:enabled="true" android:exported="true" android:directBootAware="false">
+      <intent-filter>
+        <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE"/>
+      </intent-filter>
+      <intent-filter>
+        <action android:name="androidx.profileinstaller.action.SKIP_FILE"/>
+      </intent-filter>
+      <intent-filter>
+        <action android:name="androidx.profileinstaller.action.SAVE_PROFILE"/>
+      </intent-filter>
+      <intent-filter>
+        <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION"/>
+      </intent-filter>
+    </receiver>
+    <service android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery" android:exported="false">
+      <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+    </service>
+    <service android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+    <receiver android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver" android:exported="false"/>
+    <activity android:theme="@android:01030010" android:name="net.openid.appauth.AuthorizationManagementActivity" android:exported="false" android:launchMode="2"/>
+    <meta-data android:name="com.huawei.wearengine.sdk.api_level" android:value="13"/>
+    <activity android:theme="@android:0103005A" android:name="com.huawei.wearengine.ClientHubActivity" android:exported="false" android:excludeFromRecents="true" android:configChanges="0x40000200"/>
+    <activity android:theme="@7F14034D" android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity" android:exported="false" android:stateNotNeeded="true"/>
+    <meta-data android:name="com.android.vending.splits.required" android:value="true"/>
+    <meta-data android:name="com.android.stamp.source" android:value="https://play.google.com/store"/>
+    <meta-data android:name="com.android.stamp.type" android:value="STAMP_TYPE_DISTRIBUTION_APK"/>
+    <meta-data android:name="com.android.vending.splits" android:resource="@7F170053"/>
+    <meta-data android:name="com.android.vending.derived.apk.id" android:value="2"/>
+  </application>
+</manifest>
