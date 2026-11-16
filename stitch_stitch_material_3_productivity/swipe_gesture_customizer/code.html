@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=JetBrains+Mono:wght@100..900&display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-secondary-container": "#596372", "outline": "#76777d", "error-container": "#ffdad6", "on-tertiary": "#ffffff", "surface-tint": "#575e70", "on-secondary-fixed": "#121c28", "on-primary-container": "#7d8497", "inverse-on-surface": "#f0f1f1", "primary-container": "#141b2b", "surface-dim": "#dadada", "on-tertiary-fixed": "#151c25", "inverse-primary": "#c0c6db", "surface": "#ffffff", "surface-container-high": "#e8e8e8", "primary": "#000000", "surface-container-lowest": "#ffffff", "tertiary": "#000000", "on-primary": "#ffffff", "on-secondary": "#ffffff", "on-secondary-fixed-variant": "#3e4755", "surface-container": "#eeeeee", "on-error-container": "#93000a", "secondary": "#555f6d", "surface-container-highest": "#e2e2e2", "on-surface": "#1a1c1c", "tertiary-container": "#151c25", "primary-fixed": "#dce2f7", "primary-fixed-dim": "#c0c6db", "on-background": "#1a1c1c", "on-tertiary-fixed-variant": "#404752", "on-primary-fixed-variant": "#404758", "secondary-fixed": "#d9e3f4", "error": "#ba1a1a", "surface-variant": "#e2e2e2", "on-error": "#ffffff", "tertiary-fixed-dim": "#c0c7d3", "tertiary-fixed": "#dce3f0", "surface-bright": "#ffffff", "on-primary-fixed": "#141b2b", "surface-container-low": "#f3f3f4", "on-tertiary-container": "#7d8490", "on-surface-variant": "#45464c", "secondary-fixed-dim": "#bdc7d8", "secondary-container": "#d6e0f1", "outline-variant": "#c6c6cd", "background": "#ffffff", "inverse-surface": "#2f3131" }, borderRadius: { DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem" }, spacing: { "gutter-lg": "2rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "space-xl": "2.5rem", "margin": "2rem", "space-md": "1rem", "gutter-sm": "1rem", "gutter": "1.5rem", "margin-lg": "4rem", "margin-sm": "1rem" }, fontFamily: { "headline-sm": ["Geist"], "headline-md": ["Geist"], "label-md": ["JetBrains Mono"], "label-sm": ["JetBrains Mono"], "label-lg": ["JetBrains Mono"], "body-md": ["Geist"], "display-xl": ["Geist"], "display-xl-mobile": ["Geist"], "headline-lg-mobile": ["Geist"], "body-lg": ["Geist"], "body-sm": ["Geist"], "headline-lg": ["Geist"], "title-md": ["Geist"] }, fontSize: { "headline-sm": ["20px", { lineHeight: "28px", letterSpacing: "-0.015em", fontWeight: "600" }], "headline-md": ["28px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "600" }], "label-md": ["11px", { lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "500" }], "label-sm": ["10px", { lineHeight: "14px", letterSpacing: "0.06em", fontWeight: "500" }], "label-lg": ["13px", { lineHeight: "18px", letterSpacing: "0.02em", fontWeight: "500" }], "body-md": ["14px", { lineHeight: "22px", letterSpacing: "-0.005em", fontWeight: "400" }], "display-xl": ["56px", { lineHeight: "64px", letterSpacing: "-0.04em", fontWeight: "700" }], "display-xl-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.03em", fontWeight: "700" }], "headline-lg-mobile": ["28px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "600" }], "body-lg": ["18px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "400" }], "body-sm": ["12px", { lineHeight: "18px", letterSpacing: "0em", fontWeight: "400" }], "headline-lg": ["40px", { lineHeight: "48px", letterSpacing: "-0.03em", fontWeight: "600" }], "title-md": ["16px", { lineHeight: "24px", letterSpacing: "-0.01em", fontWeight: "600" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-md flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Go Back" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-on-surface-variant transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[20px]">arrow_back</span></button><h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight uppercase">Swipe Gestures</h1></div><div class="flex items-center gap-space-sm"><button aria-label="Reset Gestures" class="min-h-[44px] px-space-sm flex items-center justify-center font-label-md text-label-md tracking-wider text-on-surface hover:text-secondary uppercase transition-colors">RESET</button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col w-full bg-surface pt-16"><div class="flex flex-col w-full pb-safe">
+<!-- Top Context Header -->
+<div class="px-space-md pt-space-md pb-space-lg">
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Gesture Calibration</span>
+<span class="text-outline-variant font-label-sm text-label-sm">•</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">SCR-SET-003</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight mb-space-xs">Task Row Swipe Actions</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+      Configure custom actions triggered when dragging task rows horizontally across calibrated distance thresholds.
+    </p>
+</div>
+<!-- Interactive Live Sandbox / Preview Component -->
+<div class="px-space-md mb-space-xl">
+<div class="bg-surface-container-low rounded-xl p-space-md">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">touch_app</span>
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface">Interactive Simulation</span>
+</div>
+<div class="flex items-center gap-1.5 bg-surface rounded-full px-2 py-0.5 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Drag Row Below</span>
+</div>
+</div>
+<!-- Task Simulation Canvas -->
+<div class="relative overflow-hidden rounded-lg bg-surface shadow-sm select-none" id="swipe-stage">
+<!-- Background Actions Left Reveal (Swipe Right) -->
+<div class="absolute inset-y-0 left-0 flex items-center justify-start pl-4 gap-2 transition-opacity duration-150 opacity-0 pointer-events-none w-full bg-surface-container" id="bg-left">
+<div class="flex items-center gap-1.5 text-primary font-headline-sm text-[13px] font-semibold" id="action-right-short">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>Complete</span>
+</div>
+<div class="hidden items-center gap-1.5 text-primary font-headline-sm text-[13px] font-semibold" id="action-right-long">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">flag</span>
+<span>Priority</span>
+</div>
+</div>
+<!-- Background Actions Right Reveal (Swipe Left) -->
+<div class="absolute inset-y-0 right-0 flex items-center justify-end pr-4 gap-2 transition-opacity duration-150 opacity-0 pointer-events-none w-full bg-surface-container" id="bg-right">
+<div class="flex items-center gap-1.5 text-primary font-headline-sm text-[13px] font-semibold" id="action-left-short">
+<span>Due Date</span>
+<span class="material-symbols-outlined text-[20px]">calendar_today</span>
+</div>
+<div class="hidden items-center gap-1.5 text-primary font-headline-sm text-[13px] font-semibold" id="action-left-long">
+<span>Delete Task</span>
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</div>
+</div>
+<!-- Draggable Task Row Front -->
+<div class="relative z-10 bg-surface px-space-md py-3.5 flex items-center justify-between transition-transform ease-out cursor-grab active:cursor-grabbing" id="draggable-row">
+<div class="flex items-center gap-3 min-w-0 flex-1 pr-2">
+<div class="w-4 h-4 rounded-sm bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[13px] text-surface opacity-0">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface truncate">Review pull request & audit sync</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="flex items-center gap-1 font-label-sm text-label-sm text-secondary">
+<span class="material-symbols-outlined text-[13px]">schedule</span>
+                  Today 16:30
+                </span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-surface-container text-on-surface">!1 High</span>
+</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px] shrink-0">drag_handle</span>
+</div>
+</div>
+<!-- Threshold Calibration Scale Bar -->
+<div class="mt-space-md pt-space-sm">
+<div class="flex items-center justify-between text-secondary font-label-sm text-label-sm uppercase mb-1">
+<span>0% Neutral</span>
+<span class="text-primary font-medium">15% Short Trigger</span>
+<span class="text-primary font-medium">45% Long Trigger</span>
+<span>100% Sweep</span>
+</div>
+<div class="relative w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<!-- Short trigger bracket -->
+<div class="absolute inset-y-0 left-[15%] w-[30%] bg-surface-container-high"></div>
+<!-- Long trigger bracket -->
+<div class="absolute inset-y-0 left-[45%] right-0 bg-surface-variant"></div>
+<!-- Live Cursor Marker -->
+<div class="absolute top-0 bottom-0 left-1/2 w-1 bg-primary -ml-0.5 transition-all" id="slider-cursor"></div>
+</div>
+<div class="flex items-center justify-between mt-2 font-label-sm text-label-sm text-secondary">
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>Haptic Pulse: Active</span>
+</div>
+<span class="text-on-surface font-medium uppercase" id="trigger-state-label">Idle (0%)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 4 Gesture Slot Configuration Cards -->
+<div class="px-space-md flex flex-col gap-space-sm mb-space-xl">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-md text-label-md uppercase tracking-wider text-secondary">Assigned Gesture Slots</span>
+<span class="font-label-sm text-label-sm text-secondary">4 Active</span>
+</div>
+<!-- Slot 1: Swipe Right Short -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-start justify-between mb-2">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">arrow_forward</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Swipe Right • Short (15% - 45%)</span>
+</div>
+<button class="font-label-md text-label-md text-primary hover:text-secondary uppercase transition-colors flex items-center gap-0.5" onclick="openActionModal('right-short')">
+          Change <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px] text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="font-title-md text-title-md text-on-surface font-semibold">Complete Task</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Marks task as completed with 3.5s undo snackbar</p>
+</div>
+</div>
+</div>
+<!-- Slot 2: Swipe Right Long -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-start justify-between mb-2">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">keyboard_double_arrow_right</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Swipe Right • Long (> 45%)</span>
+</div>
+<button class="font-label-md text-label-md text-primary hover:text-secondary uppercase transition-colors flex items-center gap-0.5" onclick="openActionModal('right-long')">
+          Change <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px] text-primary" style="font-variation-settings: 'FILL' 1;">flag</span>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="font-title-md text-title-md text-on-surface font-semibold">Set Priority</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Opens quick 4-tier priority selector modal</p>
+</div>
+</div>
+</div>
+<!-- Slot 3: Swipe Left Short -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-start justify-between mb-2">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">arrow_back</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Swipe Left • Short (15% - 45%)</span>
+</div>
+<button class="font-label-md text-label-md text-primary hover:text-secondary uppercase transition-colors flex items-center gap-0.5" onclick="openActionModal('left-short')">
+          Change <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px] text-primary">calendar_today</span>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="font-title-md text-title-md text-on-surface font-semibold">Due Date</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Summons interactive mini date picker anchored to row</p>
+</div>
+</div>
+</div>
+<!-- Slot 4: Swipe Left Long -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-start justify-between mb-2">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">keyboard_double_arrow_left</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Swipe Left • Long (> 45%)</span>
+</div>
+<button class="font-label-md text-label-md text-primary hover:text-secondary uppercase transition-colors flex items-center gap-0.5" onclick="openActionModal('left-long')">
+          Change <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px] text-primary">delete</span>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="font-title-md text-title-md text-on-surface font-semibold">Delete Task</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Moves task to trash with immediate undo capability</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Catalog Grid Reference -->
+<div class="px-space-md mb-space-xl">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md uppercase tracking-wider text-secondary">Available Action Catalog</span>
+<span class="font-label-sm text-label-sm text-secondary">9 Operations</span>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<!-- 1 Complete -->
+<div class="bg-surface-container-low rounded-lg p-3 flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-[22px] text-primary mb-1" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium truncate w-full">Complete</span>
+</div>
+<!-- 2 Due Date -->
+<div class="bg-surface-container-low rounded-lg p-3 flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-[22px] text-primary mb-1">calendar_today</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium truncate w-full">Due Date</span>
+</div>
+<!-- 3 Priority -->
+<div class="bg-surface-container-low rounded-lg p-3 flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-[22px] text-primary mb-1" style="font-variation-settings: 'FILL' 1;">flag</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium truncate w-full">Priority</span>
+</div>
+<!-- 4 Pin to Top -->
+<div class="bg-surface-container-low rounded-lg p-3 flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-[22px] text-primary mb-1">push_pin</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium truncate w-full">Pin to Top</span>
+</div>
+<!-- 5 Won't Do -->
+<div class="bg-surface-container-low rounded-lg p-3 flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-[22px] text-primary mb-1">block</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium truncate w-full">Won't Do</span>
+</div>
+<!-- 6 Move to List -->
+<div class="bg-surface-container-low rounded-lg p-3 flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-[22px] text-primary mb-1">folder</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium truncate w-full">Move to List</span>
+</div>
+<!-- 7 Start Focus -->
+<div class="bg-surface-container-low rounded-lg p-3 flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-[22px] text-primary mb-1">timer</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium truncate w-full">Start Focus</span>
+</div>
+<!-- 8 Delete -->
+<div class="bg-surface-container-low rounded-lg p-3 flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-[22px] text-primary mb-1">delete</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium truncate w-full">Delete</span>
+</div>
+<!-- 9 None / Off -->
+<div class="bg-surface-container-low rounded-lg p-3 flex flex-col items-center justify-center text-center opacity-70">
+<span class="material-symbols-outlined text-[22px] text-secondary mb-1">do_not_disturb_on</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium truncate w-full">Disabled</span>
+</div>
+</div>
+</div>
+<!-- Advanced Ergonomics & Thresholds -->
+<div class="px-space-md mb-space-xl">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md uppercase tracking-wider text-secondary">Advanced Ergonomics</span>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<!-- Toggle: Haptic Feedback -->
+<div class="flex items-center justify-between">
+<div class="flex flex-col pr-4">
+<span class="font-title-md text-title-md text-on-surface font-medium">Haptic Feedback</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tactile tick when crossing swipe trigger thresholds</span>
+</div>
+<button aria-checked="true" class="w-11 h-6 bg-primary rounded-full relative transition-colors focus:outline-none shrink-0" id="toggle-haptic" onclick="toggleSwitch(this)" role="switch">
+<span class="block w-5 h-5 bg-on-primary rounded-full absolute top-0.5 right-0.5 transition-transform"></span>
+</button>
+</div>
+<!-- Segmented Sensitivity Selector -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center">
+<span class="font-title-md text-title-md text-on-surface font-medium">Swipe Sensitivity</span>
+<span class="font-label-sm text-label-sm text-secondary uppercase">Standard (15%/45%)</span>
+</div>
+<div class="grid grid-cols-3 gap-1 bg-surface-container-low p-1 rounded-lg">
+<button class="py-1.5 text-center font-label-sm text-label-sm rounded text-secondary hover:text-on-surface transition-colors" onclick="setSensitivity(this, 'Low (20%/50%)')">Low</button>
+<button class="py-1.5 text-center font-label-sm text-label-sm rounded bg-surface shadow-sm text-primary font-semibold transition-colors" onclick="setSensitivity(this, 'Standard (15%/45%)')">Standard</button>
+<button class="py-1.5 text-center font-label-sm text-label-sm rounded text-secondary hover:text-on-surface transition-colors" onclick="setSensitivity(this, 'High (10%/35%)')">High</button>
+</div>
+</div>
+<!-- Toggle: Quick Complete on Overswipe -->
+<div class="flex items-center justify-between">
+<div class="flex flex-col pr-4">
+<span class="font-title-md text-title-md text-on-surface font-medium">Quick Complete on Overswipe</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Immediately dismiss row on full edge-to-edge sweep</span>
+</div>
+<button aria-checked="true" class="w-11 h-6 bg-primary rounded-full relative transition-colors focus:outline-none shrink-0" id="toggle-overswipe" onclick="toggleSwitch(this)" role="switch">
+<span class="block w-5 h-5 bg-on-primary rounded-full absolute top-0.5 right-0.5 transition-transform"></span>
+</button>
+</div>
+</div>
+</div>
+<!-- Open Architecture & Reset Footer -->
+<div class="px-space-md pb-space-xl flex flex-col items-center">
+<div class="w-full bg-surface-container-low rounded-xl p-space-md mb-space-lg text-center">
+<div class="flex items-center justify-center gap-1.5 mb-1 text-primary">
+<span class="material-symbols-outlined text-[18px]">lock_open</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Unrestricted Gesture Engine</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        All 4 gesture slots, threshold tuners, and custom action assignments are 100% unlocked in this open source edition.
+      </p>
+</div>
+<button class="min-h-[44px] px-space-lg py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-headline-sm text-[13px] tracking-normal transition-colors flex items-center justify-center gap-2" onclick="resetDefaults()">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+      Reset to Default Gestures
+    </button>
+</div>
+<!-- Action Picker Bottom Sheet / Modal (Hidden by Default) -->
+<div class="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm flex flex-col justify-end transition-opacity duration-200 pointer-events-none opacity-0" id="action-modal">
+<div class="bg-surface rounded-t-xl p-space-md max-w-lg mx-auto w-full flex flex-col gap-space-sm shadow-xl">
+<div class="w-10 h-1 bg-surface-container-highest rounded-full mx-auto mb-2"></div>
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Assign Gesture Action</span>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container" onclick="closeActionModal()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-2">Select the operation triggered when this threshold is reached.</p>
+<div class="grid grid-cols-1 gap-1 max-h-60 overflow-y-auto">
+<button class="p-2.5 rounded-lg flex items-center gap-3 hover:bg-surface-container transition-colors text-left" onclick="selectAction('Complete Task', 'check_circle')">
+<span class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-title-md text-title-md text-on-surface">Complete Task</span>
+</button>
+<button class="p-2.5 rounded-lg flex items-center gap-3 hover:bg-surface-container transition-colors text-left" onclick="selectAction('Due Date', 'calendar_today')">
+<span class="material-symbols-outlined text-primary text-[20px]">calendar_today</span>
+<span class="font-title-md text-title-md text-on-surface">Due Date</span>
+</button>
+<button class="p-2.5 rounded-lg flex items-center gap-3 hover:bg-surface-container transition-colors text-left" onclick="selectAction('Set Priority', 'flag')">
+<span class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings: 'FILL' 1;">flag</span>
+<span class="font-title-md text-title-md text-on-surface">Set Priority</span>
+</button>
+<button class="p-2.5 rounded-lg flex items-center gap-3 hover:bg-surface-container transition-colors text-left" onclick="selectAction('Pin to Top', 'push_pin')">
+<span class="material-symbols-outlined text-primary text-[20px]">push_pin</span>
+<span class="font-title-md text-title-md text-on-surface">Pin to Top</span>
+</button>
+<button class="p-2.5 rounded-lg flex items-center gap-3 hover:bg-surface-container transition-colors text-left" onclick="selectAction('Won\'t Do', 'block')">
+<span class="material-symbols-outlined text-primary text-[20px]">block</span>
+<span class="font-title-md text-title-md text-on-surface">Won't Do</span>
+</button>
+<button class="p-2.5 rounded-lg flex items-center gap-3 hover:bg-surface-container transition-colors text-left" onclick="selectAction('Delete Task', 'delete')">
+<span class="material-symbols-outlined text-primary text-[20px]">delete</span>
+<span class="font-title-md text-title-md text-on-surface">Delete Task</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Gesture Sandbox Simulation Logic
+  const row = document.getElementById('draggable-row');
+  const stage = document.getElementById('swipe-stage');
+  const bgLeft = document.getElementById('bg-left');
+  const bgRight = document.getElementById('bg-right');
+  const actionRightShort = document.getElementById('action-right-short');
+  const actionRightLong = document.getElementById('action-right-long');
+  const actionLeftShort = document.getElementById('action-left-short');
+  const actionLeftLong = document.getElementById('action-left-long');
+  const sliderCursor = document.getElementById('slider-cursor');
+  const triggerStateLabel = document.getElementById('trigger-state-label');
+
+  let startX = 0;
+  let currentX = 0;
+  let isDragging = false;
+  let stageWidth = stage.offsetWidth || 340;
+
+  window.addEventListener('resize', () => {
+    stageWidth = stage.offsetWidth;
+  });
+
+  function onPointerDown(e) {
+    isDragging = true;
+    startX = e.clientX || (e.touches && e.touches[0].clientX) || 0;
+    row.style.transition = 'none';
+  }
+
+  function onPointerMove(e) {
+    if (!isDragging) return;
+    const clientX = e.clientX || (e.touches && e.touches[0].clientX) || 0;
+    const diff = clientX - startX;
+    
+    // Dampen drag
+    currentX = diff;
+    row.style.transform = `translateX(${currentX}px)`;
+
+    const absPercent = Math.min(100, Math.round((Math.abs(currentX) / stageWidth) * 100));
+    
+    // Update live indicator
+    if (currentX > 0) {
+      // Swiping Right
+      bgLeft.style.opacity = Math.min(1, absPercent / 15);
+      bgRight.style.opacity = 0;
+
+      if (absPercent >= 45) {
+        actionRightShort.classList.add('hidden');
+        actionRightLong.classList.remove('hidden');
+        triggerStateLabel.textContent = `Right Long Trigger (${absPercent}%)`;
+      } else if (absPercent >= 15) {
+        actionRightShort.classList.remove('hidden');
+        actionRightLong.classList.add('hidden');
+        triggerStateLabel.textContent = `Right Short Trigger (${absPercent}%)`;
+      } else {
+        triggerStateLabel.textContent = `Neutral (${absPercent}%)`;
+      }
+
+      const cursorPosition = 50 + (absPercent / 2);
+      sliderCursor.style.left = `${cursorPosition}%`;
+    } else if (currentX < 0) {
+      // Swiping Left
+      bgRight.style.opacity = Math.min(1, absPercent / 15);
+      bgLeft.style.opacity = 0;
+
+      if (absPercent >= 45) {
+        actionLeftShort.classList.add('hidden');
+        actionLeftLong.classList.remove('hidden');
+        triggerStateLabel.textContent = `Left Long Trigger (${absPercent}%)`;
+      } else if (absPercent >= 15) {
+        actionLeftShort.classList.remove('hidden');
+        actionLeftLong.classList.add('hidden');
+        triggerStateLabel.textContent = `Left Short Trigger (${absPercent}%)`;
+      } else {
+        triggerStateLabel.textContent = `Neutral (${absPercent}%)`;
+      }
+
+      const cursorPosition = 50 - (absPercent / 2);
+      sliderCursor.style.left = `${cursorPosition}%`;
+    } else {
+      bgLeft.style.opacity = 0;
+      bgRight.style.opacity = 0;
+      sliderCursor.style.left = '50%';
+      triggerStateLabel.textContent = 'Idle (0%)';
+    }
+  }
+
+  function onPointerUp() {
+    if (!isDragging) return;
+    isDragging = false;
+    row.style.transition = 'transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1)';
+    row.style.transform = 'translateX(0px)';
+    bgLeft.style.opacity = 0;
+    bgRight.style.opacity = 0;
+    sliderCursor.style.left = '50%';
+    setTimeout(() => {
+      triggerStateLabel.textContent = 'Idle (0%)';
+    }, 250);
+  }
+
+  stage.addEventListener('mousedown', onPointerDown);
+  window.addEventListener('mousemove', onPointerMove);
+  window.addEventListener('mouseup', onPointerUp);
+
+  stage.addEventListener('touchstart', onPointerDown, { passive: true });
+  window.addEventListener('touchmove', onPointerMove, { passive: true });
+  window.addEventListener('touchend', onPointerUp);
+
+  // Toggle Switches Handler
+  function toggleSwitch(btn) {
+    const isChecked = btn.getAttribute('aria-checked') === 'true';
+    btn.setAttribute('aria-checked', !isChecked);
+    const thumb = btn.querySelector('span');
+    if (!isChecked) {
+      btn.classList.remove('bg-surface-container-highest');
+      btn.classList.add('bg-primary');
+      thumb.style.transform = 'translateX(0)';
+    } else {
+      btn.classList.remove('bg-primary');
+      btn.classList.add('bg-surface-container-highest');
+      thumb.style.transform = 'translateX(-20px)';
+    }
+  }
+
+  // Sensitivity Segment Selector
+  function setSensitivity(btn, label) {
+    const parent = btn.parentElement;
+    parent.querySelectorAll('button').forEach(b => {
+      b.classList.remove('bg-surface', 'shadow-sm', 'text-primary', 'font-semibold');
+      b.classList.add('text-secondary');
+    });
+    btn.classList.add('bg-surface', 'shadow-sm', 'text-primary', 'font-semibold');
+    btn.classList.remove('text-secondary');
+  }
+
+  // Modal logic
+  let activeSlot = null;
+  function openActionModal(slotId) {
+    activeSlot = slotId;
+    const modal = document.getElementById('action-modal');
+    modal.classList.remove('pointer-events-none', 'opacity-0');
+    modal.classList.add('opacity-100');
+  }
+
+  function closeActionModal() {
+    const modal = document.getElementById('action-modal');
+    modal.classList.add('opacity-0', 'pointer-events-none');
+    modal.classList.remove('opacity-100');
+  }
+
+  function selectAction(name, icon) {
+    closeActionModal();
+  }
+
+  function resetDefaults() {
+    triggerStateLabel.textContent = 'Gestures Reset';
+    setTimeout(() => {
+      triggerStateLabel.textContent = 'Idle (0%)';
+    }, 1500);
+  }
+</script></main></body></html>

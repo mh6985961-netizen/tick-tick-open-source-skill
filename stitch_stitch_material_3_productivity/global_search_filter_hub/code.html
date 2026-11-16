@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=JetBrains+Mono:wght@100..900&display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-tertiary-fixed": "#151c25", "surface-container": "#eeeeee", "tertiary": "#000000", "on-tertiary-fixed-variant": "#404752", "primary-fixed-dim": "#c0c6db", "tertiary-container": "#151c25", "on-primary-container": "#7d8497", "outline": "#76777d", "surface": "#ffffff", "on-background": "#1a1c1c", "secondary-fixed-dim": "#bdc7d8", "background": "#ffffff", "outline-variant": "#c6c6cd", "on-surface": "#1a1c1c", "inverse-surface": "#2f3131", "primary-container": "#141b2b", "surface-variant": "#e2e2e2", "on-primary": "#ffffff", "on-secondary": "#ffffff", "error-container": "#ffdad6", "secondary-fixed": "#d9e3f4", "secondary": "#555f6d", "primary": "#000000", "surface-container-low": "#f3f3f4", "on-tertiary": "#ffffff", "on-secondary-container": "#596372", "secondary-container": "#d6e0f1", "on-secondary-fixed-variant": "#3e4755", "on-primary-fixed-variant": "#404758", "surface-bright": "#ffffff", "on-error": "#ffffff", "on-tertiary-container": "#7d8490", "inverse-primary": "#c0c6db", "surface-container-high": "#e8e8e8", "primary-fixed": "#dce2f7", "on-primary-fixed": "#141b2b", "on-error-container": "#93000a", "error": "#ba1a1a", "surface-container-highest": "#e2e2e2", "tertiary-fixed-dim": "#c0c7d3", "surface-tint": "#575e70", "inverse-on-surface": "#f0f1f1", "on-surface-variant": "#45464c", "surface-container-lowest": "#ffffff", "surface-dim": "#dadada", "tertiary-fixed": "#dce3f0", "on-secondary-fixed": "#121c28" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-md": "1rem", "gutter-sm": "1rem", "space-xs": "0.25rem", "gutter": "1.5rem", "gutter-lg": "2rem", "space-lg": "1.5rem", "margin": "2rem", "margin-lg": "4rem", "space-sm": "0.5rem", "space-xl": "2.5rem", "margin-sm": "1rem" }, fontFamily: { "label-lg": ["JetBrains Mono"], "title-md": ["Geist"], "body-md": ["Geist"], "headline-md": ["Geist"], "headline-lg-mobile": ["Geist"], "body-lg": ["Geist"], "display-xl": ["Geist"], "headline-lg": ["Geist"], "headline-sm": ["Geist"], "label-md": ["JetBrains Mono"], "label-sm": ["JetBrains Mono"], "display-xl-mobile": ["Geist"], "body-sm": ["Geist"] }, fontSize: { "label-lg": ["13px", { lineHeight: "18px", letterSpacing: "0.02em", fontWeight: "500" }], "title-md": ["16px", { lineHeight: "24px", letterSpacing: "-0.01em", fontWeight: "600" }], "body-md": ["14px", { lineHeight: "22px", letterSpacing: "-0.005em", fontWeight: "400" }], "headline-md": ["28px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "600" }], "headline-lg-mobile": ["28px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "600" }], "body-lg": ["18px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "400" }], "display-xl": ["56px", { lineHeight: "64px", letterSpacing: "-0.04em", fontWeight: "700" }], "headline-lg": ["40px", { lineHeight: "48px", letterSpacing: "-0.03em", fontWeight: "600" }], "headline-sm": ["20px", { lineHeight: "28px", letterSpacing: "-0.015em", fontWeight: "600" }], "label-md": ["11px", { lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "500" }], "label-sm": ["10px", { lineHeight: "14px", letterSpacing: "0.06em", fontWeight: "500" }], "display-xl-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.03em", fontWeight: "700" }], "body-sm": ["12px", { lineHeight: "18px", letterSpacing: "0em", fontWeight: "400" }] } } } };</script><style>@layer base { html, body { margin: 0; padding: 0; min-height: 100%; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } } ::-webkit-scrollbar { display: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-sm flex items-center gap-space-sm"><button aria-label="Go back" class="w-11 h-11 flex items-center justify-center text-primary hover:text-on-surface-variant transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[22px]">arrow_back</span></button><div class="flex-1 flex items-center h-10 px-space-sm bg-surface-container-low rounded-lg gap-space-xs"><span class="material-symbols-outlined text-outline text-[18px]">search</span><input autofocus="" class="w-full bg-transparent font-body-md text-body-md text-primary placeholder-outline focus:outline-none" placeholder="Search..." type="search"/><button aria-label="Clear search" class="w-8 h-8 flex items-center justify-center text-outline hover:text-primary transition-colors" type="button"><span class="material-symbols-outlined text-[16px]">close</span></button></div><button aria-label="Filter search" class="w-11 h-11 flex items-center justify-center text-primary hover:text-on-surface-variant transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">tune</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="flex flex-col relative w-full pt-16 pb-safe bg-surface"><div class="flex flex-col w-full pb-10">
+<!-- Sub-Header Query & Action Control Bar -->
+<div class="px-gutter-sm pt-space-xs pb-space-sm flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-label-md text-label-md uppercase tracking-wider">FTS5</span>
+<p class="font-body-sm text-body-sm text-secondary truncate">Querying <span class="font-label-md text-label-md text-primary font-medium">"sync engine"</span></p>
+</div>
+<div class="flex items-center gap-space-xs shrink-0">
+<button aria-label="Voice Search" class="w-8 h-8 rounded flex items-center justify-center text-secondary hover:text-primary hover:bg-surface-container-low transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">mic</span>
+</button>
+<button aria-label="Saved Filters" class="w-8 h-8 rounded flex items-center justify-center text-secondary hover:text-primary hover:bg-surface-container-low transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">bookmark_border</span>
+</button>
+</div>
+</div>
+<!-- Filter Criteria Chip Strip (Horizontal Scrollable) -->
+<div class="w-full overflow-x-auto scrollbar-none px-gutter-sm pb-space-sm flex items-center gap-space-xs text-nowrap">
+<!-- Active Status Chip -->
+<button class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wide" type="button">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">check</span>
+<span>Active</span>
+</button>
+<!-- Other Status Chips -->
+<button class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container-low text-secondary hover:text-primary font-label-sm text-label-sm uppercase tracking-wide transition-colors" type="button">
+<span>Completed</span>
+</button>
+<button class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container-low text-secondary hover:text-primary font-label-sm text-label-sm uppercase tracking-wide transition-colors" type="button">
+<span>All Statuses</span>
+</button>
+<div class="h-4 w-px bg-surface-container-high shrink-0 mx-0.5"></div>
+<!-- Date Dropdown Filter -->
+<button class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-surface-container-low text-primary font-label-sm text-label-sm hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px] text-secondary">calendar_today</span>
+<span>Any Date</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">arrow_drop_down</span>
+</button>
+<!-- Priority Filter -->
+<button class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-surface-container-low text-primary font-label-sm text-label-sm hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px] text-error">priority_high</span>
+<span>Priority: Any</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">arrow_drop_down</span>
+</button>
+<!-- Scope / List Filter -->
+<button class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-surface-container-low text-primary font-label-sm text-label-sm hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px] text-secondary">folder_open</span>
+<span>All Lists</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">arrow_drop_down</span>
+</button>
+<!-- Tag Filter -->
+<button class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-surface-container-low text-primary font-label-sm text-label-sm hover:bg-surface-container transition-colors" type="button">
+<span class="font-label-sm text-secondary">#</span>
+<span>All Tags</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">arrow_drop_down</span>
+</button>
+</div>
+<!-- Quick Query Monospace Token Shortcuts -->
+<div class="px-gutter-sm pb-space-md">
+<div class="w-full flex items-center gap-space-xs overflow-x-auto scrollbar-none py-1">
+<span class="font-label-sm text-label-sm text-secondary shrink-0 uppercase tracking-widest mr-1">Quick:</span>
+<button class="px-2 py-0.5 rounded bg-surface-container-low hover:bg-surface-container text-secondary hover:text-primary font-label-sm text-label-sm tracking-tight transition-colors" type="button">
+        is:overdue
+      </button>
+<button class="px-2 py-0.5 rounded bg-surface-container-low hover:bg-surface-container text-secondary hover:text-primary font-label-sm text-label-sm tracking-tight transition-colors" type="button">
+        has:checklist
+      </button>
+<button class="px-2 py-0.5 rounded bg-surface-container-low hover:bg-surface-container text-secondary hover:text-primary font-label-sm text-label-sm tracking-tight transition-colors" type="button">
+        type:note
+      </button>
+<button class="px-2 py-0.5 rounded bg-surface-container-low hover:bg-surface-container text-secondary hover:text-primary font-label-sm text-label-sm tracking-tight transition-colors" type="button">
+        #critical
+      </button>
+<button class="px-2 py-0.5 rounded bg-surface-container-low hover:bg-surface-container text-secondary hover:text-primary font-label-sm text-label-sm tracking-tight transition-colors" type="button">
+        @today
+      </button>
+</div>
+</div>
+<div class="h-px bg-surface-container-high w-full mb-space-md"></div>
+<!-- SECTION 1: RECENT SEARCHES -->
+<section class="px-gutter-sm mb-space-lg">
+<div class="flex items-center justify-between mb-space-xs">
+<h2 class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-semibold">Recent Searches</h2>
+<button class="font-label-sm text-label-sm text-secondary hover:text-primary transition-colors" type="button">Clear</button>
+</div>
+<div class="flex flex-col gap-1">
+<!-- Item 1 -->
+<div class="group flex items-center justify-between py-2 px-2.5 rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-[16px] text-secondary shrink-0">history</span>
+<span class="font-body-md text-body-md text-primary truncate">CRDT conflict resolution</span>
+</div>
+<button aria-label="Remove search" class="w-6 h-6 flex items-center justify-center text-secondary hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+</div>
+<!-- Item 2 -->
+<div class="group flex items-center justify-between py-2 px-2.5 rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-[16px] text-secondary shrink-0">history</span>
+<span class="font-body-md text-body-md text-primary truncate">caldav sync</span>
+</div>
+<button aria-label="Remove search" class="w-6 h-6 flex items-center justify-center text-secondary hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+</div>
+<!-- Item 3 -->
+<div class="group flex items-center justify-between py-2 px-2.5 rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-[16px] text-secondary shrink-0">history</span>
+<span class="font-body-md text-body-md text-primary truncate">hydration habit</span>
+</div>
+<button aria-label="Remove search" class="w-6 h-6 flex items-center justify-center text-secondary hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+</div>
+</div>
+</section>
+<!-- SECTION 2: MATCHING TASKS & NOTES (4) -->
+<section class="px-gutter-sm mb-space-lg">
+<div class="flex items-center justify-between mb-space-sm">
+<h2 class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-semibold">
+        Matching Tasks & Notes <span class="text-primary font-normal">(4)</span>
+</h2>
+<span class="font-label-sm text-label-sm text-secondary">Ranked by relevance</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Result Card 1: Task -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs transition-colors hover:bg-surface-container">
+<div class="flex items-start gap-space-sm">
+<div class="pt-0.5">
+<input class="w-4 h-4 rounded bg-surface-container-highest text-primary focus:ring-0 focus:outline-none cursor-pointer" type="checkbox"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-space-xs mb-1">
+<h3 class="font-title-md text-title-md text-primary truncate">
+                CRDT Conflict Resolution <span class="underline decoration-2 font-bold underline-offset-2">Sync</span>
+</h3>
+<span class="shrink-0 px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm uppercase font-semibold">
+                !High
+              </span>
+</div>
+<!-- Snippet Highlight -->
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-2">
+              Verify vector clocks before pushing local deltas to central <span class="font-semibold text-primary underline underline-offset-2">sync</span> daemon.
+            </p>
+<!-- Metadata Pill Strip -->
+<div class="flex items-center flex-wrap gap-space-xs">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface text-secondary font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                Work & Architecture
+              </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px] text-error">schedule</span>
+                Due Today, 11:30 AM
+              </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Result Card 2: Task -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs transition-colors hover:bg-surface-container">
+<div class="flex items-start gap-space-sm">
+<div class="pt-0.5">
+<input class="w-4 h-4 rounded bg-surface-container-highest text-primary focus:ring-0 focus:outline-none cursor-pointer" type="checkbox"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-space-xs mb-1">
+<h3 class="font-title-md text-title-md text-primary truncate">
+                Design CalDAV 2-Way <span class="underline decoration-2 font-bold underline-offset-2">Sync</span> <span class="underline decoration-2 font-bold underline-offset-2">Engine</span>
+</h3>
+<span class="shrink-0 px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm uppercase">
+                Schedule (Q2)
+              </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-2">
+              Benchmark background worker consumption during high-frequency <span class="font-semibold text-primary underline underline-offset-2">sync</span> polling.
+            </p>
+<div class="flex items-center flex-wrap gap-space-xs">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface text-secondary font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Platform Core
+              </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px]">event</span>
+                Due Fri, Nov 15
+              </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Result Card 3: Markdown Note -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs transition-colors hover:bg-surface-container">
+<div class="flex items-start gap-space-sm">
+<div class="w-6 h-6 rounded flex items-center justify-center bg-surface text-secondary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">description</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-space-xs mb-1">
+<h3 class="font-title-md text-title-md text-primary truncate">
+                Distributed CRDT <span class="underline decoration-2 font-bold underline-offset-2">Sync</span> Architecture & GreenDAO Schema
+              </h3>
+<span class="shrink-0 font-label-sm text-label-sm text-secondary">Updated Today</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-2">
+              "...offline writes with zero-loss conflict resolution on local <span class="font-semibold text-primary underline underline-offset-2">sync</span> layer using state-based merge matrices..."
+            </p>
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded bg-surface text-secondary font-label-sm text-label-sm">
+                Markdown / 1,420 words
+              </span>
+<span class="px-2 py-0.5 rounded bg-surface text-secondary font-label-sm text-label-sm">
+                #distributed
+              </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: MATCHING LISTS & TAGS (2) -->
+<section class="px-gutter-sm mb-space-lg">
+<div class="flex items-center justify-between mb-space-sm">
+<h2 class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-semibold">
+        Matching Lists & Tags <span class="text-primary font-normal">(2)</span>
+</h2>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- List Card -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-space-xs hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-primary shrink-0"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wide text-secondary">List</span>
+</div>
+<p class="font-title-md text-title-md text-primary truncate">Core Engineering</p>
+<span class="font-body-sm text-body-sm text-secondary">4 tasks matching</span>
+</div>
+<!-- Tag Card -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-space-xs hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-secondary shrink-0">tag</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wide text-secondary">Tag</span>
+</div>
+<p class="font-title-md text-title-md text-primary truncate">#<span class="font-bold underline underline-offset-2">sync-engine</span></p>
+<span class="font-body-sm text-body-sm text-secondary">3 items tagged</span>
+</div>
+</div>
+</section>
+<!-- SECTION 4: HABITS & ROUTINES (1) -->
+<section class="px-gutter-sm mb-space-xl">
+<div class="flex items-center justify-between mb-space-sm">
+<h2 class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-semibold">
+        Habits & Routines <span class="text-primary font-normal">(1)</span>
+</h2>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-center justify-between gap-space-md hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<!-- SVG Progress Ring for habit -->
+<div class="relative w-10 h-10 shrink-0 flex items-center justify-center">
+<svg class="w-10 h-10 -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-highest" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3"></path>
+<path class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="82, 100" stroke-linecap="round" stroke-width="3"></path>
+</svg>
+<span class="absolute font-label-sm text-label-sm font-bold text-primary">14</span>
+</div>
+<div class="min-w-0">
+<h3 class="font-title-md text-title-md text-primary truncate">
+            Evening <span class="underline decoration-2 font-bold underline-offset-2">Sync</span> & Daily Review
+          </h3>
+<p class="font-body-sm text-body-sm text-secondary truncate">Daily routine • 14-day streak</p>
+</div>
+</div>
+<button aria-label="Mark habit complete" class="w-9 h-9 rounded-full bg-surface flex items-center justify-center text-secondary hover:text-primary transition-colors shrink-0" type="button">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+</div>
+</section>
+<!-- Clean Minimalist Bottom Engine Status Indicator -->
+<footer class="px-gutter-sm mt-auto">
+<div class="py-space-sm px-space-md rounded-lg bg-surface-container-low flex items-center justify-between gap-space-xs">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="w-2 h-2 rounded-full bg-primary shrink-0 animate-pulse"></span>
+<p class="font-label-sm text-label-sm text-secondary truncate">
+          7 results across 3 modules
+        </p>
+</div>
+<span class="font-label-sm text-label-sm text-secondary shrink-0">
+        SQLite FTS5 • 4ms
+      </span>
+</div>
+</footer>
+</div></main></body></html>

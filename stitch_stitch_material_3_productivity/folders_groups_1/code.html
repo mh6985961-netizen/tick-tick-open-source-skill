@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html class="h-full bg-surface" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-container-lowest": "#ffffff", "inverse-primary": "#c0c6db", "on-error": "#ffffff", "on-tertiary-container": "#7d8490", "surface-container": "#eeeeee", "primary-fixed-dim": "#c0c6db", "on-secondary": "#ffffff", "surface-container-high": "#e8e8e8", "tertiary-fixed": "#dce3f0", "on-surface-variant": "#45464c", "surface-container-low": "#f3f3f4", "tertiary-fixed-dim": "#c0c7d3", "secondary-fixed-dim": "#bdc7d8", "on-surface": "#1a1c1c", "on-secondary-fixed-variant": "#3e4755", "surface-variant": "#e2e2e2", "error-container": "#ffdad6", "on-background": "#1a1c1c", "background": "#f9f9f9", "on-tertiary-fixed": "#151c25", "surface-tint": "#575e70", "surface-bright": "#f9f9f9", "on-primary-fixed-variant": "#404758", "on-secondary-fixed": "#121c28", "outline": "#76777d", "surface-container-highest": "#e2e2e2", "outline-variant": "#c6c6cd", "primary-container": "#141b2b", "primary-fixed": "#dce2f7", "on-primary-container": "#7d8497", "on-primary": "#ffffff", "surface-dim": "#dadada", "surface": "#f9f9f9", "tertiary": "#000000", "error": "#ba1a1a", "secondary": "#555f6d", "on-error-container": "#93000a", "on-primary-fixed": "#141b2b", "inverse-surface": "#2f3131", "inverse-on-surface": "#f0f1f1", "tertiary-container": "#151c25", "secondary-fixed": "#d9e3f4", "primary": "#000000", "on-tertiary": "#ffffff", "secondary-container": "#d6e0f1", "on-secondary-container": "#596372", "on-tertiary-fixed-variant": "#404752" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "gutter-lg": "2rem", "space-md": "1rem", "gutter": "1.5rem", "margin": "2rem", "space-lg": "1.5rem", "gutter-sm": "1rem", "margin-lg": "4rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "margin-sm": "1rem", "space-xl": "2.5rem" }, fontFamily: { "headline-lg-mobile": ["Geist"], "title-md": ["Geist"], "label-sm": ["JetBrains Mono"], "display-xl-mobile": ["Geist"], "body-lg": ["Geist"], "headline-lg": ["Geist"], "display-xl": ["Geist"], "body-sm": ["Geist"], "headline-md": ["Geist"], "label-lg": ["JetBrains Mono"], "body-md": ["Geist"], "label-md": ["JetBrains Mono"], "headline-sm": ["Geist"] }, fontSize: { "headline-lg-mobile": ["28px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "600" }], "title-md": ["16px", { lineHeight: "24px", letterSpacing: "-0.01em", fontWeight: "600" }], "label-sm": ["10px", { lineHeight: "14px", letterSpacing: "0.06em", fontWeight: "500" }], "display-xl-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.03em", fontWeight: "700" }], "body-lg": ["18px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "400" }], "headline-lg": ["40px", { lineHeight: "48px", letterSpacing: "-0.03em", fontWeight: "600" }], "display-xl": ["56px", { lineHeight: "64px", letterSpacing: "-0.04em", fontWeight: "700" }], "body-sm": ["12px", { lineHeight: "18px", letterSpacing: "0em", fontWeight: "400" }], "headline-md": ["28px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "600" }], "label-lg": ["13px", { lineHeight: "18px", letterSpacing: "0.02em", fontWeight: "500" }], "body-md": ["14px", { lineHeight: "22px", letterSpacing: "-0.005em", fontWeight: "400" }], "label-md": ["11px", { lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "500" }], "headline-sm": ["20px", { lineHeight: "28px", letterSpacing: "-0.015em", fontWeight: "600" }] } } } };</script><style>@layer base { html, body { width: 100%; margin: 0; padding: 0; } body { overscroll-behavior-y: none; min-height: max(884px, 100dvh); } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface-container-lowest text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-gutter-sm flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><button aria-label="Back" class="min-w-[44px] min-h-[44px] flex items-center justify-center text-on-surface hover:text-primary transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><h1 class="font-title-md text-title-md text-on-surface tracking-tight select-none">Folders &amp; Groups</h1></div><div class="flex items-center gap-space-xs"><button aria-label="Create Folder" class="min-w-[44px] min-h-[44px] flex items-center justify-center text-on-surface hover:text-primary transition-colors active:scale-[0.97]" type="button"><span class="material-symbols-outlined text-[24px]">create_new_folder</span></button><button aria-label="Save" class="min-h-[44px] px-space-md py-space-xs bg-primary text-on-primary font-body-md text-body-md font-medium rounded-lg active:scale-[0.99] transition-all flex items-center justify-center" type="button">Save</button></div></div></header><main class="flex-1 w-full pt-16 pb-safe bg-surface-container-lowest flex flex-col"><div class="flex flex-col w-full px-gutter-sm pb-12">
+<!-- Grounding Category & Title -->
+<div class="flex flex-col pt-space-md pb-space-lg">
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="inline-flex items-center px-1.5 py-0.5 bg-surface-container text-on-surface font-label-sm text-label-sm uppercase tracking-wider rounded">WORKSPACE HIERARCHY &amp; GROUPING • SCR-ORG-003</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-semibold tracking-tight">Folders &amp; Groups</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 leading-relaxed">
+      Organize lists into collapsible folder groups, drag to reorder project hierarchies, and structure your workspace tree.
+    </p>
+</div>
+<!-- Quick Action Bar -->
+<div class="flex items-center justify-between gap-space-sm mb-space-lg">
+<button class="h-10 px-space-md bg-primary text-on-primary font-title-md text-title-md font-medium rounded flex items-center gap-space-xs active:scale-[0.99] transition-transform" id="btn-open-create" type="button">
+<span class="material-symbols-outlined text-[18px]">create_new_folder</span>
+<span>Create New Folder</span>
+</button>
+<button class="h-10 px-space-sm text-on-surface-variant font-label-md text-label-md hover:text-on-surface flex items-center gap-1 transition-colors" id="btn-toggle-all" type="button">
+<span class="material-symbols-outlined text-[16px]">unfold_more</span>
+<span id="label-toggle-all">Collapse All</span>
+</button>
+</div>
+<!-- Inline Quick Create Card (Collapsible) -->
+<div class="mb-space-lg p-space-md bg-surface-container-low rounded-lg transition-all" id="quick-create-panel">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Quick Create Folder</span>
+<span class="font-label-sm text-label-sm text-outline">Root or Group</span>
+</div>
+<div class="flex gap-space-xs mt-space-xs">
+<input class="flex-1 h-10 px-space-sm bg-surface-container-lowest text-on-surface font-body-md text-body-md placeholder:text-outline rounded focus:outline-none focus:ring-1 focus:ring-primary" id="new-folder-input" placeholder="Folder name (e.g. Clients, Q4 Goals)..." type="text"/>
+<button class="h-10 px-space-md bg-primary text-on-primary font-body-md text-body-md font-medium rounded active:scale-[0.98]" id="btn-submit-folder" type="button">
+        Create
+      </button>
+</div>
+</div>
+<!-- Interactive Hierarchy Tree -->
+<div class="flex flex-col gap-space-md mb-space-xl">
+<!-- Group 1: Work & Engineering -->
+<div class="folder-group flex flex-col bg-surface-container-low rounded-lg overflow-hidden">
+<!-- Folder Header -->
+<div class="folder-header p-space-md flex items-center justify-between bg-surface-container-lowest select-none cursor-pointer" onclick="toggleFolder('group-work')">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-[20px] text-outline cursor-grab active:cursor-grabbing">drag_indicator</span>
+<span class="material-symbols-outlined text-[22px] text-on-surface">folder</span>
+<span class="font-title-md text-title-md text-on-surface truncate">Work &amp; Engineering</span>
+<span class="px-1.5 py-0.5 bg-surface-container text-on-surface font-label-sm text-label-sm rounded ml-1">3 Lists</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button aria-label="Folder Options" class="w-8 h-8 flex items-center justify-center text-outline hover:text-on-surface rounded" onclick="event.stopPropagation()" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+<span class="material-symbols-outlined text-[20px] text-on-surface transition-transform duration-200" id="caret-group-work">expand_less</span>
+</div>
+</div>
+<!-- Nested Child Lists -->
+<div class="flex flex-col bg-surface-container-lowest pl-space-md pr-space-md pb-space-md" id="content-group-work">
+<!-- Visual branch connector container -->
+<div class="relative flex flex-col ml-3 pl-space-md space-y-space-xs pt-space-xs">
+<!-- Continuous hierarchy indicator via subtle contrast shift -->
+<div class="absolute left-0 top-0 bottom-6 w-0.5 bg-surface-container"></div>
+<!-- Child 1 -->
+<div class="relative flex items-center justify-between p-space-sm bg-surface rounded hover:bg-surface-container transition-colors group">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-[18px] text-outline cursor-grab">drag_indicator</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">terminal</span>
+<span class="font-body-md text-body-md text-on-surface font-medium truncate ml-1">Sprint 42 Backlog</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm text-outline">9 active</span>
+<span class="material-symbols-outlined text-[16px] text-outline group-hover:text-on-surface">chevron_right</span>
+</div>
+</div>
+<!-- Child 2 -->
+<div class="relative flex items-center justify-between p-space-sm bg-surface rounded hover:bg-surface-container transition-colors group">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-[18px] text-outline cursor-grab">drag_indicator</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">code</span>
+<span class="font-body-md text-body-md text-on-surface font-medium truncate ml-1">Architecture RFCs</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm text-outline">4 active</span>
+<span class="material-symbols-outlined text-[16px] text-outline group-hover:text-on-surface">chevron_right</span>
+</div>
+</div>
+<!-- Child 3 -->
+<div class="relative flex items-center justify-between p-space-sm bg-surface rounded hover:bg-surface-container transition-colors group">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-[18px] text-outline cursor-grab">drag_indicator</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface font-medium truncate ml-1">Code Review &amp; PRs</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm text-outline">3 active</span>
+<span class="material-symbols-outlined text-[16px] text-outline group-hover:text-on-surface">chevron_right</span>
+</div>
+</div>
+<!-- Folder Footer: Add List -->
+<button class="w-full py-2 px-space-sm bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-md text-label-md rounded flex items-center justify-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Add List to this Folder</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Group 2: Personal & Life -->
+<div class="folder-group flex flex-col bg-surface-container-low rounded-lg overflow-hidden">
+<!-- Folder Header -->
+<div class="folder-header p-space-md flex items-center justify-between bg-surface-container-lowest select-none cursor-pointer" onclick="toggleFolder('group-life')">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-[20px] text-outline cursor-grab active:cursor-grabbing">drag_indicator</span>
+<span class="material-symbols-outlined text-[22px] text-on-surface">folder</span>
+<span class="font-title-md text-title-md text-on-surface truncate">Personal &amp; Life</span>
+<span class="px-1.5 py-0.5 bg-surface-container text-on-surface font-label-sm text-label-sm rounded ml-1">2 Lists</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button aria-label="Folder Options" class="w-8 h-8 flex items-center justify-center text-outline hover:text-on-surface rounded" onclick="event.stopPropagation()" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+<span class="material-symbols-outlined text-[20px] text-on-surface transition-transform duration-200" id="caret-group-life">expand_less</span>
+</div>
+</div>
+<!-- Nested Child Lists -->
+<div class="flex flex-col bg-surface-container-lowest pl-space-md pr-space-md pb-space-md" id="content-group-life">
+<div class="relative flex flex-col ml-3 pl-space-md space-y-space-xs pt-space-xs">
+<div class="absolute left-0 top-0 bottom-6 w-0.5 bg-surface-container"></div>
+<!-- Child 1 -->
+<div class="relative flex items-center justify-between p-space-sm bg-surface rounded hover:bg-surface-container transition-colors group">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-[18px] text-outline cursor-grab">drag_indicator</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">menu_book</span>
+<span class="font-body-md text-body-md text-on-surface font-medium truncate ml-1">Reading &amp; Books</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm text-outline">6 active</span>
+<span class="material-symbols-outlined text-[16px] text-outline group-hover:text-on-surface">chevron_right</span>
+</div>
+</div>
+<!-- Child 2 -->
+<div class="relative flex items-center justify-between p-space-sm bg-surface rounded hover:bg-surface-container transition-colors group">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-[18px] text-outline cursor-grab">drag_indicator</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">fitness_center</span>
+<span class="font-body-md text-body-md text-on-surface font-medium truncate ml-1">Health &amp; Fitness</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm text-outline">4 active</span>
+<span class="material-symbols-outlined text-[16px] text-outline group-hover:text-on-surface">chevron_right</span>
+</div>
+</div>
+<!-- Folder Footer: Add List -->
+<button class="w-full py-2 px-space-sm bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-md text-label-md rounded flex items-center justify-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Add List to this Folder</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Root-Level Standalone Lists -->
+<div class="flex flex-col mb-space-xl">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">ROOT-LEVEL LISTS (UNASSIGNED)</span>
+<span class="px-1.5 py-0.5 bg-surface-container text-on-surface font-label-sm text-label-sm rounded">2 Standalone</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-outline mb-space-md">
+      These lists live at the top level of your drawer and do not belong to any folder group.
+    </p>
+<div class="flex flex-col gap-space-xs">
+<!-- Standalone List 1 -->
+<div class="flex items-center justify-between p-space-md bg-surface-container-low rounded-lg hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-[20px] text-outline cursor-grab active:cursor-grabbing">drag_indicator</span>
+<span class="material-symbols-outlined text-[20px] text-on-surface">edit_note</span>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface truncate">Quick Notes &amp; Scratchpad</span>
+<span class="font-label-sm text-label-sm text-outline">12 active tasks</span>
+</div>
+</div>
+<button class="px-space-sm py-1 bg-surface-container-lowest text-on-surface font-label-md text-label-md rounded flex items-center gap-1 hover:bg-surface-container active:scale-[0.98] transition-all" type="button">
+<span>Move to</span>
+<span class="material-symbols-outlined text-[14px]">arrow_drop_down</span>
+</button>
+</div>
+<!-- Standalone List 2 -->
+<div class="flex items-center justify-between p-space-md bg-surface-container-low rounded-lg hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-[20px] text-outline cursor-grab active:cursor-grabbing">drag_indicator</span>
+<span class="material-symbols-outlined text-[20px] text-on-surface">shopping_cart</span>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface truncate">Shopping &amp; Errands</span>
+<span class="font-label-sm text-label-sm text-outline">5 active tasks</span>
+</div>
+</div>
+<button class="px-space-sm py-1 bg-surface-container-lowest text-on-surface font-label-md text-label-md rounded flex items-center gap-1 hover:bg-surface-container active:scale-[0.98] transition-all" type="button">
+<span>Move to</span>
+<span class="material-symbols-outlined text-[14px]">arrow_drop_down</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Hierarchy Rules & Batch Controls -->
+<div class="flex flex-col bg-surface-container-low rounded-lg p-space-md mb-space-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-space-sm">Hierarchy Rules &amp; Batch Settings</span>
+<div class="flex flex-col space-y-space-md">
+<!-- Toggle 1: Auto Sort -->
+<div class="flex items-center justify-between">
+<div class="flex flex-col pr-space-md">
+<span class="font-title-md text-title-md text-on-surface">Auto-sort Folders Alphabetically</span>
+<span class="font-body-sm text-body-sm text-outline">Off - Custom drag hierarchy priority retained</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Toggle 2: Show Child List Count -->
+<div class="flex items-center justify-between">
+<div class="flex flex-col pr-space-md">
+<span class="font-title-md text-title-md text-on-surface">Show Child List Count in Drawer</span>
+<span class="font-body-sm text-body-sm text-outline">Displays badge counters alongside folder headers</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- System Notice: Cascade Rules -->
+<div class="flex items-start gap-space-xs p-space-sm bg-surface-container-lowest rounded">
+<span class="material-symbols-outlined text-[18px] text-outline mt-0.5">info</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+          Cascade Action: Deleting a folder un-nests all contained lists back to Root level. Contained tasks remain strictly intact.
+        </span>
+</div>
+</div>
+</div>
+<!-- System Integrity Badge -->
+<div class="flex flex-col items-center justify-center pt-space-xs text-center">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 bg-surface-container text-on-surface font-label-sm text-label-sm rounded uppercase tracking-wider">
+<span class="material-symbols-outlined text-[14px]">shield</span>
+      UNLIMITED FOLDERS &amp; NESTING • LOCAL SQLITE PROJECT_GROUP SCHEMA • ZERO RESTRICTIONS
+    </span>
+</div>
+</div>
+<script>
+  function toggleFolder(id) {
+    const content = document.getElementById('content-' + id);
+    const caret = document.getElementById('caret-' + id);
+    if (!content || !caret) return;
+    
+    if (content.classList.contains('hidden')) {
+      content.classList.remove('hidden');
+      caret.style.transform = 'rotate(0deg)';
+    } else {
+      content.classList.add('hidden');
+      caret.style.transform = 'rotate(180deg)';
+    }
+  }
+
+  const toggleAllBtn = document.getElementById('btn-toggle-all');
+  const toggleAllLabel = document.getElementById('label-toggle-all');
+  let allCollapsed = false;
+
+  if (toggleAllBtn) {
+    toggleAllBtn.addEventListener('click', () => {
+      const folders = ['group-work', 'group-life'];
+      allCollapsed = !allCollapsed;
+
+      folders.forEach(id => {
+        const content = document.getElementById('content-' + id);
+        const caret = document.getElementById('caret-' + id);
+        if (content && caret) {
+          if (allCollapsed) {
+            content.classList.add('hidden');
+            caret.style.transform = 'rotate(180deg)';
+          } else {
+            content.classList.remove('hidden');
+            caret.style.transform = 'rotate(0deg)';
+          }
+        }
+      });
+
+      if (toggleAllLabel) {
+        toggleAllLabel.textContent = allCollapsed ? 'Expand All' : 'Collapse All';
+      }
+    });
+  }
+
+  const btnOpenCreate = document.getElementById('btn-open-create');
+  const newFolderInput = document.getElementById('new-folder-input');
+  if (btnOpenCreate && newFolderInput) {
+    btnOpenCreate.addEventListener('click', () => {
+      newFolderInput.focus();
+      newFolderInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  }
+</script></main></body></html>

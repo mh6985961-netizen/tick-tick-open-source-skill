@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior:none;background-color:#ffffff;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-error-container": "#93000a", "tertiary-fixed-dim": "#c0c7d3", "on-tertiary": "#ffffff", "primary-fixed-dim": "#c0c6db", "on-tertiary-container": "#7d8490", "on-secondary-fixed": "#121c28", "primary-container": "#141b2b", "on-background": "#1a1c1c", "secondary-fixed": "#d9e3f4", "surface-tint": "#575e70", "error": "#ba1a1a", "on-surface-variant": "#45464c", "on-primary-fixed-variant": "#404758", "on-secondary-container": "#596372", "error-container": "#ffdad6", "on-error": "#ffffff", "background": "#ffffff", "primary": "#000000", "on-tertiary-fixed": "#151c25", "surface-container": "#eeeeee", "inverse-surface": "#2f3131", "surface": "#ffffff", "inverse-primary": "#c0c6db", "surface-variant": "#e2e2e2", "outline-variant": "#c6c6cd", "surface-dim": "#dadada", "primary-fixed": "#dce2f7", "secondary": "#555f6d", "surface-container-highest": "#e2e2e2", "secondary-container": "#d6e0f1", "on-secondary-fixed-variant": "#3e4755", "surface-container-high": "#e8e8e8", "on-primary-container": "#7d8497", "surface-container-low": "#f3f3f4", "tertiary-fixed": "#dce3f0", "secondary-fixed-dim": "#bdc7d8", "surface-bright": "#ffffff", "on-tertiary-fixed-variant": "#404752", "tertiary": "#000000", "outline": "#76777d", "inverse-on-surface": "#f0f1f1", "on-surface": "#111827", "on-secondary": "#ffffff", "on-primary-fixed": "#141b2b", "surface-container-lowest": "#ffffff", "tertiary-container": "#151c25", "on-primary": "#ffffff" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-sm": "0.5rem", "gutter-sm": "1rem", "margin-sm": "1rem", "margin": "2rem", "gutter": "1.5rem", "space-xl": "2.5rem", "space-xs": "0.25rem", "space-md": "1rem", "margin-lg": "4rem", "space-lg": "1.5rem", "gutter-lg": "2rem" }, fontFamily: { "body-sm": ["Geist"], "label-md": ["JetBrains Mono"], "body-md": ["Geist"], "headline-lg-mobile": ["Geist"], "headline-sm": ["Geist"], "label-sm": ["JetBrains Mono"], "display-xl": ["Geist"], "title-md": ["Geist"], "label-lg": ["JetBrains Mono"], "headline-md": ["Geist"], "headline-lg": ["Geist"], "display-xl-mobile": ["Geist"], "body-lg": ["Geist"] }, fontSize: { "body-sm": ["12px", { lineHeight: "18px", letterSpacing: "0em", fontWeight: "400" }], "label-md": ["11px", { lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "500" }], "body-md": ["14px", { lineHeight: "22px", letterSpacing: "-0.005em", fontWeight: "400" }], "headline-lg-mobile": ["28px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "600" }], "headline-sm": ["20px", { lineHeight: "28px", letterSpacing: "-0.015em", fontWeight: "600" }], "label-sm": ["10px", { lineHeight: "14px", letterSpacing: "0.06em", fontWeight: "500" }], "display-xl": ["56px", { lineHeight: "64px", letterSpacing: "-0.04em", fontWeight: "700" }], "title-md": ["16px", { lineHeight: "24px", letterSpacing: "-0.01em", fontWeight: "600" }], "label-lg": ["13px", { lineHeight: "18px", letterSpacing: "0.02em", fontWeight: "500" }], "headline-md": ["28px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "600" }], "headline-lg": ["40px", { lineHeight: "48px", letterSpacing: "-0.03em", fontWeight: "600" }], "display-xl-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.03em", fontWeight: "700" }], "body-lg": ["18px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "400" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen selection:bg-primary selection:text-on-primary"><header class="fixed top-0 inset-x-0 z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-gutter-sm flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Go back" class="w-11 h-11 flex items-center justify-center text-on-surface hover:opacity-70 transition-opacity focus:outline-none" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[22px]">arrow_back</span></button></div><div class="flex flex-col items-center justify-center text-center flex-1 px-space-xs"><span class="font-title-md text-title-md text-on-surface leading-tight tracking-tight">Quadrant Rules</span><span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase">Eisenhower Auto-Classification</span></div><div class="flex items-center justify-end gap-space-xs"><button class="h-11 px-space-sm flex items-center justify-center font-label-lg text-label-lg text-primary hover:opacity-70 transition-opacity focus:outline-none" type="button">Save</button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div class="flex flex-col w-full relative">
+<!-- Backdrop Simulated Matrix Canvas (Behind Bottom Sheet) -->
+<div aria-hidden="true" class="px-gutter-sm pt-space-sm pb-space-lg space-y-space-md opacity-40 select-none pointer-events-none">
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="p-space-md bg-surface-container-low rounded-lg space-y-space-xs">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Q1 • Urgent &amp; Important</span>
+<div class="h-10 bg-surface-container rounded flex items-center px-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">CalDAV Sync Lock Bug</span>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-low rounded-lg space-y-space-xs">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Q2 • Not Urgent &amp; Important</span>
+<div class="h-10 bg-surface-container rounded flex items-center px-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">V3 Data Engine Architecture</span>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-low rounded-lg space-y-space-xs">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Q3 • Urgent &amp; Not Important</span>
+<div class="h-10 bg-surface-container rounded flex items-center px-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Triage Discord Bug Reports</span>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-low rounded-lg space-y-space-xs">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Q4 • Not Urgent &amp; Not Imp.</span>
+<div class="h-10 bg-surface-container rounded flex items-center px-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Archive 2024 Design Drafts</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal Backdrop Layer -->
+<div class="fixed inset-0 bg-primary/40 backdrop-blur-[2px] z-40 transition-opacity"></div>
+<!-- Sheet Container Layer (Presented as Clinical Floating Bottom/Center Sheet) -->
+<section class="relative z-50 flex flex-col w-full bg-surface-container-lowest rounded-t-xl shadow-xl overflow-hidden mt-[-10rem] pb-space-xl">
+<!-- Drag Handle & Sheet Header -->
+<div class="pt-space-sm px-gutter-sm flex flex-col items-center">
+<div class="w-10 h-1 bg-surface-container-highest rounded-full mb-space-sm"></div>
+<div class="w-full flex items-start justify-between pb-space-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-md text-title-md text-on-surface">Matrix Profiles</span>
+<span class="font-label-sm text-label-sm bg-surface-container text-on-surface px-1.5 py-0.5 rounded uppercase">v2.4</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase mt-0.5">Switch &amp; Manage Decision Matrices</span>
+</div>
+<button aria-label="Close Profile Switcher" class="w-9 h-9 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface transition-colors" onclick="history.back()" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<!-- Active Profile Spotlight Card -->
+<div class="px-gutter-sm pt-space-xs pb-space-md">
+<div class="p-space-md bg-surface-container-low rounded-lg space-y-space-md">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Current Active Matrix</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mt-0.5">Work &amp; Engineering</h2>
+</div>
+<span class="font-label-sm text-label-sm bg-primary text-on-primary px-2 py-0.5 rounded uppercase font-medium tracking-wider">Active</span>
+</div>
+<!-- 2x2 Mini Balance Diagnostic Visualizer -->
+<div class="p-space-sm bg-surface-container-lowest rounded-lg space-y-space-xs">
+<div class="flex items-center justify-between text-secondary">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Quadrant Load Ratio</span>
+<span class="font-label-sm text-label-sm font-medium text-on-surface">11 Tasks Total</span>
+</div>
+<div class="grid grid-cols-2 gap-1.5 pt-1">
+<!-- Q1 -->
+<div class="p-space-xs bg-surface-container-low rounded flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary">Q1 Do First</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">27% <span class="text-secondary font-normal">(3)</span></span>
+</div>
+<!-- Q2 -->
+<div class="p-space-xs bg-primary text-on-primary rounded flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-primary/80">Q2 Schedule</span>
+<span class="font-label-md text-label-md text-on-primary font-semibold">36% <span class="text-on-primary/70 font-normal">(4)</span></span>
+</div>
+<!-- Q3 -->
+<div class="p-space-xs bg-surface-container-low rounded flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary">Q3 Delegate</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">18% <span class="text-secondary font-normal">(2)</span></span>
+</div>
+<!-- Q4 -->
+<div class="p-space-xs bg-surface-container-low rounded flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary">Q4 Eliminate</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">18% <span class="text-secondary font-normal">(2)</span></span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1 font-label-sm text-label-sm text-secondary">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">tune</span>
+            3 active rules applied
+          </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">sync</span>
+            Synced just now
+          </span>
+</div>
+</div>
+</div>
+<!-- Profiles List -->
+<div class="px-gutter-sm flex flex-col space-y-space-sm">
+<div class="flex items-center justify-between pb-0.5">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Available Profiles (4)</span>
+<span class="font-label-sm text-label-sm text-secondary">Tap to switch</span>
+</div>
+<!-- Profile 1: Work & Engineering (Selected) -->
+<article class="p-space-md bg-surface-container-low rounded-lg transition-all relative">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="mt-0.5 w-5 h-5 rounded-full bg-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-primary text-[14px]">check</span>
+</div>
+<div class="flex flex-col space-y-1">
+<div class="flex items-center gap-space-xs flex-wrap">
+<h3 class="font-title-md text-title-md text-on-surface font-semibold">Work &amp; Engineering</h3>
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 bg-primary text-on-primary rounded font-medium">Selected</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Engineering architecture, sprint hotfixes, infrastructure, and CalDAV RFCs.
+              </p>
+<!-- Tag Metadata -->
+<div class="flex items-center gap-space-xs flex-wrap pt-space-xs">
+<span class="font-label-sm text-label-sm bg-surface-container text-on-surface px-2 py-0.5 rounded">
+                  3 Projects Linked
+                </span>
+<span class="font-label-sm text-label-sm bg-surface-container text-on-surface px-2 py-0.5 rounded">
+                  11 Active Tasks
+                </span>
+</div>
+</div>
+</div>
+<button aria-label="Edit Profile: Work &amp; Engineering" class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface shrink-0 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+</button>
+</div>
+</article>
+<!-- Profile 2: Personal & Life Management -->
+<article class="p-space-md bg-surface-container-lowest rounded-lg hover:bg-surface-container-low transition-all cursor-pointer">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="mt-0.5 w-5 h-5 rounded-full bg-surface-container flex items-center justify-center shrink-0">
+<span class="w-2 h-2 rounded-full bg-transparent"></span>
+</div>
+<div class="flex flex-col space-y-1">
+<h3 class="font-title-md text-title-md text-on-surface">Personal &amp; Life Management</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Home, wellness, finance, family routines, and personal growth.
+              </p>
+<!-- Tag Metadata -->
+<div class="flex items-center gap-space-xs flex-wrap pt-space-xs">
+<span class="font-label-sm text-label-sm bg-surface-container text-on-surface px-2 py-0.5 rounded">
+                  4 Projects Linked
+                </span>
+<span class="font-label-sm text-label-sm bg-surface-container text-on-surface px-2 py-0.5 rounded">
+                  8 Active Tasks
+                </span>
+</div>
+</div>
+</div>
+<button aria-label="Switch to Personal Profile" class="px-space-sm py-1 rounded bg-surface-container text-on-surface hover:bg-primary hover:text-on-primary font-label-sm text-label-sm uppercase tracking-wider shrink-0 transition-colors" type="button">
+            Switch
+          </button>
+</div>
+</article>
+<!-- Profile 3: Deep Research & Writing -->
+<article class="p-space-md bg-surface-container-lowest rounded-lg hover:bg-surface-container-low transition-all cursor-pointer">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="mt-0.5 w-5 h-5 rounded-full bg-surface-container flex items-center justify-center shrink-0">
+<span class="w-2 h-2 rounded-full bg-transparent"></span>
+</div>
+<div class="flex flex-col space-y-1">
+<h3 class="font-title-md text-title-md text-on-surface">Deep Research &amp; Writing</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Long-form essays, distributed systems reading, and open-source RFCs.
+              </p>
+<!-- Tag Metadata -->
+<div class="flex items-center gap-space-xs flex-wrap pt-space-xs">
+<span class="font-label-sm text-label-sm bg-surface-container text-on-surface px-2 py-0.5 rounded">
+                  3 Projects Linked
+                </span>
+<span class="font-label-sm text-label-sm bg-surface-container text-on-surface px-2 py-0.5 rounded">
+                  5 Active Tasks
+                </span>
+</div>
+</div>
+</div>
+<button aria-label="Switch to Deep Research Profile" class="px-space-sm py-1 rounded bg-surface-container text-on-surface hover:bg-primary hover:text-on-primary font-label-sm text-label-sm uppercase tracking-wider shrink-0 transition-colors" type="button">
+            Switch
+          </button>
+</div>
+</article>
+<!-- Profile 4: Eisenhower Default (All Tasks) -->
+<article class="p-space-md bg-surface-container-lowest rounded-lg hover:bg-surface-container-low transition-all cursor-pointer">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="mt-0.5 w-5 h-5 rounded-full bg-surface-container flex items-center justify-center shrink-0">
+<span class="w-2 h-2 rounded-full bg-transparent"></span>
+</div>
+<div class="flex flex-col space-y-1">
+<div class="flex items-center gap-space-xs">
+<h3 class="font-title-md text-title-md text-on-surface">Eisenhower Default</h3>
+<span class="font-label-sm text-label-sm bg-surface-container text-secondary px-1.5 py-0.2 rounded uppercase">Global</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Global matrix pulling tasks across all unlocked lists and inbox items.
+              </p>
+<!-- Tag Metadata -->
+<div class="flex items-center gap-space-xs flex-wrap pt-space-xs">
+<span class="font-label-sm text-label-sm bg-surface-container text-on-surface px-2 py-0.5 rounded">
+                  All Projects (6)
+                </span>
+<span class="font-label-sm text-label-sm bg-surface-container text-on-surface px-2 py-0.5 rounded">
+                  24 Active Tasks
+                </span>
+</div>
+</div>
+</div>
+<button aria-label="Switch to Eisenhower Default Profile" class="px-space-sm py-1 rounded bg-surface-container text-on-surface hover:bg-primary hover:text-on-primary font-label-sm text-label-sm uppercase tracking-wider shrink-0 transition-colors" type="button">
+            Switch
+          </button>
+</div>
+</article>
+</div>
+<!-- Management Controls & Action Bar -->
+<div class="px-gutter-sm pt-space-md space-y-space-sm">
+<button class="w-full h-11 bg-primary text-on-primary hover:bg-neutral-800 active:scale-[0.99] rounded font-label-lg text-label-lg flex items-center justify-center gap-space-xs transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Create New Matrix Profile</span>
+</button>
+<a class="w-full h-10 bg-surface-container-low hover:bg-surface-container text-on-surface rounded font-label-md text-label-md flex items-center justify-center gap-space-xs transition-colors" href="#rules-management">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Manage Classification Rules &amp; Matrix Logic</span>
+</a>
+<!-- Open Source Entitlement Tag -->
+<div class="pt-space-xs flex items-center justify-center gap-space-xs text-secondary text-center">
+<span class="material-symbols-outlined text-[14px]">lock_open</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Unlimited Custom Profiles • Open Source Edition</span>
+</div>
+</div>
+</section>
+</div></main></body></html>

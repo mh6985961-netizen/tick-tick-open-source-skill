@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-variant": "#e2e2e2", "on-tertiary-fixed": "#151c25", "outline-variant": "#c6c6cd", "secondary-fixed": "#d9e3f4", "error": "#ba1a1a", "surface-tint": "#575e70", "primary-container": "#141b2b", "surface-container-lowest": "#ffffff", "surface-dim": "#dadada", "error-container": "#ffdad6", "on-primary": "#ffffff", "surface-container-highest": "#e2e2e2", "on-primary-fixed-variant": "#404758", "surface": "#f9f9f9", "secondary": "#555f6d", "outline": "#76777d", "on-secondary": "#ffffff", "on-background": "#1a1c1c", "surface-container-low": "#f3f3f4", "tertiary-fixed-dim": "#c0c7d3", "tertiary": "#000000", "on-tertiary-fixed-variant": "#404752", "primary": "#000000", "on-secondary-fixed-variant": "#3e4755", "inverse-surface": "#2f3131", "on-primary-fixed": "#141b2b", "on-secondary-fixed": "#121c28", "background": "#f9f9f9", "secondary-container": "#d6e0f1", "on-tertiary-container": "#7d8490", "primary-fixed": "#dce2f7", "primary-fixed-dim": "#c0c6db", "surface-bright": "#f9f9f9", "on-error-container": "#93000a", "on-primary-container": "#7d8497", "on-error": "#ffffff", "surface-container-high": "#e8e8e8", "inverse-primary": "#c0c6db", "tertiary-container": "#151c25", "surface-container": "#eeeeee", "on-secondary-container": "#596372", "inverse-on-surface": "#f0f1f1", "secondary-fixed-dim": "#bdc7d8", "on-surface": "#1a1c1c", "on-surface-variant": "#45464c", "tertiary-fixed": "#dce3f0", "on-tertiary": "#ffffff" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter": "1.5rem", "gutter-lg": "2rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "margin": "2rem", "gutter-sm": "1rem", "space-md": "1rem", "space-xs": "0.25rem", "margin-sm": "1rem", "margin-lg": "4rem", "space-xl": "2.5rem" }, "fontFamily": { "display-xl-mobile": [ "Geist" ], "label-md": [ "JetBrains Mono" ], "headline-sm": [ "Geist" ], "body-sm": [ "Geist" ], "headline-md": [ "Geist" ], "display-xl": [ "Geist" ], "label-sm": [ "JetBrains Mono" ], "title-md": [ "Geist" ], "label-lg": [ "JetBrains Mono" ], "body-md": [ "Geist" ], "body-lg": [ "Geist" ], "headline-lg": [ "Geist" ], "headline-lg-mobile": [ "Geist" ] }, "fontSize": { "display-xl-mobile": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "700" } ], "label-md": [ "11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "body-sm": [ "12px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" } ], "headline-md": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "display-xl": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.04em", "fontWeight": "700" } ], "label-sm": [ "10px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "500" } ], "title-md": [ "16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "label-lg": [ "13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "body-md": [ "14px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "400" } ], "body-lg": [ "18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "headline-lg": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "600" } ], "headline-lg-mobile": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" } ] } } } };</script><style>@layer base { html, body { min-height: 100%; margin: 0; padding: 0; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface-container-lowest text-on-surface min-h-screen flex flex-col font-body-md"><header class="fixed top-0 inset-x-0 z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-14 px-gutter-sm flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><button aria-label="Go back" class="w-11 h-11 flex items-center justify-center text-primary active:scale-95 transition-transform" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[20px]">arrow_back</span></button><h1 class="font-title-md text-title-md text-primary truncate tracking-tight">Theme &amp; Appearance</h1></div><div class="flex items-center gap-space-xs"><button class="h-11 px-space-sm flex items-center justify-center font-label-md text-label-md text-primary uppercase tracking-wider hover:opacity-70 active:scale-95 transition-all" type="button">Done</button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-14 pb-safe bg-surface-container-lowest"><div class="flex flex-col w-full px-gutter-sm pb-12 space-y-8 bg-surface-container-lowest text-on-surface">
+<!-- Live Theme Preview Card -->
+<section class="flex flex-col space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Interactive Sandbox</span>
+<div class="flex items-center gap-1.5 px-2 py-0.5 bg-surface-container-high rounded text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm font-semibold tracking-wider">REAL-TIME RENDERING</span>
+</div>
+</div>
+<!-- Miniature Screen UI Container -->
+<div class="w-full bg-surface-container-low rounded-xl p-4 shadow-sm transition-all duration-300" id="previewCanvas">
+<div class="w-full bg-surface-container-lowest rounded-lg p-3.5 space-y-3.5 shadow-sm transition-colors duration-200" id="previewDevice">
+<!-- Mini Header Bar -->
+<div class="flex items-center justify-between pb-2 border-b border-surface-container">
+<div class="flex items-center gap-2">
+<div class="w-4 h-4 rounded-full bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[10px] text-on-primary">layers</span>
+</div>
+<div class="h-2 w-16 bg-surface-variant rounded-full"></div>
+</div>
+<div class="flex items-center gap-1.5">
+<div class="h-1.5 w-4 bg-surface-variant rounded-full"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-surface-container-high"></div>
+</div>
+</div>
+<!-- Mini Interactive Task Card -->
+<div class="p-2.5 rounded bg-surface-container-low flex items-center justify-between gap-2 transition-colors" id="previewCardInner">
+<div class="flex items-center gap-2 min-w-0">
+<div class="w-4 h-4 rounded bg-primary flex items-center justify-center shrink-0 transition-colors" id="previewCheckbox">
+<span class="material-symbols-outlined text-[12px] text-on-primary">check</span>
+</div>
+<div class="flex flex-col gap-1 min-w-0">
+<span class="font-body-sm text-body-sm font-medium truncate">Audit design system tokens</span>
+<span class="font-label-sm text-label-sm text-secondary truncate">Ref: SCR-SET-002 OLED</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-primary text-on-primary font-medium shrink-0 transition-colors" id="previewPill">
+            P1
+          </span>
+</div>
+<!-- Mini Quick Action Row -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">tune</span>
+<span class="font-label-sm text-label-sm text-secondary">Monochrome Active</span>
+</div>
+<button class="h-6 px-3 rounded bg-primary text-on-primary font-label-sm text-label-sm font-medium flex items-center gap-1 active:scale-95 transition-all" id="previewFab" type="button">
+<span class="material-symbols-outlined text-[12px]">add</span>
+<span>New Key</span>
+</button>
+</div>
+</div>
+<div class="mt-3 flex items-center justify-between text-secondary">
+<span class="font-label-sm text-label-sm" id="previewThemeModeLabel">Active Theme: Monochrome Minimalist (Pure White / Light)</span>
+<span class="font-label-sm text-label-sm font-mono">60 FPS</span>
+</div>
+</div>
+</section>
+<!-- Display Mode Selection -->
+<section class="flex flex-col space-y-3">
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">DISPLAY MODE</h2>
+<p class="font-body-sm text-body-sm text-secondary">Configure day and night visual behavior across all views</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-1" id="modeSelectorGroup">
+<!-- Follow System (Selected by default) -->
+<button class="mode-card flex flex-col p-3 rounded-lg bg-surface-container-lowest shadow-sm text-left transition-all relative overflow-hidden group" onclick="selectDisplayMode('system', this)" type="button">
+<div class="absolute top-2.5 right-2.5 w-4 h-4 rounded-full bg-primary flex items-center justify-center checkmark-badge">
+<span class="material-symbols-outlined text-[11px] text-on-primary font-bold">check</span>
+</div>
+<div class="w-7 h-7 rounded bg-surface-container flex items-center justify-center mb-2.5">
+<span class="material-symbols-outlined text-[16px] text-on-surface">brightness_auto</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface">Follow System</span>
+<span class="font-body-sm text-body-sm text-secondary mt-1">Synchronizes automatically with OS schedule</span>
+</button>
+<!-- Always Light -->
+<button class="mode-card flex flex-col p-3 rounded-lg bg-surface-container-lowest shadow-sm text-left transition-all relative overflow-hidden group" onclick="selectDisplayMode('light', this)" type="button">
+<div class="absolute top-2.5 right-2.5 w-4 h-4 rounded-full bg-surface-container hidden items-center justify-center checkmark-badge">
+<span class="material-symbols-outlined text-[11px] text-on-surface font-bold">check</span>
+</div>
+<div class="w-7 h-7 rounded bg-surface-container flex items-center justify-center mb-2.5">
+<span class="material-symbols-outlined text-[16px] text-on-surface">light_mode</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface">Always Light</span>
+<span class="font-body-sm text-body-sm text-secondary mt-1">Crisp high-contrast pure white (#FFFFFF) ground</span>
+</button>
+<!-- Always Dark -->
+<button class="mode-card flex flex-col p-3 rounded-lg bg-surface-container-lowest shadow-sm text-left transition-all relative overflow-hidden group" onclick="selectDisplayMode('dark', this)" type="button">
+<div class="absolute top-2.5 right-2.5 w-4 h-4 rounded-full bg-surface-container hidden items-center justify-center checkmark-badge">
+<span class="material-symbols-outlined text-[11px] text-on-surface font-bold">check</span>
+</div>
+<div class="w-7 h-7 rounded bg-surface-container flex items-center justify-center mb-2.5">
+<span class="material-symbols-outlined text-[16px] text-on-surface">dark_mode</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface">Always Dark</span>
+<span class="font-body-sm text-body-sm text-secondary mt-1">Deep architectural charcoal night aesthetic</span>
+</button>
+</div>
+</section>
+<!-- OLED Pure Black Mode -->
+<section class="flex flex-col">
+<div class="p-4 rounded-xl bg-surface-container-low shadow-sm flex flex-col gap-3.5">
+<div class="flex items-start justify-between gap-3">
+<div class="flex flex-col gap-1 min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Pure Black OLED Dark Mode</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface text-secondary font-mono tracking-wider">
+              TRUE BLACK
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">
+            Replaces dark charcoal surfaces with absolute #000000 pure black pixels to maximize energy savings on OLED and AMOLED displays.
+          </p>
+</div>
+<!-- Custom Micro-Toggle -->
+<button aria-checked="false" class="w-12 h-6 bg-surface-container-highest rounded-full p-0.5 relative transition-colors duration-200 shrink-0 cursor-pointer focus:outline-none" id="oledToggleBtn" onclick="toggleOledSwitch()" role="switch" type="button">
+<span class="block w-5 h-5 rounded-full bg-surface-container-lowest shadow-sm transform transition-transform duration-200" id="oledToggleThumb"></span>
+</button>
+</div>
+<div class="pt-2 border-t border-surface-variant flex items-center justify-between text-secondary">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">battery_saver</span>
+<span class="font-label-sm text-label-sm">Display Engine Efficiency</span>
+</div>
+<span class="font-label-sm text-label-sm font-mono font-medium">0% PIXEL POWER DRAW</span>
+</div>
+</div>
+</section>
+<!-- Primary Accent Palette (18 Swatches Grid) -->
+<section class="flex flex-col space-y-3">
+<div class="flex flex-col">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">ACCENT PALETTE</h2>
+<span class="font-label-sm text-label-sm text-secondary font-mono">18 / 18 UNLOCKED</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">
+        Select an accent tint for buttons, active badges, and focus rings (Zero Pro restrictions)
+      </p>
+</div>
+<!-- 18 Swatch Grid (3 per row on mobile, structured layout) -->
+<div class="grid grid-cols-3 gap-2.5 pt-1" id="swatchGrid">
+<!-- Row 1: Carbon / Slate / Zinc -->
+<button class="swatch-btn flex items-center gap-2.5 p-2 rounded-lg bg-surface-container-lowest shadow-sm text-left transition-transform active:scale-95 group" onclick="selectSwatch('#111827', 'Carbon', this)" type="button">
+<div class="w-6 h-6 rounded-full flex items-center justify-center shrink-0 shadow-inner" style="background-color: #111827;">
+<span class="material-symbols-outlined text-[14px] text-white check-icon">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md truncate font-medium text-on-surface">Carbon</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono truncate">#111827</span>
+</div>
+</button>
+<button class="swatch-btn flex items-center gap-2.5 p-2 rounded-lg bg-surface-container-lowest shadow-sm text-left transition-transform active:scale-95 group" onclick="selectSwatch('#475569', 'Slate', this)" type="button">
+<div class="w-6 h-6 rounded-full flex items-center justify-center shrink-0 shadow-inner" style="background-color: #475569;">
+<span class="material-symbols-outlined text-[14px] text-white check-icon hidden">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md truncate font-medium text-on-surface">Slate</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono truncate">#475569</span>
+</div>
+</button>
+<button class="swatch-btn flex items-center gap-2.5 p-2 rounded-lg bg-surface-container-lowest shadow-sm text-left transition-transform active:scale-95 group" onclick="selectSwatch('#71717A', 'Zinc', this)" type="button">
+<div class="w-6 h-6 rounded-full flex items-center justify-center shrink-0 shadow-inner" style="background-color: #71717A;">
+<span class="material-symbols-outlined text-[14px] text-white check-icon hidden">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md truncate font-medium text-on-surface">Zinc</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono truncate">#71717A</span>
+</div>
+</button>
+<!-- Row 2: Sapphire Blue / Cobalt / Sky -->
+<button class="swatch-btn flex items-center gap-2.5 p-2 rounded-lg bg-surface-container-lowest shadow-sm text-left transition-transform active:scale-95 group" onclick="selectSwatch('#2563EB', 'Sapphire', this)" type="button">
+<div class="w-6 h-6 rounded-full flex items-center justify-center shrink-0 shadow-inner" style="background-color: #2563EB;">
+<span class="material-symbols-outlined text-[14px] text-white check-icon hidden">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md truncate font-medium text-on-surface">Sapphire</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono truncate">#2563EB</span>
+</div>
+</button>
+<button class="swatch-btn flex items-center gap-2.5 p-2 rounded-lg bg-surface-container-lowest shadow-sm text-left transition-transform active:scale-95 group" onclick="selectSwatch('#1D4ED8', 'Cobalt', this)" type="button">
+<div class="w-6 h-6 rounded-full flex items-center justify-center shrink-0 shadow-inner" style="background-color: #1D4ED8;">
+<span class="material-symbols-outlined text-[14px] text-white check-icon hidden">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md truncate font-medium text-on-surface">Cobalt</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono truncate">#1D4ED8</span>
+</div>
+</button>
+<button class="swatch-btn flex items-center gap-2.5 p-2 rounded-lg bg-surface-container-lowest shadow-sm text-left transition-transform active:scale-95 group" onclick="selectSwatch('#0284C7', 'Sky', this)" type="button">
+<div class="w-6 h-6 rounded-full flex items-center justify-center shrink-0 shadow-inner" style="background-color: #0284C7;">
+<span class="material-symbols-outlined text-[14px] text-white check-icon hidden">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md truncate font-medium text-on-surface">Sky</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono truncate">#0284C7</span>
+</div>
+</button>
+<!-- Row 3: Emerald / Forest Teal / Mint -->
+<button class="swatch-btn flex items-center gap-2.5 p-2 rounded-lg bg-surface-container-lowest shadow-sm text-left transition-transform active:scale-95 group" onclick="selectSwatch('#059669', 'Emerald', this)" type="button">
+<div class="w-6 h-6 rounded-full flex items-center justify-center shrink-0 shadow-inner" style="background-color: #059669;">
+<span class="material-symbols-outlined text-[14px] text-white check-icon hidden">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md truncate font-medium text-on-surface">Emerald</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono truncate">#059669</span>
+</div>
+</button>
+<button class="swatch-btn flex items-center gap-2.5 p-2 rounded-lg bg-surface-container-lowest shadow-sm text-left transition-transform active:scale-95 group" onclick="selectSwatch('#0D9488', 'Teal', this)" type="button">
+<div class="w-6 h-6 rounded-full flex items-center justify-center shrink-0 shadow-inner" style="background-color: #0D9488;">
+<span class="material-symbols-outlined text-[14px] text-white check-icon hidden">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md truncate font-medium text-on-surface">Teal</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono truncate">#0D9488</span>
+</div>
+</button>
+<button class="swatch-btn flex items-center gap-2.5 p-2 rounded-lg bg-surface-container-lowest shadow-sm text-left transition-transform active:scale-95 group" onclick="selectSwatch('#10B981', 'Mint', this)" type="button">
+<div class="w-6 h-6 rounded-full flex items-center justify-center shrink-0 shadow-inner" style="background-color: #10B981;">
+<span class="material-symbols-outlined text-[14px] text-white check-icon hidden">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md truncate font-medium text-on-surface">Mint</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono truncate">#10B981</span>
+</div>
+</button>
+<!-- Row 4: Amber / Burnt Orange / Coral -->
+<button class="swatch-btn flex items-center gap-2.5 p-2 rounded-lg bg-surface-container-lowest shadow-sm text-left transition-transform active:scale-95 group" onclick="selectSwatch('#D97706', 'Amber', this)" type="button">
+<div class="w-6 h-6 rounded-full flex items-center justify-center shrink-0 shadow-inner" style="background-color: #D97706;">
+<span class="material-symbols-outlined text-[14px] text-white check-icon hidden">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md truncate font-medium text-on-surface">Amber</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono truncate">#D97706</span>
+</div>
+</button>
+<button class="swatch-btn flex items-center gap-2.5 p-2 rounded-lg bg-surface-container-lowest shadow-sm text-left transition-transform active:scale-95 group" onclick="selectSwatch('#EA580C', 'Orange', this)" type="button">
+<div class="w-6 h-6 rounded-full flex items-center justify-center shrink-0 shadow-inner" style="background-color: #EA580C;">
+<span class="material-symbols-outlined text-[14px] text-white check-icon hidden">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md truncate font-medium text-on-surface">Orange</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono truncate">#EA580C</span>
+</div>
+</button>
+<button class="swatch-btn flex items-center gap-2.5 p-2 rounded-lg bg-surface-container-lowest shadow-sm text-left transition-transform active:scale-95 group" onclick="selectSwatch('#E11D48', 'Coral', this)" type="button">
+<div class="w-6 h-6 rounded-full flex items-center justify-center shrink-0 shadow-inner" style="background-color: #E11D48;">
+<span class="material-symbols-outlined text-[14px] text-white check-icon hidden">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md truncate font-medium text-on-surface">Coral</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono truncate">#E11D48</span>
+</div>
+</button>
+<!-- Row 5: Amethyst / Violet / Plum -->
+<button class="swatch-btn flex items-center gap-2.5 p-2 rounded-lg bg-surface-container-lowest shadow-sm text-left transition-transform active:scale-95 group" onclick="selectSwatch('#7C3AED', 'Amethyst', this)" type="button">
+<div class="w-6 h-6 rounded-full flex items-center justify-center shrink-0 shadow-inner" style="background-color: #7C3AED;">
+<span class="material-symbols-outlined text-[14px] text-white check-icon hidden">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md truncate font-medium text-on-surface">Amethyst</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono truncate">#7C3AED</span>
+</div>
+</button>
+<button class="swatch-btn flex items-center gap-2.5 p-2 rounded-lg bg-surface-container-lowest shadow-sm text-left transition-transform active:scale-95 group" onclick="selectSwatch('#6366F1', 'Violet', this)" type="button">
+<div class="w-6 h-6 rounded-full flex items-center justify-center shrink-0 shadow-inner" style="background-color: #6366F1;">
+<span class="material-symbols-outlined text-[14px] text-white check-icon hidden">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md truncate font-medium text-on-surface">Violet</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono truncate">#6366F1</span>
+</div>
+</button>
+<button class="swatch-btn flex items-center gap-2.5 p-2 rounded-lg bg-surface-container-lowest shadow-sm text-left transition-transform active:scale-95 group" onclick="selectSwatch('#9333EA', 'Plum', this)" type="button">
+<div class="w-6 h-6 rounded-full flex items-center justify-center shrink-0 shadow-inner" style="background-color: #9333EA;">
+<span class="material-symbols-outlined text-[14px] text-white check-icon hidden">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md truncate font-medium text-on-surface">Plum</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono truncate">#9333EA</span>
+</div>
+</button>
+<!-- Row 6: Rose / Ruby / Warm Mocha -->
+<button class="swatch-btn flex items-center gap-2.5 p-2 rounded-lg bg-surface-container-lowest shadow-sm text-left transition-transform active:scale-95 group" onclick="selectSwatch('#F43F5E', 'Rose', this)" type="button">
+<div class="w-6 h-6 rounded-full flex items-center justify-center shrink-0 shadow-inner" style="background-color: #F43F5E;">
+<span class="material-symbols-outlined text-[14px] text-white check-icon hidden">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md truncate font-medium text-on-surface">Rose</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono truncate">#F43F5E</span>
+</div>
+</button>
+<button class="swatch-btn flex items-center gap-2.5 p-2 rounded-lg bg-surface-container-lowest shadow-sm text-left transition-transform active:scale-95 group" onclick="selectSwatch('#BE123C', 'Ruby', this)" type="button">
+<div class="w-6 h-6 rounded-full flex items-center justify-center shrink-0 shadow-inner" style="background-color: #BE123C;">
+<span class="material-symbols-outlined text-[14px] text-white check-icon hidden">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md truncate font-medium text-on-surface">Ruby</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono truncate">#BE123C</span>
+</div>
+</button>
+<button class="swatch-btn flex items-center gap-2.5 p-2 rounded-lg bg-surface-container-lowest shadow-sm text-left transition-transform active:scale-95 group" onclick="selectSwatch('#78350F', 'Mocha', this)" type="button">
+<div class="w-6 h-6 rounded-full flex items-center justify-center shrink-0 shadow-inner" style="background-color: #78350F;">
+<span class="material-symbols-outlined text-[14px] text-white check-icon hidden">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md truncate font-medium text-on-surface">Mocha</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono truncate">#78350F</span>
+</div>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-secondary pt-1">
+      Accent colors apply to interactive highlights while maintaining crisp monochrome readability.
+    </p>
+</section>
+<!-- Custom HEX Color Engine -->
+<section class="flex flex-col space-y-3">
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">CUSTOM COLOR CALIBRATION</h2>
+<p class="font-body-sm text-body-sm text-secondary">Precision hex input for bespoke chromatic profiles</p>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-low shadow-sm flex flex-col space-y-4">
+<!-- Input Row -->
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-lg shrink-0 shadow-inner transition-colors duration-200" id="hexPreviewBox" style="background-color: #111827;"></div>
+<div class="relative flex-1">
+<input class="w-full h-10 px-3 bg-surface-container-lowest text-on-surface font-label-md text-label-md tracking-wider rounded-lg uppercase shadow-sm focus:outline-none focus:ring-1 focus:ring-primary transition-all" id="hexInput" maxlength="7" spellcheck="false" type="text" value="#111827"/>
+</div>
+<button class="h-10 px-4 bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider rounded-lg active:scale-95 transition-all shrink-0" onclick="applyCustomHex()" type="button">
+          Apply Hex
+        </button>
+</div>
+<!-- HSL / RGB Sliders Preview Metrics -->
+<div class="grid grid-cols-3 gap-2 pt-2 border-t border-surface-variant">
+<div class="flex flex-col p-2 rounded bg-surface-container-lowest">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-mono">Hue</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface font-mono" id="hslH">220°</span>
+</div>
+<div class="flex flex-col p-2 rounded bg-surface-container-lowest">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-mono">Saturation</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface font-mono" id="hslS">39%</span>
+</div>
+<div class="flex flex-col p-2 rounded bg-surface-container-lowest">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-mono">Lightness</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface font-mono" id="hslL">11%</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Additional Visual Preferences -->
+<section class="flex flex-col space-y-3">
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">ACCESSIBILITY &amp; MOTION</h2>
+<p class="font-body-sm text-body-sm text-secondary">Refined ergonomic overrides for visual comfort</p>
+</div>
+<div class="flex flex-col divide-y divide-surface-container rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden">
+<!-- High Contrast Text (Default ON) -->
+<div class="p-4 flex items-center justify-between gap-3">
+<div class="flex flex-col gap-0.5">
+<span class="font-title-md text-title-md text-on-surface">High Contrast Text</span>
+<span class="font-body-sm text-body-sm text-secondary">Enhance typography edge contrast and ink weight</span>
+</div>
+<button aria-checked="true" class="w-12 h-6 bg-primary rounded-full p-0.5 relative transition-colors duration-200 shrink-0 cursor-pointer focus:outline-none" id="toggleHighContrast" onclick="toggleSetting('toggleHighContrast')" role="switch" type="button">
+<span class="block w-5 h-5 rounded-full bg-surface-container-lowest shadow-sm transform translate-x-6 transition-transform duration-200"></span>
+</button>
+</div>
+<!-- Reduced Motion (Default OFF) -->
+<div class="p-4 flex items-center justify-between gap-3">
+<div class="flex flex-col gap-0.5">
+<span class="font-title-md text-title-md text-on-surface">Reduced Motion</span>
+<span class="font-body-sm text-body-sm text-secondary">Disable non-essential layout shifts and preview pulses</span>
+</div>
+<button aria-checked="false" class="w-12 h-6 bg-surface-container-highest rounded-full p-0.5 relative transition-colors duration-200 shrink-0 cursor-pointer focus:outline-none" id="toggleReducedMotion" onclick="toggleSetting('toggleReducedMotion')" role="switch" type="button">
+<span class="block w-5 h-5 rounded-full bg-surface-container-lowest shadow-sm transform translate-x-0 transition-transform duration-200"></span>
+</button>
+</div>
+<!-- Dynamic Color (Default OFF) -->
+<div class="p-4 flex items-center justify-between gap-3">
+<div class="flex flex-col gap-0.5">
+<span class="font-title-md text-title-md text-on-surface">Dynamic Color (Material You)</span>
+<span class="font-body-sm text-body-sm text-secondary">Harmonize with system wallpaper on supported environments</span>
+</div>
+<button aria-checked="false" class="w-12 h-6 bg-surface-container-highest rounded-full p-0.5 relative transition-colors duration-200 shrink-0 cursor-pointer focus:outline-none" id="toggleDynamicColor" onclick="toggleSetting('toggleDynamicColor')" role="switch" type="button">
+<span class="block w-5 h-5 rounded-full bg-surface-container-lowest shadow-sm transform translate-x-0 transition-transform duration-200"></span>
+</button>
+</div>
+</div>
+</section>
+<!-- Sovereignty / Open Source Footer -->
+<section class="flex flex-col space-y-4 pt-2">
+<div class="p-4 rounded-xl bg-surface-container-low shadow-sm flex items-start gap-3">
+<span class="material-symbols-outlined text-[20px] text-secondary shrink-0 mt-0.5">verified</span>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase font-mono tracking-wider font-semibold text-on-surface">OPEN THEME ARCHITECTURE</span>
+<p class="font-body-sm text-body-sm text-secondary">
+          All color palettes, OLED black modes, and custom hex calibrations are 100% unlocked in this open source edition. Zero in-app purchases or subscription locks.
+        </p>
+</div>
+</div>
+<div class="flex justify-center pt-2">
+<button class="h-10 px-4 font-label-md text-label-md text-secondary hover:text-on-surface uppercase tracking-wider active:scale-95 transition-all" onclick="resetToDefaults()" type="button">
+        Reset to Default Theme
+      </button>
+</div>
+</section>
+</div>
+<script>
+  let currentAccent = '#111827';
+  let isOledActive = false;
+  let currentDisplayMode = 'system';
+
+  function updatePreview() {
+    const previewDevice = document.getElementById('previewDevice');
+    const previewCardInner = document.getElementById('previewCardInner');
+    const previewCheckbox = document.getElementById('previewCheckbox');
+    const previewPill = document.getElementById('previewPill');
+    const previewFab = document.getElementById('previewFab');
+    const modeLabel = document.getElementById('previewThemeModeLabel');
+
+    if (previewCheckbox) previewCheckbox.style.backgroundColor = currentAccent;
+    if (previewPill) previewPill.style.backgroundColor = currentAccent;
+    if (previewFab) previewFab.style.backgroundColor = currentAccent;
+
+    if (isOledActive && (currentDisplayMode === 'dark' || currentDisplayMode === 'system')) {
+      previewDevice.style.backgroundColor = '#000000';
+      previewDevice.classList.add('text-white');
+      previewCardInner.style.backgroundColor = '#111111';
+      modeLabel.textContent = 'Active Theme: OLED True Black (' + currentAccent + ')';
+    } else if (currentDisplayMode === 'dark') {
+      previewDevice.style.backgroundColor = '#18181b';
+      previewDevice.classList.add('text-white');
+      previewCardInner.style.backgroundColor = '#27272a';
+      modeLabel.textContent = 'Active Theme: Architectural Dark (' + currentAccent + ')';
+    } else {
+      previewDevice.style.backgroundColor = '#ffffff';
+      previewDevice.classList.remove('text-white');
+      previewCardInner.style.backgroundColor = '#f3f3f4';
+      modeLabel.textContent = 'Active Theme: Monochrome Minimalist (Pure White / Light)';
+    }
+  }
+
+  function selectDisplayMode(mode, el) {
+    currentDisplayMode = mode;
+    const cards = document.querySelectorAll('#modeSelectorGroup .mode-card');
+    cards.forEach(card => {
+      const badge = card.querySelector('.checkmark-badge');
+      if (badge) {
+        badge.classList.remove('bg-primary');
+        badge.classList.add('bg-surface-container', 'hidden');
+        badge.querySelector('span').classList.remove('text-on-primary');
+        badge.querySelector('span').classList.add('text-on-surface');
+      }
+    });
+
+    const activeBadge = el.querySelector('.checkmark-badge');
+    if (activeBadge) {
+      activeBadge.classList.remove('hidden', 'bg-surface-container');
+      activeBadge.classList.add('bg-primary');
+      activeBadge.querySelector('span').classList.remove('text-on-surface');
+      activeBadge.querySelector('span').classList.add('text-on-primary');
+    }
+    updatePreview();
+  }
+
+  function toggleOledSwitch() {
+    isOledActive = !isOledActive;
+    const btn = document.getElementById('oledToggleBtn');
+    const thumb = document.getElementById('oledToggleThumb');
+    btn.setAttribute('aria-checked', isOledActive ? 'true' : 'false');
+    if (isOledActive) {
+      btn.classList.remove('bg-surface-container-highest');
+      btn.classList.add('bg-primary');
+      thumb.classList.add('translate-x-6');
+    } else {
+      btn.classList.remove('bg-primary');
+      btn.classList.add('bg-surface-container-highest');
+      thumb.classList.remove('translate-x-6');
+    }
+    updatePreview();
+  }
+
+  function selectSwatch(hex, name, el) {
+    currentAccent = hex;
+    document.querySelectorAll('#swatchGrid .check-icon').forEach(icon => {
+      icon.classList.add('hidden');
+    });
+    const activeCheck = el.querySelector('.check-icon');
+    if (activeCheck) activeCheck.classList.remove('hidden');
+
+    const hexInput = document.getElementById('hexInput');
+    const hexBox = document.getElementById('hexPreviewBox');
+    if (hexInput) hexInput.value = hex;
+    if (hexBox) hexBox.style.backgroundColor = hex;
+
+    calculateHSL(hex);
+    updatePreview();
+  }
+
+  function applyCustomHex() {
+    const input = document.getElementById('hexInput');
+    let hex = input.value.trim();
+    if (!hex.startsWith('#')) hex = '#' + hex;
+    if (/^#[0-9A-Fa-f]{6}$/.test(hex)) {
+      currentAccent = hex;
+      document.getElementById('hexPreviewBox').style.backgroundColor = hex;
+      document.querySelectorAll('#swatchGrid .check-icon').forEach(i => i.classList.add('hidden'));
+      calculateHSL(hex);
+      updatePreview();
+    }
+  }
+
+  function calculateHSL(hex) {
+    let r = parseInt(hex.substring(1, 3), 16) / 255;
+    let g = parseInt(hex.substring(3, 5), 16) / 255;
+    let b = parseInt(hex.substring(5, 7), 16) / 255;
+
+    let max = Math.max(r, g, b), min = Math.min(r, g, b);
+    let h, s, l = (max + min) / 2;
+
+    if (max === min) {
+      h = s = 0;
+    } else {
+      let d = max - min;
+      s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+      switch (max) {
+        case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+        case g: h = (b - r) / d + 2; break;
+        case b: h = (r - g) / d + 4; break;
+      }
+      h /= 6;
+    }
+
+    document.getElementById('hslH').textContent = Math.round(h * 360) + '°';
+    document.getElementById('hslS').textContent = Math.round(s * 100) + '%';
+    document.getElementById('hslL').textContent = Math.round(l * 100) + '%';
+  }
+
+  function toggleSetting(id) {
+    const btn = document.getElementById(id);
+    const thumb = btn.querySelector('span');
+    const state = btn.getAttribute('aria-checked') === 'true';
+    btn.setAttribute('aria-checked', !state ? 'true' : 'false');
+    if (!state) {
+      btn.classList.remove('bg-surface-container-highest');
+      btn.classList.add('bg-primary');
+      thumb.classList.remove('translate-x-0');
+      thumb.classList.add('translate-x-6');
+    } else {
+      btn.classList.remove('bg-primary');
+      btn.classList.add('bg-surface-container-highest');
+      thumb.classList.remove('translate-x-6');
+      thumb.classList.add('translate-x-0');
+    }
+  }
+
+  function resetToDefaults() {
+    currentAccent = '#111827';
+    if (isOledActive) toggleOledSwitch();
+    const systemCard = document.querySelector('#modeSelectorGroup .mode-card');
+    if (systemCard) selectDisplayMode('system', systemCard);
+    
+    const carbonBtn = document.querySelector('#swatchGrid .swatch-btn');
+    if (carbonBtn) selectSwatch('#111827', 'Carbon', carbonBtn);
+  }
+</script></main></body></html>

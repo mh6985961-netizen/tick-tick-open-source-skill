@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+
+<html class="h-full bg-surface-container-lowest" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-on-surface": "#f0f1f1", "tertiary": "#000000", "surface-container-highest": "#e2e2e2", "on-tertiary": "#ffffff", "primary": "#000000", "inverse-surface": "#2f3131", "secondary": "#555f6d", "on-secondary-fixed-variant": "#3e4755", "tertiary-container": "#151c25", "surface-tint": "#575e70", "on-secondary-fixed": "#121c28", "on-tertiary-fixed-variant": "#404752", "on-background": "#1a1c1c", "primary-fixed": "#dce2f7", "surface-container": "#eeeeee", "outline": "#76777d", "on-tertiary-fixed": "#151c25", "inverse-primary": "#c0c6db", "primary-container": "#141b2b", "on-primary-container": "#7d8497", "on-secondary-container": "#596372", "on-primary-fixed-variant": "#404758", "tertiary-fixed": "#dce3f0", "secondary-container": "#d6e0f1", "on-tertiary-container": "#7d8490", "surface-dim": "#dadada", "primary-fixed-dim": "#c0c6db", "error-container": "#ffdad6", "surface-container-lowest": "#ffffff", "background": "#f9f9f9", "secondary-fixed": "#d9e3f4", "surface-container-high": "#e8e8e8", "surface-bright": "#f9f9f9", "on-primary-fixed": "#141b2b", "surface-variant": "#e2e2e2", "error": "#ba1a1a", "on-error-container": "#93000a", "on-surface": "#1a1c1c", "surface-container-low": "#f3f3f4", "on-primary": "#ffffff", "surface": "#f9f9f9", "tertiary-fixed-dim": "#c0c7d3", "on-secondary": "#ffffff", "outline-variant": "#c6c6cd", "on-surface-variant": "#45464c", "secondary-fixed-dim": "#bdc7d8", "on-error": "#ffffff" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin-sm": "1rem", "gutter": "1.5rem", "margin-lg": "4rem", "space-xs": "0.25rem", "space-md": "1rem", "space-lg": "1.5rem", "margin": "2rem", "space-sm": "0.5rem", "gutter-sm": "1rem", "space-xl": "2.5rem", "gutter-lg": "2rem" }, "fontFamily": { "display-xl": ["Geist"], "body-md": ["Geist"], "label-sm": ["JetBrains Mono"], "title-md": ["Geist"], "label-lg": ["JetBrains Mono"], "headline-lg-mobile": ["Geist"], "headline-sm": ["Geist"], "body-sm": ["Geist"], "display-xl-mobile": ["Geist"], "headline-lg": ["Geist"], "label-md": ["JetBrains Mono"], "headline-md": ["Geist"], "body-lg": ["Geist"] }, "fontSize": { "display-xl": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.04em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "500" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }], "display-xl-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "600" }], "label-md": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="min-h-full bg-surface-container-lowest text-on-surface antialiased flex flex-col"><header class="fixed top-0 inset-x-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-gutter-sm flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Go back" class="min-w-[44px] min-h-[44px] flex items-center justify-center -ml-space-xs text-on-surface transition-transform active:scale-95" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[22px]">arrow_back</span></button><h1 class="font-title-md text-title-md text-on-surface tracking-tight select-none">Course Timetable</h1></div><div class="flex items-center gap-space-xs"><button aria-label="Add Course" class="min-w-[44px] min-h-[44px] flex items-center justify-center text-on-surface transition-transform active:scale-95 hover:text-on-surface-variant" type="button"><span class="material-symbols-outlined text-[22px]">add</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs shrink-0 select-none"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface-container-lowest"><div class="flex flex-col w-full px-gutter-sm space-y-space-lg pb-space-xl">
+<!-- Contextual Breadcrumb & Header -->
+<section class="space-y-space-xs pt-space-sm">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary px-space-xs py-0.5 bg-surface-container rounded-DEFAULT">
+        ACADEMIC TIMETABLE ENGINE • SCR-CAL-004
+      </span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-on-surface bg-surface-container px-space-xs py-0.5 rounded-DEFAULT">
+<span class="w-1.5 h-1.5 rounded-full bg-primary inline-block"></span>
+        SEMESTER 1 • 2026
+      </span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight">
+      Course Timetable
+    </h2>
+<p class="font-body-md text-body-md text-secondary">
+      Weekly lecture, lab, and seminar scheduling with odd/even alternating week cycles, campus room locations, and instructor details.
+    </p>
+</section>
+<!-- Academic Term & Week Cycle Selector Card -->
+<section class="bg-surface-container-low rounded-xl p-space-md space-y-space-md shadow-sm">
+<div class="flex items-center justify-between gap-space-sm">
+<div class="space-y-0.5">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Current Period</span>
+<h3 class="font-title-md text-title-md text-on-surface">Fall Semester 2026</h3>
+</div>
+<span class="font-label-sm text-label-sm bg-primary text-on-primary px-space-sm py-1 rounded-full whitespace-nowrap">
+        Week 08 (Even Week)
+      </span>
+</div>
+<!-- Cycle Selector Controls -->
+<div class="grid grid-cols-3 gap-1 bg-surface-container p-1 rounded-lg">
+<button class="py-1.5 text-center font-label-md text-label-md text-secondary hover:text-on-surface rounded-DEFAULT transition-colors" type="button">
+        All Weeks
+      </button>
+<button class="py-1.5 text-center font-label-md text-label-md text-secondary hover:text-on-surface rounded-DEFAULT transition-colors" type="button">
+        Odd (1,3,5)
+      </button>
+<button class="py-1.5 text-center font-label-md text-label-md bg-surface-container-lowest text-on-surface shadow-sm rounded-DEFAULT font-medium" type="button">
+        Even (2,4,6)
+      </button>
+</div>
+<!-- Date Range & Stepper Navigation -->
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+<span class="font-label-md text-label-md text-on-surface">Oct 20 – Oct 26</span>
+<span class="font-label-sm text-label-sm text-secondary">Week 8 of 16</span>
+</div>
+<div class="flex items-center gap-1">
+<button aria-label="Previous Week" class="w-8 h-8 rounded-DEFAULT bg-surface-container-lowest flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button aria-label="Next Week" class="w-8 h-8 rounded-DEFAULT bg-surface-container-lowest flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Metric Summary Row -->
+<section class="grid grid-cols-3 gap-space-sm">
+<div class="bg-surface-container-low p-space-sm rounded-xl space-y-0.5">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider block">Courses</span>
+<div class="font-headline-sm text-headline-sm text-on-surface">05</div>
+<span class="font-label-sm text-label-sm text-secondary block">Enrolled Total</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-xl space-y-0.5">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider block">Load</span>
+<div class="font-headline-sm text-headline-sm text-on-surface">22h</div>
+<span class="font-label-sm text-label-sm text-secondary block">Weekly Hours</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-xl space-y-0.5">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider block">Practicals</span>
+<div class="font-headline-sm text-headline-sm text-on-surface">03</div>
+<span class="font-label-sm text-label-sm text-secondary block">Bi-Weekly Labs</span>
+</div>
+</section>
+<!-- Today's Upcoming Timeline -->
+<section class="space-y-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">Today’s Schedule</h3>
+<p class="font-body-sm text-body-sm text-secondary">Thursday, Oct 24 • Even Week Cycle</p>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container text-secondary px-space-xs py-1 rounded-full">
+        3 Sessions
+      </span>
+</div>
+<!-- Active Class: In Progress / Imminent -->
+<div class="bg-surface-container-low rounded-xl p-space-md space-y-space-sm shadow-sm relative overflow-hidden">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="space-y-0.5">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface font-semibold tracking-wide">09:00 AM – 10:30 AM</span>
+<span class="font-label-sm text-label-sm text-secondary">• 90 min</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface pt-0.5">
+            CS-401 • Advanced Operating Systems &amp; Concurrency
+          </h4>
+</div>
+<span class="font-label-sm text-label-sm bg-primary text-on-primary px-space-xs py-0.5 rounded-full shrink-0">
+          Next in 25m
+        </span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-xs pt-space-xs">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px] text-on-surface">location_on</span>
+<span class="font-body-sm text-body-sm text-on-surface">Alan Turing Hall • Room 304</span>
+</div>
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px] text-on-surface">person</span>
+<span class="font-body-sm text-body-sm text-on-surface">Prof. Marcus Vance</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container px-space-xs py-0.5 rounded-DEFAULT">
+          Lecture • Weekly
+        </span>
+<button class="font-label-sm text-label-sm text-on-surface underline hover:text-secondary" type="button">
+          Syllabus Notes
+        </button>
+</div>
+</div>
+<!-- Class 2: Lab -->
+<div class="bg-surface-container-low rounded-xl p-space-md space-y-space-sm shadow-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="space-y-0.5">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface font-semibold">11:15 AM – 01:15 PM</span>
+<span class="font-label-sm text-label-sm text-secondary">• 120 min</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface pt-0.5">
+            CS-442 • Distributed Systems &amp; Consensus Lab
+          </h4>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container text-on-surface px-space-xs py-0.5 rounded-full shrink-0">
+          Even Weeks Only
+        </span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-xs pt-space-xs">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px] text-on-surface">dns</span>
+<span class="font-body-sm text-body-sm text-on-surface">Silicon Lab 2B • Station 14</span>
+</div>
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px] text-on-surface">school</span>
+<span class="font-body-sm text-body-sm text-on-surface">Dr. Elena Rostova</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container px-space-xs py-0.5 rounded-DEFAULT">
+          Laboratory • Odd/Even Synced
+        </span>
+<span class="font-label-sm text-label-sm text-secondary">Pre-lab Submitted</span>
+</div>
+</div>
+<!-- Class 3: Seminar -->
+<div class="bg-surface-container-low rounded-xl p-space-md space-y-space-sm shadow-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="space-y-0.5">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface font-semibold">02:30 PM – 04:00 PM</span>
+<span class="font-label-sm text-label-sm text-secondary">• 90 min</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface pt-0.5">
+            MATH-302 • Linear Optimization &amp; Matrix Algorithms
+          </h4>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container text-secondary px-space-xs py-0.5 rounded-full shrink-0">
+          Weekly
+        </span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-xs pt-space-xs">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px] text-on-surface">meeting_room</span>
+<span class="font-body-sm text-body-sm text-on-surface">Euler Auditorium • Hall B</span>
+</div>
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px] text-on-surface">person</span>
+<span class="font-body-sm text-body-sm text-on-surface">Prof. David Kuan</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container px-space-xs py-0.5 rounded-DEFAULT">
+          Seminar • Weekly
+        </span>
+<button class="font-label-sm text-label-sm text-on-surface underline hover:text-secondary" type="button">
+          Assignment #4 Due
+        </button>
+</div>
+</div>
+</section>
+<!-- Weekly Timetable Matrix Grid -->
+<section class="bg-surface-container-low rounded-xl p-space-md space-y-space-md shadow-sm">
+<div class="flex items-center justify-between">
+<div class="space-y-0.5">
+<h3 class="font-title-md text-title-md text-on-surface">Weekly Timetable Matrix</h3>
+<p class="font-body-sm text-body-sm text-secondary">Tap any block for room and instructor notes</p>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container text-on-surface px-space-xs py-0.5 rounded-DEFAULT font-medium">
+        Mon – Fri
+      </span>
+</div>
+<!-- Matrix Visualization Container -->
+<div class="overflow-x-auto -mx-space-xs px-space-xs">
+<div class="min-w-[340px] space-y-1.5">
+<!-- Day Columns Header -->
+<div class="grid grid-cols-5 gap-1.5 text-center font-label-sm text-label-sm text-secondary pb-1">
+<div>Mon</div>
+<div>Tue</div>
+<div>Wed</div>
+<div class="font-bold text-on-surface">Thu*</div>
+<div>Fri</div>
+</div>
+<!-- Morning Slot (09:00 - 11:00) -->
+<div class="grid grid-cols-5 gap-1.5">
+<!-- Mon -->
+<button class="h-14 rounded-lg bg-surface-container p-1 text-left flex flex-col justify-between hover:bg-surface-container-high transition-colors" onclick="alert('CS-401 Lecture\n09:00 - 10:30\nRoom 304')" type="button">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface block truncate">CS-401</span>
+<span class="font-label-sm text-label-sm text-secondary">09:00</span>
+</button>
+<!-- Tue -->
+<div class="h-14 rounded-lg bg-surface-container-lowest/60 flex items-center justify-center">
+<span class="text-outline-variant font-label-sm text-label-sm">—</span>
+</div>
+<!-- Wed -->
+<div class="h-14 rounded-lg bg-surface-container-lowest/60 flex items-center justify-center">
+<span class="text-outline-variant font-label-sm text-label-sm">—</span>
+</div>
+<!-- Thu (Active Day) -->
+<button class="h-14 rounded-lg bg-primary text-on-primary p-1 text-left flex flex-col justify-between hover:opacity-90 transition-opacity" onclick="alert('CS-401 Lecture\n09:00 - 10:30\nRoom 304')" type="button">
+<span class="font-label-sm text-label-sm font-semibold block truncate">CS-401</span>
+<span class="font-label-sm text-label-sm opacity-80">09:00</span>
+</button>
+<!-- Fri -->
+<div class="h-14 rounded-lg bg-surface-container-lowest/60 flex items-center justify-center">
+<span class="text-outline-variant font-label-sm text-label-sm">—</span>
+</div>
+</div>
+<!-- Midday Slot (11:00 - 13:30) -->
+<div class="grid grid-cols-5 gap-1.5">
+<!-- Mon -->
+<div class="h-14 rounded-lg bg-surface-container-lowest/60 flex items-center justify-center">
+<span class="text-outline-variant font-label-sm text-label-sm">—</span>
+</div>
+<!-- Tue -->
+<button class="h-14 rounded-lg bg-surface-container p-1 text-left flex flex-col justify-between hover:bg-surface-container-high transition-colors" onclick="alert('CS-442 Discussion\n11:15 - 12:45\nLab 2B')" type="button">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface block truncate">CS-442</span>
+<span class="font-label-sm text-label-sm text-secondary">11:15</span>
+</button>
+<!-- Wed -->
+<button class="h-14 rounded-lg bg-surface-container p-1 text-left flex flex-col justify-between hover:bg-surface-container-high transition-colors" onclick="alert('MATH-302 Lecture\n11:00 - 12:30\nHall B')" type="button">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface block truncate">MATH-302</span>
+<span class="font-label-sm text-label-sm text-secondary">11:00</span>
+</button>
+<!-- Thu (Active Day Lab) -->
+<button class="h-14 rounded-lg bg-surface-container-highest p-1 text-left flex flex-col justify-between hover:bg-surface-dim transition-colors" onclick="alert('CS-442 Lab (Even Weeks)\n11:15 - 13:15\nSilicon Lab 2B')" type="button">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface block truncate">CS-442 Lab</span>
+<span class="font-label-sm text-label-sm text-secondary">11:15</span>
+</button>
+<!-- Fri -->
+<button class="h-14 rounded-lg bg-surface-container p-1 text-left flex flex-col justify-between hover:bg-surface-container-high transition-colors" onclick="alert('PHIL-110 Ethics in AI\n11:30 - 13:00\nMain 101')" type="button">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface block truncate">PHIL-110</span>
+<span class="font-label-sm text-label-sm text-secondary">11:30</span>
+</button>
+</div>
+<!-- Afternoon Slot (14:00 - 16:30) -->
+<div class="grid grid-cols-5 gap-1.5">
+<!-- Mon -->
+<div class="h-14 rounded-lg bg-surface-container-lowest/60 flex items-center justify-center">
+<span class="text-outline-variant font-label-sm text-label-sm">—</span>
+</div>
+<!-- Tue -->
+<div class="h-14 rounded-lg bg-surface-container-lowest/60 flex items-center justify-center">
+<span class="text-outline-variant font-label-sm text-label-sm">—</span>
+</div>
+<!-- Wed -->
+<div class="h-14 rounded-lg bg-surface-container-lowest/60 flex items-center justify-center">
+<span class="text-outline-variant font-label-sm text-label-sm">—</span>
+</div>
+<!-- Thu (Active Day) -->
+<button class="h-14 rounded-lg bg-surface-container p-1 text-left flex flex-col justify-between hover:bg-surface-container-high transition-colors" onclick="alert('MATH-302 Seminar\n14:30 - 16:00\nEuler Auditorium')" type="button">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface block truncate">MATH-302</span>
+<span class="font-label-sm text-label-sm text-secondary">14:30</span>
+</button>
+<!-- Fri -->
+<div class="h-14 rounded-lg bg-surface-container-lowest/60 flex items-center justify-center">
+<span class="text-outline-variant font-label-sm text-label-sm">—</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Configuration & Synchronization Suite -->
+<section class="bg-surface-container-low rounded-xl p-space-md space-y-space-md shadow-sm">
+<div class="space-y-0.5">
+<h3 class="font-title-md text-title-md text-on-surface">Course Engine Sync &amp; Rules</h3>
+<p class="font-body-sm text-body-sm text-secondary">Local automated conflict resolver and schedule alerts</p>
+</div>
+<!-- Actions & Toggles List -->
+<div class="space-y-space-sm pt-space-xs">
+<!-- Import Button -->
+<button class="w-full flex items-center justify-between p-space-sm bg-surface-container-lowest rounded-lg hover:bg-surface-container transition-colors text-left" type="button">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-[20px] text-on-surface">upload_file</span>
+<div class="truncate">
+<span class="font-body-md text-body-md text-on-surface font-medium block truncate">Import Timetable File</span>
+<span class="font-body-sm text-body-sm text-secondary block truncate">Supports .ics, .csv, &amp; SIS Uni-Portal</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px] text-secondary">chevron_right</span>
+</button>
+<!-- Collision Engine State -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-lowest rounded-lg">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-[20px] text-on-surface">verified_user</span>
+<div class="truncate">
+<span class="font-body-md text-body-md text-on-surface font-medium block">Conflict Detection Engine</span>
+<span class="font-body-sm text-body-sm text-secondary block">0 schedule collisions in active week</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container text-on-surface px-space-xs py-0.5 rounded-DEFAULT">
+          Verified
+        </span>
+</div>
+<!-- Exam Prep Sync Toggle -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-lowest rounded-lg">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-[20px] text-on-surface">event_repeat</span>
+<div class="truncate">
+<span class="font-body-md text-body-md text-on-surface font-medium block">Exam Prep Sync</span>
+<span class="font-body-sm text-body-sm text-secondary block">Reserve study blocks automatically</span>
+</div>
+</div>
+<input aria-label="Toggle exam prep sync" checked="" class="w-4 h-4 accent-primary rounded cursor-pointer" type="checkbox"/>
+</div>
+<!-- Reminder Timing Row -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-lowest rounded-lg">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-[20px] text-on-surface">notifications_active</span>
+<div class="truncate">
+<span class="font-body-md text-body-md text-on-surface font-medium block">Class Reminders</span>
+<span class="font-body-sm text-body-sm text-secondary block">Pre-lecture push notification</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface bg-surface-container px-space-xs py-1 rounded-DEFAULT">
+          15 min prior
+        </span>
+</div>
+</div>
+</section>
+<!-- Local Sovereignty Notice & Global Actions -->
+<section class="space-y-space-md pt-space-xs">
+<div class="bg-surface-container p-space-sm rounded-lg text-center">
+<p class="font-label-sm text-label-sm text-secondary tracking-wider uppercase">
+        100% Unlimited Academic Timetables • Offline First • Zero Paywalls
+      </p>
+</div>
+<!-- Action Group -->
+<div class="space-y-space-xs">
+<button class="w-full py-3 px-space-md bg-primary text-on-primary rounded-full font-title-md text-title-md flex items-center justify-center gap-space-xs active:scale-[0.99] transition-transform" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+        Add New Course or Lab
+      </button>
+<button class="w-full py-3 px-space-md bg-surface-container-lowest text-on-surface rounded-full font-title-md text-title-md hover:bg-surface-container transition-colors flex items-center justify-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[20px]">calendar_add_on</span>
+        Export to System Calendar
+      </button>
+<div class="text-center pt-space-xs">
+<button class="font-label-md text-label-md text-secondary hover:text-on-surface underline" type="button">
+          Manage Academic Semesters &amp; Terms
+        </button>
+</div>
+</div>
+</section>
+</div></main></body></html>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=JetBrains+Mono:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#ffffff;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "background": "#f9f9f9", "on-secondary-container": "#596372", "tertiary-fixed": "#dce3f0", "on-primary-fixed-variant": "#404758", "on-secondary": "#ffffff", "on-secondary-fixed": "#121c28", "on-primary-fixed": "#141b2b", "on-primary-container": "#7d8497", "primary-fixed-dim": "#c0c6db", "on-tertiary": "#ffffff", "inverse-primary": "#c0c6db", "on-error": "#ffffff", "on-background": "#1a1c1c", "on-tertiary-fixed": "#151c25", "surface": "#ffffff", "secondary-fixed-dim": "#bdc7d8", "secondary": "#555f6d", "on-primary": "#ffffff", "primary-container": "#141b2b", "on-tertiary-container": "#7d8490", "surface-container": "#eeeeee", "error": "#ba1a1a", "inverse-on-surface": "#f0f1f1", "tertiary": "#000000", "surface-tint": "#575e70", "on-surface-variant": "#45464c", "on-error-container": "#93000a", "on-tertiary-fixed-variant": "#404752", "secondary-fixed": "#d9e3f4", "primary-fixed": "#dce2f7", "surface-bright": "#f9f9f9", "primary": "#000000", "on-surface": "#1a1c1c", "surface-container-lowest": "#ffffff", "inverse-surface": "#2f3131", "tertiary-container": "#151c25", "tertiary-fixed-dim": "#c0c7d3", "outline-variant": "#c6c6cd", "on-secondary-fixed-variant": "#3e4755", "surface-dim": "#dadada", "error-container": "#ffdad6", "surface-container-highest": "#e2e2e2", "surface-container-high": "#e8e8e8", "surface-container-low": "#f3f3f4", "surface-variant": "#e2e2e2", "secondary-container": "#d6e0f1", "outline": "#76777d" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin": "2rem", "space-xl": "2.5rem", "gutter-lg": "2rem", "space-md": "1rem", "space-lg": "1.5rem", "margin-lg": "4rem", "gutter": "1.5rem", "space-xs": "0.25rem", "gutter-sm": "1rem", "margin-sm": "1rem", "space-sm": "0.5rem" }, "fontFamily": { "label-md": ["JetBrains Mono"], "headline-sm": ["Geist"], "label-sm": ["JetBrains Mono"], "label-lg": ["JetBrains Mono"], "headline-lg-mobile": ["Geist"], "body-md": ["Geist"], "headline-lg": ["Geist"], "headline-md": ["Geist"], "body-lg": ["Geist"], "display-xl-mobile": ["Geist"], "display-xl": ["Geist"], "title-md": ["Geist"], "body-sm": ["Geist"] }, "fontSize": { "label-md": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "500" }], "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "600" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "display-xl-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "display-xl": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.04em", "fontWeight": "700" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-14 px-gutter-sm flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Back" class="w-11 h-11 -ml-space-xs flex items-center justify-center text-on-surface hover:text-primary transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[20px]">arrow_back</span></button></div><div class="flex items-center justify-center gap-space-xs flex-1 px-space-xs overflow-hidden"><span class="material-symbols-outlined text-primary text-[18px] shrink-0">check_circle_outline</span><h1 class="font-title-md text-title-md tracking-tight uppercase text-on-surface truncate">Habit Detail</h1></div><div class="flex items-center gap-space-xs"><button aria-label="Edit Habit" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors"><span class="material-symbols-outlined text-[20px]">edit</span></button><button aria-label="More Options" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors"><span class="material-symbols-outlined text-[20px]">more_vert</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-14 pb-safe bg-surface"><div class="flex flex-col w-full px-gutter-sm space-y-space-lg pb-space-xl">
+<!-- Habit Identity Header -->
+<div class="flex flex-col space-y-space-md pt-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-primary text-[24px]">water_drop</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Hydration (500ml)</h2>
+</div>
+<span class="inline-block mt-1 font-label-sm text-label-sm uppercase tracking-wider text-secondary">
+            Daily • Morning Routine
+          </span>
+</div>
+</div>
+<div class="px-2 py-1 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant font-medium">
+        ACTIVE
+      </div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg">
+<p class="font-body-sm text-body-sm text-secondary italic">
+        “Small sips throughout the day build enduring physical vitality.”
+      </p>
+</div>
+</div>
+<!-- Performance Overview Bento Grid -->
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Current Streak -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col justify-between">
+<div class="flex items-center justify-between text-secondary mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Current Streak</span>
+<span class="material-symbols-outlined text-[18px] text-primary" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+</div>
+<div>
+<div class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight">18 <span class="font-label-md text-label-md font-normal text-secondary">Days</span></div>
+<div class="font-body-sm text-body-sm text-secondary mt-1">Active since Oct 27</div>
+</div>
+</div>
+<!-- Best Streak -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col justify-between">
+<div class="flex items-center justify-between text-secondary mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Best Streak</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface">trophy</span>
+</div>
+<div>
+<div class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight">42 <span class="font-label-md text-label-md font-normal text-secondary">Days</span></div>
+<div class="font-body-sm text-body-sm text-secondary mt-1">Personal record (Jun 2026)</div>
+</div>
+</div>
+<!-- Total Check-ins -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col justify-between">
+<div class="flex items-center justify-between text-secondary mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Total Check-ins</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface">task_alt</span>
+</div>
+<div>
+<div class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight">128 <span class="font-label-md text-label-md font-normal text-secondary">Days</span></div>
+<div class="font-body-sm text-body-sm text-secondary mt-1">Lifetime logged records</div>
+</div>
+</div>
+<!-- Monthly Adherence Rate -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col justify-between">
+<div class="flex items-center justify-between text-secondary mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Adherence</span>
+<span class="font-label-sm text-label-sm font-medium text-primary">28/30</span>
+</div>
+<div class="flex items-center justify-between">
+<div>
+<div class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight">93%</div>
+<div class="font-body-sm text-body-sm text-secondary mt-1">November rate</div>
+</div>
+<div class="w-10 h-10 relative flex items-center justify-center shrink-0">
+<svg class="w-10 h-10 transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-highest" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="93, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+</div>
+</div>
+</div>
+</div>
+<!-- Calendar Heatmap Section -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col space-y-space-md">
+<!-- Month Navigation -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<h3 class="font-title-md text-title-md text-on-surface">November 2026</h3>
+<span class="px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm text-label-sm tracking-wide">CURRENT</span>
+</div>
+<div class="flex items-center gap-1">
+<button aria-label="Previous Month" class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button aria-label="Next Month" class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Day of Week Headers -->
+<div class="grid grid-cols-7 gap-1 text-center font-label-sm text-label-sm text-secondary uppercase">
+<div>M</div>
+<div>T</div>
+<div>W</div>
+<div>T</div>
+<div>F</div>
+<div>S</div>
+<div>S</div>
+</div>
+<!-- Calendar 7x5 Grid -->
+<div class="grid grid-cols-7 gap-1.5 text-center">
+<!-- Previous Month / Blank (Assume Nov 2026 starts Sun or aligned) -->
+<!-- Mon Oct 26 to Fri Oct 30 skipped or muted -->
+<div class="h-10 rounded bg-transparent flex flex-col items-center justify-center opacity-25">
+<span class="font-label-sm text-label-sm text-secondary">26</span>
+</div>
+<div class="h-10 rounded bg-transparent flex flex-col items-center justify-center opacity-25">
+<span class="font-label-sm text-label-sm text-secondary">27</span>
+</div>
+<div class="h-10 rounded bg-transparent flex flex-col items-center justify-center opacity-25">
+<span class="font-label-sm text-label-sm text-secondary">28</span>
+</div>
+<div class="h-10 rounded bg-transparent flex flex-col items-center justify-center opacity-25">
+<span class="font-label-sm text-label-sm text-secondary">29</span>
+</div>
+<div class="h-10 rounded bg-transparent flex flex-col items-center justify-center opacity-25">
+<span class="font-label-sm text-label-sm text-secondary">30</span>
+</div>
+<div class="h-10 rounded bg-transparent flex flex-col items-center justify-center opacity-25">
+<span class="font-label-sm text-label-sm text-secondary">31</span>
+</div>
+<!-- Day 1 - Completed -->
+<div class="h-10 rounded bg-primary text-on-primary flex flex-col items-center justify-center relative cursor-pointer group">
+<span class="font-label-sm text-label-sm">1</span>
+<span class="material-symbols-outlined text-[10px]">check</span>
+</div>
+<!-- Day 2 - Completed -->
+<div class="h-10 rounded bg-primary text-on-primary flex flex-col items-center justify-center">
+<span class="font-label-sm text-label-sm">2</span>
+<span class="material-symbols-outlined text-[10px]">check</span>
+</div>
+<!-- Day 3 - Missed with Repair Affordance -->
+<div class="h-10 rounded bg-surface-container-high flex flex-col items-center justify-center relative cursor-pointer" id="missed-day-cell" onclick="openRepairModal()">
+<span class="font-label-sm text-label-sm text-error font-medium">3</span>
+<span class="material-symbols-outlined text-[10px] text-error">close</span>
+<div class="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-error"></div>
+</div>
+<!-- Days 4 to 7 Completed -->
+<div class="h-10 rounded bg-primary text-on-primary flex flex-col items-center justify-center">
+<span class="font-label-sm text-label-sm">4</span>
+<span class="material-symbols-outlined text-[10px]">check</span>
+</div>
+<div class="h-10 rounded bg-primary text-on-primary flex flex-col items-center justify-center">
+<span class="font-label-sm text-label-sm">5</span>
+<span class="material-symbols-outlined text-[10px]">check</span>
+</div>
+<div class="h-10 rounded bg-primary text-on-primary flex flex-col items-center justify-center">
+<span class="font-label-sm text-label-sm">6</span>
+<span class="material-symbols-outlined text-[10px]">check</span>
+</div>
+<div class="h-10 rounded bg-primary text-on-primary flex flex-col items-center justify-center">
+<span class="font-label-sm text-label-sm">7</span>
+<span class="material-symbols-outlined text-[10px]">check</span>
+</div>
+<!-- Days 8 to 13 Completed -->
+<div class="h-10 rounded bg-primary text-on-primary flex flex-col items-center justify-center">
+<span class="font-label-sm text-label-sm">8</span>
+<span class="material-symbols-outlined text-[10px]">check</span>
+</div>
+<div class="h-10 rounded bg-primary text-on-primary flex flex-col items-center justify-center">
+<span class="font-label-sm text-label-sm">9</span>
+<span class="material-symbols-outlined text-[10px]">check</span>
+</div>
+<div class="h-10 rounded bg-primary text-on-primary flex flex-col items-center justify-center">
+<span class="font-label-sm text-label-sm">10</span>
+<span class="material-symbols-outlined text-[10px]">check</span>
+</div>
+<div class="h-10 rounded bg-primary text-on-primary flex flex-col items-center justify-center">
+<span class="font-label-sm text-label-sm">11</span>
+<span class="material-symbols-outlined text-[10px]">check</span>
+</div>
+<div class="h-10 rounded bg-primary text-on-primary flex flex-col items-center justify-center">
+<span class="font-label-sm text-label-sm">12</span>
+<span class="material-symbols-outlined text-[10px]">check</span>
+</div>
+<div class="h-10 rounded bg-primary text-on-primary flex flex-col items-center justify-center">
+<span class="font-label-sm text-label-sm">13</span>
+<span class="material-symbols-outlined text-[10px]">check</span>
+</div>
+<!-- Day 14 (TODAY) Prominently highlighted -->
+<div class="h-10 rounded bg-primary-container text-on-primary flex flex-col items-center justify-center relative">
+<span class="font-label-sm text-label-sm font-semibold underline decoration-2">14</span>
+<span class="material-symbols-outlined text-[11px] text-on-primary">check_circle</span>
+</div>
+<!-- Days 15 to 30: Future / Incomplete -->
+<div class="h-10 rounded bg-surface-container flex flex-col items-center justify-center text-on-surface-variant opacity-60">
+<span class="font-label-sm text-label-sm">15</span>
+</div>
+<div class="h-10 rounded bg-surface-container flex flex-col items-center justify-center text-on-surface-variant opacity-60">
+<span class="font-label-sm text-label-sm">16</span>
+</div>
+<div class="h-10 rounded bg-surface-container flex flex-col items-center justify-center text-on-surface-variant opacity-60">
+<span class="font-label-sm text-label-sm">17</span>
+</div>
+<div class="h-10 rounded bg-surface-container flex flex-col items-center justify-center text-on-surface-variant opacity-60">
+<span class="font-label-sm text-label-sm">18</span>
+</div>
+<div class="h-10 rounded bg-surface-container flex flex-col items-center justify-center text-on-surface-variant opacity-60">
+<span class="font-label-sm text-label-sm">19</span>
+</div>
+<div class="h-10 rounded bg-surface-container flex flex-col items-center justify-center text-on-surface-variant opacity-60">
+<span class="font-label-sm text-label-sm">20</span>
+</div>
+<div class="h-10 rounded bg-surface-container flex flex-col items-center justify-center text-on-surface-variant opacity-60">
+<span class="font-label-sm text-label-sm">21</span>
+</div>
+<div class="h-10 rounded bg-surface-container flex flex-col items-center justify-center text-on-surface-variant opacity-60">
+<span class="font-label-sm text-label-sm">22</span>
+</div>
+<div class="h-10 rounded bg-surface-container flex flex-col items-center justify-center text-on-surface-variant opacity-60">
+<span class="font-label-sm text-label-sm">23</span>
+</div>
+<div class="h-10 rounded bg-surface-container flex flex-col items-center justify-center text-on-surface-variant opacity-60">
+<span class="font-label-sm text-label-sm">24</span>
+</div>
+<div class="h-10 rounded bg-surface-container flex flex-col items-center justify-center text-on-surface-variant opacity-60">
+<span class="font-label-sm text-label-sm">25</span>
+</div>
+<div class="h-10 rounded bg-surface-container flex flex-col items-center justify-center text-on-surface-variant opacity-60">
+<span class="font-label-sm text-label-sm">26</span>
+</div>
+<div class="h-10 rounded bg-surface-container flex flex-col items-center justify-center text-on-surface-variant opacity-60">
+<span class="font-label-sm text-label-sm">27</span>
+</div>
+<div class="h-10 rounded bg-surface-container flex flex-col items-center justify-center text-on-surface-variant opacity-60">
+<span class="font-label-sm text-label-sm">28</span>
+</div>
+<div class="h-10 rounded bg-surface-container flex flex-col items-center justify-center text-on-surface-variant opacity-60">
+<span class="font-label-sm text-label-sm">29</span>
+</div>
+<div class="h-10 rounded bg-surface-container flex flex-col items-center justify-center text-on-surface-variant opacity-60">
+<span class="font-label-sm text-label-sm">30</span>
+</div>
+</div>
+<!-- Active Day Detail Strip -->
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Nov 14 (Today) Fulfilled</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">2,000 / 2,000 ml</span>
+</div>
+<!-- Heatmap Legend & Repair CTA -->
+<div class="flex items-center justify-between pt-space-xs text-secondary font-label-sm text-label-sm">
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-1">
+<div class="w-2.5 h-2.5 rounded bg-primary"></div>
+<span>Done</span>
+</div>
+<div class="flex items-center gap-1">
+<div class="w-2.5 h-2.5 rounded bg-surface-container-highest"></div>
+<span>Planned</span>
+</div>
+<div class="flex items-center gap-1">
+<div class="w-2.5 h-2.5 rounded bg-surface-container-high relative">
+<div class="w-1.5 h-1.5 rounded-full bg-error absolute inset-0 m-auto"></div>
+</div>
+<span>Missed</span>
+</div>
+</div>
+<button class="text-primary hover:underline flex items-center gap-0.5" onclick="openRepairModal()">
+<span class="material-symbols-outlined text-[14px]">history</span>
+<span>Repair Nov 3</span>
+</button>
+</div>
+</div>
+<!-- Quick Retroactive Check-in & Increment Banner -->
+<div class="bg-surface-container-low p-space-md rounded-xl space-y-space-sm">
+<div class="flex items-center justify-between">
+<div>
+<h4 class="font-title-md text-title-md text-on-surface">Retroactive Check-in</h4>
+<p class="font-body-sm text-body-sm text-secondary">Did you drink water on Nov 3? Log it now to restore your streak.</p>
+</div>
+<span class="material-symbols-outlined text-secondary text-[20px]">build_circle</span>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<button class="flex-1 py-2 px-space-sm bg-primary text-on-primary rounded font-label-md text-label-md hover:bg-neutral-800 transition-colors flex items-center justify-center gap-space-xs" onclick="repairStreak()">
+<span class="material-symbols-outlined text-[16px]">add_task</span>
+<span>Mark Nov 3 Completed (500ml)</span>
+</button>
+<button class="py-2 px-space-sm bg-surface-container-highest text-on-surface rounded font-label-md text-label-md hover:bg-surface-container transition-colors">
+        Custom
+      </button>
+</div>
+</div>
+<!-- Check-in History & Logs -->
+<div class="flex flex-col space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<h3 class="font-title-md text-title-md text-on-surface">Check-in History & Logs</h3>
+<span class="font-label-sm text-label-sm text-secondary">(128 entries)</span>
+</div>
+<button class="font-label-sm text-label-sm text-primary hover:underline flex items-center gap-0.5">
+<span>Filter</span>
+<span class="material-symbols-outlined text-[14px]">tune</span>
+</button>
+</div>
+<!-- Feed Items -->
+<div class="space-y-space-xs">
+<!-- Item 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-medium">Today, Nov 14 • 14:15</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">2,000 ml</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">Reached goal right after afternoon workout.</p>
+<div class="flex items-center gap-space-xs pt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">4 × 500ml</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Post-Exercise</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-medium">Yesterday, Nov 13 • 18:30</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">2,000 ml</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">Consistent intake across morning sprint.</p>
+<div class="flex items-center gap-space-xs pt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">4 × 500ml</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Desk Intake</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-medium">Tuesday, Nov 12 • 20:05</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">2,500 ml</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">Extra hydration during evening trail run.</p>
+<div class="flex items-center gap-space-xs pt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">5 × 500ml</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Surplus</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Action Bar -->
+<div class="flex flex-col gap-space-xs pt-space-sm">
+<button class="w-full py-3 bg-primary text-on-primary rounded font-label-lg text-label-lg font-medium flex items-center justify-center gap-space-xs shadow-sm hover:bg-neutral-800 transition-colors">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>Log Check-in Today (+500ml)</span>
+</button>
+<button class="w-full py-3 bg-surface-container text-on-surface rounded font-label-lg text-label-lg font-medium flex items-center justify-center gap-space-xs hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[18px]">ios_share</span>
+<span>Share Progress Card</span>
+</button>
+</div>
+</div>
+<script>
+  function openRepairModal() {
+    const el = document.getElementById('missed-day-cell');
+    if (el) {
+      el.classList.add('scale-105', 'transition-transform');
+      setTimeout(() => el.classList.remove('scale-105'), 300);
+    }
+  }
+
+  function repairStreak() {
+    const cell = document.getElementById('missed-day-cell');
+    if (cell) {
+      cell.className = 'h-10 rounded bg-primary text-on-primary flex flex-col items-center justify-center transition-all duration-300';
+      cell.innerHTML = '<span class="font-label-sm text-label-sm">3</span><span class="material-symbols-outlined text-[10px]">check</span>';
+      
+      const notif = document.createElement('div');
+      notif.className = 'fixed bottom-4 left-4 right-4 bg-primary text-on-primary p-3 rounded font-body-sm text-body-sm text-center shadow-lg transition-opacity duration-300 z-50';
+      notif.innerText = 'Streak Restored! Nov 3 marked as completed.';
+      document.body.appendChild(notif);
+      setTimeout(() => {
+        notif.style.opacity = '0';
+        setTimeout(() => notif.remove(), 300);
+      }, 2500);
+    }
+  }
+</script></main></body></html>

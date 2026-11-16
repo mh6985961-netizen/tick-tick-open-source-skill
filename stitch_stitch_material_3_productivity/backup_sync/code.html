@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+
+<html class="h-full bg-surface" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=JetBrains+Mono:wght@100..900&display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-container-lowest": "#ffffff", "inverse-primary": "#c0c6db", "on-error": "#ffffff", "on-tertiary-container": "#7d8490", "surface-container": "#eeeeee", "primary-fixed-dim": "#c0c6db", "on-secondary": "#ffffff", "surface-container-high": "#e8e8e8", "tertiary-fixed": "#dce3f0", "on-surface-variant": "#45464c", "surface-container-low": "#f3f3f4", "tertiary-fixed-dim": "#c0c7d3", "secondary-fixed-dim": "#bdc7d8", "on-surface": "#1a1c1c", "on-secondary-fixed-variant": "#3e4755", "surface-variant": "#e2e2e2", "error-container": "#ffdad6", "on-background": "#1a1c1c", "background": "#f9f9f9", "on-tertiary-fixed": "#151c25", "surface-tint": "#575e70", "surface-bright": "#f9f9f9", "on-primary-fixed-variant": "#404758", "on-secondary-fixed": "#121c28", "outline": "#76777d", "surface-container-highest": "#e2e2e2", "outline-variant": "#c6c6cd", "primary-container": "#141b2b", "primary-fixed": "#dce2f7", "on-primary-container": "#7d8497", "on-primary": "#ffffff", "surface-dim": "#dadada", "surface": "#f9f9f9", "tertiary": "#000000", "error": "#ba1a1a", "secondary": "#555f6d", "on-error-container": "#93000a", "on-primary-fixed": "#141b2b", "inverse-surface": "#2f3131", "inverse-on-surface": "#f0f1f1", "tertiary-container": "#151c25", "secondary-fixed": "#d9e3f4", "primary": "#000000", "on-tertiary": "#ffffff", "secondary-container": "#d6e0f1", "on-secondary-container": "#596372", "on-tertiary-fixed-variant": "#404752" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "gutter-lg": "2rem", "space-md": "1rem", "gutter": "1.5rem", "margin": "2rem", "space-lg": "1.5rem", "gutter-sm": "1rem", "margin-lg": "4rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "margin-sm": "1rem", "space-xl": "2.5rem" }, fontFamily: { "headline-lg-mobile": ["Geist"], "title-md": ["Geist"], "label-sm": ["JetBrains Mono"], "display-xl-mobile": ["Geist"], "body-lg": ["Geist"], "headline-lg": ["Geist"], "display-xl": ["Geist"], "body-sm": ["Geist"], "headline-md": ["Geist"], "label-lg": ["JetBrains Mono"], "body-md": ["Geist"], "label-md": ["JetBrains Mono"], "headline-sm": ["Geist"] }, fontSize: { "headline-lg-mobile": ["28px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "600" }], "title-md": ["16px", { lineHeight: "24px", letterSpacing: "-0.01em", fontWeight: "600" }], "label-sm": ["10px", { lineHeight: "14px", letterSpacing: "0.06em", fontWeight: "500" }], "display-xl-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.03em", fontWeight: "700" }], "body-lg": ["18px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "400" }], "headline-lg": ["40px", { lineHeight: "48px", letterSpacing: "-0.03em", fontWeight: "600" }], "display-xl": ["56px", { lineHeight: "64px", letterSpacing: "-0.04em", fontWeight: "700" }], "body-sm": ["12px", { lineHeight: "18px", letterSpacing: "0em", fontWeight: "400" }], "headline-md": ["28px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "600" }], "label-lg": ["13px", { lineHeight: "18px", letterSpacing: "0.02em", fontWeight: "500" }], "body-md": ["14px", { lineHeight: "22px", letterSpacing: "-0.005em", fontWeight: "400" }], "label-md": ["11px", { lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "500" }], "headline-sm": ["20px", { lineHeight: "28px", letterSpacing: "-0.015em", fontWeight: "600" }] } } } };</script><style>@layer base { html, body { width: 100%; margin: 0; padding: 0; } body { overscroll-behavior-y: none; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface-container-lowest text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-gutter-sm flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><button aria-label="Go back" class="min-w-[44px] min-h-[44px] flex items-center justify-center text-on-surface hover:text-primary transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[22px]">arrow_back</span></button><h1 class="font-title-md text-title-md text-on-surface tracking-tight select-none">Backup & Sync</h1></div><div class="flex items-center gap-space-xs"><button aria-label="Done" class="min-w-[44px] min-h-[44px] flex items-center justify-center text-on-surface hover:text-primary transition-colors" type="button"><span class="material-symbols-outlined text-[24px]">check</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 w-full pt-16 pb-safe bg-surface-container-lowest flex flex-col"><div class="flex flex-col w-full pb-12">
+<!-- Screen Header & Metadata Tracker -->
+<section class="px-gutter-sm pt-space-lg pb-space-md flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-primary inline-block"></span>
+<span class="font-label-sm text-label-sm tracking-wider uppercase text-on-surface-variant font-medium">
+        DATA SOVEREIGNTY & STORAGE • SCR-SET-007
+      </span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight mt-space-xs">
+      Backup, Export & Sync
+    </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+      Maintain 100% data ownership with local encrypted snapshots, open CSV exports, and optional self-hosted synchronizers.
+    </p>
+</section>
+<!-- Visual Delight & Telemetry Quick Bar -->
+<section class="px-gutter-sm mb-space-lg">
+<div class="bg-surface-container-low rounded-xl p-space-md flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded-lg bg-surface-container-lowest flex items-center justify-center shrink-0 shadow-sm text-primary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">lock</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Encrypted Node</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold truncate">SQLite 3.45 • AES-256-GCM Active</span>
+</div>
+</div>
+<div class="text-right shrink-0 pl-space-xs">
+<span class="inline-flex items-center gap-1 font-label-md text-label-md px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+          Air-Ready
+        </span>
+</div>
+</div>
+</section>
+<!-- SECTION 1: Local SQLite Backups -->
+<section class="px-gutter-sm mb-space-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[22px] text-on-surface">database</span>
+<h3 class="font-title-md text-title-md text-on-surface tracking-tight">Local SQLite Backups</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-low px-2 py-0.5 rounded">.BAK RAW</span>
+</div>
+<!-- Primary Snapshot Action Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface">Manual Database Snapshot</span>
+<span class="material-symbols-outlined text-primary text-[20px]">save_as</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Writes atomic journal write-ahead log (WAL) into a single standalone cryptographic archive.
+        </p>
+</div>
+<!-- Action Button with Micro-Interaction State -->
+<button class="w-full bg-primary text-on-primary rounded-lg py-3 px-space-md flex items-center justify-center gap-space-sm active:scale-[0.99] transition-transform shadow-sm select-none" id="btn-create-backup" onclick="triggerBackupFeedback()" type="button">
+<span class="material-symbols-outlined text-[20px]" id="backup-icon">download</span>
+<span class="font-body-md text-body-md font-medium" id="backup-text">Create Local .bak Snapshot</span>
+</button>
+<!-- Snapshot Metadata -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col gap-0.5">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>LAST SNAPSHOT</span>
+<span class="font-semibold text-on-surface">14.2 MB</span>
+</div>
+<div class="flex items-center gap-1 font-body-sm text-body-sm text-on-surface font-medium truncate">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant shrink-0">schedule</span>
+<span class="truncate">Today at 04:15 AM • AuraChrono_2026-11-14_0415.bak</span>
+</div>
+</div>
+<!-- Automatic Rolling Backups Toggle & Retentions -->
+<div class="pt-space-xs flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex flex-col pr-space-xs">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Auto Weekly Backups</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Executes background vacuum snapshot</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" id="auto-backup-toggle" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Retention Chips -->
+<div class="flex flex-col gap-space-xs mt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Snapshot Retention Pool</span>
+<div class="grid grid-cols-3 gap-2">
+<button class="retention-chip py-2 px-space-xs rounded-lg bg-primary text-on-primary font-label-md text-label-md text-center transition-colors font-medium" type="button">
+              Keep Last 5
+            </button>
+<button class="retention-chip py-2 px-space-xs rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-md text-label-md text-center transition-colors" type="button">
+              Keep Last 10
+            </button>
+<button class="retention-chip py-2 px-space-xs rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-md text-label-md text-center transition-colors" type="button">
+              Keep All
+            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Restore from Backup Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-on-surface">folder_open</span>
+<span class="font-title-md text-title-md text-on-surface">Restore Snapshot</span>
+</div>
+<span class="font-label-sm text-label-sm text-error bg-error-container/40 text-on-error-container px-2 py-0.5 rounded font-medium">DESTRUCTIVE</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Import an archived <code class="font-label-sm text-label-sm bg-surface-container px-1 py-0.5 rounded">.bak</code> database snapshot directly from your device file system.
+      </p>
+<button class="w-full bg-surface-container-lowest text-on-surface rounded-lg py-2.5 px-space-md flex items-center justify-center gap-space-sm shadow-sm active:bg-surface-container-low transition-colors" onclick="document.getElementById('file-picker-dummy').click()" type="button">
+<span class="material-symbols-outlined text-[20px]">file_upload</span>
+<span class="font-body-md text-body-md font-semibold">Restore from Local File...</span>
+</button>
+<input accept=".bak,.sqlite,.db" class="hidden" id="file-picker-dummy" onchange="alert('Snapshot archive staged: ' + this.files[0].name)" type="file"/>
+<!-- Notice note -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex items-start gap-space-xs mt-space-xs">
+<span class="material-symbols-outlined text-[18px] text-on-surface shrink-0 mt-0.5">info</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Restoring a backup completely replaces the active local database with selected snapshot data. Active memory caches will re-index immediately.
+        </span>
+</div>
+</div>
+</section>
+<!-- SECTION 2: Open Data Export -->
+<section class="px-gutter-sm mb-space-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[22px] text-on-surface">table_chart</span>
+<h3 class="font-title-md text-title-md text-on-surface tracking-tight">Open Data Export</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-low px-2 py-0.5 rounded">RFC 4180</span>
+</div>
+<!-- Export to CSV Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface">Export All Tasks to CSV</span>
+<span class="material-symbols-outlined text-[20px] text-secondary">grid_on</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Exports all active tasks, completed archives, tags, checklist items, and priority ratings into a standard open CSV spreadsheet.
+        </p>
+</div>
+<!-- Scope Toggles (Checkboxes) -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-medium">Export Scope Parameters</span>
+<label class="flex items-center gap-space-sm cursor-pointer select-none">
+<input checked="" class="w-4 h-4 rounded text-primary bg-surface-container-lowest accent-primary focus:ring-0" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Include Completed Tasks & Milestones</span>
+</label>
+<label class="flex items-center gap-space-sm cursor-pointer select-none">
+<input checked="" class="w-4 h-4 rounded text-primary bg-surface-container-lowest accent-primary focus:ring-0" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Include Subtasks, Checklists & Timestamps</span>
+</label>
+<label class="flex items-center gap-space-sm cursor-pointer select-none">
+<input class="w-4 h-4 rounded text-primary bg-surface-container-lowest accent-primary focus:ring-0" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">Include Focus Session Chrono Logs</span>
+</label>
+</div>
+<!-- Action Button -->
+<button class="w-full bg-surface-container-lowest text-on-surface rounded-lg py-3 px-space-md flex items-center justify-center gap-space-sm shadow-sm active:bg-surface-container-low transition-colors select-none" onclick="triggerExportAlert('CSV Archive')" type="button">
+<span class="material-symbols-outlined text-[20px]">ios_share</span>
+<span class="font-body-md text-body-md font-semibold">Export CSV Archive</span>
+</button>
+</div>
+<!-- Export JSON Raw Bundle Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex items-center justify-between gap-space-md">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-on-surface">data_object</span>
+<span class="font-title-md text-title-md text-on-surface truncate">Full JSON Data Bundle</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-2">
+          Structured raw schema containing Projects, Tasks, Habits, and Focus intervals for migration.
+        </p>
+</div>
+<button class="shrink-0 bg-surface-container-low hover:bg-surface-container text-on-surface px-space-md py-2.5 rounded-lg flex items-center gap-1.5 transition-colors font-label-md text-label-md font-semibold" onclick="triggerExportAlert('JSON Bundle')" type="button">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>JSON</span>
+</button>
+</div>
+</section>
+<!-- SECTION 3: Synchronization Architecture & Remote Server -->
+<section class="px-gutter-sm mb-space-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[22px] text-on-surface">sync_alt</span>
+<h3 class="font-title-md text-title-md text-on-surface tracking-tight">Synchronization Engine</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-low px-2 py-0.5 rounded">ZERO-KNOWLEDGE</span>
+</div>
+<!-- Segmented Mode Selectors -->
+<div class="flex flex-col gap-space-xs">
+<!-- Option 1: Offline Only -->
+<div class="sync-mode-card cursor-pointer bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all flex items-start gap-space-md" id="mode-offline" onclick="selectSyncMode('offline')">
+<div class="w-5 h-5 rounded-full bg-surface-container flex items-center justify-center shrink-0 mt-0.5 radio-indicator">
+<div class="w-2 h-2 rounded-full bg-transparent dot"></div>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface">Offline Only</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">wifi_off</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Air-gapped local storage with zero network sockets or outbound calls.
+          </span>
+</div>
+</div>
+<!-- Option 2: Self-Hosted Server (Active) -->
+<div class="sync-mode-card cursor-pointer bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all flex items-start gap-space-md" id="mode-selfhost" onclick="selectSyncMode('selfhost')">
+<div class="w-5 h-5 rounded-full bg-primary flex items-center justify-center shrink-0 mt-0.5 radio-indicator">
+<div class="w-2 h-2 rounded-full bg-on-primary dot"></div>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-on-surface">Self-Hosted Sync Server</span>
+<span class="font-label-sm text-label-sm bg-primary text-on-primary px-1.5 py-0.2 rounded font-medium">ACTIVE</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-on-surface">dns</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Direct end-to-end encrypted relay connected to your private instance.
+          </span>
+</div>
+</div>
+<!-- Option 3: CalDAV -->
+<div class="sync-mode-card cursor-pointer bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all flex items-start gap-space-md" id="mode-caldav" onclick="selectSyncMode('caldav')">
+<div class="w-5 h-5 rounded-full bg-surface-container flex items-center justify-center shrink-0 mt-0.5 radio-indicator">
+<div class="w-2 h-2 rounded-full bg-transparent dot"></div>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface">CalDAV Two-Way Sync</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">save_as</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Synchronize tasks and milestones via open RFC 4791 calendar endpoints.
+          </span>
+</div>
+</div>
+</div>
+<!-- Self-Hosted Server Configuration Form Container -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md" id="selfhost-config-panel">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-medium">Endpoint Credentials</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">TLS 1.3 Strict</span>
+</div>
+<!-- Input 1: Server URL -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="server-endpoint">Server Endpoint URL</label>
+<div class="relative flex items-center">
+<input class="w-full bg-surface-container-low text-on-surface rounded-lg px-space-md py-2.5 font-label-md text-label-md pr-10 focus:outline-none focus:bg-surface-container-lowest transition-colors" id="server-endpoint" type="url" value="https://sync.localho.st:8443/v1"/>
+<button aria-label="Edit URL" class="absolute right-2.5 text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</div>
+<!-- Input 2: Account Username -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="server-user">Account Username</label>
+<div class="relative flex items-center">
+<input class="w-full bg-surface-container-low text-on-surface rounded-lg px-space-md py-2.5 font-label-md text-label-md focus:outline-none focus:bg-surface-container-lowest transition-colors" id="server-user" type="text" value="alex.aurachrono"/>
+</div>
+</div>
+<!-- Input 3: Auth Token -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="server-token">Auth Token / API Secret</label>
+<div class="relative flex items-center">
+<input class="w-full bg-surface-container-low text-on-surface rounded-lg px-space-md py-2.5 font-label-md text-label-md pr-10 tracking-widest focus:outline-none focus:bg-surface-container-lowest transition-colors" id="server-token" type="password" value="aur_sec_994a8218e819bcf81912f20"/>
+<button aria-label="Toggle token visibility" class="absolute right-2.5 text-on-surface-variant hover:text-on-surface" onclick="toggleTokenVisibility()" type="button">
+<span class="material-symbols-outlined text-[18px]" id="eye-icon">visibility</span>
+</button>
+</div>
+</div>
+<!-- Live Connectivity Badge & Actions -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-2 min-w-0">
+<span class="w-2 h-2 rounded-full bg-primary shrink-0"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium truncate">
+            Connected • Ping 24ms • TLS 1.3
+          </span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant shrink-0">0s ago</span>
+</div>
+<!-- Test Connection & Sync Now Buttons -->
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+<button class="bg-surface-container-low text-on-surface hover:bg-surface-container rounded-lg py-2.5 px-space-sm flex items-center justify-center gap-1.5 active:scale-[0.99] transition-all font-body-sm text-body-sm font-semibold" id="btn-test-conn" onclick="testConnection()" type="button">
+<span class="material-symbols-outlined text-[18px]">network_ping</span>
+<span>Test Ping</span>
+</button>
+<button class="bg-primary text-on-primary rounded-lg py-2.5 px-space-sm flex items-center justify-center gap-1.5 active:scale-[0.99] transition-all font-body-sm text-body-sm font-semibold shadow-sm" id="btn-sync-now" onclick="runImmediateSync()" type="button">
+<span class="material-symbols-outlined text-[18px]" id="sync-icon">sync</span>
+<span id="sync-text">Sync Now</span>
+</button>
+</div>
+<!-- Conflict Strategy Policy -->
+<div class="pt-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-medium">Conflict Resolution Policy</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">CRDT Layer</span>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<button class="conflict-chip py-2 px-space-xs rounded-lg bg-primary text-on-primary font-label-md text-label-md text-center transition-colors font-medium" type="button">
+            Local Wins
+          </button>
+<button class="conflict-chip py-2 px-space-xs rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-md text-label-md text-center transition-colors" type="button">
+            Server Wins
+          </button>
+<button class="conflict-chip py-2 px-space-xs rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-md text-label-md text-center transition-colors" type="button">
+            Keep Both
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: Data Sovereignty Footer Banner & Safeguards -->
+<section class="px-gutter-sm flex flex-col gap-space-lg">
+<!-- Verification Card -->
+<div class="bg-surface-container rounded-xl p-space-lg flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">verified_user</span>
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-bold">
+          Zero Vendor Lock-in • 100% Data Sovereignty
+        </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+        All SQLite databases, attachments, and configuration files are unencumbered by proprietary DRM or cloud-only subscription fences. Your data belongs exclusively to you on this device.
+      </p>
+</div>
+<!-- Danger Zone Reset Action -->
+<div class="flex flex-col items-center justify-center gap-space-xs pt-space-xs">
+<button class="bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-error rounded-lg py-2.5 px-space-lg font-body-sm text-body-sm transition-colors flex items-center gap-1.5" onclick="confirmAppReset()" type="button">
+<span class="material-symbols-outlined text-[18px]">delete_forever</span>
+<span>Wipe Local Database & Reset App</span>
+</button>
+<span class="font-label-sm text-label-sm text-on-surface-variant text-center">
+        Version 2.8.4-libre • Commit #8bf29e
+      </span>
+</div>
+</section>
+</div>
+<!-- Inline JavaScript for micro-interactions & feedback -->
+<script>
+  function triggerBackupFeedback() {
+    const btn = document.getElementById('btn-create-backup');
+    const icon = document.getElementById('backup-icon');
+    const text = document.getElementById('backup-text');
+    
+    icon.textContent = 'hourglass_empty';
+    text.textContent = 'Writing Journal snapshot...';
+    btn.classList.add('opacity-75');
+
+    setTimeout(() => {
+      icon.textContent = 'check_circle';
+      text.textContent = 'Snapshot Verified (14.2 MB)';
+      btn.classList.remove('opacity-75');
+      setTimeout(() => {
+        icon.textContent = 'download';
+        text.textContent = 'Create Local .bak Snapshot';
+      }, 2500);
+    }, 700);
+  }
+
+  function triggerExportAlert(formatName) {
+    alert(formatName + ' generated and staged to system share sheet.');
+  }
+
+  function toggleTokenVisibility() {
+    const input = document.getElementById('server-token');
+    const eye = document.getElementById('eye-icon');
+    if (input.type === 'password') {
+      input.type = 'text';
+      eye.textContent = 'visibility_off';
+    } else {
+      input.type = 'password';
+      eye.textContent = 'visibility';
+    }
+  }
+
+  function selectSyncMode(mode) {
+    const modes = ['offline', 'selfhost', 'caldav'];
+    modes.forEach(m => {
+      const el = document.getElementById('mode-' + m);
+      const radio = el.querySelector('.radio-indicator');
+      const dot = el.querySelector('.dot');
+      if (m === mode) {
+        radio.classList.remove('bg-surface-container');
+        radio.classList.add('bg-primary');
+        dot.classList.remove('bg-transparent');
+        dot.classList.add('bg-on-primary');
+      } else {
+        radio.classList.add('bg-surface-container');
+        radio.classList.remove('bg-primary');
+        dot.classList.add('bg-transparent');
+        dot.classList.remove('bg-on-primary');
+      }
+    });
+
+    const panel = document.getElementById('selfhost-config-panel');
+    if (mode === 'selfhost') {
+      panel.style.display = 'flex';
+    } else {
+      panel.style.display = 'none';
+    }
+  }
+
+  function testConnection() {
+    const btn = document.getElementById('btn-test-conn');
+    const originalText = btn.innerHTML;
+    btn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span><span>Pinging...</span>';
+    setTimeout(() => {
+      btn.innerHTML = '<span class="material-symbols-outlined text-[18px]">done</span><span>22ms OK</span>';
+      setTimeout(() => {
+        btn.innerHTML = originalText;
+      }, 2000);
+    }, 600);
+  }
+
+  function runImmediateSync() {
+    const icon = document.getElementById('sync-icon');
+    const text = document.getElementById('sync-text');
+    icon.classList.add('animate-spin');
+    text.textContent = 'Syncing...';
+    setTimeout(() => {
+      icon.classList.remove('animate-spin');
+      text.textContent = 'Synchronized';
+      setTimeout(() => {
+        text.textContent = 'Sync Now';
+      }, 2000);
+    }, 1100);
+  }
+
+  function confirmAppReset() {
+    if (confirm('CRITICAL WARNING: This will permanently delete your active SQLite database, attachments, and local keys. Proceed only if you have exported a .bak snapshot.')) {
+      alert('Local database wiped. Restarting runtime sandbox...');
+    }
+  }
+
+  // Retention chip toggle behaviors
+  document.querySelectorAll('.retention-chip').forEach(chip => {
+    chip.addEventListener('click', function() {
+      document.querySelectorAll('.retention-chip').forEach(c => {
+        c.className = 'retention-chip py-2 px-space-xs rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-md text-label-md text-center transition-colors';
+      });
+      this.className = 'retention-chip py-2 px-space-xs rounded-lg bg-primary text-on-primary font-label-md text-label-md text-center transition-colors font-medium';
+    });
+  });
+
+  // Conflict chip toggle behaviors
+  document.querySelectorAll('.conflict-chip').forEach(chip => {
+    chip.addEventListener('click', function() {
+      document.querySelectorAll('.conflict-chip').forEach(c => {
+        c.className = 'conflict-chip py-2 px-space-xs rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-md text-label-md text-center transition-colors';
+      });
+      this.className = 'conflict-chip py-2 px-space-xs rounded-lg bg-primary text-on-primary font-label-md text-label-md text-center transition-colors font-medium';
+    });
+  });
+</script></main></body></html>

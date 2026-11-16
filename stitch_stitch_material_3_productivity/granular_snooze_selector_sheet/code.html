@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<meta content="mobile_blank" name="shell-type"/>
+<title>SCR-REM-002: Granular Snooze Selector Sheet</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Geist', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    @layer base {
+      html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+        font-family: 'Geist', sans-serif;
+        overscroll-behavior: none;
+      }
+      .pb-safe {
+        padding-bottom: env(safe-area-inset-bottom, 16px);
+      }
+      .pt-safe {
+        padding-top: env(safe-area-inset-top, 16px);
+      }
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+</head>
+<body class="bg-white text-[#111827] relative w-full h-full overflow-hidden flex flex-col justify-end antialiased">
+<!-- Underlying Screen Context: SCR-REM-001 Alarm Wakeup Alert (Pure White High Contrast) -->
+<div class="absolute inset-0 w-full h-full flex flex-col justify-between p-6 bg-white pointer-events-none select-none z-0">
+<!-- Top Area: Visible above sheet -->
+<div class="pt-6 flex flex-col gap-5">
+<div class="flex items-center justify-between text-neutral-600">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-red-600 animate-pulse"></span>
+<span class="font-mono text-[11px] uppercase tracking-widest text-[#111827] font-semibold">CRITICAL PERSISTENT ALARM</span>
+</div>
+<span class="font-mono text-[11px] text-neutral-500 font-medium">SEV-1 PRIORITY</span>
+</div>
+<div class="flex flex-col mt-1">
+<span class="font-mono text-6xl font-bold tracking-tight text-[#111827]">09:00</span>
+<span class="font-mono text-xs text-neutral-500 tracking-wider font-medium">AM • THU NOV 14</span>
+</div>
+<div class="bg-[#f3f4f6] border border-[#e5e7eb] rounded-2xl p-4 shadow-sm">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-red-100 text-red-700 font-mono text-[10px] mb-1.5 font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[13px]">warning</span>
+<span>UNRESOLVED CRITICAL INCIDENT</span>
+</div>
+<h1 class="text-base font-bold text-[#111827] leading-snug">Deploy Hotfix: Patch CRDT WAL Concurrency Lockup</h1>
+<p class="text-xs text-neutral-600 mt-1 leading-normal">Cluster node telemetry flagged desync cascade across replica shards.</p>
+</div>
+</div>
+<!-- Underlying action buttons preview (base layer) -->
+<div class="flex flex-col gap-2.5 pb-6 opacity-30">
+<div class="w-full py-3.5 bg-red-600 text-white rounded-xl text-center font-semibold text-sm">
+        Slide to Resolve Alarm
+      </div>
+<div class="w-full py-3 bg-[#f3f4f6] border border-[#e5e7eb] text-[#111827] rounded-xl text-center font-medium text-xs">
+        Snooze Alert
+      </div>
+</div>
+</div>
+<!-- Modal Backdrop Scrim: Gentle semi-transparent overlay over white alarm screen -->
+<div class="absolute inset-0 bg-neutral-900/40 z-10 transition-opacity"></div>
+<!-- Bottom Sheet Drawer Container: Crisp Pure White (#ffffff) Card with high contrast -->
+<div class="relative z-20 w-full bg-white rounded-t-3xl border-t border-[#e5e7eb] shadow-2xl flex flex-col max-h-[88vh] overflow-hidden text-[#111827] mt-auto">
+<!-- Drag Handle -->
+<div class="w-full flex items-center justify-center pt-3 pb-1.5 cursor-grab">
+<div class="w-12 h-1 bg-[#d1d5db] rounded-full"></div>
+</div>
+<!-- Header Section -->
+<div class="px-5 pt-1.5 pb-3 flex items-start justify-between border-b border-[#f3f4f6]">
+<div class="flex flex-col">
+<h2 class="text-lg font-bold text-[#111827] tracking-tight leading-snug">Snooze Alert</h2>
+<span class="text-xs text-neutral-500 font-normal">Select delay interval or specific resume target</span>
+</div>
+<button aria-label="Close" class="w-8 h-8 rounded-full bg-[#f3f4f6] hover:bg-[#e5e7eb] active:scale-95 flex items-center justify-center text-[#111827] transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Scrollable Body Content -->
+<div class="px-5 flex flex-col overflow-y-auto pb-4 pt-3 flex-1 space-y-4">
+<!-- Context Task Summary Card -->
+<div class="bg-[#f3f4f6] border border-[#e5e7eb] rounded-xl p-3.5 flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-mono text-[10px] bg-[#111827] text-white px-1.5 py-0.5 rounded font-bold tracking-wider">!HIGH</span>
+<div class="flex items-center gap-1 text-neutral-500 font-mono text-xs">
+<span class="material-symbols-outlined text-[13px]">alarm</span>
+<span>Origin: 09:00 AM</span>
+</div>
+</div>
+<p class="text-sm font-semibold text-[#111827] leading-snug">Deploy Hotfix: Patch CRDT WAL Concurrency Lockup</p>
+<div class="flex items-center gap-2 text-neutral-500 text-xs">
+<span>Core Sync Daemon</span>
+<span>•</span>
+<span class="text-neutral-700 font-medium">Escalation Active</span>
+</div>
+</div>
+<!-- Standard Intervals Grid -->
+<div class="flex flex-col">
+<div class="text-[11px] font-mono uppercase tracking-wider font-semibold text-neutral-500 mb-2.5">
+          STANDARD INTERVALS
+        </div>
+<div class="grid grid-cols-2 gap-2.5" id="preset-grid">
+<!-- 5 Min Preset -->
+<button class="snooze-card text-left p-3.5 rounded-xl bg-white hover:bg-[#f9fafb] border border-[#e5e7eb] transition-all flex flex-col justify-between gap-1.5 min-h-[74px] active:scale-[0.98]" data-duration="5m" type="button">
+<div class="flex justify-between items-center w-full">
+<span class="font-semibold text-[#111827] text-sm leading-snug">5 Minutes</span>
+<div class="check-indicator hidden w-4 h-4 rounded-full bg-[#111827] text-white flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[10px] font-bold">check</span>
+</div>
+</div>
+<span class="text-xs text-neutral-500 font-normal">Resume at 09:05 AM</span>
+</button>
+<!-- 10 Min Preset -->
+<button class="snooze-card text-left p-3.5 rounded-xl bg-white hover:bg-[#f9fafb] border border-[#e5e7eb] transition-all flex flex-col justify-between gap-1.5 min-h-[74px] active:scale-[0.98]" data-duration="10m" type="button">
+<div class="flex justify-between items-center w-full">
+<span class="font-semibold text-[#111827] text-sm leading-snug">10 Minutes</span>
+<div class="check-indicator hidden w-4 h-4 rounded-full bg-[#111827] text-white flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[10px] font-bold">check</span>
+</div>
+</div>
+<span class="text-xs text-neutral-500 font-normal">Resume at 09:10 AM</span>
+</button>
+<!-- 15 Min Preset (Active Default in solid black #111827) -->
+<button class="snooze-card active-card text-left p-3.5 rounded-xl bg-[#111827] text-white border border-[#111827] transition-all flex flex-col justify-between gap-1.5 min-h-[74px] shadow-sm active:scale-[0.98]" data-duration="15m" type="button">
+<div class="flex justify-between items-center w-full">
+<div class="flex items-center gap-1.5">
+<span class="font-semibold text-white text-sm leading-snug">15 Minutes</span>
+<span class="font-mono text-[9px] bg-white text-[#111827] px-1 py-0.5 rounded font-bold uppercase tracking-tight">Default</span>
+</div>
+<div class="check-indicator w-4 h-4 rounded-full bg-white text-[#111827] flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[10px] font-bold">check</span>
+</div>
+</div>
+<span class="text-xs text-neutral-300 font-normal">Resume at 09:15 AM</span>
+</button>
+<!-- 30 Min Preset -->
+<button class="snooze-card text-left p-3.5 rounded-xl bg-white hover:bg-[#f9fafb] border border-[#e5e7eb] transition-all flex flex-col justify-between gap-1.5 min-h-[74px] active:scale-[0.98]" data-duration="30m" type="button">
+<div class="flex justify-between items-center w-full">
+<span class="font-semibold text-[#111827] text-sm leading-snug">30 Minutes</span>
+<div class="check-indicator hidden w-4 h-4 rounded-full bg-[#111827] text-white flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[10px] font-bold">check</span>
+</div>
+</div>
+<span class="text-xs text-neutral-500 font-normal">Resume at 09:30 AM</span>
+</button>
+<!-- 45 Min Preset -->
+<button class="snooze-card text-left p-3.5 rounded-xl bg-white hover:bg-[#f9fafb] border border-[#e5e7eb] transition-all flex flex-col justify-between gap-1.5 min-h-[74px] active:scale-[0.98]" data-duration="45m" type="button">
+<div class="flex justify-between items-center w-full">
+<span class="font-semibold text-[#111827] text-sm leading-snug">45 Minutes</span>
+<div class="check-indicator hidden w-4 h-4 rounded-full bg-[#111827] text-white flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[10px] font-bold">check</span>
+</div>
+</div>
+<span class="text-xs text-neutral-500 font-normal">Resume at 09:45 AM</span>
+</button>
+<!-- 1 Hour Preset -->
+<button class="snooze-card text-left p-3.5 rounded-xl bg-white hover:bg-[#f9fafb] border border-[#e5e7eb] transition-all flex flex-col justify-between gap-1.5 min-h-[74px] active:scale-[0.98]" data-duration="1h" type="button">
+<div class="flex justify-between items-center w-full">
+<span class="font-semibold text-[#111827] text-sm leading-snug">1 Hour</span>
+<div class="check-indicator hidden w-4 h-4 rounded-full bg-[#111827] text-white flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[10px] font-bold">check</span>
+</div>
+</div>
+<span class="text-xs text-neutral-500 font-normal">Resume at 10:00 AM</span>
+</button>
+</div>
+</div>
+<!-- Contextual Targets Section -->
+<div class="flex flex-col">
+<div class="text-[11px] font-mono uppercase tracking-wider font-semibold text-neutral-500 mb-2">
+          CONTEXTUAL TARGETS
+        </div>
+<div class="flex flex-col gap-2">
+<!-- Tonight -->
+<button class="snooze-target-card text-left p-3 bg-white hover:bg-[#f9fafb] border border-[#e5e7eb] rounded-xl flex items-center justify-between transition-colors active:scale-[0.99]" type="button">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-[#f3f4f6] flex items-center justify-center text-[#111827]">
+<span class="material-symbols-outlined text-[18px]">bedtime</span>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-semibold text-[#111827] leading-tight">Tonight (20:00)</span>
+<span class="text-xs text-neutral-500">Today, 8:00 PM</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px] text-neutral-400">chevron_right</span>
+</button>
+<!-- Tomorrow Morning -->
+<button class="snooze-target-card text-left p-3 bg-white hover:bg-[#f9fafb] border border-[#e5e7eb] rounded-xl flex items-center justify-between transition-colors active:scale-[0.99]" type="button">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-[#f3f4f6] flex items-center justify-center text-[#111827]">
+<span class="material-symbols-outlined text-[18px]">wb_twilight</span>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-semibold text-[#111827] leading-tight">Tomorrow Morning (09:00)</span>
+<span class="text-xs text-neutral-500">Tomorrow, 9:00 AM</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px] text-neutral-400">chevron_right</span>
+</button>
+<!-- Tomorrow Afternoon -->
+<button class="snooze-target-card text-left p-3 bg-white hover:bg-[#f9fafb] border border-[#e5e7eb] rounded-xl flex items-center justify-between transition-colors active:scale-[0.99]" type="button">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-[#f3f4f6] flex items-center justify-center text-[#111827]">
+<span class="material-symbols-outlined text-[18px]">wb_sunny</span>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-semibold text-[#111827] leading-tight">Tomorrow Afternoon (14:00)</span>
+<span class="text-xs text-neutral-500">Tomorrow, 2:00 PM</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px] text-neutral-400">chevron_right</span>
+</button>
+<!-- Next Week -->
+<button class="snooze-target-card text-left p-3 bg-white hover:bg-[#f9fafb] border border-[#e5e7eb] rounded-xl flex items-center justify-between transition-colors active:scale-[0.99]" type="button">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-[#f3f4f6] flex items-center justify-center text-[#111827]">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-semibold text-[#111827] leading-tight">Next Week (Monday 09:00)</span>
+<span class="text-xs text-neutral-500">Mon, Nov 18, 9:00 AM</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px] text-neutral-400">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Granular Stepper / Custom -->
+<div class="flex flex-col">
+<div class="text-[11px] font-mono uppercase tracking-wider font-semibold text-neutral-500 mb-2">
+          GRANULAR STEPPER / CUSTOM
+        </div>
+<div class="bg-[#f3f4f6] border border-[#e5e7eb] rounded-xl p-3.5 flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-sm font-semibold text-[#111827]">Custom Snooze Offset</span>
+<span class="text-xs text-neutral-500">Calculated from current stamp</span>
+</div>
+<!-- Numeric Stepper -->
+<div class="flex items-center bg-white border border-[#e5e7eb] rounded-lg p-1 gap-1">
+<button class="w-7 h-7 rounded bg-[#f3f4f6] hover:bg-[#e5e7eb] flex items-center justify-center text-[#111827] active:scale-90 transition-transform font-bold text-sm" id="step-dec" type="button">
+                −
+              </button>
+<div class="flex items-baseline min-w-[3.25rem] justify-center">
+<span class="font-mono text-sm font-bold text-[#111827]" id="custom-val">25</span>
+<span class="font-mono text-xs text-neutral-500 ml-0.5">m</span>
+</div>
+<button class="w-7 h-7 rounded bg-[#f3f4f6] hover:bg-[#e5e7eb] flex items-center justify-center text-[#111827] active:scale-90 transition-transform font-bold text-sm" id="step-inc" type="button">
+                +
+              </button>
+</div>
+</div>
+<button class="w-full py-2 bg-white hover:bg-[#f9fafb] border border-[#e5e7eb] rounded-lg text-[#111827] text-xs font-semibold tracking-wide transition-colors flex items-center justify-center gap-1.5 active:scale-[0.99]" type="button">
+<span class="material-symbols-outlined text-[16px]">calendar_month</span>
+<span>Pick Exact Date &amp; Time...</span>
+</button>
+</div>
+</div>
+<!-- Dismiss Safeguard Note -->
+<div class="flex items-center gap-1.5 text-neutral-400 justify-center text-center pt-1 pb-1">
+<span class="material-symbols-outlined text-[13px]">lock</span>
+<span class="text-[10px] font-mono">Rescheduled locally via AlarmManager • Zero network required</span>
+</div>
+</div>
+<!-- Bottom Sticky Action Dock -->
+<div class="bg-white border-t border-[#e5e7eb] pt-3 pb-5 px-5 pb-safe flex flex-col gap-2">
+<!-- High-contrast primary action button in solid black #111827 -->
+<button class="w-full py-3.5 px-6 bg-[#111827] hover:bg-black active:scale-[0.99] rounded-xl text-white text-sm font-semibold tracking-tight transition-all flex items-center justify-center gap-2 shadow-sm" id="confirm-snooze-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">alarm</span>
+<span id="confirm-label">Confirm Snooze (15m)</span>
+</button>
+<!-- Secondary 'Turn Off / Dismiss Alarm' button in light outline/ghost style -->
+<button class="w-full py-2.5 bg-transparent hover:bg-[#f3f4f6] text-neutral-600 hover:text-[#111827] text-xs font-semibold rounded-lg transition-colors text-center" type="button">
+        Turn Off / Dismiss Alarm
+      </button>
+</div>
+</div>
+<script>
+    // Simple interactivity for presets & stepper
+    const cards = document.querySelectorAll('.snooze-card');
+    const confirmLabel = document.getElementById('confirm-label');
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        cards.forEach(c => {
+          c.classList.remove('bg-[#111827]', 'text-white', 'border-[#111827]');
+          c.classList.add('bg-white', 'border-[#e5e7eb]');
+          const textEl = c.querySelector('.font-semibold');
+          if (textEl) textEl.classList.remove('text-white');
+          if (textEl) textEl.classList.add('text-[#111827]');
+          const subText = c.querySelector('span.text-xs');
+          if (subText) subText.classList.remove('text-neutral-300');
+          if (subText) subText.classList.add('text-neutral-500');
+          const indicator = c.querySelector('.check-indicator');
+          if (indicator) indicator.classList.add('hidden');
+        });
+        card.classList.remove('bg-white', 'border-[#e5e7eb]');
+        card.classList.add('bg-[#111827]', 'text-white', 'border-[#111827]');
+        const selText = card.querySelector('.font-semibold');
+        if (selText) { selText.classList.remove('text-[#111827]'); selText.classList.add('text-white'); }
+        const selSub = card.querySelector('span.text-xs');
+        if (selSub) { selSub.classList.remove('text-neutral-500'); selSub.classList.add('text-neutral-300'); }
+        const indicator = card.querySelector('.check-indicator');
+        if (indicator) {
+          indicator.classList.remove('hidden');
+          indicator.classList.add('bg-white', 'text-[#111827]');
+        }
+        const dur = card.getAttribute('data-duration');
+        if (confirmLabel) confirmLabel.textContent = `Confirm Snooze (${dur})`;
+      });
+    });
+
+    const valEl = document.getElementById('custom-val');
+    let minutes = 25;
+    document.getElementById('step-inc')?.addEventListener('click', () => {
+      minutes += 5;
+      if (valEl) valEl.textContent = minutes;
+    });
+    document.getElementById('step-dec')?.addEventListener('click', () => {
+      if (minutes > 5) minutes -= 5;
+      if (valEl) valEl.textContent = minutes;
+    });
+  </script>
+</body></html>

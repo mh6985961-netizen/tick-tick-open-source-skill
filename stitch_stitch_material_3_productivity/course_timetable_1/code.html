@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+
+<html class="h-full bg-surface-container-lowest" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=JetBrains+Mono:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-background": "#1a1c1c", "surface-container-highest": "#e2e2e2", "error": "#ba1a1a", "secondary-fixed": "#d9e3f4", "surface-dim": "#dadada", "on-primary": "#ffffff", "secondary-container": "#d6e0f1", "outline": "#76777d", "on-primary-fixed-variant": "#404758", "tertiary-fixed-dim": "#c0c7d3", "primary-fixed-dim": "#c0c6db", "inverse-primary": "#c0c6db", "surface-container": "#eeeeee", "primary-fixed": "#dce2f7", "on-secondary-container": "#596372", "on-secondary-fixed": "#121c28", "surface-bright": "#f9f9f9", "tertiary-fixed": "#dce3f0", "background": "#f9f9f9", "on-tertiary": "#ffffff", "on-secondary": "#ffffff", "outline-variant": "#c6c6cd", "error-container": "#ffdad6", "on-tertiary-fixed": "#151c25", "tertiary-container": "#151c25", "inverse-on-surface": "#f0f1f1", "surface-container-low": "#f3f3f4", "on-surface": "#1a1c1c", "surface-container-high": "#e8e8e8", "on-error-container": "#93000a", "primary-container": "#141b2b", "on-surface-variant": "#45464c", "on-tertiary-fixed-variant": "#404752", "surface-container-lowest": "#ffffff", "on-tertiary-container": "#7d8490", "inverse-surface": "#2f3131", "secondary-fixed-dim": "#bdc7d8", "secondary": "#555f6d", "on-primary-fixed": "#141b2b", "primary": "#000000", "tertiary": "#000000", "on-secondary-fixed-variant": "#3e4755", "surface-variant": "#e2e2e2", "surface": "#f9f9f9", "on-error": "#ffffff", "surface-tint": "#575e70", "on-primary-container": "#7d8497" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-xs": "0.25rem", "space-md": "1rem", "space-sm": "0.5rem", "gutter": "1.5rem", "margin-lg": "4rem", "space-xl": "2.5rem", "margin": "2rem", "gutter-sm": "1rem", "margin-sm": "1rem", "space-lg": "1.5rem", "gutter-lg": "2rem" }, "fontFamily": { "headline-md": ["Geist"], "label-sm": ["JetBrains Mono"], "label-md": ["JetBrains Mono"], "headline-lg": ["Geist"], "display-xl-mobile": ["Geist"], "body-lg": ["Geist"], "headline-lg-mobile": ["Geist"], "headline-sm": ["Geist"], "display-xl": ["Geist"], "label-lg": ["JetBrains Mono"], "title-md": ["Geist"], "body-md": ["Geist"], "body-sm": ["Geist"] }, "fontSize": { "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "500" }], "label-md": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "600" }], "display-xl-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "display-xl": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.04em", "fontWeight": "700" }], "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface-container-lowest text-on-surface antialiased min-h-full flex flex-col"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-sm flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><button aria-label="Go back" class="w-11 h-11 flex items-center justify-center rounded-lg text-primary hover:bg-surface-container-low transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[20px]">arrow_back</span></button><h1 class="font-title-md text-title-md text-primary tracking-tight">Course Timetable</h1></div><div class="flex items-center gap-space-xs"><button aria-label="Select term" class="h-11 px-space-sm flex items-center gap-1 text-primary hover:bg-surface-container-low rounded-lg transition-colors" type="button"><span class="font-label-md text-label-md tracking-wider uppercase text-on-surface-variant">Fall 24</span><span class="material-symbols-outlined text-[18px]">unfold_more</span></button><button aria-label="Add course" class="w-11 h-11 flex items-center justify-center rounded-lg text-primary hover:bg-surface-container-low transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">add</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 w-full bg-surface-container-lowest pt-16 pb-safe"><div class="flex flex-col w-full pb-12">
+<!-- SEC: Grounding Category Header & Status -->
+<section class="px-gutter-sm pt-space-md pb-space-lg flex flex-col gap-space-sm bg-surface-container-lowest">
+<div class="flex flex-wrap items-center justify-between gap-space-xs">
+<span class="font-label-sm text-label-sm tracking-wider uppercase text-on-surface-variant">
+        ACADEMIC SCHEDULING ENGINE • SCR-CAL-004
+      </span>
+<div class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-surface-container-low text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Current Cycle: Odd Week (Wk 07)</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs mt-space-xs">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight">
+        Course Timetable
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+        Weekly academic schedule with multi-period class grids, odd/even alternating week cycle rules, classroom location tags, and instructor office hours.
+      </p>
+</div>
+</section>
+<!-- SEC 01: Semester & Week Cycle Selector -->
+<section class="px-gutter-sm py-space-md flex flex-col gap-space-md bg-surface-container-lowest">
+<!-- Term Switcher Card -->
+<div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-low">
+<div class="flex flex-col gap-0.5 min-w-0">
+<div class="flex items-center gap-1 text-primary">
+<span class="font-title-md text-title-md tracking-tight">Spring 2026 Semester</span>
+<span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">Feb 02 – Jun 18, 2026 • 16 Weeks</span>
+</div>
+<div class="flex items-center gap-1 px-space-sm py-1 rounded bg-surface-container-lowest text-primary">
+<span class="material-symbols-outlined text-[16px]">event_repeat</span>
+<span class="font-label-md text-label-md">Sync Active</span>
+</div>
+</div>
+<!-- Cycle Selector Segmented Controls -->
+<div class="flex flex-col gap-space-xs">
+<div class="grid grid-cols-3 p-1 rounded-xl bg-surface-container-low gap-1">
+<button class="py-2 rounded-lg font-label-md text-label-md transition-all text-on-surface-variant hover:text-primary" type="button">
+          All Weeks
+        </button>
+<button class="py-2 rounded-lg font-label-md text-label-md transition-all bg-primary text-on-primary font-semibold shadow-sm" type="button">
+          Odd Week (Current)
+        </button>
+<button class="py-2 rounded-lg font-label-md text-label-md transition-all text-on-surface-variant hover:text-primary" type="button">
+          Even Week
+        </button>
+</div>
+<div class="flex items-start gap-1.5 px-space-xs">
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant mt-0.5">info</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant leading-relaxed">
+          Odd/Even alternating cycle active. Courses scheduled for “Odd Weeks Only” or “Every Week” are rendered below.
+        </p>
+</div>
+</div>
+<!-- Quick Jump to Current Day -->
+<div class="flex items-center justify-between px-space-md py-space-sm rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">schedule</span>
+<span class="font-label-md text-label-md text-primary font-semibold">Today: Wednesday, Period 3</span>
+</div>
+<button class="font-label-sm text-label-sm text-primary uppercase tracking-wider underline underline-offset-2" type="button">
+        Jump to Now
+      </button>
+</div>
+</section>
+<!-- SEC: Quick Action Bar -->
+<section class="px-gutter-sm py-space-sm flex flex-wrap items-center gap-space-sm bg-surface-container-lowest">
+<button class="flex-1 min-w-[140px] h-11 px-space-md flex items-center justify-center gap-space-xs rounded-xl bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider hover:bg-neutral-800 transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Add New Course</span>
+</button>
+<button class="h-11 px-space-md flex items-center justify-center gap-space-xs rounded-xl bg-surface-container-lowest text-primary hover:bg-surface-container-low font-label-md text-label-md uppercase tracking-wider transition-colors shadow-[0_0_0_1px_rgba(0,0,0,0.1)]" type="button">
+<span class="material-symbols-outlined text-[18px]">upload_file</span>
+<span>Import Syllabus</span>
+</button>
+<button aria-label="Timetable Settings" class="w-11 h-11 flex items-center justify-center rounded-xl bg-surface-container-lowest text-primary hover:bg-surface-container-low transition-colors shadow-[0_0_0_1px_rgba(0,0,0,0.1)]" type="button">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</button>
+</section>
+<!-- SEC 02: Weekly Course Timetable Grid / Agenda Matrix -->
+<section class="px-gutter-sm pt-space-lg pb-space-md flex flex-col gap-space-md bg-surface-container-lowest">
+<!-- Day of Week Selector Strip -->
+<div class="flex items-center justify-between gap-1 overflow-x-auto pb-1 -mx-gutter-sm px-gutter-sm">
+<button class="flex-1 min-w-[44px] py-2.5 flex flex-col items-center justify-center rounded-xl bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container-low transition-colors" type="button">
+<span class="font-label-sm text-label-sm">MON</span>
+<span class="font-title-md text-title-md font-bold text-on-surface-variant">02</span>
+</button>
+<button class="flex-1 min-w-[44px] py-2.5 flex flex-col items-center justify-center rounded-xl bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container-low transition-colors" type="button">
+<span class="font-label-sm text-label-sm">TUE</span>
+<span class="font-title-md text-title-md font-bold text-on-surface-variant">03</span>
+</button>
+<button class="flex-1 min-w-[44px] py-2.5 flex flex-col items-center justify-center rounded-xl bg-primary text-on-primary shadow-sm transition-all" type="button">
+<span class="font-label-sm text-label-sm tracking-wider">WED</span>
+<span class="font-title-md text-title-md font-bold text-on-primary">04</span>
+</button>
+<button class="flex-1 min-w-[44px] py-2.5 flex flex-col items-center justify-center rounded-xl bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container-low transition-colors" type="button">
+<span class="font-label-sm text-label-sm">THU</span>
+<span class="font-title-md text-title-md font-bold text-on-surface-variant">05</span>
+</button>
+<button class="flex-1 min-w-[44px] py-2.5 flex flex-col items-center justify-center rounded-xl bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container-low transition-colors" type="button">
+<span class="font-label-sm text-label-sm">FRI</span>
+<span class="font-title-md text-title-md font-bold text-on-surface-variant">06</span>
+</button>
+<button class="flex-1 min-w-[44px] py-2.5 flex flex-col items-center justify-center rounded-xl bg-surface-container-low/50 text-outline hover:bg-surface-container-low transition-colors" type="button">
+<span class="font-label-sm text-label-sm text-outline">SAT</span>
+<span class="font-title-md text-title-md font-bold text-outline">07</span>
+</button>
+<button class="flex-1 min-w-[44px] py-2.5 flex flex-col items-center justify-center rounded-xl bg-surface-container-low/50 text-outline hover:bg-surface-container-low transition-colors" type="button">
+<span class="font-label-sm text-label-sm text-outline">SUN</span>
+<span class="font-title-md text-title-md font-bold text-outline">08</span>
+</button>
+</div>
+<!-- Daily Agenda Stream for Wednesday -->
+<div class="flex flex-col gap-space-md mt-space-xs">
+<!-- Period 1: Completed -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-on-surface-variant px-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Period 01 • 08:30 – 10:05</span>
+<span class="font-label-sm text-label-sm flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+            Completed
+          </span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low/60 flex flex-col gap-space-sm opacity-75">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface-variant tracking-wider uppercase">CS 3410</span>
+<h3 class="font-title-md text-title-md text-primary tracking-tight line-through">Computer Systems & Architecture</h3>
+</div>
+<span class="px-space-sm py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm uppercase">Every Week</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-md text-on-surface-variant font-body-sm text-body-sm pt-space-xs">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span>Turing Hall 302</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">person</span>
+<span>Prof. M. Vance</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Period 2: In Progress -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between px-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold text-primary">Period 02 • 10:20 – 11:55</span>
+<div class="px-space-sm py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-semibold tracking-wider uppercase flex items-center gap-1 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary animate-ping"></span>
+            IN PROGRESS • 25m Left
+          </div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-[0_0_0_2px_rgba(0,0,0,0.9)] flex flex-col gap-space-sm relative">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-bold text-primary tracking-wider uppercase">MATH 2940</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm font-semibold uppercase">Odd Weeks Only</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary tracking-tight mt-0.5">Linear Algebra for Engineers</h3>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-md text-on-surface-variant font-body-sm text-body-sm pt-space-xs">
+<div class="flex items-center gap-1 text-primary font-medium">
+<span class="material-symbols-outlined text-[16px]">meeting_room</span>
+<span>Olin Hall 155 (Auditorium B)</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">person</span>
+<span>Dr. Sarah Chen</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-low h-1 rounded-full overflow-hidden mt-space-xs">
+<div class="bg-primary h-full rounded-full" style="width: 70%"></div>
+</div>
+</div>
+</div>
+<!-- Lunch Break Interval -->
+<div class="py-space-sm px-space-md rounded-lg bg-surface-container-low flex items-center justify-between text-on-surface-variant">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px]">restaurant</span>
+<span class="font-label-sm text-label-sm tracking-wider uppercase">11:55 – 13:00 • Campus Lunch & Study Block</span>
+</div>
+<span class="font-label-sm text-label-sm">65m break</span>
+</div>
+<!-- Period 3: Upcoming 1 -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-on-surface-variant px-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Period 03 • 13:15 – 14:50</span>
+<span class="font-label-sm text-label-sm text-primary font-medium">Starts in 1h 20m</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface-variant tracking-wider uppercase">PHYS 2213</span>
+<h3 class="font-title-md text-title-md text-primary tracking-tight">Electromagnetism & Optics (Lab)</h3>
+</div>
+<span class="px-space-sm py-0.5 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm uppercase">Every Week</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-md text-on-surface-variant font-body-sm text-body-sm pt-space-xs">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">science</span>
+<span>Lab: Rockefeller 112</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">person</span>
+<span>Dr. K. Thorne</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Period 4: Upcoming 2 -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-on-surface-variant px-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Period 04 • 15:05 – 16:40</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Upcoming • 15:05</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface-variant tracking-wider uppercase">ENG 2000</span>
+<h3 class="font-title-md text-title-md text-primary tracking-tight">Technical Communications Seminar</h3>
+</div>
+<span class="px-space-sm py-0.5 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm uppercase">Odd Weeks Only</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-md text-on-surface-variant font-body-sm text-body-sm pt-space-xs">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">record_voice_over</span>
+<span>Seminar Room: Hollister 204</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">person</span>
+<span>Prof. L. Howard</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SEC: Mini Full Weekly Matrix Overview -->
+<section class="px-gutter-sm py-space-md flex flex-col gap-space-sm bg-surface-container-lowest">
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">grid_view</span>
+<h4 class="font-title-md text-title-md text-primary tracking-tight">Full Week Schedule Overview</h4>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">5 Days • 5 Periods</span>
+</div>
+<!-- Compact 5x5 Matrix Grid Table -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left font-label-sm text-label-sm">
+<thead>
+<tr class="text-on-surface-variant uppercase">
+<th class="py-2 pr-2 font-medium">Slot</th>
+<th class="py-2 px-1 text-center font-medium">M</th>
+<th class="py-2 px-1 text-center font-medium">T</th>
+<th class="py-2 px-1 text-center font-bold text-primary bg-surface-container rounded-t">W</th>
+<th class="py-2 px-1 text-center font-medium">T</th>
+<th class="py-2 px-1 text-center font-medium">F</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<tr>
+<td class="py-2 pr-2 text-on-surface-variant font-medium">P1</td>
+<td class="py-2 px-1 text-center"><span class="px-1 py-0.5 rounded bg-surface-container-highest text-on-surface">CS341</span></td>
+<td class="py-2 px-1 text-center"><span class="text-outline">—</span></td>
+<td class="py-2 px-1 text-center bg-surface-container"><span class="px-1 py-0.5 rounded bg-primary text-on-primary">CS341</span></td>
+<td class="py-2 px-1 text-center"><span class="text-outline">—</span></td>
+<td class="py-2 px-1 text-center"><span class="px-1 py-0.5 rounded bg-surface-container-highest text-on-surface">CS341</span></td>
+</tr>
+<tr>
+<td class="py-2 pr-2 text-on-surface-variant font-medium">P2</td>
+<td class="py-2 px-1 text-center"><span class="text-outline">—</span></td>
+<td class="py-2 px-1 text-center"><span class="px-1 py-0.5 rounded bg-surface-container-highest text-on-surface">M294</span></td>
+<td class="py-2 px-1 text-center bg-surface-container"><span class="px-1 py-0.5 rounded bg-primary text-on-primary">M294</span></td>
+<td class="py-2 px-1 text-center"><span class="px-1 py-0.5 rounded bg-surface-container-highest text-on-surface">M294</span></td>
+<td class="py-2 px-1 text-center"><span class="text-outline">—</span></td>
+</tr>
+<tr>
+<td class="py-2 pr-2 text-on-surface-variant font-medium">P3</td>
+<td class="py-2 px-1 text-center"><span class="px-1 py-0.5 rounded bg-surface-container-highest text-on-surface">P221</span></td>
+<td class="py-2 px-1 text-center"><span class="text-outline">—</span></td>
+<td class="py-2 px-1 text-center bg-surface-container"><span class="px-1 py-0.5 rounded bg-surface-container-highest text-on-surface">P221</span></td>
+<td class="py-2 px-1 text-center"><span class="px-1 py-0.5 rounded bg-surface-container-highest text-on-surface">P221</span></td>
+<td class="py-2 px-1 text-center"><span class="px-1 py-0.5 rounded bg-surface-container-highest text-on-surface">LAB</span></td>
+</tr>
+<tr>
+<td class="py-2 pr-2 text-on-surface-variant font-medium">P4</td>
+<td class="py-2 px-1 text-center"><span class="text-outline">—</span></td>
+<td class="py-2 px-1 text-center"><span class="px-1 py-0.5 rounded bg-surface-container-highest text-on-surface">E200</span></td>
+<td class="py-2 px-1 text-center bg-surface-container"><span class="px-1 py-0.5 rounded bg-surface-container-highest text-on-surface">E200</span></td>
+<td class="py-2 px-1 text-center"><span class="text-outline">—</span></td>
+<td class="py-2 px-1 text-center"><span class="text-outline">—</span></td>
+</tr>
+<tr>
+<td class="py-2 pr-2 text-on-surface-variant font-medium">P5</td>
+<td class="py-2 px-1 text-center"><span class="px-1 py-0.5 rounded bg-surface-container-highest text-on-surface">OFFC</span></td>
+<td class="py-2 px-1 text-center"><span class="px-1 py-0.5 rounded bg-surface-container-highest text-on-surface">SEM</span></td>
+<td class="py-2 px-1 text-center bg-surface-container rounded-b"><span class="text-outline">—</span></td>
+<td class="py-2 px-1 text-center"><span class="px-1 py-0.5 rounded bg-surface-container-highest text-on-surface">OFFC</span></td>
+<td class="py-2 px-1 text-center"><span class="text-outline">—</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant pt-space-xs font-label-sm text-label-sm">
+<span>Cycle filter: Odd Week active</span>
+<button class="text-primary underline font-medium" type="button">Expand Full View</button>
+</div>
+</div>
+</section>
+<!-- SEC 03: Academic Timetable Settings & Cycle Rules -->
+<section class="px-gutter-sm pt-space-lg pb-space-md flex flex-col gap-space-md bg-surface-container-lowest">
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm tracking-wider uppercase text-on-surface-variant">SEC 03 • Configuration</span>
+<h3 class="font-title-md text-title-md text-primary tracking-tight">Cycle Rules & Timetable Settings</h3>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Toggle: Show Weekend Days -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-center justify-between gap-space-md">
+<div class="flex flex-col gap-0.5">
+<span class="font-body-md text-body-md font-semibold text-primary">Show Weekend Days (Sat / Sun)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Hides weekend columns from academic timetable when no weekend lectures exist</span>
+</div>
+<button aria-checked="false" class="w-12 h-6 rounded-full bg-surface-container-highest flex items-center p-0.5 transition-colors" role="switch" type="button">
+<div class="w-5 h-5 rounded-full bg-surface-container-lowest shadow-sm"></div>
+</button>
+</div>
+<!-- Dropdown: Period Duration Scheme -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs">
+<label class="font-body-md text-body-md font-semibold text-primary">Period Duration Scheme</label>
+<div class="relative mt-1">
+<select class="w-full h-11 px-space-md appearance-none rounded-lg bg-surface-container-lowest text-primary font-body-md text-body-md outline-none focus:ring-1 focus:ring-primary shadow-sm">
+<option>90 min double periods [Active: Cornell Standard]</option>
+<option>50 min single periods</option>
+<option>45 min modular blocks</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-[20px] pointer-events-none text-on-surface-variant">expand_more</span>
+</div>
+</div>
+<!-- Dropdown: Class Reminder Alarms -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs">
+<label class="font-body-md text-body-md font-semibold text-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">notifications</span>
+          Class Reminder Alarms
+        </label>
+<div class="relative mt-1">
+<select class="w-full h-11 px-space-md appearance-none rounded-lg bg-surface-container-lowest text-primary font-body-md text-body-md outline-none focus:ring-1 focus:ring-primary shadow-sm">
+<option>15 mins before lecture</option>
+<option>10 mins before lecture</option>
+<option>30 mins before lecture</option>
+<option>At class start time</option>
+<option>Disabled</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-[20px] pointer-events-none text-on-surface-variant">expand_more</span>
+</div>
+</div>
+<!-- Stepper: Semester Total Weeks -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-center justify-between gap-space-md">
+<div class="flex flex-col gap-0.5">
+<span class="font-body-md text-body-md font-semibold text-primary">Semester Total Weeks</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Determines parity rotation limit</span>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-lowest p-1 rounded-lg shadow-sm">
+<button class="w-8 h-8 flex items-center justify-center rounded text-primary hover:bg-surface-container-low font-bold text-[18px]" type="button">−</button>
+<span class="font-label-md text-label-md font-bold px-2 text-primary">16 Wks</span>
+<button class="w-8 h-8 flex items-center justify-center rounded text-primary hover:bg-surface-container-low font-bold text-[18px]" type="button">+</button>
+</div>
+</div>
+<!-- Toggle: Odd/Even Auto-Alternation -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-center justify-between gap-space-md">
+<div class="flex flex-col gap-0.5">
+<span class="font-body-md text-body-md font-semibold text-primary">Odd/Even Week Auto-Alternation</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Automatically flips timetable view between odd and even cycles based on current academic calendar week</span>
+</div>
+<button aria-checked="true" class="w-12 h-6 rounded-full bg-primary flex items-center justify-end p-0.5 transition-colors" role="switch" type="button">
+<div class="w-5 h-5 rounded-full bg-surface-container-lowest shadow-sm"></div>
+</button>
+</div>
+<!-- Toggle: Export Timetable to System Calendar -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-center justify-between gap-space-md">
+<div class="flex flex-col gap-0.5">
+<span class="font-body-md text-body-md font-semibold text-primary">Export Timetable to System Calendar</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Syncs lecture slots into local device CalendarContract without third-party cloud lock-in</span>
+</div>
+<button aria-checked="true" class="w-12 h-6 rounded-full bg-primary flex items-center justify-end p-0.5 transition-colors" role="switch" type="button">
+<div class="w-5 h-5 rounded-full bg-surface-container-lowest shadow-sm"></div>
+</button>
+</div>
+</div>
+</section>
+<!-- Local-First Sovereignty Card & Action Controls -->
+<section class="px-gutter-sm pt-space-md pb-space-lg flex flex-col gap-space-lg bg-surface-container-lowest">
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-bold">
+          OFFLINE-FIRST ENGINE • RFC-5545 COMPLIANT • ZERO GATING
+        </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+        Full academic course scheduling with alternating week cycles, location indexing, and exam reminders stored locally on your device with zero paywalls or external server requirements.
+      </p>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col gap-space-sm">
+<button class="w-full h-12 flex items-center justify-center gap-space-xs rounded-xl bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider font-semibold hover:bg-neutral-800 transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">save</span>
+<span>Save Timetable Configuration</span>
+</button>
+<button class="w-full h-11 flex items-center justify-center rounded-xl bg-surface-container-lowest text-on-surface-variant hover:text-primary hover:bg-surface-container-low font-label-md text-label-md uppercase tracking-wider transition-colors" type="button">
+        Reset Semester Schedule
+      </button>
+</div>
+</section>
+</div></main></body></html>

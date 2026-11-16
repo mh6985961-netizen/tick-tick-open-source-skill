@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-primary-container": "#7d8497", "surface": "#f9f9f9", "background": "#f9f9f9", "tertiary-fixed-dim": "#c0c7d3", "on-secondary": "#ffffff", "primary-fixed": "#dce2f7", "on-secondary-container": "#596372", "error-container": "#ffdad6", "tertiary-container": "#151c25", "on-tertiary": "#ffffff", "secondary-container": "#d6e0f1", "on-primary": "#ffffff", "inverse-primary": "#c0c6db", "surface-container": "#eeeeee", "tertiary": "#000000", "primary-fixed-dim": "#c0c6db", "on-surface": "#1a1c1c", "on-tertiary-fixed-variant": "#404752", "inverse-surface": "#2f3131", "surface-dim": "#dadada", "on-primary-fixed-variant": "#404758", "on-surface-variant": "#45464c", "secondary": "#555f6d", "on-secondary-fixed": "#121c28", "surface-container-high": "#e8e8e8", "surface-bright": "#f9f9f9", "on-tertiary-container": "#7d8490", "inverse-on-surface": "#f0f1f1", "outline": "#76777d", "on-secondary-fixed-variant": "#3e4755", "secondary-fixed": "#d9e3f4", "error": "#ba1a1a", "tertiary-fixed": "#dce3f0", "on-tertiary-fixed": "#151c25", "surface-container-low": "#f3f3f4", "on-error": "#ffffff", "surface-container-lowest": "#ffffff", "surface-tint": "#575e70", "on-error-container": "#93000a", "surface-container-highest": "#e2e2e2", "primary": "#000000", "on-background": "#1a1c1c", "outline-variant": "#c6c6cd", "on-primary-fixed": "#141b2b", "surface-variant": "#e2e2e2", "secondary-fixed-dim": "#bdc7d8", "primary-container": "#141b2b" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "gutter-lg": "2rem", "margin-lg": "4rem", "space-xl": "2.5rem", "margin-sm": "1rem", "space-sm": "0.5rem", "margin": "2rem", "gutter": "1.5rem", "gutter-sm": "1rem", "space-lg": "1.5rem", "space-md": "1rem", "space-xs": "0.25rem" }, fontFamily: { "title-md": ["Geist"], "label-md": ["JetBrains Mono"], "body-sm": ["Geist"], "display-xl": ["Geist"], "headline-md": ["Geist"], "label-sm": ["JetBrains Mono"], "display-xl-mobile": ["Geist"], "headline-lg": ["Geist"], "body-md": ["Geist"], "headline-lg-mobile": ["Geist"], "headline-sm": ["Geist"], "label-lg": ["JetBrains Mono"], "body-lg": ["Geist"] }, fontSize: { "title-md": ["16px", { lineHeight: "24px", letterSpacing: "-0.01em", fontWeight: "600" }], "label-md": ["11px", { lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "500" }], "body-sm": ["12px", { lineHeight: "18px", letterSpacing: "0em", fontWeight: "400" }], "display-xl": ["56px", { lineHeight: "64px", letterSpacing: "-0.04em", fontWeight: "700" }], "headline-md": ["28px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "600" }], "label-sm": ["10px", { lineHeight: "14px", letterSpacing: "0.06em", fontWeight: "500" }], "display-xl-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.03em", fontWeight: "700" }], "headline-lg": ["40px", { lineHeight: "48px", letterSpacing: "-0.03em", fontWeight: "600" }], "body-md": ["14px", { lineHeight: "22px", letterSpacing: "-0.005em", fontWeight: "400" }], "headline-lg-mobile": ["28px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "600" }], "headline-sm": ["20px", { lineHeight: "28px", letterSpacing: "-0.015em", fontWeight: "600" }], "label-lg": ["13px", { lineHeight: "18px", letterSpacing: "0.02em", fontWeight: "500" }], "body-lg": ["18px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "400" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface-container-lowest font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-14 px-margin-sm flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><button aria-label="Go back" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors focus:outline-none" onclick="history.back()"><span class="material-symbols-outlined text-[20px]">arrow_back</span></button><h1 class="font-title-md text-title-md text-on-surface truncate">Notifications</h1></div><div class="flex items-center gap-space-xs"><button aria-label="Mark all read" class="h-11 px-space-sm flex items-center gap-space-xs text-on-surface hover:text-primary transition-colors focus:outline-none" title="Mark all read"><span class="material-symbols-outlined text-[20px]">done_all</span><span class="font-label-md text-label-md hidden sm:inline uppercase tracking-wider">Mark all read</span></button><button aria-label="Notification options" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors focus:outline-none" title="More options"><span class="material-symbols-outlined text-[20px]">more_vert</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-14 pb-safe bg-surface-container-lowest min-h-screen"><div class="flex flex-col w-full px-margin-sm space-y-space-lg pb-space-xl">
+<!-- Interactive Filter Bar -->
+<section class="flex flex-col gap-space-sm pt-space-xs">
+<div class="flex items-center justify-between gap-space-sm">
+<div aria-label="Filter notifications" class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-0.5" role="tablist">
+<button aria-selected="true" class="filter-chip px-3 py-1.5 rounded-lg font-label-md text-label-md bg-primary text-on-primary shadow-sm whitespace-nowrap transition-transform active:scale-95" id="filter-all" onclick="setFilter('all')">
+          All (5)
+        </button>
+<button aria-selected="false" class="filter-chip px-3 py-1.5 rounded-lg font-label-md text-label-md bg-surface-container-low text-on-surface hover:bg-surface-container whitespace-nowrap transition-all active:scale-95" id="filter-mentions" onclick="setFilter('mentions')">
+          Mentions (2)
+        </button>
+<button aria-selected="false" class="filter-chip px-3 py-1.5 rounded-lg font-label-md text-label-md bg-surface-container-low text-on-surface hover:bg-surface-container whitespace-nowrap transition-all active:scale-95" id="filter-deadlines" onclick="setFilter('deadlines')">
+          Deadlines (1)
+        </button>
+<button aria-selected="false" class="filter-chip px-3 py-1.5 rounded-lg font-label-md text-label-md bg-surface-container-low text-on-surface hover:bg-surface-container whitespace-nowrap transition-all active:scale-95" id="filter-system" onclick="setFilter('system')">
+          System &amp; Sync (2)
+        </button>
+</div>
+<button aria-label="Clear all notifications" class="shrink-0 flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-secondary hover:text-primary hover:bg-surface-container transition-colors focus:outline-none" onclick="clearAllNotifications()" title="Clear All">
+<span class="material-symbols-outlined text-[16px]">cleaning_services</span>
+<span class="font-label-md text-label-md hidden xs:inline tracking-wider uppercase">Clear</span>
+</button>
+</div>
+</section>
+<!-- Summary / Architectural Status Banner -->
+<section class="bg-surface-container-lowest shadow-sm rounded-xl p-space-md flex flex-col gap-space-xs relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="inline-flex items-center gap-1.5 bg-surface-container px-2.5 py-1 rounded-full text-on-surface">
+<span aria-hidden="true" class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Unread Updates • 3 New</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase">SCR-NOTIF-001</span>
+</div>
+<div class="mt-space-xs">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Activity Stream &amp; Alerts</h2>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">
+        Local-first event log. Peer sync alerts, deadline triggers, and collaboration updates.
+      </p>
+</div>
+</section>
+<!-- Section 1: Today • Unread -->
+<section class="flex flex-col gap-space-sm" id="section-today">
+<div class="flex items-center justify-between px-0.5">
+<div class="flex items-center gap-2">
+<h3 class="font-title-md text-title-md text-on-surface uppercase tracking-tight">Today • Unread</h3>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 bg-primary text-on-primary rounded font-mono" id="unread-count-badge">3</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-mono tracking-wider">LATEST 12m</span>
+</div>
+<!-- Notification Cards Stack -->
+<div class="flex flex-col gap-space-sm">
+<!-- Card 1: Elena Mention -->
+<article class="notif-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm transition-all" data-category="mentions" id="notif-card-1">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="relative shrink-0 mt-0.5">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center font-label-md text-label-md font-bold text-on-surface">
+                ER
+              </div>
+<div class="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[11px]" style="font-variation-settings: 'FILL' 1;">chat_bubble</span>
+</div>
+</div>
+<div class="min-w-0 flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-on-surface truncate">Elena Rostova</span>
+<span class="font-body-sm text-body-sm text-secondary">mentioned you</span>
+</div>
+<span class="font-label-md text-label-md text-secondary truncate">in ~Engineering • Sprint Backlog</span>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="font-label-sm text-label-sm text-secondary font-mono">12m ago</span>
+<span class="unread-dot w-2 h-2 rounded-full bg-primary" title="Unread"></span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg">
+<p class="font-body-md text-body-md text-on-surface italic">
+            “@alex Could you verify the CRDT lockup resolution on worker node 2 before we trigger production deployment?”
+          </p>
+</div>
+<div class="flex items-center justify-end gap-space-xs pt-1">
+<button class="px-3 py-1.5 rounded-lg font-label-md text-label-md bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors active:scale-98" onclick="markCardRead('notif-card-1')">
+            Mark as Read
+          </button>
+<button class="px-3 py-1.5 rounded-lg font-label-md text-label-md bg-primary text-on-primary hover:bg-tertiary-container transition-colors flex items-center gap-1 active:scale-98">
+<span>Reply / Open Task</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Card 2: Critical Deadline Alert -->
+<article class="notif-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm transition-all" data-category="deadlines" id="notif-card-2">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="w-9 h-9 shrink-0 rounded-lg bg-surface-container flex items-center justify-center text-on-surface mt-0.5">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">alarm</span>
+</div>
+<div class="min-w-0 flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-on-surface bg-surface-container px-1.5 py-0.5 rounded">Urgent Deadline</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface mt-1 truncate">Deploy Hotfix: Patch CRDT WAL Concurrency</h4>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="font-label-sm text-label-sm text-secondary font-mono">45m ago</span>
+<span class="unread-dot w-2 h-2 rounded-full bg-primary" title="Unread"></span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5 text-secondary">
+<p class="font-body-md text-body-md text-on-surface">
+            Task scheduled alarm triggered. Priority: High (!1). Geofence: Active at Engineering HQ.
+          </p>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm font-mono bg-surface-container-low px-2 py-0.5 rounded text-secondary">SLA: 15m Remaining</span>
+<span class="font-label-sm text-label-sm font-mono text-secondary">• Branch: hotfix-v2.4.9</span>
+</div>
+</div>
+<div class="flex items-center justify-end gap-space-xs pt-1">
+<button class="px-3 py-1.5 rounded-lg font-label-md text-label-md bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors active:scale-98 flex items-center gap-1" onclick="snoozeAlert('notif-card-2')">
+<span class="material-symbols-outlined text-[14px]">snooze</span>
+<span>Snooze (15m)</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg font-label-md text-label-md bg-primary text-on-primary hover:bg-tertiary-container transition-colors active:scale-98">
+            View Task
+          </button>
+</div>
+</article>
+<!-- Card 3: Milestone / Achievement -->
+<article class="notif-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm transition-all" data-category="system" id="notif-card-3">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="w-9 h-9 shrink-0 rounded-lg bg-surface-container flex items-center justify-center text-on-surface mt-0.5">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+</div>
+<div class="min-w-0 flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-secondary">Milestone Unlocked</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface mt-0.5">Century Club</h4>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="font-label-sm text-label-sm text-secondary font-mono">2h ago</span>
+<span class="unread-dot w-2 h-2 rounded-full bg-primary" title="Unread"></span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-secondary">
+          You completed your 100th task with zero overdue penalties! +500 XP added to Productivity Score.
+        </p>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-on-surface"></span>
+<span class="font-label-sm text-label-sm font-mono text-secondary">Local Ledger Hash: 0x8F9C</span>
+</div>
+<button class="px-3 py-1.5 rounded-lg font-label-md text-label-md bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors active:scale-98">
+            View Achievements
+          </button>
+</div>
+</article>
+</div>
+</section>
+<!-- Section 2: Yesterday & Earlier -->
+<section class="flex flex-col gap-space-sm" id="section-earlier">
+<div class="flex items-center justify-between px-0.5">
+<div class="flex items-center gap-2">
+<h3 class="font-title-md text-title-md text-on-surface uppercase tracking-tight">Yesterday &amp; Earlier</h3>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 bg-surface-container text-secondary rounded font-mono">2 items</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-mono uppercase tracking-wider">Archived</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Card 4: Peer Sync / System -->
+<article class="notif-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-xs opacity-90 transition-all" data-category="system" id="notif-card-4">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="w-9 h-9 shrink-0 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary mt-0.5">
+<span class="material-symbols-outlined text-[18px]">sync_alt</span>
+</div>
+<div class="min-w-0 flex flex-col">
+<h4 class="font-title-md text-title-md text-on-surface truncate">Peer Sync Synchronization</h4>
+<span class="font-body-sm text-body-sm text-secondary mt-0.5">
+                Successfully synchronized 14 offline task mutations across 4 verified mesh nodes.
+              </span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-mono shrink-0">Yesterday, 18:30</span>
+</div>
+<div class="flex items-center gap-2 mt-2">
+<span class="font-label-sm text-label-sm font-mono bg-surface-container px-2 py-0.5 rounded text-secondary">
+            Zero Telemetry • E2EE
+          </span>
+<span class="font-label-sm text-label-sm font-mono text-secondary">
+            Transport: WebRTC DataChannel
+          </span>
+</div>
+</article>
+<!-- Card 5: List Membership / Invite -->
+<article class="notif-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-xs opacity-90 transition-all" data-category="mentions" id="notif-card-5">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="w-9 h-9 shrink-0 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary mt-0.5">
+<span class="material-symbols-outlined text-[18px]">group_add</span>
+</div>
+<div class="min-w-0 flex flex-col">
+<h4 class="font-title-md text-title-md text-on-surface truncate">New Collaborator Joined</h4>
+<span class="font-body-sm text-body-sm text-secondary mt-0.5">
+                Tariq Chen accepted your invitation to collaborate on ‘Core Platform Architecture’.
+              </span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-mono shrink-0">Nov 12, 14:15</span>
+</div>
+<div class="flex items-center gap-2 mt-2">
+<span class="font-label-sm text-label-sm font-mono bg-surface-container px-2 py-0.5 rounded text-secondary">
+            Role: Member
+          </span>
+<span class="font-label-sm text-label-sm font-mono text-secondary">
+            Direct Peer Key: 792b...a4e1
+          </span>
+</div>
+</article>
+</div>
+</section>
+<!-- Bottom Data Sovereignty Note & Settings Shortcut -->
+<section class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface shrink-0">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md uppercase tracking-wider font-semibold text-on-surface">Data Sovereignty Standard</span>
+<p class="font-body-sm text-body-sm text-secondary">
+          Notifications are generated on-device via SQLite triggers and local alarm events without third-party push telemetry.
+        </p>
+</div>
+</div>
+<div class="pt-1">
+<button class="w-full flex items-center justify-between p-space-sm rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container transition-colors shadow-sm" onclick="window.location.hash='#SCR-SET-006'">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+<span class="font-title-md text-title-md">Configure Notification Channels &amp; Rules</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-secondary">chevron_right</span>
+</button>
+</div>
+</section>
+</div>
+<script>
+  function setFilter(category) {
+    const chips = {
+      'all': document.getElementById('filter-all'),
+      'mentions': document.getElementById('filter-mentions'),
+      'deadlines': document.getElementById('filter-deadlines'),
+      'system': document.getElementById('filter-system')
+    };
+
+    // Update chip styling
+    Object.keys(chips).forEach(key => {
+      const el = chips[key];
+      if (key === category) {
+        el.className = 'filter-chip px-3 py-1.5 rounded-lg font-label-md text-label-md bg-primary text-on-primary shadow-sm whitespace-nowrap transition-transform active:scale-95';
+        el.setAttribute('aria-selected', 'true');
+      } else {
+        el.className = 'filter-chip px-3 py-1.5 rounded-lg font-label-md text-label-md bg-surface-container-low text-on-surface hover:bg-surface-container whitespace-nowrap transition-all active:scale-95';
+        el.setAttribute('aria-selected', 'false');
+      }
+    });
+
+    // Filter cards
+    const cards = document.querySelectorAll('.notif-card');
+    cards.forEach(card => {
+      if (category === 'all' || card.getAttribute('data-category') === category) {
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  function markCardRead(cardId) {
+    const card = document.getElementById(cardId);
+    if (!card) return;
+    const dot = card.querySelector('.unread-dot');
+    if (dot) dot.remove();
+    card.classList.add('opacity-90');
+
+    // Update unread badge count
+    const remaining = document.querySelectorAll('#section-today .unread-dot').length;
+    const badge = document.getElementById('unread-count-badge');
+    if (badge) {
+      badge.textContent = remaining;
+      if (remaining === 0) {
+        badge.classList.remove('bg-primary', 'text-on-primary');
+        badge.classList.add('bg-surface-container', 'text-secondary');
+      }
+    }
+  }
+
+  function snoozeAlert(cardId) {
+    const card = document.getElementById(cardId);
+    if (!card) return;
+    card.style.transition = 'all 0.3s ease';
+    card.style.opacity = '0.3';
+    setTimeout(() => {
+      card.style.display = 'none';
+    }, 300);
+  }
+
+  function clearAllNotifications() {
+    const todayCards = document.querySelectorAll('#section-today .notif-card');
+    todayCards.forEach(card => {
+      const dot = card.querySelector('.unread-dot');
+      if (dot) dot.remove();
+      card.classList.add('opacity-90');
+    });
+    const badge = document.getElementById('unread-count-badge');
+    if (badge) {
+      badge.textContent = '0';
+      badge.classList.remove('bg-primary', 'text-on-primary');
+      badge.classList.add('bg-surface-container', 'text-secondary');
+    }
+  }
+</script></main></body></html>

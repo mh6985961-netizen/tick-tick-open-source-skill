@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'secondary': '#555f6d', 'surface-variant': '#e2e2e2', 'inverse-primary': '#c0c6db', 'surface-container-high': '#e8e8e8', 'on-error': '#ffffff', 'on-tertiary-fixed': '#151c25', 'on-primary-container': '#7d8497', 'tertiary-fixed-dim': '#c0c7d3', 'on-tertiary': '#ffffff', 'secondary-fixed': '#d9e3f4', 'surface-container-highest': '#e2e2e2', 'on-secondary-container': '#596372', 'surface-dim': '#dadada', 'on-surface': '#1a1c1c', 'surface-bright': '#f9f9f9', 'tertiary-container': '#151c25', 'secondary-container': '#d6e0f1', 'on-secondary': '#ffffff', 'on-primary': '#ffffff', 'tertiary': '#000000', 'on-tertiary-fixed-variant': '#404752', 'tertiary-fixed': '#dce3f0', 'on-error-container': '#93000a', 'surface-container-low': '#f3f3f4', 'primary': '#000000', 'surface-tint': '#575e70', 'on-primary-fixed': '#141b2b', 'background': '#f9f9f9', 'outline': '#76777d', 'surface-container-lowest': '#ffffff', 'inverse-on-surface': '#f0f1f1', 'surface-container': '#eeeeee', 'on-surface-variant': '#45464c', 'error-container': '#ffdad6', 'on-secondary-fixed': '#121c28', 'on-tertiary-container': '#7d8490', 'on-background': '#1a1c1c', 'secondary-fixed-dim': '#bdc7d8', 'primary-container': '#141b2b', 'error': '#ba1a1a', 'on-secondary-fixed-variant': '#3e4755', 'outline-variant': '#c6c6cd', 'on-primary-fixed-variant': '#404758', 'inverse-surface': '#2f3131', 'surface': '#f9f9f9', 'primary-fixed-dim': '#c0c6db', 'primary-fixed': '#dce2f7' }, borderRadius: { DEFAULT: '0.125rem', lg: '0.25rem', xl: '0.5rem', full: '0.75rem' }, spacing: { 'space-xl': '2.5rem', 'space-sm': '0.5rem', 'margin-lg': '4rem', 'gutter-lg': '2rem', 'margin': '2rem', 'space-lg': '1.5rem', 'space-xs': '0.25rem', 'margin-sm': '1rem', 'gutter': '1.5rem', 'space-md': '1rem', 'gutter-sm': '1rem' }, fontFamily: { 'label-sm': ['JetBrains Mono'], 'title-md': ['Geist'], 'body-md': ['Geist'], 'headline-lg': ['Geist'], 'headline-md': ['Geist'], 'headline-sm': ['Geist'], 'label-lg': ['JetBrains Mono'], 'body-sm': ['Geist'], 'headline-lg-mobile': ['Geist'], 'label-md': ['JetBrains Mono'], 'display-xl-mobile': ['Geist'], 'display-xl': ['Geist'], 'body-lg': ['Geist'] }, fontSize: { 'label-sm': ['10px', { lineHeight: '14px', letterSpacing: '0.06em', fontWeight: '500' }], 'title-md': ['16px', { lineHeight: '24px', letterSpacing: '-0.01em', fontWeight: '600' }], 'body-md': ['14px', { lineHeight: '22px', letterSpacing: '-0.005em', fontWeight: '400' }], 'headline-lg': ['40px', { lineHeight: '48px', letterSpacing: '-0.03em', fontWeight: '600' }], 'headline-md': ['28px', { lineHeight: '36px', letterSpacing: '-0.02em', fontWeight: '600' }], 'headline-sm': ['20px', { lineHeight: '28px', letterSpacing: '-0.015em', fontWeight: '600' }], 'label-lg': ['13px', { lineHeight: '18px', letterSpacing: '0.02em', fontWeight: '500' }], 'body-sm': ['12px', { lineHeight: '18px', letterSpacing: '0em', fontWeight: '400' }], 'headline-lg-mobile': ['28px', { lineHeight: '36px', letterSpacing: '-0.02em', fontWeight: '600' }], 'label-md': ['11px', { lineHeight: '16px', letterSpacing: '0.04em', fontWeight: '500' }], 'display-xl-mobile': ['36px', { lineHeight: '44px', letterSpacing: '-0.03em', fontWeight: '700' }], 'display-xl': ['56px', { lineHeight: '64px', letterSpacing: '-0.04em', fontWeight: '700' }], 'body-lg': ['18px', { lineHeight: '28px', letterSpacing: '-0.01em', fontWeight: '400' }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface-container-lowest font-body-md text-body-md text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-sm flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><button aria-label="Close or Go Back" class="w-11 h-11 flex items-center justify-center rounded text-on-surface hover:bg-surface-container-low transition-colors active:scale-95" onclick="history.back()"><span class="material-symbols-outlined text-[20px]">arrow_back</span></button><h1 class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight truncate">Recurrence Rules</h1></div><div class="flex items-center gap-space-sm"><button class="min-h-[44px] px-space-md py-space-xs rounded bg-primary text-on-primary font-label-lg text-label-lg uppercase tracking-wider flex items-center justify-center hover:bg-tertiary-container active:scale-[0.99] transition-transform" type="button">Save</button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-safe bg-surface-container-lowest flex-1"><div class="flex flex-col w-full pb-12">
+<!-- SECTION 1: Contextual Header Banner -->
+<div class="px-gutter-sm pt-space-md pb-space-lg flex flex-col gap-space-xs border-b border-surface-variant">
+<div class="flex items-center justify-between gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">TEMPORAL ENGINE • SCR-TASK-008</span>
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm uppercase tracking-widest">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+        RFC-5545 COMPLIANT
+      </span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight mt-1">Recurrence Rule Builder</h2>
+<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+      Configure complex repeating frequencies, interval chains, day-of-week matrices, lunar cycles, and termination boundaries with local-first precision.
+    </p>
+</div>
+<div class="px-gutter-sm flex flex-col gap-space-lg pt-space-lg">
+<!-- SECTION 2: Live RRULE Syntax & Human Summary Card -->
+<div class="bg-primary text-on-primary rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-surface-container-high">Live Compilation</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-tertiary-container text-surface-bright">Zero Latency Evaluation</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase text-outline">Human Translation</span>
+<p class="font-title-md text-title-md text-surface-container-lowest font-medium leading-snug" id="human-summary">
+          Repeats every 2 weeks on Monday, Wednesday, and Friday until Nov 14, 2027
+        </p>
+</div>
+<div class="p-space-sm bg-tertiary-container rounded border border-secondary flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-surface-variant uppercase">Raw RFC-5545 Spec</span>
+<button class="flex items-center gap-1 text-surface-variant hover:text-surface-container-lowest font-label-sm text-label-sm transition-colors" onclick="navigator.clipboard?.writeText(document.getElementById('rrule-syntax').innerText)" type="button">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+            Copy
+          </button>
+</div>
+<p class="font-label-md text-label-md text-surface-bright break-all tracking-tight" id="rrule-syntax">
+          RRULE:FREQ=WEEKLY;INTERVAL=2;BYDAY=MO,WE,FR;UNTIL=20271114T000000Z
+        </p>
+</div>
+<div class="pt-1 flex items-center justify-between border-t border-secondary/40">
+<button class="font-label-sm text-label-sm text-surface-container-high hover:text-surface-container-lowest flex items-center gap-1" onclick="document.getElementById('projection-section').scrollIntoView({behavior: 'smooth'})" type="button">
+          Next 5 Occurrences Preview
+          <span class="material-symbols-outlined text-[14px]">expand_more</span>
+</button>
+<span class="font-label-sm text-label-sm text-secondary-fixed-dim">Status: Valid RFC-5545</span>
+</div>
+</div>
+<!-- SECTION 3: Base Frequency Selector -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">SEC 01 • PRIMARY FREQUENCY</span>
+<span class="font-label-sm text-label-sm text-secondary">FREQ=WEEKLY</span>
+</div>
+<div class="grid grid-cols-5 gap-1 p-1 bg-surface-container-low rounded-lg border border-surface-variant">
+<button class="py-2 text-center rounded font-label-sm text-label-sm transition-colors text-secondary hover:text-on-surface" type="button">Daily</button>
+<button class="py-2 text-center rounded font-label-sm text-label-sm transition-colors bg-primary text-on-primary font-medium shadow-sm" type="button">Weekly</button>
+<button class="py-2 text-center rounded font-label-sm text-label-sm transition-colors text-secondary hover:text-on-surface" type="button">Monthly</button>
+<button class="py-2 text-center rounded font-label-sm text-label-sm transition-colors text-secondary hover:text-on-surface" type="button">Yearly</button>
+<button class="py-2 text-center rounded font-label-sm text-label-sm transition-colors text-secondary hover:text-on-surface" type="button">Lunar</button>
+</div>
+</div>
+<!-- SECTION 4: Interval Cadence -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">SEC 02 • INTERVAL CADENCE</span>
+<span class="font-label-sm text-label-sm text-secondary">INTERVAL=2</span>
+</div>
+<div class="p-space-md rounded-xl border border-surface-variant bg-surface-container-lowest flex flex-col gap-space-sm">
+<div class="flex items-center justify-between gap-space-md">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Repeat Every</span>
+<span class="font-body-sm text-body-sm text-secondary">Frequency unit multiplier</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="w-10 h-10 rounded border border-surface-variant flex items-center justify-center text-on-surface hover:bg-surface-container-low active:scale-95 transition-all" id="interval-dec" type="button">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<div class="min-w-[48px] h-10 px-2 rounded border border-primary bg-surface-container-lowest flex items-center justify-center font-label-lg text-label-lg font-semibold text-on-surface">
+<span id="interval-val">2</span>
+</div>
+<button class="w-10 h-10 rounded border border-surface-variant flex items-center justify-center text-on-surface hover:bg-surface-container-low active:scale-95 transition-all" id="interval-inc" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+<span class="font-title-md text-title-md text-on-surface pl-1">Weeks</span>
+</div>
+</div>
+<div class="pt-2 border-t border-surface-container-high">
+<p class="font-body-sm text-body-sm text-secondary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">info</span>
+            Task generates a new instance every 2 weeks following completion or schedule date.
+          </p>
+</div>
+</div>
+</div>
+<!-- SECTION 5: Day-of-Week Matrix -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">SEC 03 • WEEKDAY OCCURRENCE MATRIX</span>
+<span class="font-label-sm text-label-sm text-secondary">BYDAY=MO,WE,FR</span>
+</div>
+<div class="p-space-md rounded-xl border border-surface-variant bg-surface-container-lowest flex flex-col gap-space-md">
+<!-- 7 Days Grid -->
+<div class="grid grid-cols-7 gap-1.5" id="weekday-matrix">
+<button class="day-btn h-12 flex flex-col items-center justify-center rounded border border-primary bg-primary text-on-primary font-label-sm text-label-sm transition-all" data-day="MO" type="button">
+<span class="font-semibold">MON</span>
+<span class="text-[9px] opacity-75">●</span>
+</button>
+<button class="day-btn h-12 flex flex-col items-center justify-center rounded border border-surface-variant bg-surface-container-lowest text-secondary hover:border-outline font-label-sm text-label-sm transition-all" data-day="TU" type="button">
+<span>TUE</span>
+<span class="text-[9px] opacity-0">○</span>
+</button>
+<button class="day-btn h-12 flex flex-col items-center justify-center rounded border border-primary bg-primary text-on-primary font-label-sm text-label-sm transition-all" data-day="WE" type="button">
+<span class="font-semibold">WED</span>
+<span class="text-[9px] opacity-75">●</span>
+</button>
+<button class="day-btn h-12 flex flex-col items-center justify-center rounded border border-surface-variant bg-surface-container-lowest text-secondary hover:border-outline font-label-sm text-label-sm transition-all" data-day="TH" type="button">
+<span>THU</span>
+<span class="text-[9px] opacity-0">○</span>
+</button>
+<button class="day-btn h-12 flex flex-col items-center justify-center rounded border border-primary bg-primary text-on-primary font-label-sm text-label-sm transition-all" data-day="FR" type="button">
+<span class="font-semibold">FRI</span>
+<span class="text-[9px] opacity-75">●</span>
+</button>
+<button class="day-btn h-12 flex flex-col items-center justify-center rounded border border-surface-variant bg-surface-container-lowest text-secondary hover:border-outline font-label-sm text-label-sm transition-all" data-day="SA" type="button">
+<span>SAT</span>
+<span class="text-[9px] opacity-0">○</span>
+</button>
+<button class="day-btn h-12 flex flex-col items-center justify-center rounded border border-surface-variant bg-surface-container-lowest text-secondary hover:border-outline font-label-sm text-label-sm transition-all" data-day="SU" type="button">
+<span>SUN</span>
+<span class="text-[9px] opacity-0">○</span>
+</button>
+</div>
+<!-- Presets -->
+<div class="flex flex-wrap items-center gap-1.5 pt-1">
+<span class="font-label-sm text-label-sm text-secondary mr-1 uppercase">Presets:</span>
+<button class="px-2.5 py-1 rounded bg-surface-container-low border border-surface-variant text-on-surface hover:bg-surface-container font-label-sm text-label-sm transition-colors" type="button">
+            Weekdays (M-F)
+          </button>
+<button class="px-2.5 py-1 rounded bg-surface-container-low border border-surface-variant text-on-surface hover:bg-surface-container font-label-sm text-label-sm transition-colors" type="button">
+            Weekends (S-S)
+          </button>
+<button class="px-2.5 py-1 rounded bg-surface-container-low border border-surface-variant text-on-surface hover:bg-surface-container font-label-sm text-label-sm transition-colors" type="button">
+            All 7 Days
+          </button>
+</div>
+</div>
+</div>
+<!-- SECTION 6: Advanced Monthly Recurrence Options -->
+<div class="flex flex-col gap-space-sm opacity-60 hover:opacity-100 transition-opacity">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">SEC 04 • MONTHLY PATTERN (STANDBY)</span>
+<span class="font-label-sm text-label-sm text-secondary">BYMONTHDAY</span>
+</div>
+<div class="flex flex-col gap-2">
+<label class="flex items-start gap-space-sm p-space-sm rounded-lg border border-surface-variant bg-surface-container-lowest cursor-pointer hover:border-outline transition-colors">
+<input checked="" class="mt-1 accent-primary w-4 h-4" name="monthly_pattern" type="radio"/>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Same Day Each Month</span>
+<span class="font-body-sm text-body-sm text-secondary">e.g., On the 14th day of every month</span>
+</div>
+</label>
+<label class="flex items-start gap-space-sm p-space-sm rounded-lg border border-surface-variant bg-surface-container-lowest cursor-pointer hover:border-outline transition-colors">
+<input class="mt-1 accent-primary w-4 h-4" name="monthly_pattern" type="radio"/>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Relative Day Sequence</span>
+<span class="font-body-sm text-body-sm text-secondary">e.g., On the 2nd Thursday of every month</span>
+</div>
+</label>
+<label class="flex items-start gap-space-sm p-space-sm rounded-lg border border-surface-variant bg-surface-container-lowest cursor-pointer hover:border-outline transition-colors">
+<input class="mt-1 accent-primary w-4 h-4" name="monthly_pattern" type="radio"/>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Last Day of the Month</span>
+<span class="font-body-sm text-body-sm text-secondary">Adjusts automatically for 28, 29, 30, and 31 day lengths</span>
+</div>
+</label>
+</div>
+</div>
+<!-- SECTION 7: Recurrence Calculation Trigger -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">SEC 05 • RECURRENCE BASE TRIGGER</span>
+<span class="font-label-sm text-label-sm text-secondary">SCHEDULING MODE</span>
+</div>
+<div class="grid grid-cols-1 gap-2">
+<label class="flex items-start gap-space-sm p-space-md rounded-xl border border-primary bg-surface-container-lowest cursor-pointer">
+<input checked="" class="mt-1 accent-primary w-4 h-4" name="recurrence_trigger" type="radio"/>
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface">By Due Date</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-surface-container-high text-on-surface font-semibold">Strict Schedule</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">
+              Recalculates strictly from the planned due date regardless of when the task is finished. Keeps calendar cadences fixed.
+            </p>
+</div>
+</label>
+<label class="flex items-start gap-space-sm p-space-md rounded-xl border border-surface-variant bg-surface-container-lowest cursor-pointer hover:border-outline transition-colors">
+<input class="mt-1 accent-primary w-4 h-4" name="recurrence_trigger" type="radio"/>
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface">By Completion Date</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-surface-container-low text-secondary font-medium">Dynamic Habit</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">
+              Generates the next occurrence relative to the exact moment you mark the task complete. Best for recurring routines.
+            </p>
+</div>
+</label>
+</div>
+</div>
+<!-- SECTION 8: Termination & End Horizon -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">SEC 06 • TERMINATION HORIZON</span>
+<span class="font-label-sm text-label-sm text-secondary">UNTIL / COUNT</span>
+</div>
+<div class="flex flex-col gap-2">
+<label class="flex items-center justify-between p-space-sm px-space-md rounded-xl border border-surface-variant bg-surface-container-lowest cursor-pointer hover:border-outline transition-colors">
+<div class="flex items-center gap-space-sm">
+<input class="accent-primary w-4 h-4" name="end_horizon" type="radio"/>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Never Ends</span>
+<span class="font-body-sm text-body-sm text-secondary">Indefinite recurring future stream</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">COUNT=∞</span>
+</label>
+<label class="flex flex-col gap-space-sm p-space-md rounded-xl border border-primary bg-surface-container-lowest cursor-pointer">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<input checked="" class="accent-primary w-4 h-4" name="end_horizon" type="radio"/>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">On Specific Date</span>
+<span class="font-body-sm text-body-sm text-secondary">Stops projecting after calendar date</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">UNTIL=20271114</span>
+</div>
+<div class="flex items-center justify-between pl-7 pr-1 pt-1">
+<div class="flex items-center gap-2 px-3 py-1.5 rounded border border-surface-variant bg-surface-container-low font-label-md text-label-md text-on-surface">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+<span>Nov 14, 2027</span>
+</div>
+<button class="font-label-sm text-label-sm px-2.5 py-1 rounded border border-surface-variant hover:border-primary text-on-surface transition-colors" type="button">
+              Change Date
+            </button>
+</div>
+</label>
+<label class="flex items-center justify-between p-space-sm px-space-md rounded-xl border border-surface-variant bg-surface-container-lowest cursor-pointer hover:border-outline transition-colors">
+<div class="flex items-center gap-space-sm">
+<input class="accent-primary w-4 h-4" name="end_horizon" type="radio"/>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">After Set Occurrences</span>
+<span class="font-body-sm text-body-sm text-secondary">Stops after exact cycle count</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-1 rounded bg-surface-container text-on-surface font-medium">52 Cycles</span>
+</label>
+</div>
+</div>
+<!-- SECTION 9: Exception Dates & Blackout Windows -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">SEC 07 • EXCLUSIONS &amp; BLACKOUTS</span>
+<span class="font-label-sm text-label-sm text-secondary">EXDATE / RULES</span>
+</div>
+<div class="p-space-md rounded-xl border border-surface-variant bg-surface-container-lowest flex flex-col gap-space-md">
+<!-- Toggle 1 -->
+<div class="flex items-center justify-between">
+<div class="flex flex-col pr-2">
+<span class="font-title-md text-title-md text-on-surface">Skip on Public Holidays</span>
+<span class="font-body-sm text-body-sm text-secondary">Automatically bypasses observed federal calendar holidays</span>
+</div>
+<button aria-label="Toggle Skip on Public Holidays" class="w-11 h-6 rounded-full bg-primary relative transition-colors cursor-pointer shrink-0" type="button">
+<span class="w-4 h-4 rounded-full bg-surface-container-lowest absolute top-1 right-1 transition-transform"></span>
+</button>
+</div>
+<div class="border-t border-surface-container-high"></div>
+<!-- Toggle 2 -->
+<div class="flex items-center justify-between">
+<div class="flex flex-col pr-2">
+<span class="font-title-md text-title-md text-on-surface">Skip Weekend Conflicts</span>
+<span class="font-body-sm text-body-sm text-secondary">Move occurrences falling on Saturday/Sunday to Monday</span>
+</div>
+<button aria-label="Toggle Skip Weekend Conflicts" class="w-11 h-6 rounded-full bg-surface-variant relative transition-colors cursor-pointer shrink-0" type="button">
+<span class="w-4 h-4 rounded-full bg-surface-container-lowest absolute top-1 left-1 transition-transform"></span>
+</button>
+</div>
+<div class="pt-1">
+<button class="w-full py-2 px-space-sm rounded border border-dashed border-surface-variant hover:border-outline text-secondary hover:text-on-surface font-label-sm text-label-sm uppercase tracking-wider flex items-center justify-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+            Add Blackout Date Range
+          </button>
+</div>
+</div>
+</div>
+<!-- SECTION 10: Next 5 Occurrences Projection -->
+<div class="flex flex-col gap-space-sm" id="projection-section">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">SEC 08 • NEXT 5 OCCURRENCES PROJECTION</span>
+<span class="font-label-sm text-label-sm text-secondary">DUE DATES</span>
+</div>
+<div class="rounded-xl border border-surface-variant bg-surface-container-lowest overflow-hidden">
+<div class="px-space-md py-2 bg-surface-container-low border-b border-surface-variant flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary uppercase">Projected Sequence</span>
+<span class="font-label-sm text-label-sm text-secondary uppercase">Local Time (UTC-05)</span>
+</div>
+<ul class="divide-y divide-surface-container-low">
+<li class="px-space-md py-2.5 flex items-center justify-between hover:bg-surface-container-low/50 transition-colors">
+<div class="flex items-center gap-2.5">
+<span class="w-5 h-5 rounded-full bg-surface-container flex items-center justify-center font-label-sm text-label-sm font-semibold text-secondary">1</span>
+<span class="font-title-md text-title-md text-on-surface">Mon, Nov 17, 2026</span>
+</div>
+<span class="font-label-md text-label-md text-secondary">14:30</span>
+</li>
+<li class="px-space-md py-2.5 flex items-center justify-between hover:bg-surface-container-low/50 transition-colors">
+<div class="flex items-center gap-2.5">
+<span class="w-5 h-5 rounded-full bg-surface-container flex items-center justify-center font-label-sm text-label-sm font-semibold text-secondary">2</span>
+<span class="font-title-md text-title-md text-on-surface">Wed, Nov 19, 2026</span>
+</div>
+<span class="font-label-md text-label-md text-secondary">14:30</span>
+</li>
+<li class="px-space-md py-2.5 flex items-center justify-between hover:bg-surface-container-low/50 transition-colors">
+<div class="flex items-center gap-2.5">
+<span class="w-5 h-5 rounded-full bg-surface-container flex items-center justify-center font-label-sm text-label-sm font-semibold text-secondary">3</span>
+<span class="font-title-md text-title-md text-on-surface">Fri, Nov 21, 2026</span>
+</div>
+<span class="font-label-md text-label-md text-secondary">14:30</span>
+</li>
+<li class="px-space-md py-2.5 flex items-center justify-between hover:bg-surface-container-low/50 transition-colors">
+<div class="flex items-center gap-2.5">
+<span class="w-5 h-5 rounded-full bg-surface-container flex items-center justify-center font-label-sm text-label-sm font-semibold text-secondary">4</span>
+<span class="font-title-md text-title-md text-on-surface">Mon, Dec 01, 2026</span>
+</div>
+<span class="font-label-md text-label-md text-secondary">14:30</span>
+</li>
+<li class="px-space-md py-2.5 flex items-center justify-between hover:bg-surface-container-low/50 transition-colors">
+<div class="flex items-center gap-2.5">
+<span class="w-5 h-5 rounded-full bg-surface-container flex items-center justify-center font-label-sm text-label-sm font-semibold text-secondary">5</span>
+<span class="font-title-md text-title-md text-on-surface">Wed, Dec 03, 2026</span>
+</div>
+<span class="font-label-md text-label-md text-secondary">14:30</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- SECTION 11: Local Sovereignty Card & Action Buttons -->
+<div class="flex flex-col gap-space-md pt-space-sm">
+<div class="p-space-md rounded-xl border border-surface-variant bg-surface-container-low/60 flex flex-col gap-1.5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-on-surface">lock_open</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface font-semibold">LOCAL EVALUATION • ZERO PAYWALLS</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+          Unrestricted recurring schedules with complex RRULE support. Evaluated natively in local SQLite on your device without cloud subscriptions or paywalls.
+        </p>
+</div>
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<button class="w-full py-3.5 px-space-md rounded bg-primary text-on-primary font-label-lg text-label-lg uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-tertiary-container active:scale-[0.99] transition-transform shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">check</span>
+          Save Recurrence Rule
+        </button>
+<button class="w-full py-3 px-space-md rounded border border-surface-variant bg-surface-container-lowest text-secondary hover:text-error hover:border-outline font-label-lg text-label-lg uppercase tracking-wider flex items-center justify-center gap-2 active:scale-[0.99] transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">block</span>
+          Remove Recurrence / Does Not Repeat
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const decBtn = document.getElementById('interval-dec');
+    const incBtn = document.getElementById('interval-inc');
+    const valElem = document.getElementById('interval-val');
+    let interval = 2;
+
+    if (decBtn && incBtn && valElem) {
+      decBtn.addEventListener('click', () => {
+        if (interval > 1) {
+          interval--;
+          valElem.innerText = interval;
+          updateLiveString();
+        }
+      });
+      incBtn.addEventListener('click', () => {
+        if (interval < 99) {
+          interval++;
+          valElem.innerText = interval;
+          updateLiveString();
+        }
+      });
+    }
+
+    const dayBtns = document.querySelectorAll('.day-btn');
+    dayBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const isSelected = btn.classList.contains('bg-primary');
+        if (isSelected) {
+          btn.classList.remove('bg-primary', 'text-on-primary', 'border-primary');
+          btn.classList.add('bg-surface-container-lowest', 'text-secondary', 'border-surface-variant');
+          const dot = btn.querySelector('span:last-child');
+          if (dot) {
+            dot.classList.remove('opacity-75');
+            dot.classList.add('opacity-0');
+            dot.innerText = '○';
+          }
+        } else {
+          btn.classList.add('bg-primary', 'text-on-primary', 'border-primary');
+          btn.classList.remove('bg-surface-container-lowest', 'text-secondary', 'border-surface-variant');
+          const dot = btn.querySelector('span:last-child');
+          if (dot) {
+            dot.classList.add('opacity-75');
+            dot.classList.remove('opacity-0');
+            dot.innerText = '●';
+          }
+        }
+        updateLiveString();
+      });
+    });
+
+    function updateLiveString() {
+      const activeDays = Array.from(document.querySelectorAll('.day-btn.bg-primary'))
+        .map(b => b.getAttribute('data-day'));
+      const daysStr = activeDays.length ? activeDays.join(',') : 'MO';
+      const rruleElem = document.getElementById('rrule-syntax');
+      const summaryElem = document.getElementById('human-summary');
+
+      if (rruleElem) {
+        rruleElem.innerText = `RRULE:FREQ=WEEKLY;INTERVAL=${interval};BYDAY=${daysStr};UNTIL=20271114T000000Z`;
+      }
+      if (summaryElem) {
+        summaryElem.innerText = `Repeats every ${interval} weeks on ${daysStr} until Nov 14, 2027`;
+      }
+    }
+  })();
+</script></main></body></html>

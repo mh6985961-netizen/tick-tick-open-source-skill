@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#ffffff;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary": "#000000", "tertiary-fixed-dim": "#c0c7d3", "outline": "#76777d", "on-surface-variant": "#45464c", "background": "#f9f9f9", "on-tertiary-container": "#7d8490", "on-error-container": "#93000a", "surface-tint": "#575e70", "surface": "#f9f9f9", "tertiary-container": "#151c25", "surface-bright": "#f9f9f9", "surface-container-low": "#f3f3f4", "on-primary-fixed": "#141b2b", "inverse-on-surface": "#f0f1f1", "surface-variant": "#e2e2e2", "secondary": "#555f6d", "primary-fixed-dim": "#c0c6db", "secondary-container": "#d6e0f1", "on-primary-container": "#7d8497", "on-primary-fixed-variant": "#404758", "primary-fixed": "#dce2f7", "tertiary": "#000000", "outline-variant": "#c6c6cd", "surface-container": "#eeeeee", "on-error": "#ffffff", "on-secondary": "#ffffff", "surface-container-lowest": "#ffffff", "on-primary": "#ffffff", "on-secondary-fixed-variant": "#3e4755", "tertiary-fixed": "#dce3f0", "inverse-primary": "#c0c6db", "on-secondary-fixed": "#121c28", "error": "#ba1a1a", "surface-container-high": "#e8e8e8", "error-container": "#ffdad6", "on-surface": "#1a1c1c", "on-tertiary": "#ffffff", "inverse-surface": "#2f3131", "on-secondary-container": "#596372", "primary-container": "#141b2b", "on-tertiary-fixed-variant": "#404752", "secondary-fixed": "#d9e3f4", "surface-dim": "#dadada", "surface-container-highest": "#e2e2e2", "on-tertiary-fixed": "#151c25", "on-background": "#1a1c1c", "secondary-fixed-dim": "#bdc7d8" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-xs": "0.25rem", "gutter": "1.5rem", "space-lg": "1.5rem", "gutter-sm": "1rem", "space-md": "1rem", "space-xl": "2.5rem", "gutter-lg": "2rem", "margin": "2rem", "margin-lg": "4rem", "space-sm": "0.5rem", "margin-sm": "1rem" }, "fontFamily": { "label-lg": ["JetBrains Mono"], "display-xl": ["Geist"], "label-md": ["JetBrains Mono"], "headline-md": ["Geist"], "body-md": ["Geist"], "headline-sm": ["Geist"], "label-sm": ["JetBrains Mono"], "body-sm": ["Geist"], "headline-lg": ["Geist"], "display-xl-mobile": ["Geist"], "title-md": ["Geist"], "headline-lg-mobile": ["Geist"], "body-lg": ["Geist"] }, "fontSize": { "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" }], "display-xl": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.04em", "fontWeight": "700" }], "label-md": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "500" }], "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "600" }], "display-xl-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface-container-lowest font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-gutter-sm flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Go back" class="min-w-[44px] min-h-[44px] flex items-center justify-center text-on-surface hover:text-primary transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[20px]">arrow_back</span></button><h1 class="font-title-md text-title-md text-on-surface tracking-tight uppercase truncate">Smart Recognition</h1></div><div class="flex items-center gap-space-xs"><button aria-label="Save settings" class="min-w-[44px] min-h-[44px] flex items-center justify-center text-on-surface hover:text-primary transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">check</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-safe bg-surface-container-lowest min-h-screen"><div class="flex flex-col w-full pb-12">
+<!-- Screen Header & Contextual Tag -->
+<section class="px-gutter-sm pt-space-lg pb-space-md flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Natural Language Engine</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">SCR-SET-005</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight mt-1">Smart Recognition (NLP)</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+      Automatically parse dates, times, priorities, projects, and tags directly from your typed task titles in real time.
+    </p>
+</section>
+<!-- Live Interactive NLP Sandbox / Playground -->
+<section class="px-gutter-sm mb-space-xl">
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-md flex flex-col gap-space-md shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">terminal</span>
+<span class="font-label-md text-label-md tracking-wider uppercase text-on-surface">Interactive Syntax Sandbox</span>
+</div>
+<div class="flex items-center gap-1.5 px-2 py-0.5 bg-surface-container-low rounded-lg">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary">Live Parsing</span>
+</div>
+</div>
+<!-- Real-time mock input -->
+<div class="relative flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm uppercase text-secondary" for="nlp-sandbox-input">Simulated Task Buffer</label>
+<div class="relative w-full">
+<input aria-label="Interactive NLP task input" class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md px-3.5 py-2.5 rounded-lg border border-outline-variant focus:outline-none focus:border-primary transition-colors" id="nlp-sandbox-input" type="text" value="Review architecture tomorrow at 16:30 !1 ~Engineering #backend"/>
+</div>
+</div>
+<!-- Token Chips Breakdown -->
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm uppercase text-secondary">Detected Entity Tokens</span>
+<div class="flex flex-wrap gap-2" id="tokens-container">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-low rounded-lg border border-outline-variant">
+<span class="material-symbols-outlined text-[15px] text-on-surface">calendar_today</span>
+<span class="font-label-md text-label-md text-on-surface">Tomorrow 16:30</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-low rounded-lg border border-outline-variant">
+<span class="material-symbols-outlined text-[15px] text-on-surface">flag</span>
+<span class="font-label-md text-label-md text-on-surface">High (!1)</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-low rounded-lg border border-outline-variant">
+<span class="material-symbols-outlined text-[15px] text-on-surface">folder</span>
+<span class="font-label-md text-label-md text-on-surface">~Engineering</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-low rounded-lg border border-outline-variant">
+<span class="material-symbols-outlined text-[15px] text-on-surface">tag</span>
+<span class="font-label-md text-label-md text-on-surface">#backend</span>
+</div>
+</div>
+</div>
+<!-- Resulting Clean Preview -->
+<div class="pt-space-xs border-t border-surface-container flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase text-secondary">Resulting Task Title</span>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary">subdirectory_arrow_right</span>
+<span class="font-body-md text-body-md font-medium text-on-surface" id="clean-preview">Review architecture</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Master Parser Controls -->
+<section class="px-gutter-sm mb-space-xl flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Global Engine State</span>
+</div>
+<!-- Toggle: Enable Smart Recognition -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-md flex items-center justify-between gap-space-md">
+<div class="flex flex-col gap-0.5">
+<h3 class="font-title-md text-title-md text-on-surface">Enable Smart Recognition</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Detect temporal and organizational keywords as you type.</p>
+</div>
+<button aria-checked="true" class="toggle-switch relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out bg-primary" role="switch" type="button">
+<span class="sr-only">Toggle Smart Recognition</span>
+<span class="translate-x-5 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-surface-container-lowest shadow ring-0 transition duration-200 ease-in-out"></span>
+</button>
+</div>
+<!-- Toggle: Remove Recognized Text -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-md flex items-center justify-between gap-space-md">
+<div class="flex flex-col gap-0.5">
+<h3 class="font-title-md text-title-md text-on-surface">Remove Recognized Text from Title</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Strip parsed tokens like 'tomorrow 3pm' or '!high' from final task text once committed.</p>
+</div>
+<button aria-checked="true" class="toggle-switch relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out bg-primary" role="switch" type="button">
+<span class="sr-only">Toggle Token Removal</span>
+<span class="translate-x-5 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-surface-container-lowest shadow ring-0 transition duration-200 ease-in-out"></span>
+</button>
+</div>
+</section>
+<!-- Entity Tokenizer Toggles -->
+<section class="px-gutter-sm mb-space-xl flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Recognized Entity Types</span>
+<span class="font-label-sm text-label-sm text-outline">5 of 5 active</span>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl divide-y divide-surface-container overflow-hidden">
+<!-- Entity 1 -->
+<div class="p-space-md flex items-center justify-between gap-space-md">
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-on-surface">schedule</span>
+<span class="font-title-md text-title-md text-on-surface">Date &amp; Time Expressions</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">e.g. today, tomorrow, next mon, at 15:00, in 2 hours, 8am</p>
+</div>
+<button aria-checked="true" class="toggle-switch relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out bg-primary" role="switch" type="button">
+<span class="translate-x-5 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-surface-container-lowest shadow ring-0 transition duration-200 ease-in-out"></span>
+</button>
+</div>
+<!-- Entity 2 -->
+<div class="p-space-md flex items-center justify-between gap-space-md">
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-on-surface">priority_high</span>
+<span class="font-title-md text-title-md text-on-surface">Priority Keywords &amp; Bangs</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">e.g. !high, !urgent, !1, !med, !low, !none</p>
+</div>
+<button aria-checked="true" class="toggle-switch relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out bg-primary" role="switch" type="button">
+<span class="translate-x-5 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-surface-container-lowest shadow ring-0 transition duration-200 ease-in-out"></span>
+</button>
+</div>
+<!-- Entity 3 -->
+<div class="p-space-md flex items-center justify-between gap-space-md">
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-on-surface">drive_file_move</span>
+<span class="font-title-md text-title-md text-on-surface">Project &amp; List Shorthand (~)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">e.g. ~Work, ~Personal, ~Inbox (switches target list)</p>
+</div>
+<button aria-checked="true" class="toggle-switch relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out bg-primary" role="switch" type="button">
+<span class="translate-x-5 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-surface-container-lowest shadow ring-0 transition duration-200 ease-in-out"></span>
+</button>
+</div>
+<!-- Entity 4 -->
+<div class="p-space-md flex items-center justify-between gap-space-md">
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-on-surface">tag</span>
+<span class="font-title-md text-title-md text-on-surface">Tag Tokens (#)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">e.g. #finance, #dev, #followup (assigns custom tags)</p>
+</div>
+<button aria-checked="true" class="toggle-switch relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out bg-primary" role="switch" type="button">
+<span class="translate-x-5 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-surface-container-lowest shadow ring-0 transition duration-200 ease-in-out"></span>
+</button>
+</div>
+<!-- Entity 5 -->
+<div class="p-space-md flex items-center justify-between gap-space-md">
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-on-surface">sync</span>
+<span class="font-title-md text-title-md text-on-surface">Recurrence Syntax</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">e.g. every day, weekly on wed, monthly on 1st</p>
+</div>
+<button aria-checked="true" class="toggle-switch relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out bg-primary" role="switch" type="button">
+<span class="translate-x-5 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-surface-container-lowest shadow ring-0 transition duration-200 ease-in-out"></span>
+</button>
+</div>
+</div>
+</section>
+<!-- Language Model & Parser Engine Settings -->
+<section class="px-gutter-sm mb-space-xl flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Parser Specifications</span>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl divide-y divide-surface-container overflow-hidden">
+<!-- Language -->
+<button class="w-full p-space-md flex items-center justify-between text-left hover:bg-surface-container-low transition-colors" type="button">
+<div class="flex flex-col gap-0.5 pr-2">
+<span class="font-title-md text-title-md text-on-surface">Recognition Language</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">EN, FR, DE, ES, ZH, JA, KO supported</span>
+</div>
+<div class="flex items-center gap-1.5 flex-shrink-0">
+<span class="font-label-md text-label-md text-primary">Auto-Detect</span>
+<span class="material-symbols-outlined text-[18px] text-outline">chevron_right</span>
+</div>
+</button>
+<!-- Morning Default -->
+<button class="w-full p-space-md flex items-center justify-between text-left hover:bg-surface-container-low transition-colors" type="button">
+<div class="flex flex-col gap-0.5">
+<span class="font-title-md text-title-md text-on-surface">Default Time for 'Morning'</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Assigned when time is unspecified</span>
+</div>
+<div class="flex items-center gap-1.5 flex-shrink-0">
+<span class="font-label-md text-label-md text-primary">09:00 AM</span>
+<span class="material-symbols-outlined text-[18px] text-outline">chevron_right</span>
+</div>
+</button>
+<!-- Evening Default -->
+<button class="w-full p-space-md flex items-center justify-between text-left hover:bg-surface-container-low transition-colors" type="button">
+<div class="flex flex-col gap-0.5">
+<span class="font-title-md text-title-md text-on-surface">Default Time for 'Evening'</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Assigned for evening deadlines</span>
+</div>
+<div class="flex items-center gap-1.5 flex-shrink-0">
+<span class="font-label-md text-label-md text-primary">18:00 (6 PM)</span>
+<span class="material-symbols-outlined text-[18px] text-outline">chevron_right</span>
+</div>
+</button>
+<!-- Night Default -->
+<button class="w-full p-space-md flex items-center justify-between text-left hover:bg-surface-container-low transition-colors" type="button">
+<div class="flex flex-col gap-0.5">
+<span class="font-title-md text-title-md text-on-surface">Default Time for 'Night'</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Assigned for night reminders</span>
+</div>
+<div class="flex items-center gap-1.5 flex-shrink-0">
+<span class="font-label-md text-label-md text-primary">21:00 (9 PM)</span>
+<span class="material-symbols-outlined text-[18px] text-outline">chevron_right</span>
+</div>
+</button>
+</div>
+</section>
+<!-- Ergonomics & Backspace Behavior -->
+<section class="px-gutter-sm mb-space-xl flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Input Ergonomics</span>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl divide-y divide-surface-container overflow-hidden">
+<!-- Backspace Un-spans Chips -->
+<div class="p-space-md flex items-center justify-between gap-space-md">
+<div class="flex flex-col gap-0.5">
+<h3 class="font-title-md text-title-md text-on-surface">Backspace Un-spans Chips</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Pressing backspace immediately adjacent to a chip disassembles it back into editable text instead of deleting it.</p>
+</div>
+<button aria-checked="true" class="toggle-switch relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out bg-primary" role="switch" type="button">
+<span class="translate-x-5 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-surface-container-lowest shadow ring-0 transition duration-200 ease-in-out"></span>
+</button>
+</div>
+<!-- Haptic Pulse -->
+<div class="p-space-md flex items-center justify-between gap-space-md">
+<div class="flex flex-col gap-0.5">
+<h3 class="font-title-md text-title-md text-on-surface">Haptic Pulse on Token Detection</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Subtle tactile click when a keyword is recognized as a chip.</p>
+</div>
+<button aria-checked="true" class="toggle-switch relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out bg-primary" role="switch" type="button">
+<span class="translate-x-5 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-surface-container-lowest shadow ring-0 transition duration-200 ease-in-out"></span>
+</button>
+</div>
+</div>
+</section>
+<!-- Local-First Engine & Sovereignty Banner -->
+<section class="px-gutter-sm mb-space-lg flex flex-col gap-space-md">
+<div class="bg-surface-container-low border border-outline-variant rounded-xl p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-primary">verified_user</span>
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-semibold">On-Device Regex &amp; Heuristic Engine</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+        All natural language parsing executes 100% locally on-device in under 2ms using embedded deterministic regex grammars. No text or keystrokes are transmitted to cloud AI or external telemetry servers.
+      </p>
+</div>
+<!-- Reset Action Button -->
+<button class="w-full py-2.5 px-space-md rounded-lg border border-outline-variant bg-surface-container-lowest hover:bg-surface-container-low active:bg-surface-container text-on-surface font-label-md text-label-md uppercase tracking-wider transition-all flex items-center justify-center gap-2" id="reset-rules-btn" type="button">
+<span class="material-symbols-outlined text-[16px]">refresh</span>
+<span>Reset to Default Recognition Rules</span>
+</button>
+</section>
+</div>
+<script>
+  // Interactive Sandbox Live Parser Simulation
+  const inputEl = document.getElementById('nlp-sandbox-input');
+  const tokensEl = document.getElementById('tokens-container');
+  const previewEl = document.getElementById('clean-preview');
+
+  if (inputEl && tokensEl && previewEl) {
+    inputEl.addEventListener('input', (e) => {
+      const val = e.target.value;
+      let clean = val;
+      const chips = [];
+
+      // Priority match
+      const pMatch = val.match(/!(urgent|high|med|low|none|[1-4])/i);
+      if (pMatch) {
+        chips.push({ icon: 'flag', label: `Priority (${pMatch[0]})` });
+        clean = clean.replace(pMatch[0], '');
+      }
+
+      // Project match
+      const projMatch = val.match(/~(\w+)/);
+      if (projMatch) {
+        chips.push({ icon: 'folder', label: `~${projMatch[1]}` });
+        clean = clean.replace(projMatch[0], '');
+      }
+
+      // Tag match
+      const tagMatch = val.match(/#(\w+)/);
+      if (tagMatch) {
+        chips.push({ icon: 'tag', label: `#${tagMatch[1]}` });
+        clean = clean.replace(tagMatch[0], '');
+      }
+
+      // Date / Time match
+      const timeMatch = val.match(/(tomorrow|today|next \w+|at \d{1,2}:\d{2}|\d{1,2}(?:am|pm))/i);
+      if (timeMatch) {
+        chips.push({ icon: 'calendar_today', label: timeMatch[0] });
+        clean = clean.replace(timeMatch[0], '');
+      }
+
+      // Render Chips
+      tokensEl.innerHTML = '';
+      if (chips.length === 0) {
+        tokensEl.innerHTML = '<span class="font-label-sm text-label-sm text-outline italic">No recognized tokens in buffer</span>';
+      } else {
+        chips.forEach(c => {
+          const chipDiv = document.createElement('div');
+          chipDiv.className = 'inline-flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-low rounded-lg border border-outline-variant';
+          chipDiv.innerHTML = `<span class="material-symbols-outlined text-[15px] text-on-surface">${c.icon}</span><span class="font-label-md text-label-md text-on-surface">${c.label}</span>`;
+          tokensEl.appendChild(chipDiv);
+        });
+      }
+
+      // Render Clean Title
+      const trimmedClean = clean.replace(/\s+/g, ' ').trim();
+      previewEl.textContent = trimmedClean || '(empty title)';
+    });
+  }
+
+  // Generic Accessible Switch Toggle micro-interaction
+  document.querySelectorAll('.toggle-switch').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const isChecked = btn.getAttribute('aria-checked') === 'true';
+      const newState = !isChecked;
+      btn.setAttribute('aria-checked', String(newState));
+      const thumb = btn.querySelector('span:not(.sr-only)');
+      
+      if (newState) {
+        btn.classList.remove('bg-surface-variant');
+        btn.classList.add('bg-primary');
+        if (thumb) {
+          thumb.classList.remove('translate-x-0');
+          thumb.classList.add('translate-x-5');
+        }
+      } else {
+        btn.classList.remove('bg-primary');
+        btn.classList.add('bg-surface-variant');
+        if (thumb) {
+          thumb.classList.remove('translate-x-5');
+          thumb.classList.add('translate-x-0');
+        }
+      }
+    });
+  });
+
+  // Reset feedback
+  const resetBtn = document.getElementById('reset-rules-btn');
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      const originalText = resetBtn.innerHTML;
+      resetBtn.innerHTML = '<span class="material-symbols-outlined text-[16px] animate-spin">refresh</span><span>Restoring Defaults...</span>';
+      setTimeout(() => {
+        resetBtn.innerHTML = '<span class="material-symbols-outlined text-[16px]">check</span><span>Rules Reset Complete</span>';
+        setTimeout(() => {
+          resetBtn.innerHTML = originalText;
+        }, 1600);
+      }, 500);
+    });
+  }
+</script></main></body></html>

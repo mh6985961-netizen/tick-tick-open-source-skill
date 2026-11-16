@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-low": "#f3f3f4", "error-container": "#ffdad6", "surface-container-high": "#e8e8e8", "tertiary": "#000000", "primary-fixed": "#dce2f7", "secondary-fixed-dim": "#bdc7d8", "primary": "#000000", "surface-container": "#eeeeee", "surface": "#ffffff", "surface-tint": "#575e70", "background": "#ffffff", "surface-bright": "#ffffff", "inverse-on-surface": "#f0f1f1", "on-secondary-fixed-variant": "#3e4755", "secondary-fixed": "#d9e3f4", "on-secondary-container": "#596372", "tertiary-fixed": "#dce3f0", "on-surface": "#1a1c1c", "outline-variant": "#c6c6cd", "on-tertiary": "#ffffff", "surface-container-lowest": "#ffffff", "tertiary-fixed-dim": "#c0c7d3", "primary-container": "#141b2b", "on-error": "#ffffff", "surface-variant": "#e2e2e2", "surface-container-highest": "#e2e2e2", "on-primary-fixed": "#141b2b", "outline": "#76777d", "on-primary": "#ffffff", "primary-fixed-dim": "#c0c6db", "on-primary-container": "#7d8497", "on-secondary": "#ffffff", "on-background": "#1a1c1c", "inverse-primary": "#c0c6db", "on-primary-fixed-variant": "#404758", "on-tertiary-fixed-variant": "#404752", "error": "#ba1a1a", "on-tertiary-container": "#7d8490", "secondary-container": "#d6e0f1", "on-surface-variant": "#45464c", "on-tertiary-fixed": "#151c25", "on-error-container": "#93000a", "on-secondary-fixed": "#121c28", "inverse-surface": "#2f3131", "secondary": "#555f6d", "tertiary-container": "#151c25", "surface-dim": "#dadada" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-xs": "0.25rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "margin-lg": "4rem", "space-md": "1rem", "gutter": "1.5rem", "margin": "2rem", "gutter-sm": "1rem", "space-xl": "2.5rem", "margin-sm": "1rem", "gutter-lg": "2rem" }, "fontFamily": { "label-lg": ["JetBrains Mono"], "display-xl-mobile": ["Geist"], "body-md": ["Geist"], "headline-sm": ["Geist"], "headline-lg": ["Geist"], "label-sm": ["JetBrains Mono"], "body-sm": ["Geist"], "label-md": ["JetBrains Mono"], "headline-lg-mobile": ["Geist"], "body-lg": ["Geist"], "display-xl": ["Geist"], "headline-md": ["Geist"], "title-md": ["Geist"] }, "fontSize": { "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" }], "display-xl-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "600" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "500" }], "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }], "label-md": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "display-xl": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.04em", "fontWeight": "700" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-sm flex items-center justify-between"><div class="flex items-center min-w-[72px]"><button aria-label="Cancel" class="h-11 min-w-[44px] px-space-xs flex items-center justify-start gap-1 text-on-surface hover:text-secondary transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[20px]">close</span><span class="font-body-md text-body-md font-medium">Cancel</span></button></div><div class="flex-1 text-center px-space-xs truncate"><h1 class="font-title-md text-title-md text-on-surface truncate">Repeat Rules</h1></div><div class="flex items-center justify-end gap-space-sm min-w-[72px]"><button class="h-9 px-space-md bg-primary text-on-primary font-label-lg text-label-lg rounded flex items-center justify-center hover:bg-tertiary transition-colors">Done</button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface px-gutter"><div class="flex flex-col w-full pb-12 space-y-6">
+<!-- Header / Breadcrumb Grounding Card -->
+<div class="flex flex-col bg-surface-container-lowest p-6 rounded-3xl shadow-sm space-y-3">
+<div class="flex flex-wrap items-center justify-between gap-2">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">TASK RECURRENCE ENGINE • SCR-TASK-008</span>
+</div>
+<div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface">
+<span class="font-label-sm text-label-sm">RFC-5545 RRULE COMPLIANT • 100% UNLOCKED</span>
+</div>
+</div>
+<div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight">Recurrence Rule Builder</h2>
+<p class="font-body-md text-body-md text-secondary mt-1 leading-relaxed">
+        Configure flexible repeat patterns, recurrence frequencies, complex intervals, end conditions, and completion handling with zero paywalls.
+      </p>
+</div>
+</div>
+<!-- Bound Task Context Card -->
+<div class="flex flex-col bg-surface-container-low p-5 rounded-2xl shadow-sm space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-highest text-on-surface font-label-md text-label-md uppercase tracking-wider font-semibold">
+          ~ENGINEERING
+        </span>
+<span class="px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-md text-label-md font-bold uppercase tracking-wider">
+          !HIGH
+        </span>
+</div>
+<span class="material-symbols-outlined text-secondary text-[20px]">sync</span>
+</div>
+<div class="space-y-1">
+<div class="font-title-md text-title-md text-on-surface font-semibold">
+        Deploy Hotfix: Patch CRDT WAL Concurrency Lockup
+      </div>
+<div class="flex items-center gap-1.5 font-body-sm text-body-sm text-secondary">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>Currently: <strong class="text-on-surface font-medium">Does not repeat (One-time event)</strong></span>
+</div>
+</div>
+</div>
+<!-- Quick Recurrence Presets -->
+<div class="space-y-2">
+<div class="flex items-center justify-between px-1">
+<label class="font-label-md text-label-md text-secondary uppercase tracking-wider">Quick Presets</label>
+<span class="font-label-sm text-label-sm text-secondary">Click to auto-fill</span>
+</div>
+<div class="flex flex-wrap gap-2" id="presetContainer">
+<button class="preset-pill px-4 py-2 rounded-full font-label-md text-label-md transition-all bg-surface-container-lowest text-on-surface hover:bg-surface-container shadow-sm" data-preset="none" type="button">
+        Does not repeat
+      </button>
+<button class="preset-pill px-4 py-2 rounded-full font-label-md text-label-md transition-all bg-surface-container-lowest text-on-surface hover:bg-surface-container shadow-sm" data-preset="daily" type="button">
+        Every Day
+      </button>
+<button class="preset-pill px-4 py-2 rounded-full font-label-md text-label-md transition-all bg-primary text-on-primary shadow-sm" data-preset="weekly" type="button">
+        Every Week
+      </button>
+<button class="preset-pill px-4 py-2 rounded-full font-label-md text-label-md transition-all bg-surface-container-lowest text-on-surface hover:bg-surface-container shadow-sm" data-preset="monthly" type="button">
+        Every Month
+      </button>
+<button class="preset-pill px-4 py-2 rounded-full font-label-md text-label-md transition-all bg-surface-container-lowest text-on-surface hover:bg-surface-container shadow-sm" data-preset="yearly" type="button">
+        Every Year
+      </button>
+<button class="preset-pill px-4 py-2 rounded-full font-label-md text-label-md transition-all bg-surface-container-lowest text-on-surface hover:bg-surface-container shadow-sm" data-preset="weekdays" type="button">
+        Weekdays (Mon-Fri)
+      </button>
+</div>
+</div>
+<!-- Frequency & Interval Selector Card -->
+<div class="flex flex-col bg-surface-container-lowest p-5 rounded-3xl shadow-sm space-y-5">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Repeat Frequency</span>
+<span class="font-label-sm text-label-sm text-secondary">FREQ=PARAMETER</span>
+</div>
+<!-- Segmented Frequency Switcher -->
+<div class="grid grid-cols-3 sm:grid-cols-5 gap-1.5 p-1.5 rounded-full bg-surface-container-low" id="freqSwitcher">
+<button class="freq-btn py-2 px-3 rounded-full font-label-md text-label-md text-center transition-all text-on-surface hover:bg-surface-container" data-freq="DAILY" type="button">
+        Daily
+      </button>
+<button class="freq-btn py-2 px-3 rounded-full font-label-md text-label-md text-center transition-all bg-primary text-on-primary font-semibold shadow-sm" data-freq="WEEKLY" type="button">
+        Weekly
+      </button>
+<button class="freq-btn py-2 px-3 rounded-full font-label-md text-label-md text-center transition-all text-on-surface hover:bg-surface-container" data-freq="MONTHLY" type="button">
+        Monthly
+      </button>
+<button class="freq-btn py-2 px-3 rounded-full font-label-md text-label-md text-center transition-all text-on-surface hover:bg-surface-container" data-freq="YEARLY" type="button">
+        Yearly
+      </button>
+<button class="freq-btn py-2 px-3 rounded-full font-label-md text-label-md text-center transition-all text-on-surface hover:bg-surface-container col-span-3 sm:col-span-1" data-freq="CUSTOM" type="button">
+        Custom
+      </button>
+</div>
+<!-- Interval Stepper Row -->
+<div class="flex items-center justify-between bg-surface-container-low p-4 rounded-2xl">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium">Repeat Every</span>
+<span class="font-label-sm text-label-sm text-secondary">Interval multiplier</span>
+</div>
+<div class="flex items-center gap-3">
+<button class="w-10 h-10 rounded-full bg-surface-container-lowest text-on-surface flex items-center justify-center hover:bg-surface-container active:scale-95 transition-all shadow-sm" id="intervalDec" type="button">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<div class="flex items-baseline gap-1 min-w-[70px] justify-center">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface" id="intervalDisplay">1</span>
+<span class="font-body-sm text-body-sm text-secondary" id="intervalUnit">Week(s)</span>
+</div>
+<button class="w-10 h-10 rounded-full bg-surface-container-lowest text-on-surface flex items-center justify-center hover:bg-surface-container active:scale-95 transition-all shadow-sm" id="intervalInc" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Weekly Days Selection Matrix -->
+<div class="flex flex-col bg-surface-container-lowest p-5 rounded-3xl shadow-sm space-y-4" id="weeklyMatrixSection">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Repeat On</span>
+<span class="font-label-sm text-label-sm text-secondary">BYDAY Specification</span>
+</div>
+<!-- Days matrix pills -->
+<div class="grid grid-cols-7 gap-2" id="daysMatrix">
+<button class="day-token aspect-square rounded-full flex flex-col items-center justify-center font-label-md text-label-md bg-primary text-on-primary font-bold shadow-sm transition-transform active:scale-95" data-day="MO" type="button">
+<span>M</span>
+<span class="text-[9px] opacity-80">Mon</span>
+</button>
+<button class="day-token aspect-square rounded-full flex flex-col items-center justify-center font-label-md text-label-md bg-surface-container-low text-on-surface transition-transform active:scale-95" data-day="TU" type="button">
+<span>T</span>
+<span class="text-[9px] opacity-60">Tue</span>
+</button>
+<button class="day-token aspect-square rounded-full flex flex-col items-center justify-center font-label-md text-label-md bg-primary text-on-primary font-bold shadow-sm transition-transform active:scale-95" data-day="WE" type="button">
+<span>W</span>
+<span class="text-[9px] opacity-80">Wed</span>
+</button>
+<button class="day-token aspect-square rounded-full flex flex-col items-center justify-center font-label-md text-label-md bg-surface-container-low text-on-surface transition-transform active:scale-95" data-day="TH" type="button">
+<span>T</span>
+<span class="text-[9px] opacity-60">Thu</span>
+</button>
+<button class="day-token aspect-square rounded-full flex flex-col items-center justify-center font-label-md text-label-md bg-primary text-on-primary font-bold shadow-sm transition-transform active:scale-95" data-day="FR" type="button">
+<span>F</span>
+<span class="text-[9px] opacity-80">Fri</span>
+</button>
+<button class="day-token aspect-square rounded-full flex flex-col items-center justify-center font-label-md text-label-md bg-surface-container-low text-on-surface transition-transform active:scale-95" data-day="SA" type="button">
+<span>S</span>
+<span class="text-[9px] opacity-60">Sat</span>
+</button>
+<button class="day-token aspect-square rounded-full flex flex-col items-center justify-center font-label-md text-label-md bg-surface-container-low text-on-surface transition-transform active:scale-95" data-day="SU" type="button">
+<span>S</span>
+<span class="text-[9px] opacity-60">Sun</span>
+</button>
+</div>
+<!-- Shortcuts -->
+<div class="flex flex-wrap items-center gap-2 pt-1">
+<button class="px-3 py-1.5 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm transition-colors" id="shortcutWeekdays" type="button">
+        Select Weekdays (M-F)
+      </button>
+<button class="px-3 py-1.5 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm transition-colors" id="shortcutWeekends" type="button">
+        Select Weekends
+      </button>
+<button class="px-3 py-1.5 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm transition-colors" id="shortcutAll" type="button">
+        Select All
+      </button>
+</div>
+</div>
+<!-- Advanced Monthly / Yearly Options Card -->
+<div class="flex flex-col bg-surface-container-lowest p-5 rounded-3xl shadow-sm space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Monthly Cadence Rules</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm">ADVANCED</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-[20px]">tune</span>
+</div>
+<div class="space-y-3">
+<label class="flex items-center gap-3 p-3.5 rounded-2xl bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<div class="w-5 h-5 rounded-full bg-primary flex items-center justify-center">
+<div class="w-2 h-2 rounded-full bg-on-primary"></div>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium">By day of the month</span>
+<span class="font-body-sm text-body-sm text-secondary">E.g., on the 14th day of each cycle</span>
+</div>
+</label>
+<label class="flex items-center gap-3 p-3.5 rounded-2xl bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<div class="w-5 h-5 rounded-full bg-surface-container-highest flex items-center justify-center">
+<div class="w-2 h-2 rounded-full bg-transparent"></div>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium">By day of the week</span>
+<span class="font-body-sm text-body-sm text-secondary">E.g., on the 2nd Thursday of each cycle</span>
+</div>
+</label>
+</div>
+<!-- Lunar Calendar Feature Toggle -->
+<div class="flex items-center justify-between p-4 rounded-2xl bg-surface-container-low">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface text-[22px]">dark_mode</span>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium">Lunar Calendar Recurrence</span>
+<span class="font-label-sm text-label-sm text-secondary">Unlocked open-source feature</span>
+</div>
+</div>
+<button class="w-12 h-6 rounded-full bg-surface-container-highest p-0.5 flex items-center transition-colors" id="lunarToggle" type="button">
+<div class="w-5 h-5 rounded-full bg-surface-container-lowest shadow-sm transform transition-transform"></div>
+</button>
+</div>
+</div>
+<!-- Recurrence Mode / Completion Strategy Card -->
+<div class="flex flex-col bg-surface-container-lowest p-5 rounded-3xl shadow-sm space-y-4">
+<div>
+<span class="font-title-md text-title-md text-on-surface font-semibold">Recurrence Trigger Mode</span>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">Determine how completion shifts subsequent deadlines</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="triggerModeGrid">
+<div class="trigger-option p-4 rounded-2xl bg-primary text-on-primary flex flex-col justify-between space-y-3 cursor-pointer transition-all shadow-sm" data-mode="due">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Strict Schedule</span>
+<span class="material-symbols-outlined text-[18px]">event_repeat</span>
+</div>
+<div>
+<div class="font-body-md text-body-md font-semibold">Based on Due Date</div>
+<div class="font-body-sm text-body-sm opacity-80 mt-1">Fixed calendar intervals regardless of when task is marked done.</div>
+</div>
+</div>
+<div class="trigger-option p-4 rounded-2xl bg-surface-container-low text-on-surface flex flex-col justify-between space-y-3 cursor-pointer transition-all hover:bg-surface-container" data-mode="completion">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Fluid Dynamic</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">task_alt</span>
+</div>
+<div>
+<div class="font-body-md text-body-md font-semibold">Based on Completion Date</div>
+<div class="font-body-sm text-body-sm text-secondary mt-1">Recur precisely 1 interval after the instant you complete it.</div>
+</div>
+</div>
+</div>
+<!-- Skip weekends toggle -->
+<div class="flex items-center justify-between p-3.5 rounded-2xl bg-surface-container-low">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-on-surface text-[20px]">weekend</span>
+<span class="font-body-md text-body-md text-on-surface">Skip weekends when rescheduled</span>
+</div>
+<button class="w-12 h-6 rounded-full bg-primary p-0.5 flex items-center justify-end transition-colors" id="weekendToggle" type="button">
+<div class="w-5 h-5 rounded-full bg-on-primary shadow-sm transform transition-transform"></div>
+</button>
+</div>
+</div>
+<!-- End Condition Card -->
+<div class="flex flex-col bg-surface-container-lowest p-5 rounded-3xl shadow-sm space-y-4">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Ends Recurrence</span>
+<span class="font-label-sm text-label-sm text-secondary">TERMINATION RULE</span>
+</div>
+<div class="space-y-2.5" id="endConditionGroup">
+<!-- Option 1: Never -->
+<label class="end-condition-card flex items-center justify-between p-4 rounded-2xl bg-primary text-on-primary cursor-pointer transition-colors shadow-sm" data-condition="never">
+<div class="flex items-center gap-3">
+<div class="w-5 h-5 rounded-full bg-on-primary flex items-center justify-center">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold">Never</span>
+<span class="font-body-sm text-body-sm opacity-80">Infinite recurrence until archived</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[20px]">all_inclusive</span>
+</label>
+<!-- Option 2: Specific Date -->
+<label class="end-condition-card flex items-center justify-between p-4 rounded-2xl bg-surface-container-low text-on-surface hover:bg-surface-container cursor-pointer transition-colors" data-condition="date">
+<div class="flex items-center gap-3">
+<div class="w-5 h-5 rounded-full bg-surface-container-highest flex items-center justify-center">
+<div class="w-2 h-2 rounded-full bg-transparent"></div>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-medium">On specific date</span>
+<span class="font-body-sm text-body-sm text-secondary">Until expiration timestamp</span>
+</div>
+</div>
+<span class="px-3 py-1 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm">
+          Nov 14, 2027
+        </span>
+</label>
+<!-- Option 3: After count -->
+<label class="end-condition-card flex items-center justify-between p-4 rounded-2xl bg-surface-container-low text-on-surface hover:bg-surface-container cursor-pointer transition-colors" data-condition="count">
+<div class="flex items-center gap-3">
+<div class="w-5 h-5 rounded-full bg-surface-container-highest flex items-center justify-center">
+<div class="w-2 h-2 rounded-full bg-transparent"></div>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-medium">After occurrence count</span>
+<span class="font-body-sm text-body-sm text-secondary">Automatic expiry</span>
+</div>
+</div>
+<span class="px-3 py-1 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm">
+          10 occurrences
+        </span>
+</label>
+</div>
+</div>
+<!-- Live RFC-5545 RRULE Specification Preview -->
+<div class="flex flex-col bg-surface-container-low p-5 rounded-3xl shadow-sm space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-on-surface">terminal</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold tracking-wider">LIVE RFC-5545 RRULE SPECIFICATION</span>
+</div>
+<button class="px-2.5 py-1 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center gap-1 transition-colors" id="copyRrule" type="button">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span>Copy</span>
+</button>
+</div>
+<!-- Code Block Container -->
+<div class="p-3.5 rounded-2xl bg-surface-container-lowest shadow-sm flex items-center justify-between overflow-x-auto">
+<code class="font-label-md text-label-md font-bold text-on-surface tracking-tight whitespace-nowrap" id="rruleCode">
+        RRULE:FREQ=WEEKLY;INTERVAL=1;BYDAY=MO,WE,FR
+      </code>
+</div>
+<!-- Human Readable Translation -->
+<div class="flex items-start gap-2 p-3 rounded-2xl bg-surface-container text-on-surface">
+<span class="material-symbols-outlined text-[18px] mt-0.5 text-secondary">info</span>
+<p class="font-body-sm text-body-sm text-secondary leading-snug" id="rruleHumanText">
+        Repeats every week on Monday, Wednesday, and Friday until manually stopped.
+      </p>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="flex flex-col space-y-3 pt-2">
+<!-- Verification banner -->
+<div class="p-3 rounded-2xl bg-surface-container-low flex items-center justify-center text-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-semibold">
+        100% UNLOCKED RECURRENCE ENGINE • ZERO COMMERCIAL PAYWALLS • LOCAL SQLITE SYNC
+      </span>
+</div>
+<!-- CTAs -->
+<div class="flex flex-col gap-2.5">
+<button class="w-full py-4 rounded-full bg-primary text-on-primary font-label-lg text-label-lg font-bold hover:bg-tertiary transition-transform active:scale-[0.99] flex items-center justify-center gap-2 shadow-sm" id="saveRruleBtn" type="button">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+<span>Save &amp; Apply Recurrence Rule</span>
+</button>
+<button class="w-full py-3.5 rounded-full bg-surface-container-lowest text-on-surface font-label-lg text-label-lg hover:bg-surface-container transition-colors flex items-center justify-center gap-2 shadow-sm" id="clearRruleBtn" type="button">
+<span class="material-symbols-outlined text-[20px]">event_busy</span>
+<span>Clear Recurrence (Set One-time)</span>
+</button>
+<button class="w-full py-3 rounded-full text-secondary hover:text-on-surface font-label-md text-label-md transition-colors text-center" onclick="history.back()" type="button">
+        Cancel
+      </button>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    let currentFreq = 'WEEKLY';
+    let currentInterval = 1;
+    let selectedDays = ['MO', 'WE', 'FR'];
+    let endCondition = 'never';
+
+    const rruleCode = document.getElementById('rruleCode');
+    const rruleHumanText = document.getElementById('rruleHumanText');
+    const intervalDisplay = document.getElementById('intervalDisplay');
+    const intervalUnit = document.getElementById('intervalUnit');
+
+    function updateRrulePreview() {
+      if (currentFreq === 'NONE') {
+        rruleCode.textContent = 'None (One-time Task)';
+        rruleHumanText.textContent = 'Task will occur once and will not generate future instances.';
+        return;
+      }
+
+      let rrule = `RRULE:FREQ=${currentFreq}`;
+      if (currentInterval > 1) {
+        rrule += `;INTERVAL=${currentInterval}`;
+      }
+
+      if (currentFreq === 'WEEKLY' && selectedDays.length > 0) {
+        rrule += `;BYDAY=${selectedDays.join(',')}`;
+      }
+
+      if (endCondition === 'date') {
+        rrule += ';UNTIL=20271114T000000Z';
+      } else if (endCondition === 'count') {
+        rrule += ';COUNT=10';
+      }
+
+      rruleCode.textContent = rrule;
+
+      // Human-readable synthesis
+      let freqLabel = currentFreq.toLowerCase();
+      let intervalLabel = currentInterval === 1 ? `every ${freqLabel.replace('ly', '')}` : `every ${currentInterval} ${freqLabel.replace('ly', 's')}`;
+      if (currentFreq === 'DAILY') intervalLabel = currentInterval === 1 ? 'every day' : `every ${currentInterval} days`;
+      if (currentFreq === 'WEEKLY') intervalLabel = currentInterval === 1 ? 'every week' : `every ${currentInterval} weeks`;
+      if (currentFreq === 'MONTHLY') intervalLabel = currentInterval === 1 ? 'every month' : `every ${currentInterval} months`;
+      if (currentFreq === 'YEARLY') intervalLabel = currentInterval === 1 ? 'every year' : `every ${currentInterval} years`;
+
+      let daysLabel = '';
+      if (currentFreq === 'WEEKLY' && selectedDays.length > 0) {
+        const fullNames = {
+          'MO': 'Monday', 'TU': 'Tuesday', 'WE': 'Wednesday',
+          'TH': 'Thursday', 'FR': 'Friday', 'SA': 'Saturday', 'SU': 'Sunday'
+        };
+        daysLabel = ' on ' + selectedDays.map(d => fullNames[d]).join(', ');
+      }
+
+      let endLabel = ' until manually stopped.';
+      if (endCondition === 'date') endLabel = ' until Nov 14, 2027.';
+      if (endCondition === 'count') endLabel = ' for 10 occurrences.';
+
+      rruleHumanText.textContent = `Repeats ${intervalLabel}${daysLabel}${endLabel}`;
+    }
+
+    // Interval Buttons
+    document.getElementById('intervalInc').addEventListener('click', () => {
+      currentInterval++;
+      intervalDisplay.textContent = currentInterval;
+      updateRrulePreview();
+    });
+
+    document.getElementById('intervalDec').addEventListener('click', () => {
+      if (currentInterval > 1) {
+        currentInterval--;
+        intervalDisplay.textContent = currentInterval;
+        updateRrulePreview();
+      }
+    });
+
+    // Frequency Switcher
+    const freqBtns = document.querySelectorAll('.freq-btn');
+    freqBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        freqBtns.forEach(b => {
+          b.className = 'freq-btn py-2 px-3 rounded-full font-label-md text-label-md text-center transition-all text-on-surface hover:bg-surface-container';
+        });
+        btn.className = 'freq-btn py-2 px-3 rounded-full font-label-md text-label-md text-center transition-all bg-primary text-on-primary font-semibold shadow-sm';
+        currentFreq = btn.dataset.freq;
+
+        // Update units label
+        const units = {
+          'DAILY': 'Day(s)',
+          'WEEKLY': 'Week(s)',
+          'MONTHLY': 'Month(s)',
+          'YEARLY': 'Year(s)',
+          'CUSTOM': 'Cycle(s)'
+        };
+        intervalUnit.textContent = units[currentFreq] || 'Unit';
+
+        // Matrix visibility
+        const matrix = document.getElementById('weeklyMatrixSection');
+        if (currentFreq === 'WEEKLY') {
+          matrix.style.display = 'flex';
+        } else {
+          matrix.style.display = 'none';
+        }
+
+        updateRrulePreview();
+      });
+    });
+
+    // Preset Pills
+    const presetPills = document.querySelectorAll('.preset-pill');
+    presetPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        presetPills.forEach(p => {
+          p.className = 'preset-pill px-4 py-2 rounded-full font-label-md text-label-md transition-all bg-surface-container-lowest text-on-surface hover:bg-surface-container shadow-sm';
+        });
+        pill.className = 'preset-pill px-4 py-2 rounded-full font-label-md text-label-md transition-all bg-primary text-on-primary shadow-sm';
+
+        const pType = pill.dataset.preset;
+        if (pType === 'none') {
+          currentFreq = 'NONE';
+        } else if (pType === 'daily') {
+          currentFreq = 'DAILY';
+          currentInterval = 1;
+        } else if (pType === 'weekly') {
+          currentFreq = 'WEEKLY';
+          currentInterval = 1;
+          selectedDays = ['MO', 'WE', 'FR'];
+        } else if (pType === 'monthly') {
+          currentFreq = 'MONTHLY';
+          currentInterval = 1;
+        } else if (pType === 'yearly') {
+          currentFreq = 'YEARLY';
+          currentInterval = 1;
+        } else if (pType === 'weekdays') {
+          currentFreq = 'WEEKLY';
+          currentInterval = 1;
+          selectedDays = ['MO', 'TU', 'WE', 'TH', 'FR'];
+        }
+        intervalDisplay.textContent = currentInterval;
+        syncDayMatrixUI();
+        updateRrulePreview();
+      });
+    });
+
+    // Day Matrix Tokens
+    const dayTokens = document.querySelectorAll('.day-token');
+    function syncDayMatrixUI() {
+      dayTokens.forEach(token => {
+        const day = token.dataset.day;
+        if (selectedDays.includes(day)) {
+          token.className = 'day-token aspect-square rounded-full flex flex-col items-center justify-center font-label-md text-label-md bg-primary text-on-primary font-bold shadow-sm transition-transform active:scale-95';
+        } else {
+          token.className = 'day-token aspect-square rounded-full flex flex-col items-center justify-center font-label-md text-label-md bg-surface-container-low text-on-surface transition-transform active:scale-95';
+        }
+      });
+    }
+
+    dayTokens.forEach(token => {
+      token.addEventListener('click', () => {
+        const day = token.dataset.day;
+        if (selectedDays.includes(day)) {
+          if (selectedDays.length > 1) {
+            selectedDays = selectedDays.filter(d => d !== day);
+          }
+        } else {
+          selectedDays.push(day);
+        }
+        syncDayMatrixUI();
+        updateRrulePreview();
+      });
+    });
+
+    // Day Shortcuts
+    document.getElementById('shortcutWeekdays').addEventListener('click', () => {
+      selectedDays = ['MO', 'TU', 'WE', 'TH', 'FR'];
+      syncDayMatrixUI();
+      updateRrulePreview();
+    });
+
+    document.getElementById('shortcutWeekends').addEventListener('click', () => {
+      selectedDays = ['SA', 'SU'];
+      syncDayMatrixUI();
+      updateRrulePreview();
+    });
+
+    document.getElementById('shortcutAll').addEventListener('click', () => {
+      selectedDays = ['MO', 'TU', 'WE', 'TH', 'FR', 'SA', 'SU'];
+      syncDayMatrixUI();
+      updateRrulePreview();
+    });
+
+    // Trigger Mode Options
+    const triggerCards = document.querySelectorAll('.trigger-option');
+    triggerCards.forEach(tc => {
+      tc.addEventListener('click', () => {
+        triggerCards.forEach(c => {
+          c.className = 'trigger-option p-4 rounded-2xl bg-surface-container-low text-on-surface flex flex-col justify-between space-y-3 cursor-pointer transition-all hover:bg-surface-container';
+          c.querySelector('span:first-child').className = 'font-label-sm text-label-sm uppercase tracking-wider text-secondary';
+          c.querySelector('.material-symbols-outlined').className = 'material-symbols-outlined text-[18px] text-secondary';
+        });
+        tc.className = 'trigger-option p-4 rounded-2xl bg-primary text-on-primary flex flex-col justify-between space-y-3 cursor-pointer transition-all shadow-sm';
+        tc.querySelector('span:first-child').className = 'font-label-sm text-label-sm uppercase tracking-wider font-semibold';
+        tc.querySelector('.material-symbols-outlined').className = 'material-symbols-outlined text-[18px]';
+      });
+    });
+
+    // Lunar & Weekend Toggles
+    const lunarToggle = document.getElementById('lunarToggle');
+    let lunarActive = false;
+    lunarToggle.addEventListener('click', () => {
+      lunarActive = !lunarActive;
+      if (lunarActive) {
+        lunarToggle.className = 'w-12 h-6 rounded-full bg-primary p-0.5 flex items-center justify-end transition-colors';
+        lunarToggle.querySelector('div').className = 'w-5 h-5 rounded-full bg-on-primary shadow-sm transform transition-transform';
+      } else {
+        lunarToggle.className = 'w-12 h-6 rounded-full bg-surface-container-highest p-0.5 flex items-center transition-colors';
+        lunarToggle.querySelector('div').className = 'w-5 h-5 rounded-full bg-surface-container-lowest shadow-sm transform transition-transform';
+      }
+    });
+
+    const weekendToggle = document.getElementById('weekendToggle');
+    let weekendActive = true;
+    weekendToggle.addEventListener('click', () => {
+      weekendActive = !weekendActive;
+      if (weekendActive) {
+        weekendToggle.className = 'w-12 h-6 rounded-full bg-primary p-0.5 flex items-center justify-end transition-colors';
+        weekendToggle.querySelector('div').className = 'w-5 h-5 rounded-full bg-on-primary shadow-sm transform transition-transform';
+      } else {
+        weekendToggle.className = 'w-12 h-6 rounded-full bg-surface-container-highest p-0.5 flex items-center transition-colors';
+        weekendToggle.querySelector('div').className = 'w-5 h-5 rounded-full bg-surface-container-lowest shadow-sm transform transition-transform';
+      }
+    });
+
+    // End condition radio group
+    const endCards = document.querySelectorAll('.end-condition-card');
+    endCards.forEach(ec => {
+      ec.addEventListener('click', () => {
+        endCards.forEach(c => {
+          c.className = 'end-condition-card flex items-center justify-between p-4 rounded-2xl bg-surface-container-low text-on-surface hover:bg-surface-container cursor-pointer transition-colors';
+          const dotWrapper = c.querySelector('div > div');
+          dotWrapper.className = 'w-5 h-5 rounded-full bg-surface-container-highest flex items-center justify-center';
+          dotWrapper.querySelector('div').className = 'w-2 h-2 rounded-full bg-transparent';
+        });
+        ec.className = 'end-condition-card flex items-center justify-between p-4 rounded-2xl bg-primary text-on-primary cursor-pointer transition-colors shadow-sm';
+        const activeDotWrapper = ec.querySelector('div > div');
+        activeDotWrapper.className = 'w-5 h-5 rounded-full bg-on-primary flex items-center justify-center';
+        activeDotWrapper.querySelector('div').className = 'w-2 h-2 rounded-full bg-primary';
+
+        endCondition = ec.dataset.condition;
+        updateRrulePreview();
+      });
+    });
+
+    // Copy Button Feedback
+    const copyBtn = document.getElementById('copyRrule');
+    copyBtn.addEventListener('click', () => {
+      navigator.clipboard?.writeText(rruleCode.textContent.trim());
+      copyBtn.innerHTML = '<span class="material-symbols-outlined text-[14px]">check</span><span>Copied!</span>';
+      setTimeout(() => {
+        copyBtn.innerHTML = '<span class="material-symbols-outlined text-[14px]">content_copy</span><span>Copy</span>';
+      }, 1800);
+    });
+
+    // Clear Recurrence Action
+    document.getElementById('clearRruleBtn').addEventListener('click', () => {
+      currentFreq = 'NONE';
+      updateRrulePreview();
+      presetPills.forEach(p => {
+        p.className = 'preset-pill px-4 py-2 rounded-full font-label-md text-label-md transition-all bg-surface-container-lowest text-on-surface hover:bg-surface-container shadow-sm';
+      });
+      document.querySelector('[data-preset="none"]').className = 'preset-pill px-4 py-2 rounded-full font-label-md text-label-md transition-all bg-primary text-on-primary shadow-sm';
+    });
+
+    // Save button micro-delight
+    const saveBtn = document.getElementById('saveRruleBtn');
+    saveBtn.addEventListener('click', () => {
+      const originalHtml = saveBtn.innerHTML;
+      saveBtn.innerHTML = '<span class="material-symbols-outlined text-[20px]">done_all</span><span>Rule Saved to SQLite!</span>';
+      setTimeout(() => {
+        saveBtn.innerHTML = originalHtml;
+      }, 2000);
+    });
+
+    updateRrulePreview();
+  })();
+</script></main></body></html>

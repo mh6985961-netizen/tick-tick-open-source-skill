@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=JetBrains+Mono:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "background": "#f9f9f9", "surface-bright": "#f9f9f9", "surface-tint": "#575e70", "surface-container-highest": "#e2e2e2", "primary": "#000000", "tertiary-fixed": "#dce3f0", "on-tertiary-fixed-variant": "#404752", "on-secondary-fixed": "#121c28", "surface-container": "#eeeeee", "inverse-primary": "#c0c6db", "on-surface-variant": "#45464c", "on-tertiary-fixed": "#151c25", "surface-container-lowest": "#ffffff", "on-tertiary": "#ffffff", "on-surface": "#1a1c1c", "tertiary-fixed-dim": "#c0c7d3", "tertiary": "#000000", "surface-variant": "#e2e2e2", "secondary-container": "#d6e0f1", "primary-fixed-dim": "#c0c6db", "surface-dim": "#dadada", "surface-container-high": "#e8e8e8", "on-primary": "#ffffff", "error": "#ba1a1a", "on-tertiary-container": "#7d8490", "tertiary-container": "#151c25", "surface": "#f9f9f9", "surface-container-low": "#f3f3f4", "error-container": "#ffdad6", "on-primary-container": "#7d8497", "secondary-fixed": "#d9e3f4", "on-primary-fixed": "#141b2b", "primary-fixed": "#dce2f7", "primary-container": "#141b2b", "on-primary-fixed-variant": "#404758", "outline-variant": "#c6c6cd", "secondary-fixed-dim": "#bdc7d8", "inverse-on-surface": "#f0f1f1", "on-secondary": "#ffffff", "secondary": "#555f6d", "on-background": "#1a1c1c", "on-secondary-fixed-variant": "#3e4755", "on-secondary-container": "#596372", "on-error": "#ffffff", "inverse-surface": "#2f3131", "outline": "#76777d", "on-error-container": "#93000a" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "gutter": "1.5rem", "gutter-lg": "2rem", "margin-sm": "1rem", "margin-lg": "4rem", "space-xl": "2.5rem", "margin": "2rem", "space-xs": "0.25rem", "space-md": "1rem", "space-sm": "0.5rem", "gutter-sm": "1rem", "space-lg": "1.5rem" }, fontFamily: { "display-xl": ["Geist"], "headline-sm": ["Geist"], "label-sm": ["JetBrains Mono"], "title-md": ["Geist"], "display-xl-mobile": ["Geist"], "headline-md": ["Geist"], "label-lg": ["JetBrains Mono"], "body-lg": ["Geist"], "label-md": ["JetBrains Mono"], "headline-lg-mobile": ["Geist"], "body-sm": ["Geist"], "body-md": ["Geist"], "headline-lg": ["Geist"] }, fontSize: { "display-xl": ["56px", { lineHeight: "64px", letterSpacing: "-0.04em", fontWeight: "700" }], "headline-sm": ["20px", { lineHeight: "28px", letterSpacing: "-0.015em", fontWeight: "600" }], "label-sm": ["10px", { lineHeight: "14px", letterSpacing: "0.06em", fontWeight: "500" }], "title-md": ["16px", { lineHeight: "24px", letterSpacing: "-0.01em", fontWeight: "600" }], "display-xl-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.03em", fontWeight: "700" }], "headline-md": ["28px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "600" }], "label-lg": ["13px", { lineHeight: "18px", letterSpacing: "0.02em", fontWeight: "500" }], "body-lg": ["18px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "400" }], "label-md": ["11px", { lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "500" }], "headline-lg-mobile": ["28px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "600" }], "body-sm": ["12px", { lineHeight: "18px", letterSpacing: "0em", fontWeight: "400" }], "body-md": ["14px", { lineHeight: "22px", letterSpacing: "-0.005em", fontWeight: "400" }], "headline-lg": ["40px", { lineHeight: "48px", letterSpacing: "-0.03em", fontWeight: "600" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface-container-lowest text-on-surface font-body-md text-body-md antialiased min-h-full flex flex-col"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-sm flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><button aria-label="Go Back" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[22px]">arrow_back</span></button><h1 class="font-title-md text-title-md text-on-surface truncate tracking-tight">Calendar View Options</h1></div><div class="flex items-center gap-space-sm"><button class="min-h-[44px] px-space-md bg-primary text-on-primary rounded font-label-lg text-label-lg uppercase tracking-wider flex items-center justify-center hover:bg-neutral-800 active:scale-[0.99] transition-all" type="button">Save</button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 bg-surface-container-lowest pb-safe"><div class="flex flex-col w-full pb-12">
+<!-- Content Container with strict spatial pacing -->
+<div class="w-full max-w-3xl mx-auto px-4 sm:px-6 flex flex-col gap-8 pt-4">
+<!-- 1. Header & Meta Section -->
+<header class="flex flex-col gap-3">
+<div class="flex items-center justify-between flex-wrap gap-2">
+<div class="inline-flex items-center gap-2 px-2.5 py-1 bg-surface-container-low text-on-surface rounded">
+<span class="font-label-sm text-label-sm tracking-widest uppercase">CALENDAR ENGINE • SCR-CAL-002</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-lowest text-on-surface rounded shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm tracking-wider uppercase font-semibold">UNRESTRICTED CORE</span>
+</div>
+</div>
+<div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight">Calendar View Options</h1>
+<p class="font-body-md text-body-md text-secondary mt-1 max-w-2xl">
+          Configure weekly start days, timeline hour boundaries, multi-day density, event visibility, and grid behavior across all calendar layouts.
+        </p>
+</div>
+</header>
+<!-- 2. Week & Date Fundamentals Section -->
+<section class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-medium">WEEK & TIMELINE HORIZON</span>
+<span class="font-label-sm text-label-sm text-outline">SEC 01</span>
+</div>
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-5 flex flex-col gap-6">
+<!-- Start Day of Week -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div class="min-w-0">
+<span class="font-title-md text-title-md text-on-surface block">Start Day of Week</span>
+<span class="font-body-sm text-body-sm text-secondary block mt-0.5">Determines the first column across multi-day views</span>
+</div>
+<div aria-label="Start Day" class="inline-flex bg-surface-container-low p-1 rounded-lg self-start sm:self-auto shrink-0" role="group">
+<button class="px-3.5 py-1.5 rounded font-label-md text-label-md text-secondary hover:text-on-surface transition-colors" type="button">Sunday</button>
+<button class="px-3.5 py-1.5 rounded bg-primary text-on-primary font-label-md text-label-md shadow-sm transition-transform active:scale-[0.98]" type="button">Monday</button>
+<button class="px-3.5 py-1.5 rounded font-label-md text-label-md text-secondary hover:text-on-surface transition-colors" type="button">Saturday</button>
+</div>
+</div>
+<div class="w-full h-px bg-surface-container"></div>
+<!-- Show Week Numbers Toggle -->
+<div class="flex items-center justify-between gap-4">
+<div class="min-w-0 pr-2">
+<span class="font-title-md text-title-md text-on-surface block">Show Week Numbers</span>
+<span class="font-body-sm text-body-sm text-secondary block mt-0.5">Displays ISO 8601 week counters in month and week gutters (e.g. W46)</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" id="toggle-week-numbers" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="w-full h-px bg-surface-container"></div>
+<!-- First Week of Year -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div class="min-w-0">
+<span class="font-title-md text-title-md text-on-surface block">First Week of Year</span>
+<span class="font-body-sm text-body-sm text-secondary block mt-0.5">Rule utilized for counting annual calendar weeks</span>
+</div>
+<div class="relative shrink-0">
+<select class="appearance-none bg-surface-container-low text-on-surface font-label-md text-label-md px-3.5 py-2 pr-9 rounded-lg focus:outline-none cursor-pointer">
+<option selected="">First 4-day week (ISO)</option>
+<option>First full week (7 days)</option>
+<option>Starts on Jan 1</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 text-secondary text-[18px]">expand_more</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Timeline Visible Hour Boundaries Section -->
+<section class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-medium">DAY & WEEK VIEW HOUR BOUNDARIES</span>
+<span class="font-label-sm text-label-sm text-outline">SEC 02</span>
+</div>
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-5 flex flex-col gap-6">
+<div>
+<span class="font-title-md text-title-md text-on-surface block">Visible Timeline Range</span>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">
+            Constrain the vertical scrollable grid to your active working hours to minimize dead night space.
+          </p>
+</div>
+<!-- Dual Hour Range Steppers -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<!-- Start Hour Card -->
+<div class="bg-surface-container-low p-3.5 rounded-lg flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-secondary">Start Hour</span>
+<span class="font-title-md text-title-md text-on-surface font-mono mt-0.5" id="val-start-hour">07:00 AM</span>
+<span class="font-body-sm text-body-sm text-outline">Early Morning</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-lowest p-1 rounded shadow-sm">
+<button aria-label="Decrease start hour" class="w-8 h-8 rounded flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors active:scale-95" type="button">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<button aria-label="Increase start hour" class="w-8 h-8 rounded flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors active:scale-95" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</div>
+<!-- End Hour Card -->
+<div class="bg-surface-container-low p-3.5 rounded-lg flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-secondary">End Hour</span>
+<span class="font-title-md text-title-md text-on-surface font-mono mt-0.5" id="val-end-hour">22:00 PM</span>
+<span class="font-body-sm text-body-sm text-outline">Late Evening</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-lowest p-1 rounded shadow-sm">
+<button aria-label="Decrease end hour" class="w-8 h-8 rounded flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors active:scale-95" type="button">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<button aria-label="Increase end hour" class="w-8 h-8 rounded flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors active:scale-95" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- 24-Hour Visual Horizon Bar -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-secondary font-mono">
+<span>00:00</span>
+<span class="text-on-surface font-semibold">Active Window (15 Hours)</span>
+<span>24:00</span>
+</div>
+<!-- The visual timeline strip -->
+<div class="w-full h-8 bg-surface-container rounded-lg overflow-hidden flex relative">
+<!-- 00:00 to 07:00 (7/24 approx 29.16%) -->
+<div class="h-full bg-surface-container-highest flex items-center justify-center shrink-0" style="width: 29.16%;">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider hidden sm:inline">Night</span>
+</div>
+<!-- 07:00 to 22:00 (15/24 approx 62.5%) -->
+<div class="h-full bg-primary text-on-primary flex items-center justify-between px-3 shrink-0" style="width: 62.5%;">
+<span class="font-label-sm text-label-sm font-mono text-surface-container-lowest/90 font-medium">07:00</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest font-semibold">Active Horizon</span>
+<span class="font-label-sm text-label-sm font-mono text-surface-container-lowest/90 font-medium">22:00</span>
+</div>
+<!-- 22:00 to 24:00 (2/24 approx 8.33%) -->
+<div class="h-full bg-surface-container-highest flex items-center justify-center shrink-0" style="width: 8.34%;">
+<span class="font-label-sm text-label-sm text-outline hidden sm:inline">Off</span>
+</div>
+</div>
+</div>
+<div class="w-full h-px bg-surface-container"></div>
+<!-- Auto-scroll to Current Time on Launch -->
+<div class="flex items-center justify-between gap-4">
+<div class="min-w-0 pr-2">
+<span class="font-title-md text-title-md text-on-surface block">Auto-scroll to Current Time on Launch</span>
+<span class="font-body-sm text-body-sm text-secondary block mt-0.5">Focuses the vertical scrollbar directly onto the active moment marker</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" id="toggle-autoscroll" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</section>
+<!-- 4. Grid Density & Snap Resolution Section -->
+<section class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-medium">GRID DENSITY & SNAP RESOLUTION</span>
+<span class="font-label-sm text-label-sm text-outline">SEC 03</span>
+</div>
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-5 flex flex-col gap-6">
+<!-- Hour Row Height Segmented Cards -->
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface">Hour Row Height (Grid Scale)</span>
+<span class="font-label-sm text-label-sm text-secondary">Vertical Pitch</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+<!-- Compact -->
+<button class="flex flex-col items-start p-3.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-left transition-all" type="button">
+<div class="flex items-center justify-between w-full">
+<span class="font-title-md text-title-md text-on-surface">Compact</span>
+<span class="font-label-sm text-label-sm font-mono text-secondary">40px</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary mt-1">Maximum daily span overview</span>
+</button>
+<!-- Standard (Active) -->
+<button class="flex flex-col items-start p-3.5 rounded-lg bg-primary text-on-primary text-left transition-all shadow-sm" type="button">
+<div class="flex items-center justify-between w-full">
+<span class="font-title-md text-title-md text-on-primary">Standard</span>
+<span class="material-symbols-outlined text-on-primary text-[18px]">check</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-primary/80 mt-1">60px/hr • Balanced legibility</span>
+</button>
+<!-- Spacious -->
+<button class="flex flex-col items-start p-3.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-left transition-all" type="button">
+<div class="flex items-center justify-between w-full">
+<span class="font-title-md text-title-md text-on-surface">Spacious</span>
+<span class="font-label-sm text-label-sm font-mono text-secondary">80px</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary mt-1">Comfortable multi-tag visibility</span>
+</button>
+</div>
+</div>
+<div class="w-full h-px bg-surface-container"></div>
+<!-- Drag Snap Interval -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div class="min-w-0">
+<span class="font-title-md text-title-md text-on-surface block">Drag-to-Schedule Snap Interval</span>
+<span class="font-body-sm text-body-sm text-secondary block mt-0.5">Quantization step when dragging tasks across grid slots</span>
+</div>
+<div aria-label="Snap Interval" class="inline-flex bg-surface-container-low p-1 rounded-lg self-start sm:self-auto shrink-0" role="group">
+<button class="px-3 py-1.5 rounded font-label-md text-label-md text-secondary hover:text-on-surface transition-colors" type="button">5 min</button>
+<button class="px-3 py-1.5 rounded bg-primary text-on-primary font-label-md text-label-md shadow-sm transition-transform active:scale-[0.98]" type="button">15 min</button>
+<button class="px-3 py-1.5 rounded font-label-md text-label-md text-secondary hover:text-on-surface transition-colors" type="button">30 min</button>
+<button class="px-3 py-1.5 rounded font-label-md text-label-md text-secondary hover:text-on-surface transition-colors" type="button">60 min</button>
+</div>
+</div>
+<div class="w-full h-px bg-surface-container"></div>
+<!-- Default Event Duration -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div class="min-w-0">
+<span class="font-title-md text-title-md text-on-surface block">Default New Event Duration</span>
+<span class="font-body-sm text-body-sm text-secondary block mt-0.5">Initial span applied when tapping to construct an event</span>
+</div>
+<div class="relative shrink-0">
+<select class="appearance-none bg-surface-container-low text-on-surface font-label-md text-label-md px-3.5 py-2 pr-9 rounded-lg focus:outline-none cursor-pointer">
+<option>15 Minutes</option>
+<option selected="">30 Minutes</option>
+<option>45 Minutes</option>
+<option>60 Minutes</option>
+<option>90 Minutes</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 text-secondary text-[18px]">expand_more</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. Task & Event Visibility Controls Section -->
+<section class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-medium">DISPLAYED ARTIFACTS & TASK FILTERING</span>
+<span class="font-label-sm text-label-sm text-outline">SEC 04</span>
+</div>
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-5 flex flex-col gap-5">
+<!-- Toggle: Show Completed Tasks -->
+<div class="flex items-center justify-between gap-4">
+<div class="min-w-0 pr-2">
+<span class="font-title-md text-title-md text-on-surface block">Show Completed Tasks in Calendar</span>
+<span class="font-body-sm text-body-sm text-secondary block mt-0.5">Renders finished items with strikethrough in past day slots</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" id="toggle-completed" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="w-full h-px bg-surface-container"></div>
+<!-- Toggle: Show Cancelled / Won't Do -->
+<div class="flex items-center justify-between gap-4">
+<div class="min-w-0 pr-2">
+<span class="font-title-md text-title-md text-on-surface block">Show Won't Do / Cancelled Items</span>
+<span class="font-body-sm text-body-sm text-secondary block mt-0.5">Keeps discarded or abandoned tasks on historical day views</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input class="sr-only peer" id="toggle-cancelled" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="w-full h-px bg-surface-container"></div>
+<!-- Toggle: Show Undated Tasks in Unscheduled Drawer -->
+<div class="flex items-center justify-between gap-4">
+<div class="min-w-0 pr-2">
+<span class="font-title-md text-title-md text-on-surface block">Show Undated Tasks in Unscheduled Drawer</span>
+<span class="font-body-sm text-body-sm text-secondary block mt-0.5">Keeps bottom pull-up drawer available in Day and Week views</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" id="toggle-undated" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="w-full h-px bg-surface-container"></div>
+<!-- Toggle: Highlight Current Time Indicator -->
+<div class="flex items-center justify-between gap-4">
+<div class="min-w-0 pr-2">
+<span class="font-title-md text-title-md text-on-surface block">Highlight Current Time Indicator</span>
+<span class="font-body-sm text-body-sm text-secondary block mt-0.5">Renders solid high-contrast indicator line across timeline</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" id="toggle-time-indicator" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="w-full h-px bg-surface-container"></div>
+<!-- Toggle: CalDAV/WebCal Subscriptions -->
+<div class="flex items-center justify-between gap-4">
+<div class="min-w-0 pr-2">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-title-md text-title-md text-on-surface">Show Calendar Subscription Events</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 bg-surface-container-low text-secondary rounded">3 Accounts Active</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary block mt-0.5">Displays external read-only WebCal and CalDAV feeds</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" id="toggle-subscriptions" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</section>
+<!-- 6. Month View Multi-Day Display Rules Section -->
+<section class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-medium">MONTH VIEW SPECIALIZATION</span>
+<span class="font-label-sm text-label-sm text-outline">SEC 05</span>
+</div>
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-5 flex flex-col gap-5">
+<!-- Visible Tasks Per Cell Stepper -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div class="min-w-0">
+<span class="font-title-md text-title-md text-on-surface block">Maximum Visible Tasks per Date Cell</span>
+<span class="font-body-sm text-body-sm text-secondary block mt-0.5">Remaining entries are grouped cleanly into '+X more' badges</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-low p-1 rounded-lg self-start sm:self-auto shrink-0">
+<button aria-label="Decrease visible tasks" class="w-8 h-8 rounded bg-surface-container-lowest flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors shadow-sm active:scale-95" type="button">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<span class="font-label-md text-label-md font-mono text-on-surface px-3 font-semibold">3 Tasks</span>
+<button aria-label="Increase visible tasks" class="w-8 h-8 rounded bg-surface-container-lowest flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors shadow-sm active:scale-95" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</div>
+<div class="w-full h-px bg-surface-container"></div>
+<!-- Toggle: Lunar / Regional Dates -->
+<div class="flex items-center justify-between gap-4">
+<div class="min-w-0 pr-2">
+<span class="font-title-md text-title-md text-on-surface block">Show Lunar / Regional Calendar Dates</span>
+<span class="font-body-sm text-body-sm text-secondary block mt-0.5">Annotates solar dates with regional astronomical day indexes</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input class="sr-only peer" id="toggle-lunar" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="w-full h-px bg-surface-container"></div>
+<!-- Toggle: Dim Past Days in Month -->
+<div class="flex items-center justify-between gap-4">
+<div class="min-w-0 pr-2">
+<span class="font-title-md text-title-md text-on-surface block">Dim Past Days in Current Month</span>
+<span class="font-body-sm text-body-sm text-secondary block mt-0.5">Reduces opacity of days preceding today to emphasize remaining agenda</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" id="toggle-dim-past" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</section>
+<!-- 7. Sovereignty Card & Action Controls -->
+<div class="flex flex-col gap-4 pt-2">
+<!-- Sovereignty Card -->
+<div class="bg-surface-container-low p-4 rounded-xl flex items-start gap-3.5">
+<div class="w-9 h-9 rounded bg-primary text-on-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface font-semibold">
+            LOCAL-FIRST SCHEDULING • ZERO SUBSCRIPTION RESTRICTIONS • NATIVE DRAG SNAP ENGINE
+          </span>
+<p class="font-body-sm text-body-sm text-secondary mt-1">
+            All 5 calendar modes (Month, Week, 3-Day, Day, Agenda) and time-blocking capabilities execute locally without subscription barriers or cloud timeouts.
+          </p>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col sm:flex-row items-center gap-3 w-full pt-2">
+<button class="w-full sm:flex-1 min-h-[48px] px-6 bg-primary text-on-primary rounded font-title-md text-title-md flex items-center justify-center gap-2 hover:bg-neutral-800 active:scale-[0.99] transition-all shadow-sm" type="button">
+<span>Apply Calendar Preferences</span>
+<span class="material-symbols-outlined text-[18px]">done</span>
+</button>
+<button class="w-full sm:w-auto min-h-[48px] px-6 bg-surface-container-low text-on-surface hover:bg-surface-container rounded font-title-md text-title-md flex items-center justify-center active:scale-[0.99] transition-all" type="button">
+<span>Reset to Default Calendar View</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple micro-interaction state handling for segmented buttons
+  document.querySelectorAll('[role="group"]').forEach(group => {
+    const buttons = group.querySelectorAll('button');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => {
+          b.className = "px-3.5 py-1.5 rounded font-label-md text-label-md text-secondary hover:text-on-surface transition-colors";
+        });
+        btn.className = "px-3.5 py-1.5 rounded bg-primary text-on-primary font-label-md text-label-md shadow-sm transition-transform active:scale-[0.98]";
+      });
+    });
+  });
+</script></main></body></html>

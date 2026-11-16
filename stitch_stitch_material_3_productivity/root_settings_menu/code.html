@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><title>Aura Chrono</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error": "#ba1a1a", "on-secondary-container": "#596372", "error-container": "#ffdad6", "surface-container-highest": "#e2e2e2", "outline": "#76777d", "on-primary-container": "#7d8497", "tertiary-fixed-dim": "#c0c7d3", "inverse-primary": "#c0c6db", "secondary": "#555f6d", "on-error-container": "#93000a", "secondary-fixed": "#d9e3f4", "on-background": "#1a1c1c", "on-secondary-fixed": "#121c28", "outline-variant": "#c6c6cd", "surface-container-lowest": "#ffffff", "surface-variant": "#e2e2e2", "inverse-on-surface": "#f0f1f1", "on-surface": "#1a1c1c", "on-primary-fixed": "#141b2b", "on-surface-variant": "#45464c", "on-tertiary-fixed": "#151c25", "on-primary": "#ffffff", "secondary-container": "#d6e0f1", "primary": "#000000", "surface-tint": "#575e70", "primary-fixed": "#dce2f7", "inverse-surface": "#2f3131", "surface-container": "#eeeeee", "on-secondary-fixed-variant": "#3e4755", "tertiary-container": "#151c25", "tertiary-fixed": "#dce3f0", "surface": "#f9f9f9", "tertiary": "#000000", "secondary-fixed-dim": "#bdc7d8", "primary-container": "#141b2b", "primary-fixed-dim": "#c0c6db", "on-tertiary-fixed-variant": "#404752", "surface-dim": "#dadada", "on-error": "#ffffff", "surface-container-high": "#e8e8e8", "surface-container-low": "#f3f3f4", "on-tertiary-container": "#7d8490", "background": "#f9f9f9", "surface-bright": "#f9f9f9", "on-primary-fixed-variant": "#404758", "on-secondary": "#ffffff", "on-tertiary": "#ffffff" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin-sm": "1rem", "gutter-sm": "1rem", "space-xl": "2.5rem", "space-sm": "0.5rem", "margin-lg": "4rem", "gutter-lg": "2rem", "space-xs": "0.25rem", "gutter": "1.5rem", "margin": "2rem", "space-md": "1rem", "space-lg": "1.5rem" }, "fontFamily": { "label-sm": ["JetBrains Mono"], "headline-sm": ["Geist"], "body-lg": ["Geist"], "body-sm": ["Geist"], "headline-md": ["Geist"], "label-md": ["JetBrains Mono"], "display-xl": ["Geist"], "title-md": ["Geist"], "headline-lg": ["Geist"], "label-lg": ["JetBrains Mono"], "headline-lg-mobile": ["Geist"], "display-xl-mobile": ["Geist"], "body-md": ["Geist"] }, "fontSize": { "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "500" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-md": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }], "display-xl": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.04em", "fontWeight": "700" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "600" }], "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "display-xl-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "400" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface-container-lowest text-on-surface min-h-full flex flex-col font-body-md text-body-md"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-sm flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Go back" class="w-11 h-11 -ml-2 flex items-center justify-center text-on-surface hover:text-primary transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[20px]">arrow_back</span></button><h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Settings</h1></div><div class="flex items-center gap-space-xs"><button aria-label="Search settings" class="w-11 h-11 flex items-center justify-center text-secondary hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">search</span></button><button aria-label="Help and documentation" class="w-11 h-11 flex items-center justify-center text-secondary hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">help_outline</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface-container-lowest"><div class="flex flex-col w-full px-gutter-sm pb-12 pt-space-sm space-y-space-lg max-w-xl mx-auto">
+<!-- Profile & Account Summary Card -->
+<button aria-label="Alex Korov profile details" class="w-full text-left bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all active:scale-[0.99] flex items-center justify-between group" type="button">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center shrink-0">
+<span class="font-label-lg text-label-lg text-on-primary tracking-widest">AK</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Alex Korov</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary truncate">alex.k@engineering.local</span>
+<div class="mt-space-xs inline-flex items-center self-start px-2 py-0.5 rounded-full bg-surface-container-low text-on-surface">
+<span class="font-label-sm text-label-sm tracking-wider uppercase">Open Source Edition • Pro Unlocked</span>
+</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary group-hover:text-on-surface transition-colors shrink-0 ml-space-xs">chevron_right</span>
+</button>
+<!-- Section 1: Preferences -->
+<div class="flex flex-col space-y-space-xs">
+<div class="px-space-xs">
+<span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase">Preferences</span>
+</div>
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col">
+<!-- Row 1 -->
+<button class="w-full text-left p-space-md flex items-center justify-between hover:bg-surface-container-low transition-colors group" type="button">
+<div class="flex items-start gap-space-md min-w-0 pr-space-xs">
+<span class="material-symbols-outlined text-secondary group-hover:text-on-surface mt-0.5 text-[20px] shrink-0">palette</span>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface truncate">Appearance &amp; Theme</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Monochrome Minimalist • Follow System</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary group-hover:text-on-surface shrink-0">chevron_right</span>
+</button>
+<!-- Row 2 -->
+<button class="w-full text-left p-space-md flex items-center justify-between hover:bg-surface-container-low transition-colors group" type="button">
+<div class="flex items-start gap-space-md min-w-0 pr-space-xs">
+<span class="material-symbols-outlined text-secondary group-hover:text-on-surface mt-0.5 text-[20px] shrink-0">swipe</span>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface truncate">Swipe Actions</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Configured (Complete, Date, Priority, Delete)</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary group-hover:text-on-surface shrink-0">chevron_right</span>
+</button>
+<!-- Row 3 -->
+<button class="w-full text-left p-space-md flex items-center justify-between hover:bg-surface-container-low transition-colors group" type="button">
+<div class="flex items-start gap-space-md min-w-0 pr-space-xs">
+<span class="material-symbols-outlined text-secondary group-hover:text-on-surface mt-0.5 text-[20px] shrink-0">schedule</span>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface truncate">Date &amp; Time</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Start of week: Monday • 24-Hour format</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary group-hover:text-on-surface shrink-0">chevron_right</span>
+</button>
+<!-- Row 4 -->
+<button class="w-full text-left p-space-md flex items-center justify-between hover:bg-surface-container-low transition-colors group" type="button">
+<div class="flex items-start gap-space-md min-w-0 pr-space-xs">
+<span class="material-symbols-outlined text-secondary group-hover:text-on-surface mt-0.5 text-[20px] shrink-0">check_circle</span>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface truncate">Task Defaults</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Default List: ~Inbox • Default Reminder: At time</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary group-hover:text-on-surface shrink-0">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Section 2: Productivity & Automation -->
+<div class="flex flex-col space-y-space-xs">
+<div class="px-space-xs">
+<span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase">Productivity &amp; Automation</span>
+</div>
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col">
+<!-- Row 1 -->
+<button class="w-full text-left p-space-md flex items-center justify-between hover:bg-surface-container-low transition-colors group" type="button">
+<div class="flex items-start gap-space-md min-w-0 pr-space-xs">
+<span class="material-symbols-outlined text-secondary group-hover:text-on-surface mt-0.5 text-[20px] shrink-0">psychology</span>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface truncate">Smart Recognition (NLP)</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Auto-parse dates, times, priority, tags &amp; lists</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary group-hover:text-on-surface shrink-0">chevron_right</span>
+</button>
+<!-- Row 2 -->
+<button class="w-full text-left p-space-md flex items-center justify-between hover:bg-surface-container-low transition-colors group" type="button">
+<div class="flex items-start gap-space-md min-w-0 pr-space-xs">
+<span class="material-symbols-outlined text-secondary group-hover:text-on-surface mt-0.5 text-[20px] shrink-0">notifications_active</span>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface truncate">Sounds &amp; Annoying Alerts</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Urgent alarm loops: Every 2m • Vibration: On</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary group-hover:text-on-surface shrink-0">chevron_right</span>
+</button>
+<!-- Row 3 -->
+<button class="w-full text-left p-space-md flex items-center justify-between hover:bg-surface-container-low transition-colors group" type="button">
+<div class="flex items-start gap-space-md min-w-0 pr-space-xs">
+<span class="material-symbols-outlined text-secondary group-hover:text-on-surface mt-0.5 text-[20px] shrink-0">timer</span>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface truncate">Focus &amp; Pomodoro</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Dial default: 25m • Flip-to-focus: Active</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary group-hover:text-on-surface shrink-0">chevron_right</span>
+</button>
+<!-- Row 4 -->
+<button class="w-full text-left p-space-md flex items-center justify-between hover:bg-surface-container-low transition-colors group" type="button">
+<div class="flex items-start gap-space-md min-w-0 pr-space-xs">
+<span class="material-symbols-outlined text-secondary group-hover:text-on-surface mt-0.5 text-[20px] shrink-0">grid_view</span>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface truncate">Eisenhower Matrix Rules</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">4 custom condition profiles active</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary group-hover:text-on-surface shrink-0">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Section 3: Security & Sovereignty -->
+<div class="flex flex-col space-y-space-xs">
+<div class="px-space-xs">
+<span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase">Security &amp; Sovereignty</span>
+</div>
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col">
+<!-- Row 1 -->
+<button class="w-full text-left p-space-md flex items-center justify-between hover:bg-surface-container-low transition-colors group" type="button">
+<div class="flex items-start gap-space-md min-w-0 pr-space-xs">
+<span class="material-symbols-outlined text-secondary group-hover:text-on-surface mt-0.5 text-[20px] shrink-0">lock</span>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface truncate">App Lock Security</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Biometric fingerprint + 4-digit PIN fallback</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary group-hover:text-on-surface shrink-0">chevron_right</span>
+</button>
+<!-- Row 2 -->
+<button class="w-full text-left p-space-md flex items-center justify-between hover:bg-surface-container-low transition-colors group" type="button">
+<div class="flex items-start gap-space-md min-w-0 pr-space-xs">
+<span class="material-symbols-outlined text-secondary group-hover:text-on-surface mt-0.5 text-[20px] shrink-0">sync_alt</span>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface truncate">Data Management &amp; Sync</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Local SQLite snapshot • CalDAV &amp; Self-Hosted Sync</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary group-hover:text-on-surface shrink-0">chevron_right</span>
+</button>
+<!-- Row 3 -->
+<button class="w-full text-left p-space-md flex items-center justify-between hover:bg-surface-container-low transition-colors group" type="button">
+<div class="flex items-start gap-space-md min-w-0 pr-space-xs">
+<span class="material-symbols-outlined text-secondary group-hover:text-on-surface mt-0.5 text-[20px] shrink-0">download</span>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface truncate">Export to CSV</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Full unencrypted task, habit &amp; stats export</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary group-hover:text-on-surface shrink-0">file_download</span>
+</button>
+</div>
+</div>
+<!-- Section 4: About -->
+<div class="flex flex-col space-y-space-xs">
+<div class="px-space-xs">
+<span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase">About</span>
+</div>
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col">
+<!-- Row 1 -->
+<button class="w-full text-left p-space-md flex items-center justify-between hover:bg-surface-container-low transition-colors group" type="button">
+<div class="flex items-start gap-space-md min-w-0 pr-space-xs">
+<span class="material-symbols-outlined text-secondary group-hover:text-on-surface mt-0.5 text-[20px] shrink-0">info</span>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface truncate">Aura Chrono</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Version 2.4.0 (Build 2026.11-oss) • GPLv3</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary group-hover:text-on-surface shrink-0">chevron_right</span>
+</button>
+<!-- Row 2 -->
+<a class="w-full text-left p-space-md flex items-center justify-between hover:bg-surface-container-low transition-colors group" href="https://github.com/aura-chrono/core" rel="noopener noreferrer" target="_blank">
+<div class="flex items-start gap-space-md min-w-0 pr-space-xs">
+<span class="material-symbols-outlined text-secondary group-hover:text-on-surface mt-0.5 text-[20px] shrink-0">code</span>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface truncate">Source Code &amp; Documentation</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">github.com/aura-chrono/core</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary group-hover:text-on-surface shrink-0">open_in_new</span>
+</a>
+<!-- Row 3 -->
+<button class="w-full text-left p-space-md flex items-center justify-between hover:bg-surface-container-low transition-colors group" type="button">
+<div class="flex items-start gap-space-md min-w-0 pr-space-xs">
+<span class="material-symbols-outlined text-secondary group-hover:text-on-surface mt-0.5 text-[20px] shrink-0">verified_user</span>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface truncate">Third-Party Licenses</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Zero analytics SDKs • Zero proprietary trackers</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary group-hover:text-on-surface shrink-0">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Grounding Sovereignty Notice -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col space-y-space-xs text-on-surface">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-on-surface">shield</span>
+<span class="font-label-sm text-label-sm tracking-wider uppercase font-semibold">Local-First Protocol</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+      All preferences and keys reside in on-device SQLite. Zero telemetry, zero in-app purchases, zero subscription paywalls.
+    </p>
+</div>
+</div></main></body></html>

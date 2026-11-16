@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=JetBrains+Mono:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-container": "#141b2b", "secondary": "#555f6d", "outline": "#76777d", "tertiary": "#000000", "error-container": "#ffdad6", "inverse-primary": "#c0c6db", "surface-container-low": "#f3f3f4", "tertiary-fixed": "#dce3f0", "on-tertiary": "#ffffff", "surface-container-lowest": "#ffffff", "surface-tint": "#575e70", "background": "#f9f9f9", "on-primary-fixed-variant": "#404758", "surface-container-highest": "#e2e2e2", "on-primary": "#ffffff", "inverse-surface": "#2f3131", "primary": "#000000", "inverse-on-surface": "#f0f1f1", "on-primary-container": "#7d8497", "on-secondary": "#ffffff", "tertiary-fixed-dim": "#c0c7d3", "on-surface": "#1a1c1c", "primary-fixed": "#dce2f7", "tertiary-container": "#151c25", "error": "#ba1a1a", "on-secondary-fixed-variant": "#3e4755", "surface-variant": "#e2e2e2", "on-surface-variant": "#45464c", "surface-dim": "#dadada", "outline-variant": "#c6c6cd", "surface-container-high": "#e8e8e8", "surface": "#f9f9f9", "surface-bright": "#f9f9f9", "on-tertiary-fixed-variant": "#404752", "on-background": "#1a1c1c", "primary-fixed-dim": "#c0c6db", "secondary-fixed-dim": "#bdc7d8", "secondary-container": "#d6e0f1", "secondary-fixed": "#d9e3f4", "on-error": "#ffffff", "on-primary-fixed": "#141b2b", "on-tertiary-container": "#7d8490", "surface-container": "#eeeeee", "on-secondary-fixed": "#121c28", "on-tertiary-fixed": "#151c25", "on-secondary-container": "#596372", "on-error-container": "#93000a" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter-sm": "1rem", "gutter-lg": "2rem", "margin": "2rem", "margin-lg": "4rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "gutter": "1.5rem", "space-md": "1rem", "space-xl": "2.5rem", "margin-sm": "1rem" }, "fontFamily": { "body-md": ["Geist"], "body-lg": ["Geist"], "label-md": ["JetBrains Mono"], "display-xl-mobile": ["Geist"], "headline-md": ["Geist"], "headline-sm": ["Geist"], "label-lg": ["JetBrains Mono"], "headline-lg-mobile": ["Geist"], "title-md": ["Geist"], "body-sm": ["Geist"], "display-xl": ["Geist"], "headline-lg": ["Geist"], "label-sm": ["JetBrains Mono"] }, "fontSize": { "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "label-md": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }], "display-xl-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }], "display-xl": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.04em", "fontWeight": "700" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "600" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "500" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface-container-lowest text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-sm flex items-center justify-between"><button aria-label="Go back" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-on-surface-variant transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[20px]">arrow_back</span></button><h1 class="text-title-md font-title-md text-on-surface tracking-tight truncate max-w-[50%]">Smart List Builder</h1><div class="flex items-center gap-space-xs"><button class="h-11 px-space-md flex items-center justify-center font-label-lg text-label-lg text-primary hover:text-secondary transition-colors" type="button">Save</button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-safe bg-surface-container-lowest flex-1"><div class="flex flex-col w-full px-gutter-sm pb-space-xl">
+<!-- 1. Top Contextual Breadcrumb & Header -->
+<section class="flex flex-col pt-space-md pb-space-lg gap-space-xs">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary tracking-wider uppercase">
+        SMART FILTER ENGINE • SCR-ORG-005
+      </span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+        MULTI-VARIABLE BOOLEAN LOGIC • 100% UNLOCKED
+      </span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight mt-1">
+      Smart List Rule Builder
+    </h2>
+<p class="font-body-md text-body-md text-secondary">
+      Construct dynamic custom views by combining projects, tags, dates, priorities, and assignees with custom AND/OR logical operators.
+    </p>
+</section>
+<!-- 2. Basic Smart List Configuration Card -->
+<section class="bg-surface-container-lowest rounded-[24px] p-space-lg shadow-sm flex flex-col gap-space-md mb-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-primary">tune</span>
+<span class="font-title-md text-title-md text-on-surface">General Settings</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary uppercase">Config</span>
+</div>
+<!-- Input -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-secondary uppercase tracking-wider">Smart List Name</label>
+<div class="relative flex items-center">
+<input class="w-full h-12 pl-space-md pr-10 bg-surface-container-low rounded-xl text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary outline-none transition-all" id="list-name-input" placeholder="e.g. Critical Sprint Roadblocks" type="text" value="Critical Sprint Roadblocks"/>
+<button aria-label="Clear list name" class="absolute right-3 text-secondary hover:text-on-surface transition-colors p-1" onclick="document.getElementById('list-name-input').value = ''" type="button">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+</div>
+</div>
+<!-- Icon & Monochrome Badge Picker -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-secondary uppercase tracking-wider">Icon & Identity</label>
+<div class="flex items-center gap-space-sm overflow-x-auto pb-1">
+<button class="w-11 h-11 rounded-xl bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-sm transition-transform active:scale-95" type="button">
+<span class="material-symbols-outlined text-[20px]">filter_list</span>
+</button>
+<button class="w-11 h-11 rounded-xl bg-surface-container text-on-surface flex items-center justify-center shrink-0 hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+</button>
+<button class="w-11 h-11 rounded-xl bg-surface-container text-on-surface flex items-center justify-center shrink-0 hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">star</span>
+</button>
+<button class="w-11 h-11 rounded-xl bg-surface-container text-on-surface flex items-center justify-center shrink-0 hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">local_fire_department</span>
+</button>
+<button class="w-11 h-11 rounded-xl bg-surface-container text-on-surface flex items-center justify-center shrink-0 hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+</button>
+<div class="h-6 w-px bg-surface-container-highest mx-1 shrink-0"></div>
+<div class="flex items-center gap-1.5 shrink-0 px-2 py-1 bg-surface-container-low rounded-xl">
+<span class="w-3.5 h-3.5 rounded-full bg-primary"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-secondary"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-outline-variant"></span>
+</div>
+</div>
+</div>
+<!-- Toggle Drawer -->
+<div class="pt-space-xs flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium">Show in Navigation Drawer</span>
+<span class="font-body-sm text-body-sm text-secondary">Pin to quick access drawer under Smart Lists</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-on-primary after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-primary after:border-surface-container-highest after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</section>
+<!-- 3. Live Matching Query Preview Card -->
+<section class="bg-surface-container-lowest rounded-[24px] p-space-lg shadow-sm flex flex-col gap-space-sm mb-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">terminal</span>
+<span class="font-label-md text-label-md text-secondary uppercase tracking-wider">LIVE SQLITE QUERY PREVIEW</span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-md text-label-md font-semibold">
+        14 Tasks Matched
+      </span>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-xl overflow-x-auto">
+<code class="font-label-sm text-label-sm text-on-surface block leading-relaxed break-all">
+        WHERE status = 0 AND priority >= 3 AND due_date <= 'today+3d' AND tag IN ('#backend', '#frontend')
+      </code>
+</div>
+<button class="mt-1 flex items-center justify-between px-3 py-2 bg-surface-container hover:bg-surface-container-high rounded-xl transition-colors text-left" id="preview-toggle-btn" onclick="togglePreviewSample()" type="button">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-on-surface">visibility</span>
+<span class="font-body-sm text-body-sm font-medium text-on-surface">View 14 Matched Tasks Sample</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-secondary transition-transform" id="preview-arrow">expand_more</span>
+</button>
+<!-- Collapsible Sample Drawer -->
+<div class="hidden flex-col gap-2 pt-2" id="preview-sample-content">
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="w-2 h-2 rounded-full bg-primary shrink-0"></span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Database migrations deadlock</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary shrink-0">Due Today • !5</span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="w-2 h-2 rounded-full bg-primary shrink-0"></span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Revoke stale OAuth session tokens</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary shrink-0">Due in 2d • !4</span>
+</div>
+</div>
+</section>
+<!-- 4. Logical Operator Selector -->
+<section class="flex flex-col gap-space-xs mb-space-md">
+<div class="flex items-center justify-between px-1">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-wider">Logic Conjunction</span>
+<span class="font-label-sm text-label-sm text-secondary">3 Modes</span>
+</div>
+<div class="grid grid-cols-3 p-1 bg-surface-container rounded-2xl gap-1">
+<button class="conj-tab py-2.5 px-2 rounded-xl bg-primary text-on-primary font-label-sm text-label-sm font-medium transition-all text-center leading-tight shadow-sm" onclick="setConjunction(this)" type="button">
+        Match ALL (AND)
+      </button>
+<button class="conj-tab py-2.5 px-2 rounded-xl bg-transparent text-secondary hover:text-on-surface font-label-sm text-label-sm font-medium transition-all text-center leading-tight" onclick="setConjunction(this)" type="button">
+        Match ANY (OR)
+      </button>
+<button class="conj-tab py-2.5 px-2 rounded-xl bg-transparent text-secondary hover:text-on-surface font-label-sm text-label-sm font-medium transition-all text-center leading-tight" onclick="setConjunction(this)" type="button">
+        Advanced Expr
+      </button>
+</div>
+</section>
+<!-- 5. Filter Conditions Rule Stack -->
+<section class="flex flex-col gap-space-sm mb-space-md">
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-wider">Active Rule Stack</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">4 Rules</span>
+</div>
+<button class="font-label-sm text-label-sm text-secondary hover:text-on-surface transition-colors" type="button">Clear All</button>
+</div>
+<!-- Rule 1: Due Date -->
+<div class="rule-card bg-surface-container-lowest rounded-[20px] p-space-md shadow-sm flex flex-col gap-space-xs transition-all">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary cursor-grab">drag_indicator</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface font-medium">Rule 01</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Due Date</span>
+</div>
+<button aria-label="Delete rule" class="text-secondary hover:text-on-surface p-1 transition-colors" onclick="this.closest('.rule-card').remove()" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+<div class="grid grid-cols-2 gap-2 mt-1">
+<div class="flex flex-col bg-surface-container-low px-3 py-2 rounded-xl">
+<span class="font-label-sm text-label-sm text-secondary">Operator</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">is within next</span>
+</div>
+<div class="flex flex-col bg-surface-container-low px-3 py-2 rounded-xl">
+<span class="font-label-sm text-label-sm text-secondary">Parameter</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">3 Days</span>
+</div>
+</div>
+</div>
+<!-- Rule 2: Priority -->
+<div class="rule-card bg-surface-container-lowest rounded-[20px] p-space-md shadow-sm flex flex-col gap-space-xs transition-all">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary cursor-grab">drag_indicator</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface font-medium">Rule 02</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Priority</span>
+</div>
+<button aria-label="Delete rule" class="text-secondary hover:text-on-surface p-1 transition-colors" onclick="this.closest('.rule-card').remove()" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+<div class="grid grid-cols-2 gap-2 mt-1">
+<div class="flex flex-col bg-surface-container-low px-3 py-2 rounded-xl">
+<span class="font-label-sm text-label-sm text-secondary">Operator</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">is greater than or equal</span>
+</div>
+<div class="flex flex-col bg-surface-container-low px-3 py-2 rounded-xl">
+<span class="font-label-sm text-label-sm text-secondary">Parameter</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">High (!3) or Urgent (!5)</span>
+</div>
+</div>
+</div>
+<!-- Rule 3: Tags -->
+<div class="rule-card bg-surface-container-lowest rounded-[20px] p-space-md shadow-sm flex flex-col gap-space-xs transition-all">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary cursor-grab">drag_indicator</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface font-medium">Rule 03</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Tags</span>
+</div>
+<button aria-label="Delete rule" class="text-secondary hover:text-on-surface p-1 transition-colors" onclick="this.closest('.rule-card').remove()" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+<div class="flex flex-col bg-surface-container-low px-3 py-2 rounded-xl mt-1 gap-1">
+<span class="font-label-sm text-label-sm text-secondary">contains any of</span>
+<div class="flex flex-wrap gap-1.5 pt-0.5">
+<span class="px-2.5 py-0.5 rounded-lg bg-surface-container-highest text-on-surface font-label-sm text-label-sm">#backend</span>
+<span class="px-2.5 py-0.5 rounded-lg bg-surface-container-highest text-on-surface font-label-sm text-label-sm">#frontend</span>
+<span class="px-2.5 py-0.5 rounded-lg bg-surface-container-highest text-on-surface font-label-sm text-label-sm">#infra</span>
+</div>
+</div>
+</div>
+<!-- Rule 4: List/Folder -->
+<div class="rule-card bg-surface-container-lowest rounded-[20px] p-space-md shadow-sm flex flex-col gap-space-xs transition-all">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary cursor-grab">drag_indicator</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface font-medium">Rule 04</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">List / Folder</span>
+</div>
+<button aria-label="Delete rule" class="text-secondary hover:text-on-surface p-1 transition-colors" onclick="this.closest('.rule-card').remove()" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+<div class="grid grid-cols-2 gap-2 mt-1">
+<div class="flex flex-col bg-surface-container-low px-3 py-2 rounded-xl">
+<span class="font-label-sm text-label-sm text-secondary">Operator</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">is in folder</span>
+</div>
+<div class="flex flex-col bg-surface-container-low px-3 py-2 rounded-xl">
+<span class="font-label-sm text-label-sm text-secondary">Parameter</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Work & Engineering</span>
+</div>
+</div>
+</div>
+<!-- Add Condition Button -->
+<button class="w-full py-3.5 px-4 rounded-[20px] border-2 border-dashed border-outline-variant hover:border-primary text-secondary hover:text-primary flex items-center justify-center gap-2 font-label-md text-label-md font-medium transition-colors bg-surface-container-lowest/50 active:scale-[0.99]" onclick="openConditionSheet()" type="button">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span>Add Filter Condition</span>
+</button>
+</section>
+<!-- 6. Filter Exclusion Rules (Negative Filters) -->
+<section class="bg-surface-container-lowest rounded-[20px] p-space-md shadow-sm flex flex-col gap-space-sm mb-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">block</span>
+<span class="font-title-md text-title-md text-on-surface">Exclusion Criteria (NOT Logic)</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">Active</span>
+</div>
+<div class="flex flex-col gap-2">
+<label class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-low cursor-pointer">
+<span class="font-body-sm text-body-sm text-on-surface">Exclude tasks marked as Won't Do</span>
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-0 accent-primary" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-low cursor-pointer">
+<span class="font-body-sm text-body-sm text-on-surface">Exclude archived subprojects</span>
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-0 accent-primary" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-low cursor-pointer">
+<span class="font-body-sm text-body-sm text-on-surface">Exclude recurring parent templates</span>
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-0 accent-primary" type="checkbox"/>
+</label>
+</div>
+</section>
+<!-- 7. Smart List Sorting & Grouping Defaults -->
+<section class="bg-surface-container-lowest rounded-[20px] p-space-md shadow-sm flex flex-col gap-space-md mb-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">view_agenda</span>
+<span class="font-title-md text-title-md text-on-surface">Display Defaults</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">Layout</span>
+</div>
+<!-- Default View Mode -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-secondary uppercase tracking-wider">Default View Mode</label>
+<div class="grid grid-cols-3 p-1 bg-surface-container rounded-xl gap-1">
+<button class="view-tab py-2 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-medium transition-all text-center" onclick="setViewMode(this)" type="button">List</button>
+<button class="view-tab py-2 rounded-lg bg-transparent text-secondary hover:text-on-surface font-label-sm text-label-sm font-medium transition-all text-center" onclick="setViewMode(this)" type="button">Kanban</button>
+<button class="view-tab py-2 rounded-lg bg-transparent text-secondary hover:text-on-surface font-label-sm text-label-sm font-medium transition-all text-center" onclick="setViewMode(this)" type="button">Timeline</button>
+</div>
+</div>
+<!-- Sort & Group Pair -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-secondary uppercase tracking-wider">Primary Sort</label>
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-low">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Due Date (Earliest)</span>
+<button aria-label="Toggle sort order" class="text-secondary hover:text-on-surface p-0.5" type="button">
+<span class="material-symbols-outlined text-[18px]">swap_vert</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-secondary uppercase tracking-wider">Group Tasks By</label>
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-low">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Priority (High to Low)</span>
+<button aria-label="Change grouping" class="text-secondary hover:text-on-surface p-0.5" type="button">
+<span class="material-symbols-outlined text-[18px]">unfold_more</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. Local Sovereignty & Action Triggers -->
+<section class="flex flex-col gap-space-sm pt-space-xs">
+<div class="p-3 bg-surface-container-low rounded-xl text-center">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider leading-relaxed block">
+        100% UNLIMITED SMART LISTS • ZERO COMMERCIAL PAYWALLS • FAST LOCAL INDEX FTS5
+      </span>
+</div>
+<div class="flex flex-col gap-2 pt-1">
+<button class="w-full py-4 px-6 bg-primary text-on-primary hover:bg-neutral-800 rounded-full font-label-lg text-label-lg font-semibold tracking-wide transition-all shadow-md active:scale-[0.98] flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[20px]">check</span>
+<span>Save & Create Smart List</span>
+</button>
+<button class="w-full py-3.5 px-6 bg-surface-container hover:bg-surface-container-high text-on-surface rounded-full font-label-md text-label-md font-medium transition-all active:scale-[0.98] flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+<span>Test & Validate Rules</span>
+</button>
+<button class="w-full py-3 px-6 text-secondary hover:text-on-surface font-label-md text-label-md transition-colors text-center" onclick="history.back()" type="button">
+        Discard Changes
+      </button>
+</div>
+</section>
+<!-- Modal / Bottom Sheet: Field Picker (Hidden by default) -->
+<div class="fixed inset-0 z-50 bg-black/40 backdrop-blur-[2px] hidden items-end justify-center p-0 transition-opacity" id="condition-modal">
+<div class="w-full max-w-lg bg-surface-container-lowest rounded-t-[32px] p-space-lg flex flex-col gap-space-md shadow-2xl animate-in slide-in-from-bottom duration-200">
+<div class="w-12 h-1.5 bg-surface-container-highest rounded-full mx-auto"></div>
+<div class="flex items-center justify-between">
+<h3 class="font-title-md text-title-md text-on-surface">Select Condition Field</h3>
+<button aria-label="Close modal" class="p-1 text-secondary hover:text-on-surface" onclick="closeConditionSheet()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="grid grid-cols-2 gap-2 max-h-[530px] overflow-y-auto">
+<button class="flex items-center gap-2.5 p-3 rounded-2xl bg-surface-container-low hover:bg-surface-container text-left transition-colors" onclick="closeConditionSheet()" type="button">
+<span class="material-symbols-outlined text-[20px] text-primary">calendar_today</span>
+<span class="font-body-md text-body-md font-medium text-on-surface">Due Date</span>
+</button>
+<button class="flex items-center gap-2.5 p-3 rounded-2xl bg-surface-container-low hover:bg-surface-container text-left transition-colors" onclick="closeConditionSheet()" type="button">
+<span class="material-symbols-outlined text-[20px] text-primary">folder</span>
+<span class="font-body-md text-body-md font-medium text-on-surface">Project</span>
+</button>
+<button class="flex items-center gap-2.5 p-3 rounded-2xl bg-surface-container-low hover:bg-surface-container text-left transition-colors" onclick="closeConditionSheet()" type="button">
+<span class="material-symbols-outlined text-[20px] text-primary">label</span>
+<span class="font-body-md text-body-md font-medium text-on-surface">Tag</span>
+</button>
+<button class="flex items-center gap-2.5 p-3 rounded-2xl bg-surface-container-low hover:bg-surface-container text-left transition-colors" onclick="closeConditionSheet()" type="button">
+<span class="material-symbols-outlined text-[20px] text-primary">flag</span>
+<span class="font-body-md text-body-md font-medium text-on-surface">Priority</span>
+</button>
+<button class="flex items-center gap-2.5 p-3 rounded-2xl bg-surface-container-low hover:bg-surface-container text-left transition-colors" onclick="closeConditionSheet()" type="button">
+<span class="material-symbols-outlined text-[20px] text-primary">check_circle</span>
+<span class="font-body-md text-body-md font-medium text-on-surface">Status</span>
+</button>
+<button class="flex items-center gap-2.5 p-3 rounded-2xl bg-surface-container-low hover:bg-surface-container text-left transition-colors" onclick="closeConditionSheet()" type="button">
+<span class="material-symbols-outlined text-[20px] text-primary">person</span>
+<span class="font-body-md text-body-md font-medium text-on-surface">Assignee</span>
+</button>
+<button class="flex items-center gap-2.5 p-3 rounded-2xl bg-surface-container-low hover:bg-surface-container text-left transition-colors col-span-2" onclick="closeConditionSheet()" type="button">
+<span class="material-symbols-outlined text-[20px] text-primary">checklist</span>
+<span class="font-body-md text-body-md font-medium text-on-surface">Checklist Progress</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function togglePreviewSample() {
+    const content = document.getElementById('preview-sample-content');
+    const arrow = document.getElementById('preview-arrow');
+    if (content.classList.contains('hidden')) {
+      content.classList.remove('hidden');
+      content.classList.add('flex');
+      arrow.style.transform = 'rotate(180deg)';
+    } else {
+      content.classList.add('hidden');
+      content.classList.remove('flex');
+      arrow.style.transform = 'rotate(0deg)';
+    }
+  }
+
+  function setConjunction(btn) {
+    document.querySelectorAll('.conj-tab').forEach(tab => {
+      tab.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+      tab.classList.add('bg-transparent', 'text-secondary');
+    });
+    btn.classList.remove('bg-transparent', 'text-secondary');
+    btn.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+  }
+
+  function setViewMode(btn) {
+    document.querySelectorAll('.view-tab').forEach(tab => {
+      tab.classList.remove('bg-primary', 'text-on-primary');
+      tab.classList.add('bg-transparent', 'text-secondary');
+    });
+    btn.classList.remove('bg-transparent', 'text-secondary');
+    btn.classList.add('bg-primary', 'text-on-primary');
+  }
+
+  function openConditionSheet() {
+    const modal = document.getElementById('condition-modal');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  }
+
+  function closeConditionSheet() {
+    const modal = document.getElementById('condition-modal');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+</script></main></body></html>

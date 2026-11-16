@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-fixed-dim": "#c0c6db", "secondary-fixed": "#d9e3f4", "secondary": "#555f6d", "primary-container": "#141b2b", "primary": "#000000", "on-primary-fixed": "#141b2b", "on-secondary-fixed": "#121c28", "error": "#ba1a1a", "tertiary-container": "#151c25", "inverse-on-surface": "#f0f1f1", "surface-container-low": "#f3f3f4", "background": "#f9f9f9", "tertiary": "#000000", "tertiary-fixed": "#dce3f0", "error-container": "#ffdad6", "secondary-fixed-dim": "#bdc7d8", "surface-container": "#eeeeee", "on-error-container": "#93000a", "on-primary": "#ffffff", "surface-container-high": "#e8e8e8", "inverse-primary": "#c0c6db", "on-surface": "#1a1c1c", "on-tertiary-container": "#7d8490", "primary-fixed": "#dce2f7", "surface-bright": "#f9f9f9", "on-surface-variant": "#45464c", "on-background": "#1a1c1c", "on-primary-fixed-variant": "#404758", "on-tertiary": "#ffffff", "secondary-container": "#d6e0f1", "outline": "#76777d", "surface-variant": "#e2e2e2", "on-primary-container": "#7d8497", "tertiary-fixed-dim": "#c0c7d3", "surface-container-highest": "#e2e2e2", "inverse-surface": "#2f3131", "surface-container-lowest": "#ffffff", "on-tertiary-fixed-variant": "#404752", "on-secondary-container": "#596372", "surface-tint": "#575e70", "surface": "#ffffff", "on-error": "#ffffff", "on-secondary-fixed-variant": "#3e4755", "on-secondary": "#ffffff", "on-tertiary-fixed": "#151c25", "outline-variant": "#c6c6cd", "surface-dim": "#dadada" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin": "2rem", "space-xs": "0.25rem", "space-md": "1rem", "gutter": "1.5rem", "space-sm": "0.5rem", "gutter-sm": "1rem", "gutter-lg": "2rem", "space-xl": "2.5rem", "space-lg": "1.5rem", "margin-sm": "1rem", "margin-lg": "4rem" }, "fontFamily": { "body-lg": ["Geist"], "headline-md": ["Geist"], "display-xl": ["Geist"], "title-md": ["Geist"], "display-xl-mobile": ["Geist"], "body-sm": ["Geist"], "headline-lg": ["Geist"], "headline-lg-mobile": ["Geist"], "body-md": ["Geist"], "label-sm": ["JetBrains Mono"], "label-md": ["JetBrains Mono"], "headline-sm": ["Geist"], "label-lg": ["JetBrains Mono"] }, "fontSize": { "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "display-xl": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.04em", "fontWeight": "700" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display-xl-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "600" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "500" }], "label-md": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" }] } } } }</script><style>@layer base{html,body{min-height:100%;margin:0;padding:0;background-color:#ffffff;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 350,'GRAD' 0,'opsz' 24;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="h-16 px-space-md flex items-center justify-between"><button aria-label="Open navigation drawer" class="min-w-[44px] min-h-[44px] flex items-center justify-center text-on-surface hover:text-primary transition-colors"><span class="material-symbols-outlined text-[22px]">menu</span></button><h1 class="font-title-md text-title-md tracking-tight text-on-surface text-center flex-1 mx-space-xs truncate">Habits</h1><div class="flex items-center gap-space-xs"><button aria-label="Section filter" class="min-w-[44px] min-h-[44px] flex items-center justify-center text-on-surface hover:text-primary transition-colors"><span class="material-symbols-outlined text-[20px]">tune</span></button><button aria-label="Calendar heatmap" class="min-w-[44px] min-h-[44px] flex items-center justify-center text-on-surface hover:text-primary transition-colors"><span class="material-symbols-outlined text-[20px]">grid_view</span></button><a class="min-w-[44px] min-h-[44px] flex items-center justify-center ml-space-xs" data-path="settings" href="#"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></a></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-28 px-space-md bg-surface"><div class="flex flex-col w-full">
+<!-- Routine Filter Pills -->
+<section class="w-full mb-space-md">
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 no-scrollbar">
+<button class="bg-primary text-on-primary px-3 py-1.5 rounded-full font-label-md text-label-md tracking-wider uppercase whitespace-nowrap shadow-sm">
+        All Routines
+      </button>
+<button class="bg-surface-container-low text-secondary px-3 py-1.5 rounded-full font-label-md text-label-md tracking-wider uppercase whitespace-nowrap active:bg-surface-container-high transition-colors">
+        Morning
+      </button>
+<button class="bg-surface-container-low text-secondary px-3 py-1.5 rounded-full font-label-md text-label-md tracking-wider uppercase whitespace-nowrap active:bg-surface-container-high transition-colors">
+        Afternoon
+      </button>
+<button class="bg-surface-container-low text-secondary px-3 py-1.5 rounded-full font-label-md text-label-md tracking-wider uppercase whitespace-nowrap active:bg-surface-container-high transition-colors">
+        Evening
+      </button>
+</div>
+</section>
+<!-- 7-Day Horizontal Calendar Strip -->
+<section class="w-full mb-space-lg">
+<div class="bg-surface-container-lowest p-space-sm rounded-xl flex items-center justify-between gap-1 shadow-sm">
+<!-- Mon -->
+<button class="flex flex-col items-center py-2 px-1 flex-1 rounded-lg hover:bg-surface-container-low transition-colors">
+<span class="font-label-sm text-label-sm text-secondary uppercase">Mon</span>
+<span class="font-label-md text-label-md text-on-surface mt-1">11</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary mt-1.5"></span>
+</button>
+<!-- Tue -->
+<button class="flex flex-col items-center py-2 px-1 flex-1 rounded-lg hover:bg-surface-container-low transition-colors">
+<span class="font-label-sm text-label-sm text-secondary uppercase">Tue</span>
+<span class="font-label-md text-label-md text-on-surface mt-1">12</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary mt-1.5"></span>
+</button>
+<!-- Wed -->
+<button class="flex flex-col items-center py-2 px-1 flex-1 rounded-lg hover:bg-surface-container-low transition-colors">
+<span class="font-label-sm text-label-sm text-secondary uppercase">Wed</span>
+<span class="font-label-md text-label-md text-on-surface mt-1">13</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary mt-1.5"></span>
+</button>
+<!-- Thu (Today) -->
+<button class="flex flex-col items-center py-2 px-1 flex-1 rounded-lg bg-surface-container-high relative">
+<span class="font-label-sm text-label-sm text-primary font-semibold uppercase">Thu</span>
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-md text-label-md mt-1">
+          14
+        </div>
+<span class="w-1.5 h-1.5 rounded-full bg-primary mt-1"></span>
+</button>
+<!-- Fri -->
+<button class="flex flex-col items-center py-2 px-1 flex-1 rounded-lg hover:bg-surface-container-low transition-colors">
+<span class="font-label-sm text-label-sm text-secondary uppercase">Fri</span>
+<span class="font-label-md text-label-md text-on-surface mt-1">15</span>
+<span class="w-1.5 h-1.5 rounded-full bg-surface-container-highest mt-1.5"></span>
+</button>
+<!-- Sat -->
+<button class="flex flex-col items-center py-2 px-1 flex-1 rounded-lg hover:bg-surface-container-low transition-colors">
+<span class="font-label-sm text-label-sm text-secondary uppercase">Sat</span>
+<span class="font-label-md text-label-md text-on-surface mt-1">16</span>
+<span class="w-1.5 h-1.5 rounded-full bg-surface-container-highest mt-1.5"></span>
+</button>
+<!-- Sun -->
+<button class="flex flex-col items-center py-2 px-1 flex-1 rounded-lg hover:bg-surface-container-low transition-colors">
+<span class="font-label-sm text-label-sm text-secondary uppercase">Sun</span>
+<span class="font-label-md text-label-md text-on-surface mt-1">17</span>
+<span class="w-1.5 h-1.5 rounded-full bg-surface-container-highest mt-1.5"></span>
+</button>
+</div>
+</section>
+<!-- Daily Overview Progress Bento Card -->
+<section class="w-full mb-space-xl">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex flex-col pr-space-sm">
+<span class="font-label-sm text-label-sm tracking-wider uppercase text-secondary">Daily Adherence</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mt-1">4 of 6 Habits Completed</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">2 habits remaining for evening routine</p>
+</div>
+<div class="relative w-16 h-16 shrink-0 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-high" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3"></path>
+<path class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="67, 100" stroke-linecap="round" stroke-width="3"></path>
+</svg>
+<span class="absolute font-label-md text-label-md font-semibold text-on-surface">67%</span>
+</div>
+</div>
+</section>
+<!-- Section 1: Morning Routine -->
+<section class="w-full mb-space-lg">
+<div class="flex items-center justify-between mb-space-sm px-1">
+<h3 class="font-label-sm text-label-sm tracking-wider uppercase text-secondary">Morning Routine • 3 Habits</h3>
+<button aria-label="Collapse Morning Routine" class="text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">expand_less</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Habit Card 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[20px]">water_drop</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface truncate">Hydration (500ml)</span>
+<span class="bg-primary text-on-primary px-2 py-0.5 rounded-full font-label-sm text-label-sm flex items-center gap-0.5 shrink-0">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+                18d
+              </span>
+</div>
+<span class="font-label-md text-label-md text-secondary mt-1">1,500 / 2,000 ml</span>
+</div>
+</div>
+<button aria-label="Log hydration check-in" class="relative w-11 h-11 shrink-0 flex items-center justify-center ml-2 active:scale-95 transition-transform">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-high" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3"></path>
+<path class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="75, 100" stroke-linecap="round" stroke-width="3"></path>
+</svg>
+<span class="material-symbols-outlined absolute text-primary text-[18px]">add</span>
+</button>
+</div>
+<!-- Habit Card 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[20px]">self_improvement</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface truncate">Mindful Breath &amp; Meditation</span>
+<span class="bg-primary text-on-primary px-2 py-0.5 rounded-full font-label-sm text-label-sm flex items-center gap-0.5 shrink-0">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+                24d
+              </span>
+</div>
+<span class="font-label-md text-label-md text-secondary mt-1">15 mins completed</span>
+</div>
+</div>
+<button aria-label="Completed meditation" class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0 ml-2 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">check</span>
+</button>
+</div>
+<!-- Habit Card 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[20px]">menu_book</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface truncate">Deep Reading (Technical Spec)</span>
+<span class="bg-primary text-on-primary px-2 py-0.5 rounded-full font-label-sm text-label-sm flex items-center gap-0.5 shrink-0">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+                9d
+              </span>
+</div>
+<span class="font-label-md text-label-md text-secondary mt-1">30 / 30 mins</span>
+</div>
+</div>
+<button aria-label="Completed reading" class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0 ml-2 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">check</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Section 2: Afternoon Routine -->
+<section class="w-full mb-space-lg">
+<div class="flex items-center justify-between mb-space-sm px-1">
+<h3 class="font-label-sm text-label-sm tracking-wider uppercase text-secondary">Afternoon Routine • 1 Habit</h3>
+<button aria-label="Collapse Afternoon Routine" class="text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">expand_less</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Habit Card 4 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[20px]">directions_walk</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface truncate">Post-Lunch Active Walk</span>
+<span class="bg-primary text-on-primary px-2 py-0.5 rounded-full font-label-sm text-label-sm flex items-center gap-0.5 shrink-0">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+                12d
+              </span>
+</div>
+<span class="font-label-md text-label-md text-secondary mt-1">2.5 / 3.0 km</span>
+</div>
+</div>
+<button aria-label="Increment walk progress by 0.5km" class="relative w-11 h-11 shrink-0 flex items-center justify-center ml-2 active:scale-95 transition-transform">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-high" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3"></path>
+<path class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="80, 100" stroke-linecap="round" stroke-width="3"></path>
+</svg>
+<span class="font-label-sm text-label-sm font-semibold text-primary absolute">+0.5</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Section 3: Evening Routine -->
+<section class="w-full mb-space-lg">
+<div class="flex items-center justify-between mb-space-sm px-1">
+<h3 class="font-label-sm text-label-sm tracking-wider uppercase text-secondary">Evening Routine • 2 Habits</h3>
+<button aria-label="Collapse Evening Routine" class="text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">expand_less</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Habit Card 5 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[20px]">terminal</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface truncate">Open-Source Contribution</span>
+<span class="bg-primary text-on-primary px-2 py-0.5 rounded-full font-label-sm text-label-sm flex items-center gap-0.5 shrink-0">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+                5d
+              </span>
+</div>
+<span class="font-label-md text-label-md text-secondary mt-1">1 commit or PR review</span>
+</div>
+</div>
+<button aria-label="Check in open-source contribution" class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center shrink-0 ml-2 active:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-outline-variant text-[20px]">radio_button_unchecked</span>
+</button>
+</div>
+<!-- Habit Card 6 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[20px]">edit_note</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface truncate">Daily Chronicle &amp; Reflection</span>
+<span class="bg-primary text-on-primary px-2 py-0.5 rounded-full font-label-sm text-label-sm flex items-center gap-0.5 shrink-0">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+                31d
+              </span>
+</div>
+<span class="font-label-md text-label-md text-secondary mt-1">1 diary entry</span>
+</div>
+</div>
+<button aria-label="Check in daily reflection" class="relative w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center shrink-0 ml-2 active:bg-surface-container-high transition-colors">
+<svg class="w-full h-full -rotate-90 p-1" viewbox="0 0 36 36">
+<path class="text-outline-variant" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="4, 4" stroke-width="2.5"></path>
+</svg>
+<span class="material-symbols-outlined text-outline-variant text-[16px] absolute">edit</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Routine Micro-Insight Card -->
+<section class="w-full mt-space-sm mb-space-md">
+<div class="bg-surface-container-low p-space-md rounded-xl flex items-start gap-space-md">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-primary text-[18px]">insights</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm tracking-wider uppercase text-secondary">Peak Consistency</span>
+<p class="font-body-sm text-body-sm text-on-surface mt-0.5">
+          Your morning sequence has maintained a 100% adherence rate for 8 consecutive days.
+        </p>
+</div>
+</div>
+</section>
+</div></main><div class="fixed bottom-20 right-space-md z-40 pb-safe pointer-events-none"><button aria-label="Quick Add" class="pointer-events-auto min-w-[44px] min-h-[44px] w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-[0_4px_16px_rgba(0,0,0,0.18)] hover:bg-on-surface-variant transition-transform active:scale-95"><span class="material-symbols-outlined text-[24px]">add</span></button></div><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-1px_8px_rgba(0,0,0,0.03)]" data-active-classes="text-primary font-semibold"><div class="flex justify-between items-center h-16 px-space-xs max-w-lg mx-auto"><a class="flex-1 flex flex-col items-center justify-center min-w-[44px] min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="tasks" href="#"><span class="material-symbols-outlined text-[20px]">checklist</span><span class="font-label-sm text-label-sm tracking-wider uppercase mt-1">Tasks</span></a><a class="flex-1 flex flex-col items-center justify-center min-w-[44px] min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="calendar" href="#"><span class="material-symbols-outlined text-[20px]">calendar_today</span><span class="font-label-sm text-label-sm tracking-wider uppercase mt-1">Calendar</span></a><a aria-current="page" class="flex-1 flex flex-col items-center justify-center min-w-[44px] min-h-[44px] py-1 transition-colors text-primary font-semibold" data-path="habits" href="#"><span class="material-symbols-outlined text-[20px]">spa</span><span class="font-label-sm text-label-sm tracking-wider uppercase mt-1">Habits</span></a><a class="flex-1 flex flex-col items-center justify-center min-w-[44px] min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="focus" href="#"><span class="material-symbols-outlined text-[20px]">timer</span><span class="font-label-sm text-label-sm tracking-wider uppercase mt-1">Focus</span></a><a class="flex-1 flex flex-col items-center justify-center min-w-[44px] min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="matrix" href="#"><span class="material-symbols-outlined text-[20px]">apps</span><span class="font-label-sm text-label-sm tracking-wider uppercase mt-1">Matrix</span></a></div></nav></body></html>

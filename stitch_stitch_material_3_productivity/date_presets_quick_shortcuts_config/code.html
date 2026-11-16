@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=JetBrains+Mono:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#ffffff;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"primary-fixed-dim":"#c0c6db","on-secondary-container":"#596372","surface-dim":"#dadada","tertiary-fixed":"#dce3f0","on-primary-fixed":"#141b2b","background":"#ffffff","secondary-container":"#d6e0f1","surface":"#ffffff","on-secondary-fixed-variant":"#3e4755","secondary-fixed-dim":"#bdc7d8","outline":"#76777d","on-primary-fixed-variant":"#404758","inverse-on-surface":"#f0f1f1","tertiary":"#000000","primary-fixed":"#dce2f7","tertiary-container":"#151c25","on-tertiary-fixed":"#151c25","on-surface":"#1a1c1c","secondary-fixed":"#d9e3f4","surface-container":"#eeeeee","primary-container":"#141b2b","error":"#ba1a1a","outline-variant":"#c6c6cd","on-error":"#ffffff","surface-tint":"#575e70","on-tertiary-container":"#7d8490","error-container":"#ffdad6","tertiary-fixed-dim":"#c0c7d3","on-primary-container":"#7d8497","surface-container-highest":"#e2e2e2","on-background":"#1a1c1c","surface-variant":"#e2e2e2","on-tertiary":"#ffffff","surface-bright":"#ffffff","on-secondary":"#ffffff","inverse-primary":"#c0c6db","secondary":"#555f6d","surface-container-low":"#f3f3f4","on-tertiary-fixed-variant":"#404752","on-surface-variant":"#45464c","on-primary":"#ffffff","surface-container-lowest":"#ffffff","inverse-surface":"#2f3131","on-error-container":"#93000a","surface-container-high":"#e8e8e8","on-secondary-fixed":"#121c28","primary":"#000000"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin-lg":"4rem","space-xs":"0.25rem","margin-sm":"1rem","gutter-sm":"1rem","space-md":"1rem","gutter-lg":"2rem","space-xl":"2.5rem","gutter":"1.5rem","space-lg":"1.5rem","space-sm":"0.5rem","margin":"2rem"},"fontFamily":{"display-xl-mobile":["Geist"],"headline-lg-mobile":["Geist"],"headline-lg":["Geist"],"headline-sm":["Geist"],"title-md":["Geist"],"body-lg":["Geist"],"label-sm":["JetBrains Mono"],"label-lg":["JetBrains Mono"],"headline-md":["Geist"],"label-md":["JetBrains Mono"],"body-sm":["Geist"],"display-xl":["Geist"],"body-md":["Geist"]},"fontSize":{"display-xl-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.03em","fontWeight":"700"}],"headline-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.03em","fontWeight":"600"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"600"}],"title-md":["16px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["18px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"400"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"500"}],"label-lg":["13px",{"lineHeight":"18px","letterSpacing":"0.02em","fontWeight":"500"}],"headline-md":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-md":["11px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"display-xl":["56px",{"lineHeight":"64px","letterSpacing":"-0.04em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"22px","letterSpacing":"-0.005em","fontWeight":"400"}]}}}}</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-14 px-gutter-sm flex items-center justify-between"><button aria-label="Go back" class="min-w-[44px] min-h-[44px] -ml-space-xs flex items-center justify-center text-on-surface hover:text-primary transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[20px]">arrow_back</span></button><h1 class="font-title-md text-title-md text-on-surface font-semibold tracking-tight text-center truncate px-space-xs">Date Presets</h1><div class="flex items-center gap-space-xs"><button class="min-h-[44px] px-space-sm flex items-center justify-center font-label-lg text-label-lg text-primary hover:text-secondary transition-colors uppercase tracking-wider font-medium" type="button">Save</button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-14 pb-safe bg-surface px-gutter-sm"><div class="flex flex-col w-full pb-10 space-y-6">
+<!-- Context Header & Breadcrumb -->
+<div class="flex flex-col space-y-2 pt-2">
+<div class="flex items-center justify-between">
+<div class="inline-flex items-center gap-space-xs px-2.5 py-1 rounded-full bg-surface-container-low">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-medium">TEMPORAL PREFERENCES • SCR-TASK-009</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-low">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm tracking-wide text-on-surface-variant font-medium">100% UNLOCKED</span>
+</div>
+</div>
+<div class="pt-1">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight">Quick Date Presets</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 leading-relaxed">
+        Customize the 4 primary quick-tap date shortcut chips visible across task creation sheets, date pickers, and swipe actions.
+      </p>
+</div>
+</div>
+<!-- Live Interactive UI Simulation / Preview Card -->
+<div class="rounded-full bg-surface-container-low p-5 space-y-4">
+<div class="flex flex-col space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm tracking-wider uppercase text-on-surface-variant font-semibold">LIVE PICKER PREVIEW • TAP TO TEST</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">touch_app</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">How your configured presets appear in Quick Add & Date Picker sheets:</p>
+</div>
+<!-- Live Preview Chip Bar (Scrollable horizontally) -->
+<div class="flex items-center gap-2 overflow-x-auto py-1 no-scrollbar" id="preview-chips-container">
+<button class="preview-chip px-3.5 py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1.5 shrink-0 transition-transform active:scale-95" type="button">
+<span class="material-symbols-outlined text-[14px]">event_upcoming</span>
+<span>Today</span>
+</button>
+<button class="preview-chip px-3.5 py-2 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md flex items-center gap-1.5 shrink-0 transition-transform active:scale-95" type="button">
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">wb_sunny</span>
+<span>Tomorrow (+1d)</span>
+</button>
+<button class="preview-chip px-3.5 py-2 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md flex items-center gap-1.5 shrink-0 transition-transform active:scale-95" type="button">
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">next_week</span>
+<span>Next Week (+7d)</span>
+</button>
+<button class="preview-chip px-3.5 py-2 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md flex items-center gap-1.5 shrink-0 transition-transform active:scale-95" type="button">
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">weekend</span>
+<span>Weekend (Sat)</span>
+</button>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">sync_alt</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Real-time projection based on active slots 1–4 configured below.</span>
+</div>
+</div>
+<!-- Primary Slot Allocator (Slots 1 to 4) -->
+<div class="rounded-full bg-surface-container-lowest p-5 space-y-4 shadow-sm">
+<div>
+<div class="flex items-center justify-between">
+<h3 class="font-title-md text-title-md text-on-surface">Active Preset Slots (Max 4)</h3>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface">4 / 4 ASSIGNED</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Drag handle to reorder, tap slot to change assigned shortcut:</p>
+</div>
+<!-- Slot List -->
+<div class="space-y-2.5" id="slots-container">
+<!-- Slot 1 -->
+<div class="p-3.5 rounded-full bg-surface-container-low flex items-center justify-between transition-colors hover:bg-surface-container">
+<div class="flex items-center gap-3 min-w-0">
+<div class="cursor-grab text-on-surface-variant active:cursor-grabbing p-1">
+<span class="material-symbols-outlined text-[18px]">drag_indicator</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm font-semibold px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface">SLOT 1</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">Today</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-primary text-on-primary">Active Default</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 truncate">Resolves to: Current date at 09:00 or Default Task Time</p>
+</div>
+</div>
+<button aria-label="Change Slot 1 Shortcut" class="p-2 -mr-1 rounded-full text-on-surface hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">swap_horiz</span>
+</button>
+</div>
+<!-- Slot 2 -->
+<div class="p-3.5 rounded-full bg-surface-container-low flex items-center justify-between transition-colors hover:bg-surface-container">
+<div class="flex items-center gap-3 min-w-0">
+<div class="cursor-grab text-on-surface-variant active:cursor-grabbing p-1">
+<span class="material-symbols-outlined text-[18px]">drag_indicator</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm font-semibold px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface">SLOT 2</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">Tomorrow</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant">Active</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 truncate">Resolves to: Current date + 1 day (09:00)</p>
+</div>
+</div>
+<button aria-label="Change Slot 2 Shortcut" class="p-2 -mr-1 rounded-full text-on-surface hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">swap_horiz</span>
+</button>
+</div>
+<!-- Slot 3 -->
+<div class="p-3.5 rounded-full bg-surface-container-low flex items-center justify-between transition-colors hover:bg-surface-container">
+<div class="flex items-center gap-3 min-w-0">
+<div class="cursor-grab text-on-surface-variant active:cursor-grabbing p-1">
+<span class="material-symbols-outlined text-[18px]">drag_indicator</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm font-semibold px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface">SLOT 3</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">Next Week</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant">Active</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 truncate">Resolves to: Coming Monday (Nov 18, 09:00)</p>
+</div>
+</div>
+<button aria-label="Change Slot 3 Shortcut" class="p-2 -mr-1 rounded-full text-on-surface hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">swap_horiz</span>
+</button>
+</div>
+<!-- Slot 4 -->
+<div class="p-3.5 rounded-full bg-surface-container-low flex items-center justify-between transition-colors hover:bg-surface-container">
+<div class="flex items-center gap-3 min-w-0">
+<div class="cursor-grab text-on-surface-variant active:cursor-grabbing p-1">
+<span class="material-symbols-outlined text-[18px]">drag_indicator</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm font-semibold px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface">SLOT 4</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">This Weekend</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant">Active</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 truncate">Resolves to: Upcoming Saturday (Nov 16, 10:00)</p>
+</div>
+</div>
+<button aria-label="Change Slot 4 Shortcut" class="p-2 -mr-1 rounded-full text-on-surface hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">swap_horiz</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Available Preset Library / Shortcut Catalog -->
+<div class="space-y-3">
+<div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold">Available Shortcuts Catalog</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Tap any shortcut below to swap into an active slot:</p>
+</div>
+<div class="grid grid-cols-2 gap-2.5">
+<!-- Item 1 -->
+<button class="p-3.5 rounded-full bg-surface-container-lowest text-left transition-all active:scale-[0.98] hover:bg-surface-container-low shadow-sm flex flex-col justify-between" type="button">
+<div class="flex items-center justify-between w-full mb-1.5">
+<span class="material-symbols-outlined text-[18px] text-on-surface">wb_twilight</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">14:00</span>
+</div>
+<div class="font-title-md text-title-md text-on-surface truncate">This Afternoon</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-0.5 truncate">Today, 14:00 Anchor</div>
+</button>
+<!-- Item 2 -->
+<button class="p-3.5 rounded-full bg-surface-container-lowest text-left transition-all active:scale-[0.98] hover:bg-surface-container-low shadow-sm flex flex-col justify-between" type="button">
+<div class="flex items-center justify-between w-full mb-1.5">
+<span class="material-symbols-outlined text-[18px] text-on-surface">bedtime</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">20:00</span>
+</div>
+<div class="font-title-md text-title-md text-on-surface truncate">Tonight</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-0.5 truncate">Today, 20:00 Anchor</div>
+</button>
+<!-- Item 3 -->
+<button class="p-3.5 rounded-full bg-surface-container-lowest text-left transition-all active:scale-[0.98] hover:bg-surface-container-low shadow-sm flex flex-col justify-between" type="button">
+<div class="flex items-center justify-between w-full mb-1.5">
+<span class="material-symbols-outlined text-[18px] text-on-surface">schedule</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">+2d</span>
+</div>
+<div class="font-title-md text-title-md text-on-surface truncate">In 2 Days</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-0.5 truncate">Current date + 2 days</div>
+</button>
+<!-- Item 4 -->
+<button class="p-3.5 rounded-full bg-surface-container-lowest text-left transition-all active:scale-[0.98] hover:bg-surface-container-low shadow-sm flex flex-col justify-between" type="button">
+<div class="flex items-center justify-between w-full mb-1.5">
+<span class="material-symbols-outlined text-[18px] text-on-surface">update</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">+3d</span>
+</div>
+<div class="font-title-md text-title-md text-on-surface truncate">In 3 Days</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-0.5 truncate">Current date + 3 days</div>
+</button>
+<!-- Item 5 -->
+<button class="p-3.5 rounded-full bg-surface-container-lowest text-left transition-all active:scale-[0.98] hover:bg-surface-container-low shadow-sm flex flex-col justify-between" type="button">
+<div class="flex items-center justify-between w-full mb-1.5">
+<span class="material-symbols-outlined text-[18px] text-on-surface">calendar_month</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">1st Day</span>
+</div>
+<div class="font-title-md text-title-md text-on-surface truncate">Next Month</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-0.5 truncate">1st of next month</div>
+</button>
+<!-- Item 6 -->
+<button class="p-3.5 rounded-full bg-surface-container-lowest text-left transition-all active:scale-[0.98] hover:bg-surface-container-low shadow-sm flex flex-col justify-between" type="button">
+<div class="flex items-center justify-between w-full mb-1.5">
+<span class="material-symbols-outlined text-[18px] text-on-surface">inventory_2</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Backlog</span>
+</div>
+<div class="font-title-md text-title-md text-on-surface truncate">Someday / No Date</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-0.5 truncate">Clears date, sends to inbox</div>
+</button>
+</div>
+</div>
+<!-- Custom Offset Preset Builder -->
+<div class="rounded-full bg-surface-container-low p-5 space-y-4">
+<div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold">Create Custom Offset Preset</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Define custom relative interval (e.g. +3 business days, +2 weeks):</p>
+</div>
+<!-- Stepper Control -->
+<div class="flex items-center justify-between p-3.5 rounded-full bg-surface-container-lowest">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-medium">Offset Quantity</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Relative increment</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface font-title-md hover:bg-surface-container-highest transition-colors active:scale-95" id="decrement-offset" type="button">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="font-label-lg text-label-lg font-bold w-9 text-center text-on-surface" id="offset-value">+5</span>
+<button class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface font-title-md hover:bg-surface-container-highest transition-colors active:scale-95" id="increment-offset" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+<!-- Unit Segmented Control -->
+<div class="space-y-1.5">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-medium">Interval Unit</label>
+<div class="grid grid-cols-3 gap-1.5 p-1 rounded-full bg-surface-container-highest">
+<button class="py-2 rounded-full font-label-md text-label-md text-center bg-primary text-on-primary font-medium transition-all shadow-sm" type="button">Days</button>
+<button class="py-2 rounded-full font-label-md text-label-md text-center text-on-surface font-medium hover:bg-surface-container transition-all" type="button">Weeks</button>
+<button class="py-2 rounded-full font-label-md text-label-md text-center text-on-surface font-medium hover:bg-surface-container transition-all" type="button">Months</button>
+</div>
+</div>
+<!-- Time Anchor Setting -->
+<div class="space-y-1.5">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-medium">Target Anchor Time</label>
+<div class="grid grid-cols-3 gap-1.5">
+<button class="p-2 rounded-full bg-surface-container-lowest text-center font-label-sm text-label-sm text-on-surface border-none flex flex-col items-center gap-0.5" type="button">
+<span class="font-semibold">Morning</span>
+<span class="text-on-surface-variant">09:00</span>
+</button>
+<button class="p-2 rounded-full bg-surface-container text-center font-label-sm text-label-sm text-on-surface flex flex-col items-center gap-0.5" type="button">
+<span class="font-semibold">Afternoon</span>
+<span class="text-on-surface-variant">14:00</span>
+</button>
+<button class="p-2 rounded-full bg-surface-container text-center font-label-sm text-label-sm text-on-surface flex flex-col items-center gap-0.5" type="button">
+<span class="font-semibold">Specific</span>
+<span class="text-on-surface-variant">Custom</span>
+</button>
+</div>
+</div>
+<!-- Skip Weekends Toggle -->
+<div class="flex items-center justify-between p-3.5 rounded-full bg-surface-container-lowest">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-medium">Skip Weekends (Business Days)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Bumps Saturday/Sunday targets to Monday</span>
+</div>
+<button aria-checked="true" class="w-12 h-6 rounded-full bg-primary relative transition-colors focus:outline-none flex items-center px-0.5" id="weekend-toggle" type="button">
+<span class="w-5 h-5 rounded-full bg-surface transition-transform translate-x-6"></span>
+</button>
+</div>
+<!-- Save Custom Preset Button -->
+<button class="w-full py-3.5 px-4 rounded-full bg-surface-container-lowest text-on-surface font-label-lg text-label-lg font-semibold flex items-center justify-center gap-2 hover:bg-surface-container-highest transition-colors active:scale-[0.99] shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>Save as Custom Preset Option</span>
+</button>
+</div>
+<!-- Default Time of Day Calibration -->
+<div class="rounded-full bg-surface-container-lowest p-5 space-y-4 shadow-sm">
+<div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold">Preset Default Time Anchors</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Calibrate absolute hour targets for relative day stamps:</p>
+</div>
+<div class="space-y-2">
+<!-- Morning Anchor -->
+<div class="flex items-center justify-between p-3 rounded-full bg-surface-container-low">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">wb_twilight</span>
+<span class="font-body-md text-body-md font-medium text-on-surface">Morning Anchor</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md px-3 py-1 rounded-full bg-surface-container text-on-surface font-semibold">09:00</span>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</div>
+<!-- Afternoon Anchor -->
+<div class="flex items-center justify-between p-3 rounded-full bg-surface-container-low">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">light_mode</span>
+<span class="font-body-md text-body-md font-medium text-on-surface">Afternoon Anchor</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md px-3 py-1 rounded-full bg-surface-container text-on-surface font-semibold">14:00</span>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</div>
+<!-- Evening Anchor -->
+<div class="flex items-center justify-between p-3 rounded-full bg-surface-container-low">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">dark_mode</span>
+<span class="font-body-md text-body-md font-medium text-on-surface">Evening Anchor</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md px-3 py-1 rounded-full bg-surface-container text-on-surface font-semibold">19:00</span>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</div>
+<!-- Night Anchor -->
+<div class="flex items-center justify-between p-3 rounded-full bg-surface-container-low">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">bedtime</span>
+<span class="font-body-md text-body-md font-medium text-on-surface">Night Anchor</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md px-3 py-1 rounded-full bg-surface-container text-on-surface font-semibold">21:00</span>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Local Engine Verification & Actions -->
+<div class="space-y-4 pt-2">
+<!-- Verification Banner -->
+<div class="p-3.5 rounded-full bg-surface-container-low flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-on-surface shrink-0 mt-0.5">verified_user</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-bold uppercase tracking-wider">100% Local-First Engine</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Zero cloud paywalls. Stored persistently in local SQLite preferences schema. Synchronizes instantaneously across all task creation pathways.</span>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col gap-2.5 pt-1">
+<button class="w-full py-4 px-6 rounded-full bg-primary text-on-primary font-title-md text-title-md font-semibold tracking-wide text-center transition-all hover:bg-neutral-900 active:scale-[0.99] shadow-sm flex items-center justify-center gap-2" id="save-presets-btn" type="button">
+<span class="material-symbols-outlined text-[20px]">check</span>
+<span>Save & Apply Presets</span>
+</button>
+<button class="w-full py-3 px-6 rounded-full bg-surface-container text-on-surface font-label-lg text-label-lg font-medium text-center transition-all hover:bg-surface-container-high active:scale-[0.99]" id="reset-presets-btn" type="button">
+        Reset to Default Presets
+      </button>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    // Stepper control logic
+    const decBtn = document.getElementById('decrement-offset');
+    const incBtn = document.getElementById('increment-offset');
+    const valDisplay = document.getElementById('offset-value');
+    let currentVal = 5;
+
+    if (decBtn && incBtn && valDisplay) {
+      decBtn.addEventListener('click', () => {
+        if (currentVal > 1) {
+          currentVal--;
+          valDisplay.textContent = '+' + currentVal;
+        }
+      });
+
+      incBtn.addEventListener('click', () => {
+        if (currentVal < 90) {
+          currentVal++;
+          valDisplay.textContent = '+' + currentVal;
+        }
+      });
+    }
+
+    // Toggle switch logic
+    const weekendToggle = document.getElementById('weekend-toggle');
+    if (weekendToggle) {
+      let isChecked = true;
+      weekendToggle.addEventListener('click', () => {
+        isChecked = !isChecked;
+        weekendToggle.setAttribute('aria-checked', isChecked);
+        const knob = weekendToggle.firstElementChild;
+        if (isChecked) {
+          weekendToggle.classList.remove('bg-surface-container-high');
+          weekendToggle.classList.add('bg-primary');
+          knob.classList.remove('translate-x-0');
+          knob.classList.add('translate-x-6');
+        } else {
+          weekendToggle.classList.remove('bg-primary');
+          weekendToggle.classList.add('bg-surface-container-high');
+          knob.classList.remove('translate-x-6');
+          knob.classList.add('translate-x-0');
+        }
+      });
+    }
+
+    // Interactive Preview Chips tap effect
+    const chips = document.querySelectorAll('.preview-chip');
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        chips.forEach(c => {
+          c.classList.remove('bg-primary', 'text-on-primary');
+          c.classList.add('bg-surface-container-lowest', 'text-on-surface');
+        });
+        chip.classList.remove('bg-surface-container-lowest', 'text-on-surface');
+        chip.classList.add('bg-primary', 'text-on-primary');
+      });
+    });
+
+    // Save animation feedback
+    const saveBtn = document.getElementById('save-presets-btn');
+    if (saveBtn) {
+      saveBtn.addEventListener('click', () => {
+        const originalHtml = saveBtn.innerHTML;
+        saveBtn.innerHTML = '<span class="material-symbols-outlined text-[20px]">done_all</span><span>Presets Synchronized!</span>';
+        saveBtn.classList.add('opacity-90');
+        setTimeout(() => {
+          saveBtn.innerHTML = originalHtml;
+          saveBtn.classList.remove('opacity-90');
+        }, 1800);
+      });
+    }
+  })();
+</script></main></body></html>
